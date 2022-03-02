@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="All episode transcripts for the TV show &quot;How I Met Your Mother&quot;. Aired from September 19, 2005, to March 31, 2014." />
+<meta property="og:title" content="How I Met Your Mother Transcripts - Forever Dreaming" />
+<meta property="og:description" content="All episode transcripts for the TV show &quot;How I Met Your Mother&quot;. Aired from September 19, 2005, to March 31, 2014." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://transcripts.foreverdreaming.org/viewforum.php?f=177&amp;start=200" />
+<meta property="og:image" content="https://transcripts.foreverdreaming.org/images/logo250t.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>How I Met Your Mother Transcripts Index Page 9 - Forever Dreaming</title>
+<link rel="canonical" href="https://transcripts.foreverdreaming.org/viewforum.php?f=177&amp;start=200" />
+<link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link href="favicon.ico" rel="shortcut icon" title="Site Icon" type="image/x-icon" />
+<link href="favicon.ico" rel="icon" title="Site Icon" type="image/x-icon" />
+<link rel="alternate" type="application/atom+xml" title="Feed - Transcripts - Forever Dreaming" href="https://transcripts.foreverdreaming.org/feed.php" />
+<link rel="stylesheet" href="./styles/transcripts_default/theme/stylesheet.css?r1" type="text/css" />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-3808023418243141",
+		enable_page_level_ads: true
+	});
+</script>
+</head>
+<body class="viewforum f177">
+<i id="top"></i>
+<div id="wrapheader">
+	<div id="menubar" class="clearfix">
+		<div class="pull-left">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" onClick="javascript:doToggle('togglenav');"><span style="display:none">Toggle navigation</span><i class="fa fa-bars"></i></button>
+			</div>
+			<div class="navbar-collapse collapse" id="togglenav" style="display:none">
+				<ul class="nav navbar-nav">
+					<li><a href="./"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="./index.php" title="A-Z List of episode transcripts"><i class="fa fa-list"></i> A-Z List</a></li>
+					<li><a href="search/" title="Search Forever Dreaming Transcripts"><i class="fa fa-search"></i> Search</a></li>
+					<li><a href="about/" title="About Forever Dreaming and Transcripts"><i class="fa fa-info"></i> About</a></li>
+					<li><a rel="nofollow" href="http://foreverdreaming.org/" title="Forever Dreaming"><i class="fa fa-comments"></i> Forum</a></li>
+					<li><a href="donate/" title="Contribute towards running costs"><i class="fa fa-gift"></i>  Donate</a></li>
+					<li><a href="faq/" title="Frequently Asked Questions"><i class="fa fa-question"></i> FAQ</a></li>
+					<li><a href="contact/" title="Contact us"><i class="fa fa-envelope"></i> Contact</a></li>
+					<li><a href="./ucp.php?mode=login&amp;sid=f930a1778963d61e2c88b8511d09e033"><i class="fa fa-sign-in"></i> Login</a></li><li><a rel="nofollow" href="./ucp.php?mode=register&amp;sid=f930a1778963d61e2c88b8511d09e033"><i class="fa fa-share"></i> Register</a></li>
+				
+				</ul>
+			</div>
+		</div>
+		<div class="pull-right social-links"><a href="https://twitter.com/FDdotorg" title="Follow us on Twitter" class="twitter" target="_blank"><i class="fa fa-twitter fa-2x"></i> Follow</a></div>
+	</div>
+</div>
+<div id="wrapper">
+<div id="header">
+	<h1>How I Met Your Mother Transcripts</h1>
+</div>
+<div id="wrapcentre">
+	<div class="box extra-content tool-box">
+		<div class="boxheading clearfix">
+			<div class="pull-left">
+				<p class="breadcrumbs" role="navigation"><a rel="nofollow" href="javascript:var handle=window.open('http://foreverdreaming.org/')">F.D.</a><b> &#187; </b><a href="./index.php?sid=f930a1778963d61e2c88b8511d09e033">Transcripts</a><b> &#187; </b><a href="./viewforum.php?f=47&amp;sid=f930a1778963d61e2c88b8511d09e033">TV &amp; Movie Transcripts</a><b> &#187; </b><a href="./viewforum.php?f=775&amp;sid=f930a1778963d61e2c88b8511d09e033">H</a><b> &#187; </b><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033">How I Met Your Mother</a></p>
+			</div>
+			<div class="social-links pull-right">
+				<a title="Share on Facebook" href="javascript:void(0)" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;"><i class="fa fa-facebook fa-lg"></i></a> &nbsp;
+				<a title="Share on Twitter" href="javascript:void(0)" onclick="window.open('http://twitter.com/?status=Check%20this%20out!%20'+encodeURIComponent(location.href),'twitter-share-dialog','width=626,height=436');return false;"><i class="fa fa-twitter fa-lg"></i></a> &nbsp;
+				<a title="Share on Tumblr" href="javascript:void(0)" onclick="window.open('http://www.tumblr.com/share/link?url='+encodeURIComponent(location.href),'tumblr-share-dialog','width=626,height=436');return false;"><i class="fa fa-tumblr fa-lg"></i></a> &nbsp;
+				<a title="Share on Google+" href="javascript:void(0)" onclick="window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href),'google-plus-share-dialog','width=626,height=436');return false;"><i class="fa fa-google-plus fa-lg"></i></a> &nbsp;
+			</div>
+		</div>
+	
+	</div>
+	<!-- CUSTOM_ANNOUNCEMENT -->
+<script type="text/javascript"> var infolinks_pid = 3356422; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+
+	<div class="intro">
+		&quot;How I Met Your Mother&quot; follows Ted's searches for the woman of his dreams in New York City, with the help of his four best friends, culminating in eventual happiness with his children's mother.
+	</div>
+	<br style="clear:both" />
+
+	<div id="pageheader">
+		
+	</div>
+
+	<div class="box extra-content control-box top">
+		<div class="boxbody clearfix">
+			
+				<div class="pull-left nowrap"><b class="pagination"><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=175">&laquo;</a><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033">1</a><span class="page-dots"> ... </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=100">5</a><span class="page-sep">, </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=125">6</a><span class="page-sep">, </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=150">7</a><span class="page-sep">, </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=175">8</a><span class="page-sep">, </span><strong>9</strong></b></div>
+			
+		</div>
+	</div>
+
+		<div style="margin-bottom:5px;">
+			
+		</div>
+<div id="pagecontent">
+	<div class="box community-content forum-box">
+		<div class="boxheading">
+			<h2>How I Met Your Mother</h2>
+		</div>
+		<div class="boxbody">
+			<table class="tablebg">
+				<tr>
+					<th class="topic-titles text-left">&nbsp;Episode&nbsp;</th>
+					<th class="views">&nbsp;Views&nbsp;</th>
+					<th class="latest text-left">&nbsp;Added&nbsp;</th>
+				</tr>
+			
+					<tr>
+						<td class="announcements row3" colspan="3"><b class="gensmall">Info</b></td>
+					</tr>
+				
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="Happy New Year!! Thank you to so many of you for your generous donations in helping with the costs of the board, volunteering editing help, taking..." href="./viewtopic.php?f=177&amp;t=32146&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">Updates: Happy New Year 1/1/22</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">215059</td>
+					<td class="latest row2"><time datetime="2018-11-06T14:51:38Z">11/06/18 09:51</time></td>
+				</tr>
+			
+					<tr>
+						<td class="r-topics row3" colspan="3"><b class="gensmall">Episode</b></td>
+					</tr>
+				
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="MAN: Well, that party was a dud. MAN 2: I think I struck out with, like, 20 girls. And... my condom expired. We are losers! We've tried everything...." href="./viewtopic.php?f=177&amp;t=11632&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x17 - Sunrise</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">3537</td>
+					<td class="latest row2"><time datetime="2014-02-05T18:41:18Z">02/05/14 13:41</time></td>
+				</tr>
+			
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="(cork pops) Whoa, sorry, sorry. Oh, my God! You know that there is gonna be champagne at this party, right? I know, I know. But we're gonna get there..." href="./viewtopic.php?f=177&amp;t=11631&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x18 - Rally</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">2877</td>
+					<td class="latest row2"><time datetime="2014-02-26T08:44:14Z">02/26/14 03:44</time></td>
+				</tr>
+			
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="Thank you for bringing me here. I am so glad we made it. That snowstorm was getting really bad. Wait, you think this is a snowstorm? This is nothing...." href="./viewtopic.php?f=177&amp;t=11630&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x19 - Vesuvius</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">2873</td>
+					<td class="latest row2"><time datetime="2014-03-05T09:56:00Z">03/05/14 04:56</time></td>
+				</tr>
+			
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="NARRATOR: It was the day of Barney and Robin's wedding, and a surprise guest had just arrived. ROBIN: Mom, I-I can't believe you're here. How did you..." href="./viewtopic.php?f=177&amp;t=11629&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x20 - Daisy</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">2787</td>
+					<td class="latest row2"><time datetime="2014-03-12T06:58:16Z">03/12/14 01:58</time></td>
+				</tr>
+			
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="TED: Hi. Hi. Okay. (chuckles) So I thought we'd... try this new restaurant. It's right around the corner from here. It's Scottish-Mexican fusion...." href="./viewtopic.php?f=177&amp;t=11628&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x21 - Gary Blauman</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">3202</td>
+					<td class="latest row2"><time datetime="2014-03-19T02:11:39Z">03/18/14 21:11</time></td>
+				</tr>
+			
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="NARRATOR: Kids, it's not always rational, but people on their wedding day sometimes find themselves panicking about whether they've made the best..." href="./viewtopic.php?f=177&amp;t=11627&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x22 - The End of the Aisle</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">4781</td>
+					<td class="latest row2"><time datetime="2014-03-26T02:54:17Z">03/25/14 21:54</time></td>
+				</tr>
+			
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="So? (whispers): No. No. You-You were in. I said, &quot;Have you met Ted&quot; and everything. How could that not work? I don't know, we introduced..." href="./viewtopic.php?f=177&amp;t=11626&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x23 - Last Forever, Part 1</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">4017</td>
+					<td class="latest row2"><time datetime="2014-04-02T16:15:41Z">04/02/14 11:15</time></td>
+				</tr>
+			
+				<tr>
+					<td class="topic-titles row2">
+						
+						 <h3><a title="So? (whispers): No. No. You-You were in. I said, &quot;Have you met Ted&quot; and everything. How could that not work? I don't know, we introduced..." href="./viewtopic.php?f=177&amp;t=11636&amp;sid=f930a1778963d61e2c88b8511d09e033" class="topictitle">09x24 - Last Forever, Part 2</a></h3>
+						
+					</td>
+					<td class="views row2 text-center">8556</td>
+					<td class="latest row2"><time datetime="2014-04-02T08:31:27Z">04/02/14 03:31</time></td>
+				</tr>
+			
+			</table>
+		</div>
+	</div>
+<div class="ads ads-footer footer-forum">
+	<!-- Transcripts Footer Forum -->
+	<ins class="adsbygoogle transcripts-footer-forum"
+		style="display:inline-block"
+		data-ad-client="ca-pub-3808023418243141"
+		data-ad-slot="5549985470"
+		data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+</div>
+	
+<br style="clear:both" />
+
+<div class="box extra-content control-box bottom">
+	<div class="boxbody clearfix">
+		
+			<div class="pull-left nowrap"><b class="pagination"><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=175">&laquo;</a><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033">1</a><span class="page-dots"> ... </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=100">5</a><span class="page-sep">, </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=125">6</a><span class="page-sep">, </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=150">7</a><span class="page-sep">, </span><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033&amp;start=175">8</a><span class="page-sep">, </span><strong>9</strong></b></div>
+		
+	</div>
+	</div>
+
+<br style="clear:both" />
+
+
+<p class="breadcrumbs" role="navigation"><a rel="nofollow" href="javascript:var handle=window.open('http://foreverdreaming.org/')">F.D.</a><b> &#187; </b><a href="./index.php?sid=f930a1778963d61e2c88b8511d09e033">Transcripts</a><b> &#187; </b><a href="./viewforum.php?f=47&amp;sid=f930a1778963d61e2c88b8511d09e033">TV &amp; Movie Transcripts</a><b> &#187; </b><a href="./viewforum.php?f=775&amp;sid=f930a1778963d61e2c88b8511d09e033">H</a><b> &#187; </b><a href="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033">How I Met Your Mother</a></p>
+
+<br style="clear:both" />
+<div class="jumps text-right">
+	<br />
+	
+</div>
+<br />
+</div>
+	
+	<div id="footer">
+		<div id="footer-top">
+<div class="donate">
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_donations" />
+		<input type="hidden" name="business" value="webmaster@foreverdreaming.org" />
+		<input type="hidden" name="lc" value="US" />
+		<input type="hidden" name="item_name" value="Forever Dreaming" />
+		<input type="hidden" name="no_note" value="0" />
+		<input type="hidden" name="currency_code" value="USD" />
+		<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHosted" />
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+	</form>
+</div>
+<p style="color:red">Please help keep our site running with a small donation.</p><p>&copy; 2000-2022 <a rel="nofollow" target="_blank" href="http://foreverdreaming.org/" title="Forever Dreaming">Forever Dreaming</a>. <strong class="nowrap">All rights reserved</strong>.</p>
+                <div id="footer-links">
+				<a href="./about/" title="About us">About</a>
+                                <a href="./contact/" title="Contact us">Contact</a>
+				<a href="./copyright/" title="Copyright Policy">Copyright</a>
+				<a href="./privacy/" title="Privacy Policy">Privacy</a>
+                                <a rel="nofollow" target="_blank" href="http://amazon.com/shop/fdsterek" title="Online Store">Store</a><br />
+				<a rel="nofollow" class="hidden" href="/viewtopic/" title="Upcoming">Upcoming</a>
+			</div>
+
+</div>
+		<div id="wrapfooter">
+				
+			<span class="copyright"></span>
+			
+			<a id="lx" href="https://www.alexa.com/siteinfo/foreverdreaming.org"><script type="text/javascript" src="https://xslt.alexa.com/site_stats/js/t/a?url=foreverdreaming.org"></script></a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+// <![CDATA[
+
+function popup(e,t,n,r){if(!r){r="_popup"}window.open(e.replace(/&/g,"&"),r,"height="+n+",resizable=yes,scrollbars=yes,width="+t);return false}function jumpto(){var e=prompt("Enter the page number you wish to go to:","9");var t="25";var n="./viewforum.php?f=177&amp;sid=f930a1778963d61e2c88b8511d09e033";if(e!==null&&!isNaN(e)&&e==Math.floor(e)&&e>0){if(n.indexOf("?")==-1){document.location.href=n+"?start="+(e-1)*t}else{document.location.href=n.replace(/&/g,"&")+"&start="+(e-1)*t}}}function find_username(e){popup(e,760,570,"_usersearch");return false}function marklist(id,name,state){var parent=document.getElementById(id);if(!parent){eval("parent = document."+id)}if(!parent){return}var rb=parent.getElementsByTagName("input");for(var r=0;r<rb.length;r++){if(rb[r].name.substr(0,name.length)==name){rb[r].checked=state}}}
+
+// ]]>
+</script>
+
+<script>function doToggle(e){obj=document.getElementById(e);if(obj.style.display=="none"||obj.style.display==""){obj.style.display="block"}else{obj.style.display="none"}}</script>
+<script>
+function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+loadCSS("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+function doToggle(e){obj=document.getElementById(e);if(obj.style.display=="none"||obj.style.display==""){obj.style.display="block"}else{obj.style.display="none"}}
+</script>
+<script>
+window.cookieconsent_options = {"message":"This website uses cookies to improve your experience on our website.","dismiss":"Got it!","learnMore":"More info","link":"http://transcripts.foreverdreaming.org/privacy/#cookies","theme":"dark-top","domain":"foreverdreaming.org"};
+</script>
+<script src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41587662-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-41587662-1');
+</script>
+</body>
+</html>
