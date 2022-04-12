@@ -1,3 +1,4 @@
+["How I Met Your Mother", credits]
 [Title: The Year 2030]
 Narrator: Kids, when you're single all you're looking for is happily ever after. But only one of your stories can end that way. The rest end with someone getting hurt. This is one of those stories, and it starts... with a shirt.
 Daughter: A shirt?
@@ -165,6 +166,8 @@ Natalie: And I suppose you're suddenly ready to get married and settle down?
 Ted: Well, yeah, actually (smiling). I'm a different guy now. Give me another chance.
 Natalie: You must think I have absolutely no self respect.
 Ted: Come on... Just a cup of coffee. (Pretending the sock monkey's talking) Please Natalie. Give the guy a chance. (Natalie looks at the sock monkey) Self respect is over-rated! (Monkey raises right arm as though it's a fact. Natalie laughs)
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 [Natalie's Apartment - Ted/Natalie]
 (After s*x)
 Natalie: Wow. Maybe it was the caffeine, but you really brought your game up to a whole new level.
@@ -231,6 +234,7 @@ Natalie: Yeah, no that's okay... I wasn't telling anyone about it.
 Ted: Today's your birthday! I... I didn't get you anything.
 Natalie: Oh, it's okay. You know you've already given me the best present of all. I can trust again.
 Ted: You're welcome. (Chugs wine. To waiter) Oh, so much more wine.
+
 [West 53rd Street, Horse Stable - Robin/Henry]
 Robin: Henry, as New York's oldest handsome cab driver, you've seen quite a lot.
 (Cut to TV in bar)

@@ -1,3 +1,4 @@
+INT. KITCHEN
 (Robin cooking, Ted walks in)
 Future Ted VO:...learn about relationships is that you're never done getting to know someone.
 Everyone has secrets. Some are nice.
@@ -178,6 +179,8 @@ Robin: He moved to Hong Kong for work and I was like, good enough.
 Ted: Good... good enough. That's not good enough. You order pancakes and you get waffles, that's good enough.
 Robin: I haven't seen him in years. It's just a part of my life I wanna forget. Just please don't tell anyone about this.
 Ted: OK.
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 INT. MACLAREN'S
 (Marshall slaps Barney)
 Barney: Your hand is monstrous.

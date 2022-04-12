@@ -1,3 +1,4 @@
+The bar
 Barney: So, this chick and I are going at it behind the Central Park Zoo. The Bonobo chimps start giving us a standing O, and just when I'm about to give her the same thing... What up?... I... I can't. I just... I can't. Guys, I know you count the minutes until you can escape from your humdrum lives by hearing how awesome mine is, and I love doing that for you, but I just can't tonight.
 Robin: What's wrong?
 Barney: I don't want to talk about it.
@@ -107,6 +108,8 @@ James: If this picture was taken in North Dakota, then why is our old swing set 
 Loretta: I don't know! I did my best as a single parent, and it wasn't always easy, and I'd recommend putting the coleslaw right on top of the Sloppy Joe, because it's delicious that way!
 James: Can you believe her?
 Barney: I know. Forgetting to send the photo. That poor sculptor had to work from memory. Those statues probably look nothing like us. Damn it, Mom!
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 Back in the bedroom
 Robin: So, Ted? You were worried that I oversold you to Liz. Well, I fixed it.
 Ted: How?

@@ -1,3 +1,4 @@
+Pilot
 Scene One
 [Title: The Year 2030]
 Narrator: Kids, I'm going to tell you an incredible story. The story of how I met your mother
@@ -196,6 +197,8 @@ Lily: Ted, anyone who's single would tell you the same thing. Even the dumbest s
 Barney: (Phone) Hey loser, how's not playing laser tag? Because playing laser tag is awesome! Oh, I k*lled you Connor; don't make me get your mom!
 Ted: Hey, listen. I need your opinion on something.
 Barney: Okay, meet me at the bar in fifteen minutes-AND SUIT UP!
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 [Slides to Bar Scene]
 (Lily, Ted, Barney and Marshall sitting at a table)
 Ted: So these guys think I chickened out. What do you think?

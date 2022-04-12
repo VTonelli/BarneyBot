@@ -1,3 +1,4 @@
+Ted (2030): There are ways to relieve stress.
 Woman: You'll have a few minutes, Mr. Stinson.
 Ted (2030): Many people bite their nails. Others tap their feet.And others imagine themselves to be interviewed by renowned sports commentator Jim Nantz.
 Jim: Hi friends, any sport has had its icon, which it excels. Ali was boxing, basketball had Jordan, and the sport of sleeping with bombs snuff chance, my next guest, Mr Barney Stinson.Barney, welcome.
@@ -167,6 +168,8 @@ Robin: Jen Coulin.
 Ted: Dale you called?
 Robin: Why do you...
 Marshall: Guys, guys, look!
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 Barney leaves the bar once again on the arm of a young woman.
 Jim: Barney, I will interrupt you one second, I must ask you something. Have you ever taken Viagra?
 Barney: No, sir. I like to play by the rules. While I can not say I did not propose to.

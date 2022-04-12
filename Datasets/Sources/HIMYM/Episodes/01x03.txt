@@ -1,3 +1,4 @@
+["How I Met Your Mother", credits]
 [Title: The Year 2030]
 Narrator: So there was this one night, before I met your mother when I really wanted to go to the bar.
 Son: The bar? Big surprise!
@@ -171,6 +172,8 @@ Officer McNeil: We got footage of you placing two bags on JFK carousel three, an
 Barney: (To Ted) Those bags were your responsibility.
 Ted: They were your bags.
 Officer McNeil: Sir, please. We're assessing the bag situation.
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 (Cut to JFK Airport, Carousel three. b*mb squad are hovering equipment over their bags)
 (Officer McNeil's office)
 Ted: Look, this is all just... it's a misunderstanding.
@@ -190,6 +193,7 @@ Ted: We at least get to call our lawyer.
 Barney: Exactly! (To Ted) We have a lawyer?
 [Marshall's car - Marshall]
 Marshall: (On Phone) Listen to me, you're both American citizens. Don't let them pull any patriot-act voodoo. You both retain the right to refuse to answer any questions without an attorney present so don't say anything until I get there, alright? Okay, goodbye (Hangs up. Sings) To Philly! The adventure continues! Destroy!
+
 [The Bar - Lily/Robin]
 Robin: It's ridiculous in here, why don't we go somewhere else?
 Lily: (Unbuttoning sweater) No, this place is great (positions mouth in an inviting kiss position)
@@ -264,6 +268,7 @@ Barney: Hmm... I bet nobody in history has ever licked the Liberty Bell! If some
 Ted: (Decides he's going to leave) Well, this is my stop.
 Barney: Legendary, Ted, LEGENDARY!
 Ted: Barney, I'm going to the airport. Sascha, thank you... and uh... tell your grandpa I'm sorry I walked in on him in the bathroom. (Leaves)
+
 [The Bar - Robin/Lily/Derrick]
 Derrick: I'll get some Club Soda for that stain. (Leaves)
 Robin: (enters) Lily, I thought tonight was about us hanging out, what are you doing?

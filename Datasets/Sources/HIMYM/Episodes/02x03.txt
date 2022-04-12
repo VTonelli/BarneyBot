@@ -1,3 +1,4 @@
+Year 2030
 Ted: Kids you know that photo in the den? It was taken back in 2006, when Grandma and Grandpa came to visit me and we all went out to brunch. We all look pretty happy, right? Wrong.
 Year 2006
 Lily: I wish your face would melt off.
@@ -93,7 +94,7 @@ Ted: Barney, what are you doing here?
 Barney: Uh... I'm here to meet your parents. They must be dying to meet me after all the legendary Barney stories you've told them.
 Ted: I haven't told them any legendary Barney stories.
 Barney: What?
-Ted: Barney, here is a list of all the things I talk with my dad about&#058; baseball.
+Ted: Barney, here is a list of all the things I talk with my dad about: baseball.
 Barney: But I'm your best friend.
 Ted: Well, actually Marshall's my...
 Barney: I'm the most important person in your life.
@@ -176,6 +177,8 @@ Ted: Enjoying your vacation so far?
 Ted's father: Oh, yeah.
 Ted: Uh, listen, can I speak to you outside for a sec?
 Ted's father: Sure.
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 Outside.
 Ted: So you went out with Barney last night?
 Ted's father: Yeah.

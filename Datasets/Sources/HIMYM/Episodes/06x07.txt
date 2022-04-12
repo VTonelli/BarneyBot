@@ -1,3 +1,4 @@
+Ted's class
 Ted: And so, due to one architectural oversight, the Toledo Bridge Disaster of 1906 claimed the lives of 75 people. Now, I hate to stop while I'm on a roll, but happy Halloween, ya crazies!
 (class cheering)
 Student #1: Hey, Professor Brosby, you gonna come get beers with us later?
@@ -135,7 +136,7 @@ Marshall: Something bad happened.
 [FLASHBACK]
 (knocking)
 Marshall: Randy, hey, have you seen the...
-Randy: Before you get to that, regarding the earlier project I was working on... Voil&amp;agrave;!
+Randy: Before you get to that, regarding the earlier project I was working on... Voil&agrave;!
 Marshall: That's the Hermanson contract?
 Randy: The Hermanson contract? Oh, man, this is the Filbert contract. Damn it! No... (He shredds the file once again) Anyway, what's your thing?
 Marshall: I need the Filbert contract!
@@ -162,6 +163,8 @@ Randy: Downtown. (Randy jumps into the shredder, Marshall wakes up)
 Marshall: No!!
 Lily: It's okay, baby.
 Ted from 2030: It wasn't okay. So the next morning...
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 Marshall's boss' office
 Marshall: Arthur, I'm here because I made a mistake. I fired Randy yesterday.
 Arthur: That was a mistake. You should have fired him a year ago.

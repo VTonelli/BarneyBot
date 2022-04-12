@@ -1,3 +1,4 @@
+[the year 2030]
 Narrator: everybody make mistakes. Take this girl Meg for instance
 [the year 2007 - the bar - Barney/Meg]
 Narrator: She made a mistake, a mistake named Barney.
@@ -102,7 +103,7 @@ The estate agent: The lockbox combination is 1421, and here's my card.
 (Ted comes to Barney)
 Ted: Are you serious? You're trying to sneak this apartment away from Marshall and Lily?
 Barney: Ted, do you think i have no morals whatsoever? I simply want to fool a girl into thinking this is my apartment so i can nail her once and never have to see her again. I'm not a monster!
-(Lily&amp;Marshall talk to the estate agent)
+(Lily&Marshall talk to the estate agent)
 The estate agent: Now, listen, i don't want to put a lot of pressure on you, but there is one other couple that expressed very serious interest
 Marshall: I see what you're doing here. "another couple", please, that crap is page one out of the Realtor's playbook. And we're not buying it.
 Narrator: Is what Marshall should have said.
@@ -169,6 +170,8 @@ Marshall: My student loans. Great. I thought we were friends. you know what, it'
 Bank employee: Okay, actually, it's because of your wife's credit card debt.
 (The bank employee shows on his computer the Lily's debt to Marshall. He seems astonished)
 Lilly: Marshall, there's something i have to tell you, and i want you to hear it from me first.
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 [The appartment - Ted/Barney/Robin - they come in]
 Robin: Okay, let me get this straight. You just snuck this girl into some stranger's apartment?
 Barney: Yeah, we spent the night.
@@ -206,7 +209,7 @@ Barney (to Robin): Don't touch the evidence. (to Ted) I got your back partner.
 Ted: It's not stiny water bottle. Notice the label is peed off.
 [Flashback - The apartment- Lily/Marshall - They quarrel]Ted (voice off): Lily always peels labels off the bottle when she's feeling guilty. This lab is not only peel off but torn up. Oh man, she must have done something bad. Which means Marshall must have been really angry, and when Marshall gets rely angry, he eats.
 [End flashback]
-(Ted runs to the kitchen, picks up a ben &amp; jerry ice cream on the floor)
+(Ted runs to the kitchen, picks up a ben & jerry ice cream on the floor)
 Ted: Just as i suspected, Cherry Garcia. Given the liquid consistency, i place the fight between... noon and 1.
 Robin: Ew, that was on the floor.
 Barney: If you wwant to get to the bottom of this, you're gonna need a stronger stomach than that, doll face.
@@ -300,5 +303,5 @@ Cab driver: Don't you know? Baby, this whole neighborhood is downwind of the sew
 Marshall: Wait... What did you just say?
 Cab driver: I said, we're downwind of the sewage treatment plant.
 [Title: DOWISETREPLA]
-Marshall &amp; Lily: Oh oh
+Marshall & Lily: Oh oh
 End.
