@@ -195,7 +195,7 @@ class BBMetric:
         elif name == "semantic answer similarity":
             metric = BBMetric(name,
                               SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2"))
-        elif name == "semantic answer similarity classifier":
+        elif name == "semantic classifier":
             metric = BBMetric(name,
                               SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2"))
         elif name == "human - coherence":
