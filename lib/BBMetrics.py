@@ -7,11 +7,19 @@ from tqdm import tqdm
 import tensorflow as tf
 import os
 import pandas as pd
+from nltk.util import ngrams
 
 consistency_questions = ["Who are you?",
                          "What is your name?",
                          "What is your job?",
                          "Where do you live?"]
+
+def distinct(sentences, ngram_size=3):
+    scores = []
+    for sentence in sentences:
+        distinct_ngrams = set(ngrams(sentence.split(), ngram_size))
+        scores.append(len(distinct_ngrams) / len(sentence))
+    return np.mean(np.array(scores))
 
 def perplexity(model, tokenizer, sentences, stride=64):
     encodings = tokenizer("\n\n".join(sentences), return_tensors="tf")
@@ -108,7 +116,7 @@ def single_answers(model, tokenizer, filepath, train, questions):
 
 class BBMetric:
     metrics_list = ["bleu", "semantic similarity", "rouge l",
-                    "emotion", "semantic answer similarity",
+                    "emotion", "semantic answer similarity", "distinct",
                     "semantic classifier", "perplexity", "human - coherence",
                     "human - consistency", "human - style"]
     def __init__(self, name, metric):
@@ -142,6 +150,11 @@ class BBMetric:
         elif name == "semantic answer similarity":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
+            self.train_require_args = set()
+            self.train_optional_args = set()
+        elif name == "distinct":
+            self.compute_require_args = set(["sentences"])
+            self.compute_optional_args = set(["ngram_size"])
             self.train_require_args = set()
             self.train_optional_args = set()
         elif name == "semantic classifier":
@@ -195,6 +208,9 @@ class BBMetric:
         elif name == "semantic answer similarity":
             metric = BBMetric(name,
                               SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2"))
+        elif name == "distinct":
+            metric = BBMetric(name,
+                              lambda s, n: distinct(s, n))
         elif name == "semantic classifier":
             metric = BBMetric(name,
                               SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2"))
@@ -249,7 +265,11 @@ class BBMetric:
             predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
             result['scores'] = np.diagonal(cosine_similarity(self.metric.encode(predictions),
-                                                             self.metric.encode(references)))  
+                                                             self.metric.encode(references)))
+        elif self.name == "distinct":
+            sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
+            result['score'] = self.metric(sentences,
+                                          kwargs['ngram_size'] if 'ngram_size' in kwargs else 3)
         elif self.name == "perplexity":
             sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
             result['score'] = self.metric(kwargs['model'], kwargs['tokenizer'], sentences,
@@ -276,7 +296,9 @@ class BBMetric:
            self.name == "semantic similarity" or \
            self.name == "rouge l" or \
            self.name == "semantic answer similarity" or \
-           self.name == "emotion":
+           self.name == "emotion" or \
+           self.name == "distinct" or \
+           self.name == "perplexity":
             return
         elif self.name == "semantic classifier":
             raise NotImplementedError("Still Working on it!")
