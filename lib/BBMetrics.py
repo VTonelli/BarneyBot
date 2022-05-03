@@ -8,30 +8,215 @@ import tensorflow as tf
 import os
 import pandas as pd
 from nltk.util import ngrams
-
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras import callbacks
+from tensorflow.keras import regularizers
+from sklearn.model_selection import train_test_split
+import json
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from itertools import combinations
+    
 consistency_questions = ["Who are you?",
                          "What is your name?",
                          "What is your job?",
                          "Where do you live?"]
 
 class BarneyBotTripletClassifier:
-    batch_size = 16
-    epochs = 1000
-    lr = 1e-6
-    regularizer_weight_r = 1e-4
-    regularizer_weight_s = 1e-3
-    dropout_rate = 0.2
-    train_size = 0.85
-    test_size = 0.10
-    version = ''
+    def __init__(self):
+        self.batch_size = 16
+        self.lr = 1e-6
+        self.patience = 6
+        self.regularizer_weight_r = 1e-4
+        self.regularizer_weight_s = 1e-3
+        self.dropout_rate = 0.2
+        self.train_size = 0.85
+        self.test_size = 0.10
 
-    def train(character, character_dict, base_folder, n_shuffles, shutdown_at_end, from_saved_embeddings):
-        source_folder = os.path.join(base_folder, "Data", "Sources", character_dict[character]['source'])
-        character_folder = os.path.join(base_folder, "Data", "Character", character)
-        
+    def create_model(self, input_size):
+        inputs = keras.Input(shape=input_size)
+        x = layers.Dense(
+            1024,
+            activation='relu',
+        )(inputs)
+        x = layers.BatchNormalization()(x)
+
+        x = layers.Dense(
+            1024,
+            activation='relu',
+        )(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(
+            512, 
+            activation='relu',
+        )(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(
+            256, 
+            activation='relu',
+        )(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(
+            128, 
+            activation='relu',
+            kernel_regularizer=regularizers.l2(self.regularizer_weight_r),
+            bias_regularizer=regularizers.l2(self.regularizer_weight_r)
+        )(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dropout(self.dropout_rate)(x)
+        out = layers.Dense(
+            1, 
+            activation='sigmoid',
+            kernel_regularizer=regularizers.l2(self.regularizer_weight_s),
+            bias_regularizer=regularizers.l2(self.regularizer_weight_s)
+        )(x)
+        classifier_model = keras.Model(inputs, out)
+        classifier_model.compile(
+            loss = keras.losses.BinaryCrossentropy(),
+            optimizer = keras.optimizers.Adam(learning_rate = self.lr),
+            metrics = [keras.metrics.BinaryAccuracy(), keras.metrics.Recall()]
+        )
+        return classifier_model
+    
+    def get_triplet_df(self, series_df, n_shuffles, random_state):
+        # separate character from others
+        series_df_1 = series_df[series_df['character']==1].copy()
+        series_df_0 = series_df[series_df['character']==0].copy()
+        df_rows = {'character':[], 'encoded_lines':[]}
+        for i in range(n_shuffles):
+            print("Running shuffle " + str(i) + "/" + str(n_shuffles))
+            # shuffle dataset
+            series_df_1 = series_df_1.sample(frac=1, random_state=random_state+i).reset_index(drop=True)
+            series_df_0 = series_df_0.sample(n=len(series_df_1), random_state=random_state+i).reset_index(drop=True)
+            for i in tqdm(range(2,len(series_df_1))):
+                # character
+                lines = list(series_df_1['encoded_line'][i-2:i+1])
+                lines = np.concatenate(lines)
+                df_rows['character'].append(1)
+                df_rows['encoded_lines'].append(lines)
+                # other
+                lines = list(series_df_0['encoded_line'][i-2:i+1])
+                lines = np.concatenate(lines)
+                df_rows['character'].append(0)
+                df_rows['encoded_lines'].append(lines)
+        df = pd.DataFrame(data=df_rows)
+        return df.sample(frac=1, random_state=random_state).reset_index(drop=True)
+    
+    def compute(self, sentences, character, character_dict, base_folder, from_n_epochs='last'):
+        character_folder = os.path.join(base_folder, "Data", "Characters", character)
+        if from_n_epochs=='last':
+            try:
+                checkpoint_folder_template = character_dict[character]['classifier_name'] + '_'
+                checkpoint_names = [d for d in os.listdir(character_folder) if checkpoint_folder_template in d]
+                checkpoint_names.sort()
+                checkpoint_folder = checkpoint_names[-1]
+                checkpoint_folder = os.path.join(character_folder, checkpoint_folder)
+                classifier_path = checkpoint_folder
+            except:
+                raise Exception(checkpoint_folder_template+'*', 'not found in out folder')
+        else:
+            classifier_path = os.path.join(character_folder, character_dict[character]['classifier_name']+"_"+str(from_n_epochs))
+        classifier_model = keras.models.load_model(classifier_path)
+        sentence_transformer = SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
+        samples = [sentence_transformer.encode(line) for line in sentences]
+        triplets = list(combinations(samples, 3))
+        input_size = len(samples[0]) * 3
+        n_inputs = len(triplets)
+        inputs = np.array(triplets).reshape(n_inputs, input_size)
+        outputs = classifier_model(inputs)
+        return outputs
+    
+    def train(self, character, character_dict, source_dict, random_state, base_folder,
+              n_shuffles=10, shutdown_at_end=False, from_saved_embeddings=True, epochs=1000):
+        source = character_dict[character]['source']
+        source_folder = os.path.join(base_folder, "Data", "Sources", source)
+        character_folder = os.path.join(base_folder, "Data", "Characters", character)
         model_path = os.path.join(character_folder, character_dict[character]['classifier_name'])
-        series_df = pd.read_csv(os.path.join(source_folder, character_dict[character]['series_df_filename']))
-        print(series_df[series_df['character']==character])
+        series_df = pd.read_csv(os.path.join(source_folder, source_dict[source]['df_filename']))
+        series_df['character'] = series_df['character'].apply(lambda x: 1 if x==character else 0)
+        series_df = series_df[['character', 'line']]
+        if not os.path.exists(os.path.join(character_folder, character_dict[character]['encoded_lines_filename'])):
+            from_saved_embeddings = False
+            print('Encoded lines not found, from_saved_embeddings set to False')
+        if not from_saved_embeddings:
+            sentence_transformer = SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
+            series_df['encoded_line'] = [sentence_transformer.encode(line) for line in tqdm(series_df['line'])]
+            series_df[['line', 'character']].to_csv(
+                os.path.join(character_folder, character_dict[character]['classifier_df']), 
+                index = False
+            )
+            np.save(
+                os.path.join(character_folder, character_dict[character]['encoded_lines_filename']),
+                series_df['encoded_line'].to_numpy()
+            )
+            series_df = pd.read_csv(
+                os.path.join(character_folder, character_dict[character]['classifier_df']),
+                dtype={'line': str,
+                       'character': int
+                }
+            )
+            print("Saved encoded lines at", os.path.join(character_folder, character_dict[character]['encoded_lines_filename']))
+        series_df['encoded_line'] = np.load(
+            os.path.join(character_folder, character_dict[character]['encoded_lines_filename']), 
+                         allow_pickle=True
+        )
+        print("Loaded encoded lines from", os.path.join(character_folder, character_dict[character]['encoded_lines_filename']))
+        series_train_df, series_test_df = train_test_split(series_df, test_size=self.test_size, random_state=random_state)
+        series_train_df, series_val_df = train_test_split(series_train_df, test_size = 1-self.train_size-self.test_size,
+                                                          random_state=random_state)
+        shuffled_df = self.get_triplet_df(series_df, n_shuffles=n_shuffles, random_state=random_state)
+        tot_len = len(shuffled_df)
+        train_len = int(tot_len*self.train_size)
+        test_len = int(tot_len*self.test_size)
+        val_len = tot_len - train_len - test_len
+        print('Loading training data...')
+        X_train = np.array([[float(e) for e in s] for s in tqdm(shuffled_df['encoded_lines'][:train_len])])
+        y_train = np.array([c for c in tqdm(shuffled_df['character'][:train_len])])
+        print('Loading test data...')
+        X_test = np.array([[float(e) for e in s] for s in tqdm(shuffled_df['encoded_lines'][:test_len])])
+        y_test = np.array([c for c in tqdm(shuffled_df['character'][:test_len])])
+        print('Loading validation data...')
+        X_val = np.array([[float(e) for e in s] for s in tqdm(shuffled_df['encoded_lines'][:val_len])])
+        y_val = np.array([c for c in tqdm(shuffled_df['character'][:val_len])])
+        classifier_model = self.create_model(len(X_train[0],))
+        earlystop_callback = callbacks.EarlyStopping(
+            monitor="val_binary_accuracy",
+            min_delta=0,
+            patience=self.patience,
+            verbose=0,
+            mode="max",
+            baseline=None,
+            restore_best_weights=True,
+        )
+        # Fit classifier
+        train_history = classifier_model.fit(
+            X_train, 
+            y_train,
+            validation_data = (X_val, y_val),
+            epochs= epochs,
+            verbose = 1, 
+            callbacks=[earlystop_callback],
+            batch_size = self.batch_size
+        )
+        # Display confusion matrix
+        print('#'*25 + ' Model Test ' + '#'*25)
+        fig, ax=plt.subplots(1,1,figsize=(5,5))
+        y_pred = classifier_model.predict(X_test).round()
+        cm = confusion_matrix(y_test, y_pred)
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Others', character])
+        disp.plot(ax=ax)
+        plt.show()
+        # Save classifier and history
+        classifier_path = os.path.join(character_folder, character_dict[character]['classifier_name'] + "_" + \
+                                       str(train_history.params['epochs']))
+        classifier_model.save(classifier_path)
+        filename = character.lower() + '_training_history_' + str(train_history.params['epochs']) + '.json'
+        output_string = json.dumps(train_history.history)
+        with open(os.path.join(character_folder, filename), 'w') as file:
+            file.write(output_string)
+        if shutdown_at_end:
+            os.system('shutdown /' + shutdown_at_end)
 
 def distinct(sentences, ngram_size=3):
     scores = []
@@ -177,10 +362,10 @@ class BBMetric:
             self.train_require_args = set()
             self.train_optional_args = set()
         elif name == "semantic classifier":
-            self.compute_require_args = set(["sentences", "character"])
-            self.compute_optional_args = set()
-            self.train_require_args = set(["character", "character_dict", "base_folder"])
-            self.train_optional_args = set(["from_saved_embeddings", "shutdown_at_end", "n_shuffles"])
+            self.compute_require_args = set(["sentences", "character", "character_dict", "base_folder"])
+            self.compute_optional_args = set(['from_n_epochs'])
+            self.train_require_args = set(["character", "character_dict", "source_dict", "random_state", "base_folder"])
+            self.train_optional_args = set(["from_saved_embeddings", "shutdown_at_end", "n_shuffles", "epochs"])
         elif name == "perplexity":
             self.compute_require_args = set(["model", "tokenizer", "sentences"])
             self.compute_optional_args = set(["stride"])
@@ -300,7 +485,12 @@ class BBMetric:
         elif self.name == "human - style":
             result['score'] = self.metric(None, None, kwargs['filepath'], False, None)
         elif self.name == "semantic classifier":
-            raise NotImplementedError("Still Working on it!")
+            sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
+            if len(sentences) < 3:
+                raise Exception("Needs at least three sentences to run the classifier!")
+            outputs = self.metric.compute(sentences, kwargs['character'], kwargs['character_dict'], kwargs['base_folder'],
+                                          kwargs['from_n_epochs'] if 'from_n_epochs' in kwargs else 'last')
+            result['score'] = np.mean(np.array(outputs))
         return result
     
     def train(self, **kwargs):
@@ -320,10 +510,12 @@ class BBMetric:
            self.name == "perplexity":
             return
         elif self.name == "semantic classifier":
-            self.metric.train(kwargs['character'], kwargs['character_dict'], kwargs['base_folder'],
+            self.metric.train(kwargs['character'], kwargs['character_dict'], kwargs['source_dict'],
+                              kwargs['random_state'], kwargs['base_folder'],
                               kwargs['n_shuffles'] if 'n_shuffles' in kwargs else 10,
                               kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False,
-                              kwargs['from_saved_embeddings'] if 'from_saved_embeddings' in kwargs else True)
+                              kwargs['from_saved_embeddings'] if 'from_saved_embeddings' in kwargs else True,
+                              kwargs['epochs'] if 'epochs' in kwargs else 1000)
         elif self.name == "human - coherence":
             self.metric(kwargs['model'], kwargs['tokenizer'], kwargs['filepath'], True, 
                         kwargs['length'] if 'length' in kwargs else 5)
