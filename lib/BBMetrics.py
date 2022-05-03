@@ -14,6 +14,25 @@ consistency_questions = ["Who are you?",
                          "What is your job?",
                          "Where do you live?"]
 
+class BarneyBotTripletClassifier:
+    batch_size = 16
+    epochs = 1000
+    lr = 1e-6
+    regularizer_weight_r = 1e-4
+    regularizer_weight_s = 1e-3
+    dropout_rate = 0.2
+    train_size = 0.85
+    test_size = 0.10
+    version = ''
+
+    def train(character, character_dict, base_folder, n_shuffles, shutdown_at_end, from_saved_embeddings):
+        source_folder = os.path.join(base_folder, "Data", "Sources", character_dict[character]['source'])
+        character_folder = os.path.join(base_folder, "Data", "Character", character)
+        
+        model_path = os.path.join(character_folder, character_dict[character]['classifier_name'])
+        series_df = pd.read_csv(os.path.join(source_folder, character_dict[character]['series_df_filename']))
+        print(series_df[series_df['character']==character])
+
 def distinct(sentences, ngram_size=3):
     scores = []
     for sentence in sentences:
@@ -158,10 +177,10 @@ class BBMetric:
             self.train_require_args = set()
             self.train_optional_args = set()
         elif name == "semantic classifier":
-            self.compute_require_args = set(["sentences", "filepath"])
+            self.compute_require_args = set(["sentences", "character"])
             self.compute_optional_args = set()
-            self.train_require_args = set(["dataset", "character", "filepath"])
-            self.train_optional_args = set()
+            self.train_require_args = set(["character", "character_dict", "base_folder"])
+            self.train_optional_args = set(["from_saved_embeddings", "shutdown_at_end", "n_shuffles"])
         elif name == "perplexity":
             self.compute_require_args = set(["model", "tokenizer", "sentences"])
             self.compute_optional_args = set(["stride"])
@@ -213,7 +232,7 @@ class BBMetric:
                               lambda s, n: distinct(s, n))
         elif name == "semantic classifier":
             metric = BBMetric(name,
-                              SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2"))
+                              BarneyBotTripletClassifier())
         elif name == "human - coherence":
             metric = BBMetric(name,
                               lambda m, t, f, train, l: human_conversation(m, t, f, train, l))
@@ -301,7 +320,10 @@ class BBMetric:
            self.name == "perplexity":
             return
         elif self.name == "semantic classifier":
-            raise NotImplementedError("Still Working on it!")
+            self.metric.train(kwargs['character'], kwargs['character_dict'], kwargs['base_folder'],
+                              kwargs['n_shuffles'] if 'n_shuffles' in kwargs else 10,
+                              kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False,
+                              kwargs['from_saved_embeddings'] if 'from_saved_embeddings' in kwargs else True)
         elif self.name == "human - coherence":
             self.metric(kwargs['model'], kwargs['tokenizer'], kwargs['filepath'], True, 
                         kwargs['length'] if 'length' in kwargs else 5)
