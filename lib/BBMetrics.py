@@ -158,9 +158,9 @@ class BBMetric:
             self.train_require_args = set()
             self.train_optional_args = set()
         elif name == "semantic classifier":
-            self.compute_require_args = set(["sentences"])
+            self.compute_require_args = set(["sentences", "filepath"])
             self.compute_optional_args = set()
-            self.train_require_args = set(["dataset", "_training_args"])
+            self.train_require_args = set(["dataset", "character", "filepath"])
             self.train_optional_args = set()
         elif name == "perplexity":
             self.compute_require_args = set(["model", "tokenizer", "sentences"])
