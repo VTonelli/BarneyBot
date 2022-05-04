@@ -248,7 +248,7 @@ def distinct(sentences, ngram_size=3):
     for sentence in sentences:
         distinct_ngrams = set(ngrams(sentence.split(), ngram_size))
         scores.append(len(distinct_ngrams) / len(sentence))
-    return np.mean(np.array(scores))
+    return np.mean(np.array(scores)), np.std(np.array(scores))
 
 def perplexity(model, tokenizer, sentences, stride=64):
     encodings = tokenizer("\n\n".join(sentences), return_tensors="tf")
@@ -430,7 +430,7 @@ class BBMetric:
             metric = BBMetric(name,
                               pipeline("text-classification",
                                        model='bhadresh-savani/distilbert-base-uncased-emotion',
-                                       return_all_scores=False))
+                                       return_all_scores=True))
         elif name == "perplexity":
             metric = BBMetric(name,
                               lambda m, t, s, stride: perplexity(m, t, s, stride))
@@ -468,47 +468,65 @@ class BBMetric:
         if self.name == "bleu":
             predictions = [x.split() for x in kwargs['predictions']] if type(kwargs['predictions']) is list else [kwargs['predictions'].split()]
             references = [[x.split()] for x in kwargs['references']] if type(kwargs['references']) is list else [[kwargs['references'].split()]]
-            self.metric.add_batch(predictions=predictions,
-                                  references=references)
-            result['score'] = self.metric.compute()['bleu']
+            single_outputs = []
+            for i in range(len(predictions)): 
+                self.metric.add(prediction=predictions[i],
+                                reference=references[i])
+                single_outputs.append(self.metric.compute()['bleu'])
+            result['score'] = np.mean(np.array(single_outputs))
+            result['std'] = np.std(np.array(single_outputs))
         elif self.name == "semantic similarity":
             sentences_a = kwargs['sentences_a'] if type(kwargs['sentences_a']) is list else [kwargs['sentences_a']]
             sentences_b = kwargs['sentences_b'] if type(kwargs['sentences_b']) is list else [kwargs['sentences_b']]
-            result['scores'] = self.metric.predict(list(zip(sentences_a, sentences_b)))
+            single_outputs = self.metric.predict(list(zip(sentences_a, sentences_b)))
+            result['score'] = np.mean(np.array(single_outputs))
+            result['std'] = np.std(np.array(single_outputs))
         elif self.name == "rouge l":
             predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
-            self.metric.add_batch(predictions=predictions,
-                                  references=references)
-            result['score'] = self.metric.compute()['rougeL'].mid.fmeasure
+            single_outputs = []
+            for i in range(len(predictions)): 
+                self.metric.add(prediction=predictions[i],
+                                reference=references[i])
+                single_outputs.append(self.metric.compute()['rougeL'].mid.fmeasure)
+            result['score'] = np.mean(np.array(single_outputs))
+            result['std'] = np.std(np.array(single_outputs))
         elif self.name == "emotion":
             sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
             output = self.metric(sentences)
-            result['scores'] = []
-            result['labels'] = []
+            result['score'] = {}
+            result['std'] = {}
+            for emotion_dict in output[0]:
+                result['score'][emotion_dict['label']] = []
+            emotions_n = len(result['score'])
             for elem in output:
-                result['scores'].append(elem['score'])
-                result['labels'].append(elem['label'])
-            result['scores'] = np.array(result['scores'])
+                for emotion_dict in elem:
+                    result['score'][emotion_dict['label']].append(emotion_dict['score'])
+            for emotion_dict in output[0]:
+                emotion = emotion_dict['label']
+                result['std'][emotion] = np.std(np.array(result['score'][emotion]))
+                result['score'][emotion] = np.mean(np.array(result['score'][emotion]))
         elif self.name == "semantic answer similarity":
             predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
-            result['scores'] = np.diagonal(cosine_similarity(self.metric.encode(predictions),
-                                                             self.metric.encode(references)))
+            single_outputs = np.diagonal(cosine_similarity(self.metric.encode(predictions),
+                                                           self.metric.encode(references)))
+            result['score'] = np.mean(np.array(single_outputs))
+            result['std'] = np.std(np.array(single_outputs))
         elif self.name == "distinct":
             sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
-            result['score'] = self.metric(sentences,
-                                          kwargs['ngram_size'] if 'ngram_size' in kwargs else 3)
+            result['score'], result['std'] = self.metric(sentences,
+                                                         kwargs['ngram_size'] if 'ngram_size' in kwargs else 3)
         elif self.name == "perplexity":
             sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
-            result['score'] = self.metric(kwargs['model'], kwargs['tokenizer'], sentences,
-                                          kwargs['stride'] if 'stride' in kwargs else 64)
+            result['score_concat'] = self.metric(kwargs['model'], kwargs['tokenizer'], sentences,
+                                                 kwargs['stride'] if 'stride' in kwargs else 64)
         elif self.name == "human - coherence":
-            result['score'] = self.metric(None, None, kwargs['filepath'], False, None)
+            result['score'], result['std'] = self.metric(None, None, kwargs['filepath'], False, None)
         elif self.name == "human - consistency":
-            result['score'] = self.metric(None, None, kwargs['filepath'], False, None)
+            result['score'], result['std'] = self.metric(None, None, kwargs['filepath'], False, None)
         elif self.name == "human - style":
-            result['score'] = self.metric(None, None, kwargs['filepath'], False, None)
+            result['score'], result['std'] = self.metric(None, None, kwargs['filepath'], False, None)
         elif self.name == "semantic classifier":
             sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
             if len(sentences) < 3:
@@ -517,6 +535,7 @@ class BBMetric:
                                           kwargs['n_draws'] if 'n_draws' in kwargs else (len(sentences)-2),
                                           kwargs['from_n_epochs'] if 'from_n_epochs' in kwargs else 'last')
             result['score'] = np.mean(np.array(outputs))
+            result['std'] = np.std(np.array(outputs))
         return result
     
     def train(self, **kwargs):
