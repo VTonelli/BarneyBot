@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 import json
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from itertools import combinations
+import random
     
 consistency_questions = ["Who are you?",
                          "What is your name?",
@@ -25,6 +25,7 @@ consistency_questions = ["Who are you?",
 
 class BarneyBotTripletClassifier:
     def __init__(self):
+        # Training params
         self.batch_size = 16
         self.lr = 1e-6
         self.patience = 6
@@ -33,7 +34,18 @@ class BarneyBotTripletClassifier:
         self.dropout_rate = 0.2
         self.train_size = 0.85
         self.test_size = 0.10
+        # Instance state
+        self.sentence_transformer = None
+        self.character = None
+        self.classifier_model = None
+        self.trained_epochs = None
 
+    def reset_state(self):
+        self.sentence_transformer = None
+        self.character = None
+        self.classifier_model = None
+        self.trained_epochs = None
+        
     def create_model(self, input_size):
         inputs = keras.Input(shape=input_size)
         x = layers.Dense(
@@ -103,7 +115,7 @@ class BarneyBotTripletClassifier:
         df = pd.DataFrame(data=df_rows)
         return df.sample(frac=1, random_state=random_state).reset_index(drop=True)
     
-    def compute(self, sentences, character, character_dict, base_folder, from_n_epochs='last'):
+    def compute(self, sentences, character, character_dict, base_folder, n_draws, from_n_epochs='last'):
         character_folder = os.path.join(base_folder, "Data", "Characters", character)
         if from_n_epochs=='last':
             try:
@@ -113,22 +125,33 @@ class BarneyBotTripletClassifier:
                 checkpoint_folder = checkpoint_names[-1]
                 checkpoint_folder = os.path.join(character_folder, checkpoint_folder)
                 classifier_path = checkpoint_folder
+                n_epochs = int(checkpoint_folder.rfind('_') + 1)
             except:
                 raise Exception(checkpoint_folder_template+'*', 'not found in out folder')
         else:
             classifier_path = os.path.join(character_folder, character_dict[character]['classifier_name']+"_"+str(from_n_epochs))
-        classifier_model = keras.models.load_model(classifier_path)
-        sentence_transformer = SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
-        samples = [sentence_transformer.encode(line) for line in sentences]
-        triplets = list(combinations(samples, 3))
+            n_epochs = from_n_epochs
+        if not self.classifier_model or self.trained_epochs != n_epochs or character != self.character:
+            self.classifier_model = keras.models.load_model(classifier_path)
+            self.trained_epochs = n_epochs
+            self.character = character
+        if not self.sentence_transformer:
+            self.sentence_transformer = SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
+        print("Using classifier at " + classifier_path)
+        samples = [self.sentence_transformer.encode(line) for line in sentences]
+        n_samples = len(samples)
+        triplets = []
+        for _ in range(n_draws):
+            rnd_indices = random.sample(range(0, n_samples), 3)
+            triplets.append([samples[rnd_indices[0]], samples[rnd_indices[1]], samples[rnd_indices[2]]])
         input_size = len(samples[0]) * 3
-        n_inputs = len(triplets)
-        inputs = np.array(triplets).reshape(n_inputs, input_size)
-        outputs = classifier_model(inputs)
+        inputs = np.array(triplets).reshape(n_draws, input_size)
+        outputs = self.classifier_model(inputs)
         return outputs
     
     def train(self, character, character_dict, source_dict, random_state, base_folder,
               n_shuffles=10, shutdown_at_end=False, from_saved_embeddings=True, epochs=1000):
+        self.reset_state()
         source = character_dict[character]['source']
         source_folder = os.path.join(base_folder, "Data", "Sources", source)
         character_folder = os.path.join(base_folder, "Data", "Characters", character)
@@ -140,8 +163,8 @@ class BarneyBotTripletClassifier:
             from_saved_embeddings = False
             print('Encoded lines not found, from_saved_embeddings set to False')
         if not from_saved_embeddings:
-            sentence_transformer = SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
-            series_df['encoded_line'] = [sentence_transformer.encode(line) for line in tqdm(series_df['line'])]
+            self.sentence_transformer = SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
+            series_df['encoded_line'] = [self.sentence_transformer.encode(line) for line in tqdm(series_df['line'])]
             series_df[['line', 'character']].to_csv(
                 os.path.join(character_folder, character_dict[character]['classifier_df']), 
                 index = False
@@ -179,7 +202,7 @@ class BarneyBotTripletClassifier:
         print('Loading validation data...')
         X_val = np.array([[float(e) for e in s] for s in tqdm(shuffled_df['encoded_lines'][:val_len])])
         y_val = np.array([c for c in tqdm(shuffled_df['character'][:val_len])])
-        classifier_model = self.create_model(len(X_train[0],))
+        self.classifier_model = self.create_model(len(X_train[0],))
         earlystop_callback = callbacks.EarlyStopping(
             monitor="val_binary_accuracy",
             min_delta=0,
@@ -190,7 +213,7 @@ class BarneyBotTripletClassifier:
             restore_best_weights=True,
         )
         # Fit classifier
-        train_history = classifier_model.fit(
+        train_history = self.classifier_model.fit(
             X_train, 
             y_train,
             validation_data = (X_val, y_val),
@@ -199,10 +222,12 @@ class BarneyBotTripletClassifier:
             callbacks=[earlystop_callback],
             batch_size = self.batch_size
         )
+        self.character = character
+        self.epochs = train_history.params['epochs']
         # Display confusion matrix
         print('#'*25 + ' Model Test ' + '#'*25)
         fig, ax=plt.subplots(1,1,figsize=(5,5))
-        y_pred = classifier_model.predict(X_test).round()
+        y_pred = self.classifier_model.predict(X_test).round()
         cm = confusion_matrix(y_test, y_pred)
         disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Others', character])
         disp.plot(ax=ax)
@@ -210,7 +235,7 @@ class BarneyBotTripletClassifier:
         # Save classifier and history
         classifier_path = os.path.join(character_folder, character_dict[character]['classifier_name'] + "_" + \
                                        str(train_history.params['epochs']))
-        classifier_model.save(classifier_path)
+        self.classifier_model.save(classifier_path)
         filename = character.lower() + '_training_history_' + str(train_history.params['epochs']) + '.json'
         output_string = json.dumps(train_history.history)
         with open(os.path.join(character_folder, filename), 'w') as file:
@@ -363,7 +388,7 @@ class BBMetric:
             self.train_optional_args = set()
         elif name == "semantic classifier":
             self.compute_require_args = set(["sentences", "character", "character_dict", "base_folder"])
-            self.compute_optional_args = set(['from_n_epochs'])
+            self.compute_optional_args = set(['from_n_epochs', "n_draws"])
             self.train_require_args = set(["character", "character_dict", "source_dict", "random_state", "base_folder"])
             self.train_optional_args = set(["from_saved_embeddings", "shutdown_at_end", "n_shuffles", "epochs"])
         elif name == "perplexity":
@@ -489,6 +514,7 @@ class BBMetric:
             if len(sentences) < 3:
                 raise Exception("Needs at least three sentences to run the classifier!")
             outputs = self.metric.compute(sentences, kwargs['character'], kwargs['character_dict'], kwargs['base_folder'],
+                                          kwargs['n_draws'] if 'n_draws' in kwargs else (len(sentences)-2),
                                           kwargs['from_n_epochs'] if 'from_n_epochs' in kwargs else 'last')
             result['score'] = np.mean(np.array(outputs))
         return result
