@@ -355,62 +355,74 @@ class BBMetric:
         self.train_require_args = None
         self.compute_optional_args = None
         self.train_optional_args = None
+        self.return_args = None
         
         if name == "bleu":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
+            self.return_args = ['score', 'std']
         elif name == "semantic similarity":
             self.compute_require_args = set(["sentences_a", "sentences_b"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
+            self.return_args = ['score', 'std']
         elif name == "rouge l":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
+            self.return_args = ['score', 'std']
         elif name == "emotion":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
+            self.return_args = ['label', 'score', 'std']
         elif name == "semantic answer similarity":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
+            self.return_args = ['score', 'std']
         elif name == "distinct":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set(["ngram_size"])
             self.train_require_args = set()
             self.train_optional_args = set()
+            self.return_args = ['score', 'std']
         elif name == "semantic classifier":
             self.compute_require_args = set(["sentences", "character", "character_dict", "base_folder"])
             self.compute_optional_args = set(['from_n_epochs', "n_draws"])
             self.train_require_args = set(["character", "character_dict", "source_dict", "random_state", "base_folder"])
             self.train_optional_args = set(["from_saved_embeddings", "shutdown_at_end", "n_shuffles", "epochs"])
+            self.return_args = ['score', 'std']
         elif name == "perplexity":
             self.compute_require_args = set(["model", "tokenizer", "sentences"])
             self.compute_optional_args = set(["stride"])
             self.train_require_args = set()
             self.train_optional_args = set()
+            self.return_args = ['score_concat']
         elif name == "human - coherence":
             self.compute_require_args = set(["filepath"])
             self.compute_optional_args = set()
             self.train_require_args = set(["model", "tokenizer", "filepath"])
             self.train_optional_args = set(["length"])
+            self.return_args = ['score', 'std']
         elif name == "human - consistency":
             self.compute_require_args = set(["filepath"])
             self.compute_optional_args = set()
             self.train_require_args = set(["model", "tokenizer", "filepath"])
             self.train_optional_args = set()
+            self.return_args = ['score', 'std']
         elif name == "human - style":
             self.compute_require_args = set(["filepath"])
             self.compute_optional_args = set()
             self.train_require_args = set(["model", "tokenizer", "filepath", "questions"])
             self.train_optional_args = set()
+            self.return_args = ['score', 'std']
             
     def __str__(self):
         return str({"instance": self, "name": self.name, "metric": self.metric})
@@ -506,6 +518,9 @@ class BBMetric:
                 emotion = emotion_dict['label']
                 result['std'][emotion] = np.std(np.array(result['score'][emotion]))
                 result['score'][emotion] = np.mean(np.array(result['score'][emotion]))
+            result['label'] = list(result['score'].keys())
+            result['score'] = list(result['score'].values())
+            result['std'] = list(result['std'].values())
         elif self.name == "semantic answer similarity":
             predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
