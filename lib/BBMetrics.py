@@ -262,7 +262,8 @@ def human_conversation(model, tokenizer, filepath, train, length=5):
             bot_input_ids = tf.concat([chat_history_ids, new_user_input_ids], axis=-1) if step > 0 else new_user_input_ids
             # generated a response while limiting the current answer to 128 tokens,
             max_length = 128 + bot_input_ids.shape[1]
-            chat_history_ids = model.generate(bot_input_ids, max_length=max_length, pad_token_id=tokenizer.eos_token_id)
+            chat_history_ids = model.generate(bot_input_ids, max_length=max_length, pad_token_id=tokenizer.eos_token_id,
+                                              do_sample=True, top_p=0.92, top_k=50)
             # pretty print last ouput tokens from bot
             bot_sentence = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
             chat_history.append(bot_sentence)
@@ -286,8 +287,7 @@ def human_conversation(model, tokenizer, filepath, train, length=5):
         human_convo_df.to_csv(filepath, index=False)
     else:
         human_convo_df = pd.read_csv(filepath)
-        average_score = np.average(human_convo_df['score'].to_numpy())
-        return average_score / 5
+        return np.average(human_convo_df['score'].to_numpy() / 5), np.std(human_convo_df['score'].to_numpy() / 5)
     
 def single_answers(model, tokenizer, filepath, train, questions):
     questions_history = []
@@ -298,7 +298,8 @@ def single_answers(model, tokenizer, filepath, train, questions):
             question_input_ids = tokenizer.encode(question + tokenizer.eos_token, return_tensors='tf')
             # generated a response while limiting the current answer to 128 tokens,
             max_length = 128 + question_input_ids.shape[1]
-            chat_history_ids = model.generate(question_input_ids, max_length=max_length, pad_token_id=tokenizer.eos_token_id)
+            chat_history_ids = model.generate(question_input_ids, max_length=max_length, pad_token_id=tokenizer.eos_token_id,
+                                              do_sample=True, top_p=0.92, top_k=50)
             # pretty print last ouput tokens from bot
             bot_sentence = tokenizer.decode(chat_history_ids[:, question_input_ids.shape[-1]:][0], skip_special_tokens=True)
             questions_history.append((question, bot_sentence))
@@ -323,7 +324,7 @@ def single_answers(model, tokenizer, filepath, train, questions):
     else:
         questions_df = pd.read_csv(filepath)
         average_score = np.average(questions_df['score'].to_numpy())
-        return average_score / 5
+        return np.average(human_convo_df['score'].to_numpy() / 5), np.std(human_convo_df['score'].to_numpy() / 5)
 
 class BBMetric:
     metrics_list = ["bleu", "semantic similarity", "rouge l",
