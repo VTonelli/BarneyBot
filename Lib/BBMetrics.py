@@ -17,6 +17,7 @@ import json
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import random
+import itertools
     
 consistency_questions = ["Who are you?",
                          "What is your name?",
@@ -113,7 +114,7 @@ class BarneyBotTripletClassifier:
         df = pd.DataFrame(data=df_rows)
         return df.sample(frac=1, random_state=random_state).reset_index(drop=True)
     
-    def compute(self, sentences, character, character_dict, base_folder, n_draws):
+    def compute(self, sentences, character, character_dict, base_folder, n_sentences='all', verbose=False):
         character_folder = os.path.join(base_folder, "Data", "Characters", character)
         checkpoint_folder = os.path.join(character_folder, character_dict[character]['classifier_name'])
         if not self.classifier_model or character != self.character:
@@ -121,15 +122,14 @@ class BarneyBotTripletClassifier:
             self.character = character
         if not self.sentence_transformer:
             self.sentence_transformer = SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2")
-        print("Using classifier at " + checkpoint_folder)
-        samples = [self.sentence_transformer.encode(line) for line in sentences]
-        n_samples = len(samples)
-        triplets = []
-        for _ in range(n_draws):
-            rnd_indices = random.sample(range(0, n_samples), 3)
-            triplets.append([samples[rnd_indices[0]], samples[rnd_indices[1]], samples[rnd_indices[2]]])
-        input_size = len(samples[0]) * 3
-        inputs = np.array(triplets).reshape(n_draws, input_size)
+        if verbose:
+            print("Using classifier at " + checkpoint_folder)
+        samples = np.array([self.sentence_transformer.encode(line) for line in sentences])
+        random.seed(1)
+        if type(n_sentences) == int:
+            sampled_indices = np.random.randint(0, len(samples), size=n_sentences)
+            samples = samples[sampled_indices]
+        inputs = np.array([np.concatenate(triplet) for triplet in itertools.permutations(samples, 3)])
         outputs = self.classifier_model(inputs)
         return outputs
     
@@ -378,7 +378,7 @@ class BBMetric:
             self.return_args = ['score', 'std']
         elif name == "semantic classifier":
             self.compute_require_args = set(["sentences", "character", "character_dict", "base_folder"])
-            self.compute_optional_args = set(["n_draws"])
+            self.compute_optional_args = set(["n_sentences", "verbose"])
             self.train_require_args = set(["character", "character_dict", "source_dict", "random_state", "base_folder"])
             self.train_optional_args = set(["from_saved_embeddings", "shutdown_at_end", "n_shuffles"])
             self.return_args = ['score', 'std']
@@ -529,8 +529,15 @@ class BBMetric:
             sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
             if len(sentences) < 3:
                 raise Exception("Needs at least three sentences to run the classifier!")
+            n_sentences = kwargs['n_sentences'] if 'n_sentences' in kwargs else 'all'
+            if n_sentences != 'all' and type(n_sentences) != int:
+                raise Exception("Invalid type for n_sentences!")
+            if type(n_sentences) == int and n_sentences < 0:
+                raise Exception("Invalid number of sentences!")
+            if type(n_sentences) == int and n_sentences > len(sentences):
+                n_sentences = 'all'
             outputs = self.metric.compute(sentences, kwargs['character'], kwargs['character_dict'], kwargs['base_folder'],
-                                          kwargs['n_draws'] if 'n_draws' in kwargs else (len(sentences)-2))
+                                          n_sentences, kwargs['verbose'] if 'verbose' in kwargs else False)
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
         return result
