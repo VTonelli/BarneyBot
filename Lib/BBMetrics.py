@@ -541,7 +541,10 @@ class BBMetric:
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
         for key in result:
-            result[key] = result[key].tolist()
+            try:
+                result[key] = result[key].tolist()
+            except:
+                pass
         return result
     
     def train(self, **kwargs):
