@@ -540,6 +540,8 @@ class BBMetric:
                                           n_sentences, kwargs['verbose'] if 'verbose' in kwargs else False)
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
+        for key in result:
+            result[key] = result[key].tolist()
         return result
     
     def train(self, **kwargs):
