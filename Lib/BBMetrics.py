@@ -324,7 +324,7 @@ def single_answers(model, tokenizer, filepath, train, questions):
     else:
         questions_df = pd.read_csv(filepath)
         average_score = np.average(questions_df['score'].to_numpy())
-        return np.average(human_convo_df['score'].to_numpy() / 5), np.std(human_convo_df['score'].to_numpy() / 5)
+        return np.average(questions_df['score'].to_numpy() / 5), np.std(questions_df['score'].to_numpy() / 5)
 
 class BBMetric:
     metrics_list = ["bleu", "semantic similarity", "rouge l",

@@ -1,4 +1,4 @@
-context,label,name_serie
+context,label,source
 "Barney, this is about the building.",Come on. This is so about the girl.,HIMYM
 All right. I'll be right there. Stay where you are.,"Ted, Ted.",HIMYM
 I think there's a pretty girl smiling at me there.,"Hey, this is a chair, but go ahead and drag it.",HIMYM
@@ -29,8 +29,8 @@ Hey.,"Hey-hey-hey! So, how did it go with Dana? Any reason I should leave a bloc
 "Joey... are you sure? I mean, I know how much you love him!","Rachel... let's be clear on this, ok? I do not love Hugsy. I like him a normal amount...",Friends
 "Ok, ten.","Okay, Monica picks ten, I call nine! Anyone else?",Friends
 "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?","Oh yeah, no problem.",Friends
-What are you doing for a living?,I am a lawyer.,STD
-How are you doing?,Good.,STD
-Where are you going to?,I am going out.,STD
-What are you wearing?,A T-shirt.,STD
-What do you want to do tonight?,Watching tv.,STD
+What are you doing for a living?,I am a lawyer.,Standard
+How are you doing?,Good.,Standard
+Where are you going to?,I am going out.,Standard
+What are you wearing?,A T-shirt.,Standard
+What do you want to do tonight?,Watching tv.,Standard
