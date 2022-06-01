@@ -1,0 +1,289 @@
+{
+    "metadata": {
+        "ordering": [
+            "context-chatbota",
+            "context-chatbotb",
+            "chatbotb-chatbota",
+            "ccl"
+        ]
+    },
+    "semantic answer similarity": [
+        {
+            "score": 0.038395728915929794,
+            "std": 0.05448443442583084
+        },
+        {
+            "score": 0.07509466260671616,
+            "std": 0.15709038078784943
+        },
+        {
+            "score": 0.017233509570360184,
+            "std": 0.017516061663627625
+        },
+        0.46412296910228984
+    ],
+    "bleu": [
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        0.5
+    ],
+    "rouge l": [
+        {
+            "score": 0.04486410342767079,
+            "std": 0.06874329035583517
+        },
+        {
+            "score": 0.08013495271629664,
+            "std": 0.11166912171799044
+        },
+        {
+            "score": 0.054982371847033494,
+            "std": 0.06912788238760251
+        },
+        0.46686269772310734
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.123951607290942,
+            "std": 0.04849877746138806
+        },
+        {
+            "score": 0.12767908002919123,
+            "std": 0.055922195335399334
+        },
+        0.49414216937315125
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.10227911342351165,
+                0.33726308339225525,
+                0.005861289196764119,
+                0.46907362272281067,
+                0.08321001948248262,
+                0.002312873212005278
+            ],
+            "std": [
+                0.24843124549331447,
+                0.3786943517183285,
+                0.008557273837262491,
+                0.3388039646093638,
+                0.12489404708474953,
+                0.001372446578892026
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.09551912617670107,
+                0.313351019554206,
+                0.04772680392239376,
+                0.4246950338702715,
+                0.08526560905863464,
+                0.033442412699930306
+            ],
+            "std": [
+                0.22831241864298865,
+                0.34709794735664556,
+                0.18176284984923072,
+                0.3532619036302964,
+                0.17715247396901906,
+                0.16396040331773576
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.9972282844865324
+    ],
+    "semantic similarity": [
+        {
+            "score": 0.22866401076316833,
+            "std": 0.13619914650917053
+        },
+        {
+            "score": 0.27044767141342163,
+            "std": 0.12796513736248016
+        },
+        {
+            "score": 0.18091562390327454,
+            "std": 0.10234908014535904
+        },
+        0.47545450798457
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.5573427677154541,
+            "std": 0.46157151460647583
+        },
+        {
+            "score": 0.034739043563604355,
+            "std": 0.16054703295230865
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "There will be a large contingent of people there",
+            "Vader stands on the Death Star platform and watches as the guards whip past.",
+            "I'm on my way, look where she is, she's right there.",
+            "If you don't mind me asking what is your secret?",
+            "The Force is with you.",
+            "What is it, young Skywalker?",
+            "Chewie, you found the Rebel spies.",
+            "He is the son of Anakin.",
+            "No.If you had told me that you would have broken this ship. That would be unfortunate.",
+            "No! I want them dead.",
+            "It's not impossible.",
+            "Lord Vader, what is your plan with the Millennium Falcon?",
+            "He is a great man.",
+            "Your father was right.He told you,That the Rebellion was a lie.",
+            "Yes, my lord.",
+            "We must destroy them.",
+            "Amen. And now I know you will die.",
+            "Vader's lightsaber swings around in the circle as the circle pushes closer to the Death Star.",
+            "Vader calmly adjusts his control stick and calmly adjusts his control stick",
+            "Yes, Commander.",
+            "Yes, my lord.",
+            "We've traced the Rebel spies to this location. Take her away!",
+            "I told you to stay here!",
+            "Darth Vader's guards have been beaten for all of this, and now they're in command of the Millennium Falcon.",
+            "He turned in his mind and turned to the side.",
+            "Yes, sir.",
+            "Pardon me, Ambassador.",
+            "No, my Lord.",
+            "She will never stop being proud.",
+            "He's on his way to the Ambassador's cell, you know.",
+            "The Emperor does not concern me as a senate.",
+            "Yes, my lord.",
+            "I'll keep an eye on you, Commander.",
+            "The Emperor commands you not to target any ships with the Force that are not in range of this facility.",
+            "Yes, my Lord."
+        ],
+        "chatbotb": [
+            "No. He's a robot.",
+            "I guess so. Hey, buddy. Can we take a few seconds to admire this?",
+            "Well, I always wanted a girder.",
+            "I love you, Zoidberg! You're one of the greats!",
+            "No!",
+            "My heart stopped beating when I saw you.",
+            "Good work, Bender.",
+            "I didn't see the part where you got your own nose removed, huh? I'd like to think that's what you meant.",
+            "And what do you think of that?",
+            "Fry, I think it may be time we went back and forth to the bathroom for a few hours.",
+            "There's a shelter in the woods where his owners buried him.",
+            "Oh, crap! That stinks!",
+            "Well, at least now he knows what it means to be a human female...a...hot mess!",
+            "Yes, Bender.",
+            "Well, I've only got one thing to say to you. One up vote for you. Bender: Please make a deal. Here, we'll use those three discs you're looking for.",
+            "What's the point of having Flexo on a hoverboat when you can't fly a spaceship.",
+            "Nah, just stick to this sub and watch what Leela says.",
+            "Then I shall slay thee.",
+            "Uh, no. I was just curious.",
+            "It's my old broken friend.",
+            "So when do we start?",
+            "And they were right. We are a planet ruled by a galactic super power.",
+            "I know you did it. But the Emperor had a mission. To slay the Huns with his bare hands.",
+            "Yeah!",
+            "Yes they are.",
+            "Yes. I'm just a simple old meatball.",
+            "C'mon, Fry! Get up!",
+            "No, but you're quite the opposite. I love him and I really can't let go of him.",
+            "Ten dollars? I'll go!",
+            "It's all a plan, Leela.",
+            "I'm a retired alcoholic who likes to drink but he has no idea what is going on. You don't need an alcoholic to know what's going on here.",
+            "Hey! I'm a Globetrotter!",
+            "To the beach!",
+            "What's the question?",
+            "We could just make a few more costumes."
+        ]
+    }
+}

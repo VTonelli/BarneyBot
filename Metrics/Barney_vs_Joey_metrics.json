@@ -1,0 +1,289 @@
+{
+    "metadata": {
+        "ordering": [
+            "context-chatbota",
+            "context-chatbotb",
+            "chatbotb-chatbota",
+            "ccl"
+        ]
+    },
+    "semantic similarity": [
+        {
+            "score": 0.13943339884281158,
+            "std": 0.23187044262886047
+        },
+        {
+            "score": 0.05502849817276001,
+            "std": 0.08120716363191605
+        },
+        {
+            "score": 0.061764881014823914,
+            "std": 0.14532716572284698
+        },
+        0.42106464322189674
+    ],
+    "bleu": [
+        {
+            "score": 0.014518078518703278,
+            "std": 0.08465421744814575
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        0.48558730878323436
+    ],
+    "rouge l": [
+        {
+            "score": 0.10217739551089826,
+            "std": 0.18753060145030073
+        },
+        {
+            "score": 0.052969183428958996,
+            "std": 0.06971576223938476
+        },
+        {
+            "score": 0.05399236364780685,
+            "std": 0.09690134000832445
+        },
+        0.4534600996523498
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.11551354651749131,
+            "std": 0.06356381759303943
+        },
+        {
+            "score": 0.14459486779977543,
+            "std": 0.05558173235416881
+        },
+        0.504799647820859
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.0692946153144086,
+                0.35652533629243927,
+                0.0721272528271324,
+                0.36523466517433656,
+                0.1339484488146679,
+                0.002869673995467435
+            ],
+            "std": [
+                0.2234993081290007,
+                0.41535769879836204,
+                0.23398821071245843,
+                0.38786465483804555,
+                0.2611197502129322,
+                0.004709275553613868
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.07663500758270467,
+                0.35001751492964106,
+                0.029738739795201193,
+                0.43410181272109705,
+                0.1006008426983109,
+                0.00890608421302334
+            ],
+            "std": [
+                0.22924260608772037,
+                0.4137635008063053,
+                0.16273669583413555,
+                0.3972228179294453,
+                0.22657564449505438,
+                0.04144563810605149
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.9820853039583618
+    ],
+    "semantic answer similarity": [
+        {
+            "score": 0.3517177999019623,
+            "std": 0.2153531163930893
+        },
+        {
+            "score": 0.28004610538482666,
+            "std": 0.09693237394094467
+        },
+        {
+            "score": 0.2753688395023346,
+            "std": 0.14392156898975372
+        },
+        0.46881072026477444
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.3901313841342926,
+            "std": 0.44552651047706604
+        },
+        {
+            "score": 0.35465237498283386,
+            "std": 0.4360698163509369
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "Building.",
+            "Oh. God. Thank you.",
+            "Is that a thing you do with your tongue?",
+            "I love you, too.",
+            "Just don't tell her.",
+            "Hey, what happened to your little paw?",
+            "We just got a shipment of stamps.",
+            "I wish I could, I just never will, and all because I fear it may end me on the path to power and glory...  No, I'm kidding, I'm going to run off into the woods with my woes.",
+            "I want your body, and not some crap out of a magazine in a box. My god. It's an apartment. That's an apartment. It's a place I can leave my body and move to when I'm dead. In fact, I think you'll find a suitable replacement. Your name will be Robin. And you'll find a suitable replacement for Ted.",
+            "I'm going.",
+            "Cause he's a cat person.",
+            "What are you doing?",
+            "Doggie.",
+            "A word, but you know what, I love the language. I'm tired of being the only one who speaks it. And it's not because I hate it. I hate it because it's how I am.",
+            "No. I'm gonna have a field day. That's my day off.",
+            "Oh, my God! Barney is here! He's here!",
+            "What?",
+            "I'm too scared to prove to anyone that I was wrong.",
+            "I'm fine. I'm fine.",
+            "I'm still shaking. It's nothing. I just got a shipment of cigarettes that came with some tape I left over from last night.",
+            "Who's gonna fight me?",
+            "That's not a theory. That's... a picture. That's not a theory. That's... that's... an actual picture.",
+            "Come on, dude. That's like saying God is coming to Earth. It's ridiculous.",
+            "Of course, you did. That's why I brought the little blue whale in case we ever go swimming together again.",
+            "We have a strict no sexual relationships policy.",
+            "Yeah. Yeah. Well, I don't know, I'm kind of tired, 'cause I slept through it. You guys slept through it? Okay, you did it again!",
+            "Hello.",
+            "You do not. Barney.",
+            "Hey, how's everything going?",
+            "Absolutely.",
+            "Yeah, it's pretty rough. I mean, the bar's pretty high, but you're not gonna go higher than a thousand dollars. And you're not going to try to cash in on that hot wings money by giving me a hundred bucks to take my suit off the dresser's lap.",
+            "I'm fine. How are you doing?",
+            "The Arcadian. It's great, isn't it?",
+            "Oh, I love this.",
+            "The first three..."
+        ],
+        "chatbotb": [
+            "I know!",
+            "No, no, no. Look, it's not your fault that there are like so few people around here. I mean, what the hell are you doing?",
+            "What?!",
+            "No-no! No! Don't do it! Joey, you don't want to hear this! I'm sorry. I'm sorry. I'm sorry.",
+            "No, I mean we both want the same thing!",
+            "So uh, how do you feel about these little guys who, who are supposed to be big boys, and I do not have them?",
+            "So I just ordered the food. What should I put on top?",
+            "I guess! But uh, it doesnt mean a thing.",
+            "Well, you broke it.",
+            "Joey, we have to make room for Janine, and that room is gonna have to stay for a while.",
+            "Because I gave him a chance to learn the secrets of the city. And he wouldnt let them get away.",
+            "You mean like when we had wine and you ate it?",
+            "Ross, he'll never get it! He's never gotten that part! He's always been all white! He's always been a red head! What's going on with you guys?",
+            "Joey, I am an amazing actor, and I cannot say I have any lines!",
+            "What're you doing?",
+            "Thats great, yeah.",
+            "That's it! I'm not a man anymore! I'm an outlaw!",
+            "Okay. Oh, so you wanna go watch me again, huh?",
+            "Oh, no. I'm fine.",
+            "Okay! Okay. Ive been looking all over for a woman like you.",
+            "You got a problem.",
+            "They're on the way.",
+            "Oh, no, I'm not gonna make any changes. Oh, theres the guy from work who always talks like that about you. Yeah, we uh, talk about all the great stuff, uh, the great stuff. The great stuff.",
+            "Hold on, lets just stop here and get some food.",
+            "Theres a reason theyre not gonna be there.",
+            "No, I wish. No. I went to a little restaurant and he made me a cheeseburger.  Oh! Oh! Oh! I was just over there eating an apple.",
+            "Oh, I'm not a guy! You don't have to be a guy to understand a joke!",
+            "I love Chandler.",
+            "Ooh, this might be tricky for Joey.",
+            "Yeah, okay. That'll be fine, just pick up the phone.",
+            "Yeah. Yeah. Why?",
+            "Oh, uh, I just got off the phone with Angela Lansbanger.",
+            "Oh, oh, oh... I thought you were coming home.",
+            "Hey, Chandler you know, Monica and I are both wearing thongs, but I thought that thongs are more appropriate.",
+            "I dont know! I dont have anything in mind, Im afraid"
+        ]
+    }
+}

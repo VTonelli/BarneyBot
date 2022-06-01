@@ -415,7 +415,7 @@ class BBMetric:
         if name == "bleu":
             metric = BBMetric(name,
                               datasets.load_metric('bleu'))
-        elif name == "semantic similarity":
+        elif name == "semantic answer similarity":
             metric = BBMetric(name,
                               CrossEncoder('cross-encoder/stsb-roberta-large'))
         elif name == "rouge l":
@@ -429,7 +429,7 @@ class BBMetric:
         elif name == "perplexity":
             metric = BBMetric(name,
                               lambda m, t, s, stride: perplexity(m, t, s, stride))
-        elif name == "semantic answer similarity":
+        elif name == "semantic similarity":
             metric = BBMetric(name,
                               SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2"))
         elif name == "distinct":
@@ -470,7 +470,7 @@ class BBMetric:
                 single_outputs.append(self.metric.compute()['bleu'])
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
-        elif self.name == "semantic similarity":
+        elif self.name == "semantic answer similarity":
             sentences_a = kwargs['sentences_a'] if type(kwargs['sentences_a']) is list else [kwargs['sentences_a']]
             sentences_b = kwargs['sentences_b'] if type(kwargs['sentences_b']) is list else [kwargs['sentences_b']]
             single_outputs = self.metric.predict(list(zip(sentences_a, sentences_b)))
@@ -504,7 +504,7 @@ class BBMetric:
             result['label'] = list(result['score'].keys())
             result['score'] = list(result['score'].values())
             result['std'] = list(result['std'].values())
-        elif self.name == "semantic answer similarity":
+        elif self.name == "semantic similarity":
             predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
             single_outputs = np.diagonal(cosine_similarity(self.metric.encode(predictions),

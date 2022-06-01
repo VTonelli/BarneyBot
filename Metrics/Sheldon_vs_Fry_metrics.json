@@ -1,0 +1,289 @@
+{
+    "metadata": {
+        "ordering": [
+            "context-chatbota",
+            "context-chatbotb",
+            "chatbotb-chatbota",
+            "ccl"
+        ]
+    },
+    "semantic answer similarity": [
+        {
+            "score": 0.15390443801879883,
+            "std": 0.2463175356388092
+        },
+        {
+            "score": 0.1056717038154602,
+            "std": 0.15868797898292542
+        },
+        {
+            "score": 0.10573701560497284,
+            "std": 0.16778552532196045
+        },
+        0.45852062235554947
+    ],
+    "bleu": [
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        0.5
+    ],
+    "rouge l": [
+        {
+            "score": 0.1364958275231719,
+            "std": 0.24561809749174393
+        },
+        {
+            "score": 0.11203439187911236,
+            "std": 0.1594007206969413
+        },
+        {
+            "score": 0.079886394930527,
+            "std": 0.15237013573941918
+        },
+        0.47902866332032273
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.1156851265875412,
+            "std": 0.07239627051026613
+        },
+        {
+            "score": 0.1342354755366571,
+            "std": 0.048951462257728603
+        },
+        0.5031847989245717
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.08384530270206077,
+                0.4219736336489275,
+                0.059324617222383885,
+                0.36293581232228983,
+                0.04067507253036768,
+                0.03124554157859945
+            ],
+            "std": [
+                0.23796290894485178,
+                0.43392703821621803,
+                0.22209018580854803,
+                0.38882522334125064,
+                0.09207104715119722,
+                0.16439770181234112
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.059007682078351664,
+                0.5283674104654762,
+                0.02798865860012094,
+                0.319303112900317,
+                0.06325300736311225,
+                0.002080140669464267
+            ],
+            "std": [
+                0.18285326693380247,
+                0.4426604984311038,
+                0.14377985676302515,
+                0.38273415360774604,
+                0.1570355693332824,
+                0.0017602551760725095
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.9723567305678069
+    ],
+    "semantic similarity": [
+        {
+            "score": 0.3628130555152893,
+            "std": 0.23538486659526825
+        },
+        {
+            "score": 0.34824424982070923,
+            "std": 0.16104739904403687
+        },
+        {
+            "score": 0.28519344329833984,
+            "std": 0.16151726245880127
+        },
+        0.5262049694052848
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.24965649843215942,
+            "std": 0.38620248436927795
+        },
+        {
+            "score": 0.3031086027622223,
+            "std": 0.4317958652973175
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "Well, this building was never my strong suit. But then you see my downstairs living room, and it just got a little more interesting.",
+            "Oh. Okay.",
+            "Well, she might be, maybe she wants to spend more time with you.",
+            "I love you, too.",
+            "She isnt.",
+            "Soft kitty, little ball of fur.",
+            "Sheldon, youre not leaving me.",
+            "Shes still in school, and shes my sister.",
+            "Yeah, well, whatever works.",
+            "He may have made you so sad.",
+            "Uh, he loved the outdoors. And he was a good boy, so",
+            "Sheldon, why isnt this your card?",
+            "Ooh, I like to imagine youre being a part of it.",
+            "You didnt.",
+            "Oh, yeah?",
+            "Forget science.",
+            "You know, I dont know why youre so surprised. You can spend more time thinking about what weve done. I mean, I could spend hours thinking about what weve done, but I still have to think about it.",
+            "I told you to sit. I told you to sit. I told you to sit. I told you to sit. I told you to sit.",
+            "What?",
+            "Sheldon, did you ever think about how our lifes journey could benefit from a little more science and less fat people?",
+            "No, no. I will take the fight to the death.",
+            "They were already married, but I see your confusion. No, I said I was talking about myself. You said I was talking about someone else.",
+            "Oh, great. Just make a small fort.",
+            "Yes.",
+            "She and Luke have sex on Star Wars Day.",
+            "Yeah, we were playing Vegas on the Game of Thrones map. It was a lot of fun. You should come say hi.",
+            "Hey.",
+            "You dont see it, do you?",
+            "No, wait, hang on. Ten.",
+            "Youre welcome, Stuart.",
+            "Im renting a room out for a couple of hundred dollars, which most people will pay in rent.",
+            "Were doing very well. Just need some practice. And I was thinking if I make it to the next round, I could use some practice throwing.",
+            "Probably to a comic book store or a funeral.",
+            "Uh, I bought the new Jamba Juice, it tastes like the kind of green youd find in the trash.",
+            "Uh, well, theres really only one thing we know about, and thats open science."
+        ],
+        "chatbotb": [
+            "What do you mean the building?",
+            "Look, you've gotta come back home to figure out what caused you to crash.",
+            "So, who wants to help me find my life again?",
+            "I love you, too, Bender.",
+            "Yes, very much so. But I am a very important lady. I'm going out with my best friend Leela.",
+            "No I don't!",
+            "What are the claws for?",
+            "He's gonna marry my brother, yeah right?",
+            "That is, the Fry.",
+            "I'll have a look.",
+            "What about the car?",
+            "Bender, the one true king of this world!",
+            "We're gonna die! We're gonna die! We're gonna die! We're gonna die! We're gonna die!",
+            "I am Bender.",
+            "No! My wife's going to be mortified.",
+            "Alright, cool. Here's to a happy marriage.",
+            "Whoa, you mean we're no more evil than Fry?",
+            "Well we're not gonna get that far.",
+            "Yeah I'm OK, thanks for asking!",
+            "Uh, wait a minute. You're my best friend!",
+            "But you are my enemy, you are my enemy, I will destroy you.",
+            "I wish I could make you a sandwich.",
+            "What?",
+            "You'll be fine.",
+            "You have to take her back to your planet to let me know when the robots are operational.",
+            "I was in there with you!",
+            "Oh. The end of the line. It's Fry.",
+            "This is the closest I've ever come to being a robot again.",
+            "OK, two.",
+            "Well if you say so, Fry.",
+            "Being a human, I mean.",
+            "My parents, I'm doing good. So what are you doing?",
+            "I think he's gonna be out for a walk.",
+            "Not much, but you can still taste the rainbow.",
+            "I want to see Leela get rekt by a robot and then try to save her."
+        ]
+    }
+}
