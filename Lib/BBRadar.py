@@ -123,7 +123,28 @@ class BBRadar:
             ('Predictions-Labels', [predictions, labels])
         ]
         self.character = character
-
+        
+    def subplotEmotionsRadar(self, nrows, ncols, fig, idx, legend=None, colors=None):
+        N = len(self.data[0])
+        theta = radar_factory(N, frame='polygon')
+        spoke_labels = self.data.pop(0)
+        axs = fig.add_subplot(nrows, ncols, idx, projection='radar')
+        axs.set_title('Emotion ' + self.character, weight='bold', size='medium', position=(0.5, 1.1),
+                      horizontalalignment='center', verticalalignment='center')
+        if colors == None:
+            colors = ['b', 'r']
+        # Plot the four cases from the example data on separate axes
+        for (title, case_data) in self.data:
+            axs.set_rgrids([0.2, 0.4, 0.6, 0.8])
+            for d, color in zip(case_data, colors):
+                axs.plot(theta, d, color=color, label='_nolegend_')
+                axs.fill(theta, d, facecolor=color, alpha=0.25)
+            axs.set_varlabels(spoke_labels)
+        # add legend relative to top-left plot
+        if legend==None:
+            legend = ('Predictions', 'Labels')
+        legend = axs.legend(legend, loc=(0.9, .95),
+                            labelspacing=0.1, fontsize='small')
 
     def plotEmotionsRadar(self):
         N = len(self.data[0])
