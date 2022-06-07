@@ -471,9 +471,9 @@ class BBMetric:
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
         elif self.name == "semantic answer similarity":
-            sentences_a = kwargs['sentences_a'] if type(kwargs['sentences_a']) is list else [kwargs['sentences_a']]
-            sentences_b = kwargs['sentences_b'] if type(kwargs['sentences_b']) is list else [kwargs['sentences_b']]
-            single_outputs = self.metric.predict(list(zip(sentences_a, sentences_b)))
+            predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
+            references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
+            single_outputs = self.metric.predict(list(zip(predictions, references)))
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
         elif self.name == "rouge l":
@@ -505,10 +505,10 @@ class BBMetric:
             result['score'] = list(result['score'].values())
             result['std'] = list(result['std'].values())
         elif self.name == "semantic similarity":
-            predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
-            references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
-            single_outputs = np.diagonal(cosine_similarity(self.metric.encode(predictions),
-                                                           self.metric.encode(references)))
+            sentences_a = kwargs['sentences_a'] if type(kwargs['sentences_a']) is list else [kwargs['sentences_a']]
+            sentences_b = kwargs['sentences_b'] if type(kwargs['sentences_b']) is list else [kwargs['sentences_b']]
+            single_outputs = np.diagonal(cosine_similarity(self.metric.encode(sentences_a),
+                                                           self.metric.encode(sentences_b)))
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
         elif self.name == "distinct":
