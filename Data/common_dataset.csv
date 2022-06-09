@@ -1,36 +1,36 @@
-context,label,source
-"Barney, this is about the building.",Come on. This is so about the girl.,HIMYM
-All right. I'll be right there. Stay where you are.,"Ted, Ted.",HIMYM
-I think there's a pretty girl smiling at me there.,"Hey, this is a chair, but go ahead and drag it.",HIMYM
-"I love you, man.","Me too, buddy.",HIMYM
-Not even if she's hot?,Not even if her mom's hot.,HIMYM
-"Soft kitty, warm kitty Little ball of fur","Happy kitty, slippy kitty Pur pur pur",TBBT
-Penny.,Thats just wrong.,TBBT
-"Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?","Well, it took a little negotiating, but I wore him down. Uh, we get the asteroid, and if you and I have children, they all have to be named Rajesh.",TBBT
-"I didnt break it. I, I guess Stuart sold it to me like this.","Yes. Yes, he did, that is a perfectly satisfying and plausible explanation. Yeah, lets all be mad at Stuart.",TBBT
-Be careful.,"If I were not being careful, your telling me to be careful would not make me careful.",TBBT
-But why would anyone go near that dog?,"The day I was at Gringotts, Hagrid took something out of one of the vaults.",HP
+label,context,source
+Come on. This is so about the girl.,"Barney, this is about the building.",HIMYM
+"Ted, Ted.",All right. I'll be right there. Stay where you are.,HIMYM
+"Hey, this is a chair, but go ahead and drag it.",I think there's a pretty girl smiling at me there.,HIMYM
+"Me too, buddy.","I love you, man.",HIMYM
+Not even if her mom's hot.,Not even if she's hot?,HIMYM
+"Happy kitty, slippy kitty Pur pur pur","Soft kitty, warm kitty Little ball of fur",TBBT
+Thats just wrong.,Penny.,TBBT
+"Well, it took a little negotiating, but I wore him down. Uh, we get the asteroid, and if you and I have children, they all have to be named Rajesh.","Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",TBBT
+"Yes. Yes, he did, that is a perfectly satisfying and plausible explanation. Yeah, lets all be mad at Stuart.","I didnt break it. I, I guess Stuart sold it to me like this.",TBBT
+"If I were not being careful, your telling me to be careful would not make me careful.",Be careful.,TBBT
+"The day I was at Gringotts, Hagrid took something out of one of the vaults.",But why would anyone go near that dog?,HP
 Expecto Patronum!,Expecto Patronum!,HP
-Ron Weasley.,I'm Harry. Harry Potter.,HP
-I spoke a different language?,But I didn't realize...,HP
-Harry?,Professor.,HP
-"OK. First Bender, then Flexo, then Fry.","Wait, let's go by rank.",Futurama
-"Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.","It'll be a rich, full day.",Futurama
-I'm too scared.,"Leela, your scaredness is being transmitted straight to Bender. If you care about Nibbler, stop caring about him!",Futurama
-Dr. Zoidberg? Are you OK?,He's dead.,Futurama
-"Fry, thank God we found you.",Leela? What are you guys doing here in the year 4000?,Futurama
-I will not fight you.,"Give yourself to the dark side. It is the only way you can save your friends. Yes, your",SW
-"Lord Vader, what about Leia and theWookiee?",They must never again leave thiscity.,SW
-The Emperor's coming here?,"That is correct, Commander. And heis most displeased with your",SW
-Shall I hold them?,No. Leave them to me. I will deal,SW
-"Lord Vader, what about Leia and theWookiee?",They must never again leave thiscity.,SW
-"Oh! Joey uh, were you in our room last night?",No.  I was told the name of the movie would not appear on the bill!,Friends
-Hey.,"Hey-hey-hey! So, how did it go with Dana? Any reason I should leave a block of time open say Thursday?",Friends
-"Joey... are you sure? I mean, I know how much you love him!","Rachel... let's be clear on this, ok? I do not love Hugsy. I like him a normal amount...",Friends
-"Ok, ten.","Okay, Monica picks ten, I call nine! Anyone else?",Friends
-"Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?","Oh yeah, no problem.",Friends
-What are you doing for a living?,I am a lawyer.,Standard
-How are you doing?,Good.,Standard
-Where are you going to?,I am going out.,Standard
-What are you wearing?,A T-shirt.,Standard
-What do you want to do tonight?,Watching tv.,Standard
+I'm Harry. Harry Potter.,Ron Weasley.,HP
+But I didn't realize...,I spoke a different language?,HP
+Professor.,Harry?,HP
+"Wait, let's go by rank.","OK. First Bender, then Flexo, then Fry.",FTM
+"It'll be a rich, full day.","Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",FTM
+"Leela, your scaredness is being transmitted straight to Bender. If you care about Nibbler, stop caring about him!",I'm too scared.,FTM
+He's dead.,Dr. Zoidberg? Are you OK?,FTM
+Leela? What are you guys doing here in the year 4000?,"Fry, thank God we found you.",FTM
+"Give yourself to the dark side. It is the only way you can save your friends. Yes, your",I will not fight you.,SW
+They must never again leave thiscity.,"Lord Vader, what about Leia and theWookiee?",SW
+"That is correct, Commander. And heis most displeased with your",The Emperor's coming here?,SW
+No. Leave them to me. I will deal,Shall I hold them?,SW
+They must never again leave thiscity.,"Lord Vader, what about Leia and theWookiee?",SW
+No.  I was told the name of the movie would not appear on the bill!,"Oh! Joey uh, were you in our room last night?",Friends
+"Hey-hey-hey! So, how did it go with Dana? Any reason I should leave a block of time open say Thursday?",Hey.,Friends
+"Rachel... let's be clear on this, ok? I do not love Hugsy. I like him a normal amount...","Joey... are you sure? I mean, I know how much you love him!",Friends
+"Okay, Monica picks ten, I call nine! Anyone else?","Ok, ten.",Friends
+"Oh yeah, no problem.","Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",Friends
+I am a lawyer.,What are you doing for a living?,Standard
+Good.,How are you doing?,Standard
+I am going out.,Where are you going to?,Standard
+A T-shirt.,What are you wearing?,Standard
+Watching tv.,What do you want to do tonight?,Standard

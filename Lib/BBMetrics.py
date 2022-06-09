@@ -233,62 +233,15 @@ def distinct(sentences, ngram_size=3):
         scores.append(len(distinct_ngrams) / len(sentence))
     return np.mean(np.array(scores)), np.std(np.array(scores))
 
-def perplexity(model, tokenizer, input_texts, batch_size: int = 16, add_start_token: bool = True, device=None):
-    tokenizer_pad_token = tokenizer.pad_token
-    tokenizer.pad_token = None
-    if tokenizer.pad_token is None and batch_size > 1:
-        existing_special_tokens = list(tokenizer.special_tokens_map_extended.values())
-        assert (
-            len(existing_special_tokens) > 0
-        ), "If batch_size > 1, model must have at least one special token to use for padding. Please use a different model or set batch_size=1."
-        tokenizer.add_special_tokens({"pad_token": existing_special_tokens[0]})
-    if add_start_token:
-        assert (
-            tokenizer.bos_token is not None
-        ), "Input model must already have a BOS token if using add_start_token=True. Please use a different model, or set add_start_token=False"
-        max_tokenized_len = model.config.max_length - 1
-    else:
-        max_tokenized_len = model.config.max_length
-    encodings = tokenizer(
-        input_texts,
-        add_special_tokens=False,
-        padding=True,
-        truncation=True,
-        max_length=max_tokenized_len,
-        return_tensors="tf",
-        return_attention_mask=True,
-    )
-    encoded_texts = encodings["input_ids"]
-    attn_masks = encodings["attention_mask"]
-    if add_start_token:
-        assert tf.math.reduce_all(tf.math.greater(tf.math.reduce_sum(attn_masks, axis=1), 1)), "Each input text must be at least one token long."
-    else:
-        assert tf.math.reduce_all(tf.math.greater(tf.math.reduce_sum(attn_masks, axis=1), 2)), "When add_start_token=False, each input text must be at least two tokens long. Run with add_start_token=True if inputting strings of only one token, and remove all empty input strings."
-    ppls = []
-    loss_fct = losses.SparseCategoricalCrossentropy(from_logits=True, reduction="none")
-    for start_index in tqdm(range(0, len(encoded_texts), batch_size)):
-        end_index = min(start_index + batch_size, len(encoded_texts))
-        encoded_batch = encoded_texts[start_index:end_index]
-        attn_mask = attn_masks[start_index:end_index]
-        if add_start_token:
-            bos_tokens_tensor = tf.convert_to_tensor([[tokenizer.bos_token_id]] * tf.shape(encoded_batch)[0].numpy())
-            encoded_batch = tf.concat([bos_tokens_tensor, encoded_batch], axis=1)
-            attn_mask = tf.concat(
-                [tf.ones(bos_tokens_tensor.shape, dtype=tf.int32), attn_mask], axis=1
-            )
-        labels = encoded_batch
-        out_logits = model(encoded_batch, attention_mask=attn_mask)['logits']
-        shift_logits = out_logits[..., :-1, :]
-        shift_labels = labels[..., 1:]
-        shift_attention_mask_batch = attn_mask[..., 1:]
-        perplexity_batch = tf.pow(2,
-            tf.math.reduce_sum(loss_fct(shift_labels, shift_logits) * tf.cast(shift_attention_mask_batch, dtype=tf.float32),
-                               axis=1)
-            / tf.cast(tf.math.reduce_sum(shift_attention_mask_batch, axis=1), dtype=tf.float32)
-        )
-        ppls += perplexity_batch.numpy().tolist()
-    tokenizer.pad_token = tokenizer_pad_token
-    return ppls
+def perplexity(model, encoded_test_set):
+    max_length = model.config.n_positions
+    nlls = []
+    iterator = iter(encoded_test_set)
+    for _ in tqdm(range(len(encoded_test_set))):
+        batch = next(iterator)
+        loss = model.evaluate(batch, verbose=0)
+        nlls.append(loss)
+    return np.exp(np.array(nlls).sum() / len(encoded_test_set))
 
 def human_conversation(model, tokenizer, filepath, train, length=5):
     chat_history = []
@@ -385,7 +338,7 @@ class BBMetric:
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
-            self.return_args = ['score', 'std']
+            self.return_args = ['score']
         elif name == "semantic similarity":
             self.compute_require_args = set(["sentences_a", "sentences_b"])
             self.compute_optional_args = set()
@@ -423,11 +376,11 @@ class BBMetric:
             self.train_optional_args = set(["from_saved_embeddings", "shutdown_at_end", "n_shuffles"])
             self.return_args = ['score', 'std']
         elif name == "perplexity":
-            self.compute_require_args = set(["model", "tokenizer", "sentences"])
+            self.compute_require_args = set(["model", "encoded_test_set"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
-            self.return_args = ['score', 'std']
+            self.return_args = ['score']
         elif name == "human - coherence":
             self.compute_require_args = set(["filepath"])
             self.compute_optional_args = set()
@@ -468,7 +421,7 @@ class BBMetric:
                                        return_all_scores=True))
         elif name == "perplexity":
             metric = BBMetric(name,
-                              lambda m, t, s: perplexity(m, t, s))
+                              lambda m, s: perplexity(m, s))
         elif name == "semantic similarity":
             metric = BBMetric(name,
                               SentenceTransformer("sentence-transformers/paraphrase-multilingual-mpnet-base-v2"))
@@ -503,13 +456,8 @@ class BBMetric:
         if self.name == "bleu":
             predictions = [x.split() for x in kwargs['predictions']] if type(kwargs['predictions']) is list else [kwargs['predictions'].split()]
             references = [[x.split()] for x in kwargs['references']] if type(kwargs['references']) is list else [[kwargs['references'].split()]]
-            single_outputs = []
-            for i in range(len(predictions)): 
-                self.metric.add(prediction=predictions[i],
-                                reference=references[i])
-                single_outputs.append(self.metric.compute()['bleu'])
-            result['score'] = np.mean(np.array(single_outputs))
-            result['std'] = np.std(np.array(single_outputs))
+            self.metric.add_batch(predictions=predictions, references=references)
+            result['score'] = self.metric.compute()['bleu']
         elif self.name == "semantic answer similarity":
             predictions = kwargs['predictions'] if type(kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(kwargs['references']) is list else [kwargs['references']]
@@ -556,10 +504,7 @@ class BBMetric:
             result['score'], result['std'] = self.metric(sentences,
                                                          kwargs['ngram_size'] if 'ngram_size' in kwargs else 3)
         elif self.name == "perplexity":
-            sentences = kwargs['sentences'] if type(kwargs['sentences']) is list else [kwargs['sentences']]
-            single_outputs = self.metric(kwargs['model'], kwargs['tokenizer'], sentences)
-            result['score'] = np.mean(np.array(single_outputs))
-            result['std'] = np.std(np.array(single_outputs))
+            result['score'] = self.metric(kwargs['model'], kwargs['encoded_test_set'])
         elif self.name == "human - coherence":
             result['score'], result['std'] = self.metric(None, None, kwargs['filepath'], False, None)
         elif self.name == "human - consistency":
