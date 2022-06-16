@@ -1,56 +1,116 @@
 {
     "metadata": {
-        "ordering": [
-            "context-chatbota",
-            "context-chatbotb",
-            "chatbotb-chatbota",
-            "ccl"
-        ]
+        "dataset name": "common small dataset",
+        "names": {
+            "context": "context",
+            "chatbota": "Sheldon",
+            "chatbotb": "Barney"
+        },
+        "semantic similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "perplexity": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "bleu": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "rouge l": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "distinct": {
+            "ordering": [
+                "context",
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "emotion": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "chatbotb-chatbota correlation"
+            ]
+        },
+        "semantic answer similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "semantic classifier": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        }
     },
-    "semantic answer similarity": [
+    "semantic similarity": [
         {
-            "score": 0.15404655039310455,
-            "std": 0.21953679621219635
+            "score": 0.3393293619155884,
+            "std": 0.17047354578971863
         },
         {
-            "score": 0.14340455830097198,
-            "std": 0.23884527385234833
+            "score": 0.27114006876945496,
+            "std": 0.1386135369539261
         },
         {
-            "score": 0.08277326822280884,
-            "std": 0.10903429985046387
+            "score": 0.2233516275882721,
+            "std": 0.1317758411169052
         },
-        0.49284034087185447
+        0.45907857147691633
+    ],
+    "perplexity": [
+        67.96138565177583,
+        60.62977505345756
     ],
     "bleu": [
         {
-            "score": 0.0,
-            "std": 0.0
+            "score": 0.0
         },
         {
-            "score": 0.05714285714285714,
-            "std": 0.23211538298959886
+            "score": 0.02287443209393896
         },
         {
-            "score": 0.0,
-            "std": 0.0
+            "score": 0.0
         },
-        0.44448979591836735
+        0.4773871877278712
     ],
     "rouge l": [
         {
-            "score": 0.07990140667597738,
-            "std": 0.12330311482189288
+            "score": 0.10198249912870752,
+            "std": 0.1652669007884761
         },
         {
-            "score": 0.13457456049306643,
-            "std": 0.261135380121769
+            "score": 0.10849603907627005,
+            "std": 0.17334388006853912
         },
         {
-            "score": 0.04893458479170966,
-            "std": 0.07479593738468276
+            "score": 0.05532937808324578,
+            "std": 0.08392613126702762
         },
-        0.44801871985143304
+        0.4950383431933011
     ],
     "distinct": [
         {
@@ -58,14 +118,13 @@
             "std": 0.06188826948933667
         },
         {
-            "score": 0.11678128967495426,
-            "std": 0.0715422567055501
+            "score": 0.11788891424235222,
+            "std": 0.06638797374136844
         },
         {
-            "score": 0.1158384377107427,
-            "std": 0.06395164423424306
-        },
-        0.49979533061933457
+            "score": 0.102347517219918,
+            "std": 0.06259253326613069
+        }
     ],
     "emotion": [
         {
@@ -96,20 +155,20 @@
         },
         {
             "score": [
-                0.06117343912483193,
-                0.38587807307818106,
-                0.055661413829407785,
-                0.4009882413225049,
-                0.09330543827818474,
-                0.002993395150406286
+                0.0778883971273899,
+                0.42761944574553384,
+                0.05752182220208592,
+                0.30447434404798385,
+                0.12798223699709135,
+                0.004513753966395078
             ],
             "std": [
-                0.11199714363430638,
-                0.3815252379503301,
-                0.2063382604052843,
-                0.3357186750541516,
-                0.13070344661495928,
-                0.003027511725002705
+                0.22753727835701984,
+                0.3990181249634728,
+                0.21890401887489325,
+                0.34303876782488213,
+                0.2365038290366606,
+                0.005450984776606383
             ],
             "label": [
                 "sadness",
@@ -122,20 +181,20 @@
         },
         {
             "score": [
-                0.06672399521173378,
-                0.3960434979260234,
-                0.039823512411177424,
-                0.4072153193352278,
-                0.05983323712238676,
-                0.03036043407919351
+                0.09468170248687134,
+                0.5030295168174365,
+                0.0037825051799050663,
+                0.28582372402556105,
+                0.08984782675688621,
+                0.022834729237781307
             ],
             "std": [
-                0.1932570964280716,
-                0.42354351034011595,
-                0.16671406503167283,
-                0.38003717565814815,
-                0.13399185089027174,
-                0.1646530215260293
+                0.23658853452989156,
+                0.4381061530673346,
+                0.007611029198355009,
+                0.35169534566035904,
+                0.1685511494655738,
+                0.1148994954447567
             ],
             "label": [
                 "sadness",
@@ -146,31 +205,31 @@
                 "surprise"
             ]
         },
-        0.9932452714440766
+        0.978138662029687
     ],
-    "semantic similarity": [
+    "semantic answer similarity": [
         {
-            "score": 0.32616472244262695,
-            "std": 0.18805363774299622
+            "score": 0.11646623909473419,
+            "std": 0.16821114718914032
         },
         {
-            "score": 0.3378838002681732,
-            "std": 0.2197580635547638
+            "score": 0.07674828171730042,
+            "std": 0.1488790512084961
         },
         {
-            "score": 0.25554752349853516,
-            "std": 0.14620065689086914
+            "score": 0.04989274963736534,
+            "std": 0.09017149358987808
         },
-        0.5210018589501115
+        0.46231544392487245
     ],
     "semantic classifier": [
         {
-            "score": 0.3769148886203766,
-            "std": 0.44998133182525635
+            "score": 0.33175215125083923,
+            "std": 0.43926098942756653
         },
         {
-            "score": 0.4256027042865753,
-            "std": 0.4614787995815277
+            "score": 0.25809553265571594,
+            "std": 0.403698593378067
         }
     ],
     "sentences": {
@@ -212,78 +271,78 @@
             "What do you want to do tonight?"
         ],
         "chatbota": [
-            "I know. I said I was.",
-            "Oh, yeah. Okay. Okay. Good night.",
-            "Its me. I do not smile, I dont know why. You?",
-            "And I want you to know that Im very happy for you.",
-            "No, but if she does count as hot, we have a winner.",
-            "Wet kitty, sleepy kitty, purr purr.",
-            "Sheldon.",
-            "That too.",
-            "Youre just trying to get ahead of things.",
-            "You dont get a chance to do this without my permission.",
-            "Uh, to spy on us?",
-            "This is a church. Do you know what that means?",
-            "I am Ron.",
-            "No.",
-            "Yeah?",
-            "Yes, I have one more thing to do. Im gonna need some adult supervision.",
-            "Sheldon, you can do it, just hang out, enjoy the rest.",
-            "Come on. I have to go to sleep.",
-            "I dont want to talk about it.",
-            "So, hows it done?",
-            "All right, lets go.",
-            "She was dead the whole time.",
-            "I dont see why not.",
-            "Sure.",
-            "Not really.",
-            "No,",
-            "Hi.",
-            "Okay, I can answer that one. I do love me some Zack.",
-            "We wait, ten, eleven.",
-            "Well, of course.",
-            "You know, this is the first time Ive been forced to take a vacation. My body and mind are at the top of the food chain. Our bodies and the mind are in a state of eternal struggle. We cannot leave this world behind, we must face the challenge. Not only is that an insane person, I have a PhD in astrophysics.",
-            "Relaxing. Just think how much I hate being there with you.",
-            "I cant tell you.",
-            "I dont know, a little blue T-shirt, khakis, white shirt.",
-            "I cant go."
+            "Oh, right. What building is this?",
+            "Well, Ill be right across the hall.",
+            "Not just smiling, her jaws are clenched.",
+            "I love you, too.",
+            "I dont know. I mean, she couldnt possibly become my girlfriend by taking the time out of her busy schedule to have sex with random men who look like her.",
+            "Good morning, Penny.",
+            "You might want to mark your Google calendars. This is Tewmans memorial in Galveston, Texas, on November 7, 1876. Do you remember that date?",
+            "Oh, okay, he said good-bye.",
+            "I think we can make it work.",
+            "I wont.",
+            "Because we have a death wish. And you know why? Because every year at Disneyland, we treat them like family. I mean, every year, every year. You know, even in the middle of the night, they can see how broken up we are.",
+            "Lets get that big toe, baby.",
+            "Sheldon, I am so sorry.",
+            "Heres the difference. In Klingon, the B is for bowel. In Swedish, the M is for milqueto. In Finnish, the T is for angry.",
+            "Yes!",
+            "All right, this is easy. Just pull the arm out of the sleeve, and the arm goes through two slits. The arm slits around three slits.",
+            "Okay, well, I wasnt talking to Leonard.",
+            "Raj, arent you worried youre being replaced?",
+            "I think I may have cholera.",
+            "What do you mean, we found you?",
+            "You may have a point. I am truly the Dark Knight. And Im not just some trained monkey dancing for coins. On a more serious note, I am more like Gandalf the Grey. And I dont appreciate the Princess Bride reference.",
+            "They left.",
+            "Not until now.",
+            "Yeah, you know whats interesting? You guys decided to be the last people standing at the Redwood National Forest.",
+            "Thats right. Episode I, II, II was the last one of the Disney Princesses to be named after an outlaw.",
+            "Yes.",
+            "What?",
+            "Its not just about love. He knows how much I love him.",
+            "You have a spot on the waiting list.",
+            "Okay. Hey, Sheldon, what are you doing here?",
+            "Hes a waitress, so he gets paid.",
+            "I told you I wasnt gonna be doing the dishes, but the reason youre doing it is I found a hack online that lets you combine your computer, photocell phone and your GPS.",
+            "To Disneyland.",
+            "What?",
+            "Well, frankly, I dont know, its just a thought experiment. Maybe something a little more spontaneous?"
         ],
         "chatbotb": [
-            "Yeah, I know, you're an idiot.",
-            "Right on the money.",
-            "Guys, you're acting all right.",
-            "It's not a lie! You know how I love you? Now, the real question is... do you really love me?",
-            "Of course.",
-            "You're a bit ticked.",
-            "No, it's the opposite. I love a good tiki.",
-            "Oh, my God. This is great. Thank you.",
-            "Why the longitude of it?",
-            "Well, now I'm not. And for a second, you're the guy in New Jersey, the most dangerous profession in the world.",
-            "Because it was the best dog ever.",
-            "Barney, it's just your imagination. How can I sleep with you if you do not know that you are going to want to do it to me...  right?",
-            "Yes! Theodore.",
-            "Well, that's my native tongue, so, I've always been pleasantly surprised. I mean, I know nothing about your native tongue, but, I've always wanted to reach out to you.",
-            "Oh, God. I'm so sorry.",
-            "What have I done?",
-            "I'm sorry, Robin, it's for the bride. I just want to see you alive, not just sleep around and fantasizing about Robin dying for her.",
-            "So are we!",
-            "Yeah, I am, Barney.",
-            "My wife left.",
-            "I will not fight you.",
-            "She's my wife. I married her first, and I am proud of her.",
-            "I'm sorry, but it is more of a greeting than a greeting.",
-            "You hold them!",
-            "The Wookiee...",
-            "Yeah, I was there.",
-            "Hey, Barney.",
-            "Yes, Barney.",
-            "How long have you been waiting to say that?",
-            "Fine.",
-            "Absolutely nothing. It's not like a job. I'm a professional now. It's like a personal trainer. You get paid by the hour, you train by the hour.",
-            "Good. Here's a present. A very young girl I met at a party once. Her name was Evelyn Mosby.",
-            "To the library.",
-            "What are you wearing?",
-            "To take his place in the booth as the lead vocalist on the new project of New york City called The Price Is Right."
+            "I told you.",
+            "All right.",
+            "But I'm too old for this. I'm allowed to accept criticism.",
+            "But we have to go.",
+            "We'll be right back.",
+            "Oh, it's from a video.",
+            "You're welcome.",
+            "Thank you, Mommy.",
+            "Oh, come on, dude. It's nothing compared to what he did to his brother.",
+            "I had never known he was so angry, it's...",
+            "Because it smells like success.",
+            "Gamin...",
+            "Robin.",
+            "I know.",
+            "Come on, Barney.",
+            "I don't understand. What happened to your leg?",
+            "But what will it do?",
+            "Barney, I'm sorry.",
+            "Are you OK?",
+            "Thank God we found you.  We were going to call Barney, but he had his number. I'll call you.  You there, Ted?",
+            "You are a brave man. You fought the brave soul who dared challenge you. But you did not fight me. We are brothers now. And it makes us happy that you two are together. And your stories do not change the lives of millions of women around the world. You are an inspiration to us all.",
+            "You mean, those guys from Tarth and Whatevs?",
+            "Sorry. We only have one choice.",
+            "Yeah, like that. Let's grab a drink.",
+            "You're a big guy.",
+            "Yeah, I was in the neighborhood.",
+            "Oh, God, what is that?",
+            "Wow, wow, wow.",
+            "Ted, let me introduce you to the greatest architect of our city, Frank Gehry.",
+            "Sure.",
+            "You are the child of a bitch.",
+            "Fine. Let's go.",
+            "Where the hell is she going?",
+            "I just realized I have a date tonight. What is the first thing you think of?",
+            "I'm fine."
         ]
     }
 }

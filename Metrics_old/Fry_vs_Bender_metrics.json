@@ -1,0 +1,289 @@
+{
+    "metadata": {
+        "ordering": [
+            "context-chatbota",
+            "context-chatbotb",
+            "chatbotb-chatbota",
+            "ccl"
+        ]
+    },
+    "semantic answer similarity": [
+        {
+            "score": 0.1212279349565506,
+            "std": 0.21214866638183594
+        },
+        {
+            "score": 0.06958496570587158,
+            "std": 0.12359759211540222
+        },
+        {
+            "score": 0.04682077467441559,
+            "std": 0.08054656535387039
+        },
+        0.45078662135639047
+    ],
+    "bleu": [
+        {
+            "score": 0.02857142857142857,
+            "std": 0.1665986255670086
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        0.47183673469387755
+    ],
+    "rouge l": [
+        {
+            "score": 0.10559353937997047,
+            "std": 0.18986629526162085
+        },
+        {
+            "score": 0.0582348536441238,
+            "std": 0.1001824501008621
+        },
+        {
+            "score": 0.06881860096289938,
+            "std": 0.0806166167661826
+        },
+        0.4561307367407121
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.12453773841218703,
+            "std": 0.06601581073231777
+        },
+        {
+            "score": 0.14904717687211802,
+            "std": 0.05545537414893732
+        },
+        0.4965210360843866
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.08117974218455076,
+                0.3792477691271675,
+                0.02994559916509648,
+                0.33864833387862225,
+                0.16655506300636003,
+                0.004423479730862059
+            ],
+            "std": [
+                0.23375080767666073,
+                0.43407350873734896,
+                0.15784644281123847,
+                0.38840251675798637,
+                0.2953013379153352,
+                0.007080495625077537
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.10581933204666712,
+                0.31940592752902636,
+                0.03092007560439275,
+                0.49308526296102045,
+                0.049326047977332824,
+                0.0014433514368387738
+            ],
+            "std": [
+                0.2556612714164447,
+                0.4171701781018891,
+                0.16242887142628445,
+                0.4189566772727736,
+                0.16397912105051737,
+                0.001278753063210309
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.8885446775030348
+    ],
+    "semantic similarity": [
+        {
+            "score": 0.35789984464645386,
+            "std": 0.1999766081571579
+        },
+        {
+            "score": 0.26496583223342896,
+            "std": 0.1471899151802063
+        },
+        {
+            "score": 0.23343761265277863,
+            "std": 0.13394717872142792
+        },
+        0.4386309124190816
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.4907365143299103,
+            "std": 0.46598175168037415
+        },
+        {
+            "score": 0.5843683481216431,
+            "std": 0.45734167098999023
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "My God! We're gonna get lucky and Fry will find that mysterious old man in his own time. The most dangerous man in the world!",
+            "Where?",
+            "I thought she was talking about my dog.",
+            "I love you, man.",
+            "Oh, I mean if it is too much trouble, let her go.",
+            "That's no ball, it's a fur ball. And the ball's made of some kind of fuzzy fur. So I used the fuzzy ball.",
+            "Hey Bender, what's the catch?",
+            "Pfft. No. That's his old roommate.",
+            "No, I think I can keep the money.",
+            "I'm scared.",
+            "Because it's really important to the universe as a whole?",
+            "Gemerald's Feast.",
+            "Oh. My God, that's my old roommate. He's so angry and you just destroyed him. I'm gonna turn the lights off!",
+            "Oh I can't even understand.",
+            "Why would they do that?",
+            "What the?",
+            "Oh, no, my God! I could take him! He's just like you!",
+            "I'm so scared to go.",
+            "This is horrible! I mean, it's great because at the end you can feel your legs going crazy.",
+            "Oh, yeah. I'm gonna try to make it out here.",
+            "Yeah! Oh, I'll just keep my hands up like a robot!",
+            "Leia is great but I can't believe we're the only two people alive that aren't married.",
+            "Don't be silly. All the humans are extinct. And they're all wearing eye patch hats and eating their noses.",
+            "Fry! It's not you. It's the children's story!",
+            "I'm so happy.",
+            "That's no excuse!",
+            "Hey, Bender, you're a wonderful person. How come you let me be your friend, though?",
+            "Well, if you want to come back to reality Leela... I guess you can say that again.",
+            "Cool.",
+            "No. That's why we brought you here.",
+            "I'm unemployed. I work on robots.",
+            "Beats by Lewis Morton.",
+            "Bendes?",
+            "Uh, I think I know what to wear.",
+            "Hmm. I guess it depends on what I am doing, and what I find interesting."
+        ],
+        "chatbotb": [
+            "I was not aware there were other humans in the building.",
+            "It's not your fault. You let him live and then he let you go.",
+            "What are you doing here? Why are you looking down on me?",
+            "So what's this'bout, you two?",
+            "The other kind!",
+            "I've got it all. You're all my best friends!",
+            "No!",
+            "I did.",
+            "That's so Raven. I've been looking for a good time with her. She'll even give you a handy -",
+            "Oh, I'm not so bad. After all, I am the world's greatest robot. And that includes my mom.",
+            "It's the Earth's gravity. There is no escape out of the hell that is my house.",
+            "Hey Fry, when you're hugging, there's always a big pile of money in your underpants.",
+            "Come on, let's go. We'll need someone who knows how to bend metal.",
+            "In the land of the free, the man must be bound to his own demands.",
+            "A girl I used to date.",
+            "Who are we doing this with?",
+            "Aw, thanks. I'm tired of the world destroying itself.",
+            "I can't do it. It's too dangerous.",
+            "Hey, look! The Robot Devil's stuck in his teeth.",
+            "It is, indeed, the happiest place on Earth.",
+            "We have to get our minds off of the '71 Robot Mafia.",
+            "My God, the pain's unbearable. If I was a pile of titanium I'd dump all my weight on you. You're as ugly as a pile of titanium!",
+            "Let us just say I've never felt more at home with a man before.",
+            "I would but I fear they would tear my hand off and my friends wouldn't want to let me keep them.",
+            "No.",
+            "I was, but you didn't see me. So why are you talking about me now?",
+            "That's ridiculous. How can you live like this without getting all the attention you're getting?",
+            "But you don't know how much he loves you.",
+            "Ten bucks an hour? How much do I get paid?",
+            "Well this isn't my trailer so let me see how 'n I look.",
+            "I'm quitting my job.",
+            "Great, you're the best friend of Bender. I hope you get lots of gifts for your friends. And when you do, let's dance!",
+            "Hurry, it's time for our annual Freedom parade.",
+            "Well, I am now. And no one will ever know why.",
+            "Well. I'm gonna go get hammered."
+        ]
+    }
+}

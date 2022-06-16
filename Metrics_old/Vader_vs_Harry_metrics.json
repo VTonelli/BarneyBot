@@ -1,0 +1,289 @@
+{
+    "metadata": {
+        "ordering": [
+            "context-chatbota",
+            "context-chatbotb",
+            "chatbotb-chatbota",
+            "ccl"
+        ]
+    },
+    "semantic answer similarity": [
+        {
+            "score": 0.03376883268356323,
+            "std": 0.062355976551771164
+        },
+        {
+            "score": 0.12100674957036972,
+            "std": 0.2608977258205414
+        },
+        {
+            "score": 0.027702506631612778,
+            "std": 0.043673668056726456
+        },
+        0.41695102462140543
+    ],
+    "bleu": [
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        {
+            "score": 0.05714285714285714,
+            "std": 0.23211538298959886
+        },
+        {
+            "score": 0.0,
+            "std": 0.0
+        },
+        0.44448979591836735
+    ],
+    "rouge l": [
+        {
+            "score": 0.03140058186673059,
+            "std": 0.05907457032139256
+        },
+        {
+            "score": 0.15624986124986126,
+            "std": 0.2796206162154012
+        },
+        {
+            "score": 0.040837965123679404,
+            "std": 0.06822336740905734
+        },
+        0.3837782615958343
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.11506040801753463,
+            "std": 0.054669843144145025
+        },
+        {
+            "score": 0.09154016528169695,
+            "std": 0.061241039082468925
+        },
+        0.4989862826051033
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.10013476644692543,
+                0.3875768719265969,
+                0.005892506773982729,
+                0.35689018206571094,
+                0.14580693925714253,
+                0.003698742202167133
+            ],
+            "std": [
+                0.24320994727258957,
+                0.36931972531949214,
+                0.006941616914875082,
+                0.3143290558937725,
+                0.22663237315880333,
+                0.0057280400114830985
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.04237697964500902,
+                0.22418736132260944,
+                0.0326114612024477,
+                0.49874073706367716,
+                0.19701581964618525,
+                0.005067649749772889
+            ],
+            "std": [
+                0.04954620525822089,
+                0.2519171981870956,
+                0.16487161414561405,
+                0.3095173590531726,
+                0.22736498666839378,
+                0.0051368859348711925
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.8351041532382184
+    ],
+    "semantic similarity": [
+        {
+            "score": 0.22217701375484467,
+            "std": 0.12531185150146484
+        },
+        {
+            "score": 0.3286539316177368,
+            "std": 0.21028880774974823
+        },
+        {
+            "score": 0.1910923570394516,
+            "std": 0.10006895661354065
+        },
+        0.417449893615345
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.6891857981681824,
+            "std": 0.42567089200019836
+        },
+        {
+            "score": 0.1008809432387352,
+            "std": 0.2651585638523102
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "You found something?",
+            "We'll meet again, my friend.",
+            "Calculate. Where are your plans?",
+            "Vader and the Millennium Falcon are in pursuit of the TIE fighter.",
+            "No.Chewie!",
+            "Awww, the flakcat did not survive. He is now a winged bearcat.",
+            "What is it?",
+            "I'm not sure about the condition of the shuttle. If he felt he was hurt, he should have taken a more emotionally demanding course, perhaps he would have helped youfind his way here.",
+            "You do not want to know the truth.",
+            "You cannot hide forever.",
+            "They found a TIE fighter in the Millennium Falcon's cockpit.",
+            "The Emperor has invited you to his chamber.",
+            "The Force is withyou... no",
+            "Aaah, the battle for the faith. Your destiny is yours, my friend. You willfind your way here.",
+            "A few of them are alive.Iwant to know who will join them.",
+            "Yes, my lord.",
+            "No.No!",
+            "You're too trusting.",
+            "If I could leave this planet I might",
+            "No! No! No! No! It is your imagination.",
+            "What is thy bidding, my Master?",
+            "You know the truth, young one.",
+            "We'll need to find another ship for him, Lord Vader.",
+            "They have consular access to the Death Star plans. You may not use them.",
+            "I know.",
+            "I'll take a look in your",
+            "Skywalker and Calrissian",
+            "I'll have you know I'm an actual member of the Rebel Alliance and a member of the Senate at the minute!",
+            "I'll keep an eye out for you.",
+            "Aurora asks what the plans are, Artoo turns to the left and talks to the Falcon.",
+            "Your ship has entered a state of unception.",
+            "That is unfortunate.",
+            "Yes, my lord.",
+            "I'll take your word for it.",
+            "Yes, my Master."
+        ],
+        "chatbotb": [
+            "The Sorting Hat.",
+            "You see my scar? You see it.",
+            "We've got a steal.",
+            "I have everything you want.",
+            "She can't even sing.",
+            "Loves the smell of the air and the sound of the camera.",
+            "Come on, now! Go. Let's take her home.",
+            "But he chose...",
+            "Hagrid, there's a snake in the lake.",
+            "But Hagrid...",
+            "That's the thing!",
+            "Harry, you can't do magic outside school.",
+            "Professor Dumbledore.",
+            "Oh, yeah?",
+            "Professor, can we ask you something?",
+            "No. No. Not at all.",
+            "Harry. You've got to show me.",
+            "Harry?",
+            "Professor, why don't we just go and check the Chamber of Secrets and see if it's locked properly?",
+            "You killed my parents, didn't you?",
+            "You cannot defeat the Dark Lord.",
+            "The Slytherin Muggle Ministry, I think?",
+            "This is it.",
+            "Hold on.",
+            "Harry Potter, wait!",
+            "No. I swear. I was just up by the lake, and there was no sign of me.",
+            "Hey!",
+            "How can you know? I'm Fred.",
+            "How old are you?",
+            "No.",
+            "I don't know.",
+            "How are you doing?",
+            "Hagrid!",
+            "What are you wearing?",
+            "I don't know."
+        ]
+    }
+}

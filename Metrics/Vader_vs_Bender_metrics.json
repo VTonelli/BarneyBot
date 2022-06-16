@@ -1,56 +1,116 @@
 {
     "metadata": {
-        "ordering": [
-            "context-chatbota",
-            "context-chatbotb",
-            "chatbotb-chatbota",
-            "ccl"
-        ]
+        "dataset name": "common small dataset",
+        "names": {
+            "context": "context",
+            "chatbota": "Vader",
+            "chatbotb": "Bender"
+        },
+        "semantic similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "perplexity": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "bleu": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "rouge l": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "distinct": {
+            "ordering": [
+                "context",
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "emotion": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "chatbotb-chatbota correlation"
+            ]
+        },
+        "semantic answer similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "semantic classifier": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        }
     },
-    "semantic answer similarity": [
+    "semantic similarity": [
         {
-            "score": 0.038395728915929794,
-            "std": 0.05448443442583084
+            "score": 0.2829643785953522,
+            "std": 0.181353360414505
         },
         {
-            "score": 0.07509466260671616,
-            "std": 0.15709038078784943
+            "score": 0.3279571235179901,
+            "std": 0.21459242701530457
         },
         {
-            "score": 0.017233509570360184,
-            "std": 0.017516061663627625
+            "score": 0.22683005034923553,
+            "std": 0.1446201056241989
         },
-        0.46412296910228984
+        0.4817453644959172
+    ],
+    "perplexity": [
+        57.950867367315794,
+        57.97443492558129
     ],
     "bleu": [
         {
-            "score": 0.0,
-            "std": 0.0
+            "score": 0.0
         },
         {
-            "score": 0.0,
-            "std": 0.0
+            "score": 0.010065165963930318
         },
         {
-            "score": 0.0,
-            "std": 0.0
+            "score": 0.0
         },
-        0.5
+        0.48998548781901036
     ],
     "rouge l": [
         {
-            "score": 0.04486410342767079,
-            "std": 0.06874329035583517
+            "score": 0.08072591008481493,
+            "std": 0.18044734026922646
         },
         {
-            "score": 0.08013495271629664,
-            "std": 0.11166912171799044
+            "score": 0.1404803251158738,
+            "std": 0.23594741591627952
         },
         {
-            "score": 0.054982371847033494,
-            "std": 0.06912788238760251
+            "score": 0.08047601956512634,
+            "std": 0.17889809164805645
         },
-        0.46686269772310734
+        0.4452690748893165
     ],
     "distinct": [
         {
@@ -58,14 +118,13 @@
             "std": 0.06188826948933667
         },
         {
-            "score": 0.123951607290942,
-            "std": 0.04849877746138806
+            "score": 0.11936724037848247,
+            "std": 0.0625763584837172
         },
         {
-            "score": 0.12767908002919123,
-            "std": 0.055922195335399334
-        },
-        0.49414216937315125
+            "score": 0.1363168358351507,
+            "std": 0.052544718580560194
+        }
     ],
     "emotion": [
         {
@@ -96,20 +155,20 @@
         },
         {
             "score": [
-                0.10227911342351165,
-                0.33726308339225525,
-                0.005861289196764119,
-                0.46907362272281067,
-                0.08321001948248262,
-                0.002312873212005278
+                0.05502098399031508,
+                0.4432793156609737,
+                0.009052525944675186,
+                0.43495797150369203,
+                0.055346262935615544,
+                0.0023429340637189204
             ],
             "std": [
-                0.24843124549331447,
-                0.3786943517183285,
-                0.008557273837262491,
-                0.3388039646093638,
-                0.12489404708474953,
-                0.001372446578892026
+                0.08602235914206237,
+                0.3793710619101188,
+                0.015236252933408651,
+                0.34208987563002835,
+                0.09166574128036253,
+                0.0018377713005958093
             ],
             "label": [
                 "sadness",
@@ -122,20 +181,20 @@
         },
         {
             "score": [
-                0.09551912617670107,
-                0.313351019554206,
-                0.04772680392239376,
-                0.4246950338702715,
-                0.08526560905863464,
-                0.033442412699930306
+                0.17883624092501121,
+                0.40329841454097604,
+                0.02797500366120533,
+                0.30381568978066625,
+                0.0830546462737922,
+                0.003020015734987932
             ],
             "std": [
-                0.22831241864298865,
-                0.34709794735664556,
-                0.18176284984923072,
-                0.3532619036302964,
-                0.17715247396901906,
-                0.16396040331773576
+                0.35213867482793654,
+                0.4361202310439113,
+                0.13993367516907482,
+                0.3711138631344453,
+                0.19311616066728468,
+                0.0044924774662936165
             ],
             "label": [
                 "sadness",
@@ -146,31 +205,31 @@
                 "surprise"
             ]
         },
-        0.9972282844865324
+        0.936369432762185
     ],
-    "semantic similarity": [
+    "semantic answer similarity": [
         {
-            "score": 0.22866401076316833,
-            "std": 0.13619914650917053
+            "score": 0.07973115146160126,
+            "std": 0.18138636648654938
         },
         {
-            "score": 0.27044767141342163,
-            "std": 0.12796513736248016
+            "score": 0.12655453383922577,
+            "std": 0.21930834650993347
         },
         {
-            "score": 0.18091562390327454,
-            "std": 0.10234908014535904
+            "score": 0.07512711733579636,
+            "std": 0.16961495578289032
         },
-        0.47545450798457
+        0.45709487407060934
     ],
     "semantic classifier": [
         {
-            "score": 0.5573427677154541,
-            "std": 0.46157151460647583
+            "score": 0.23112475872039795,
+            "std": 0.3800378739833832
         },
         {
-            "score": 0.034739043563604355,
-            "std": 0.16054703295230865
+            "score": 0.03851195424795151,
+            "std": 0.1704338937997818
         }
     ],
     "sentences": {
@@ -212,78 +271,78 @@
             "What do you want to do tonight?"
         ],
         "chatbota": [
-            "There will be a large contingent of people there",
-            "Vader stands on the Death Star platform and watches as the guards whip past.",
-            "I'm on my way, look where she is, she's right there.",
-            "If you don't mind me asking what is your secret?",
-            "The Force is with you.",
-            "What is it, young Skywalker?",
-            "Chewie, you found the Rebel spies.",
-            "He is the son of Anakin.",
-            "No.If you had told me that you would have broken this ship. That would be unfortunate.",
-            "No! I want them dead.",
-            "It's not impossible.",
-            "Lord Vader, what is your plan with the Millennium Falcon?",
-            "He is a great man.",
-            "Your father was right.He told you,That the Rebellion was a lie.",
+            "What are you talking about?",
+            "It will be in the station.",
+            "You're lucky you're not in the computer room with your computer on the computer screen.",
+            "I'm here for you.",
+            "I have a strong urge to hold that.",
+            "Good. We will stick you in the back of the ship, and we'll bring you out with ease.",
+            "That's right, Captain.",
+            "He's too perfect for this place.",
+            "You did, my lord.",
+            "Only a little light transmission.",
+            "Oh no! You're too late! The Emperor is about to die!",
+            "Don't worry about that.",
+            "There's a boy in our class called Death Star two Death Star Troopers and two TIE fighters",
+            "There is no escape.",
+            "Look into the eyes of a madman.",
+            "I've been trying to keep your ships on the ground for a while, no.",
+            "That's the one",
+            "Don't worry. I have a lot to worry about.",
+            "This station is now operational. See you in sector four, Captain.",
+            "Yes, my Lord.",
+            "Yes, my master.",
+            "It's all yours, my son.",
             "Yes, my lord.",
-            "We must destroy them.",
-            "Amen. And now I know you will die.",
-            "Vader's lightsaber swings around in the circle as the circle pushes closer to the Death Star.",
-            "Vader calmly adjusts his control stick and calmly adjusts his control stick",
-            "Yes, Commander.",
-            "Yes, my lord.",
-            "We've traced the Rebel spies to this location. Take her away!",
-            "I told you to stay here!",
-            "Darth Vader's guards have been beaten for all of this, and now they're in command of the Millennium Falcon.",
-            "He turned in his mind and turned to the side.",
             "Yes, sir.",
-            "Pardon me, Ambassador.",
-            "No, my Lord.",
-            "She will never stop being proud.",
-            "He's on his way to the Ambassador's cell, you know.",
-            "The Emperor does not concern me as a senate.",
-            "Yes, my lord.",
-            "I'll keep an eye on you, Commander.",
-            "The Emperor commands you not to target any ships with the Force that are not in range of this facility.",
-            "Yes, my Lord."
+            "Oh, my, my, lord, I am so beset by the Rebel lies, he is so, so bold. And he is no better than the other men, and it will be all he's ever done for us.",
+            "I'm no longer you.",
+            "Hey.",
+            "He's an unmerked beast, so he has to remain with us.",
+            "That's enough, General.",
+            "No, I'm here for you. Where are you going?",
+            "You will not be in any position to stop us!",
+            "I don't",
+            "No.",
+            "If I can't get my power back...",
+            "We are off to find a new way to die."
         ],
         "chatbotb": [
-            "No. He's a robot.",
-            "I guess so. Hey, buddy. Can we take a few seconds to admire this?",
-            "Well, I always wanted a girder.",
-            "I love you, Zoidberg! You're one of the greats!",
-            "No!",
-            "My heart stopped beating when I saw you.",
-            "Good work, Bender.",
-            "I didn't see the part where you got your own nose removed, huh? I'd like to think that's what you meant.",
-            "And what do you think of that?",
-            "Fry, I think it may be time we went back and forth to the bathroom for a few hours.",
-            "There's a shelter in the woods where his owners buried him.",
-            "Oh, crap! That stinks!",
-            "Well, at least now he knows what it means to be a human female...a...hot mess!",
-            "Yes, Bender.",
-            "Well, I've only got one thing to say to you. One up vote for you. Bender: Please make a deal. Here, we'll use those three discs you're looking for.",
-            "What's the point of having Flexo on a hoverboat when you can't fly a spaceship.",
-            "Nah, just stick to this sub and watch what Leela says.",
-            "Then I shall slay thee.",
-            "Uh, no. I was just curious.",
-            "It's my old broken friend.",
-            "So when do we start?",
-            "And they were right. We are a planet ruled by a galactic super power.",
-            "I know you did it. But the Emperor had a mission. To slay the Huns with his bare hands.",
-            "Yeah!",
-            "Yes they are.",
-            "Yes. I'm just a simple old meatball.",
-            "C'mon, Fry! Get up!",
-            "No, but you're quite the opposite. I love him and I really can't let go of him.",
-            "Ten dollars? I'll go!",
-            "It's all a plan, Leela.",
-            "I'm a retired alcoholic who likes to drink but he has no idea what is going on. You don't need an alcoholic to know what's going on here.",
-            "Hey! I'm a Globetrotter!",
-            "To the beach!",
-            "What's the question?",
-            "We could just make a few more costumes."
+            "This place is beautiful. I'd stay in it. It could also be empty if I just dumped everything in it.",
+            "Where am I?",
+            "Are you happy?",
+            "I love you too, man.",
+            "It's all the same ugly old trash!",
+            "What's all the hubbub?",
+            "Ow!",
+            "I don't know. But if I had to choose between two equally adorable names, it'd be Bender and Fishy Joe.",
+            "No offence intended, Fry. But this picture is absolutely horrific.",
+            "They're so cute when they're scared.",
+            "My God, it's a robot!",
+            "I'll have to pop over. Y'know, as Lord of all creation, you gotta believe in what you can do. You gotta believe in what you can do, whether it be miracles or sexy poses.",
+            "And now, for the unveiling, you will be made of a traditional wooden wig.",
+            "Bender, I'm telling you, with enough bending you can make a great...",
+            "Oh, yes, I'm Bender. You know? A robot.",
+            "Flexo's my best friend. If I had to choose between him and Flexo I'd pick Flexo. But I choose Flexo because he's so cute.",
+            "Oh, I'm so lonely. I can't even think about what I might do. Oh, yeah? Well, I don't know anything!",
+            "Hey, this is for you, Bender. Don't look at me like that.",
+            "Not really.",
+            "Well if you ever needed a helpless helpless superhero with a troubled past just look in this box.",
+            "I hate you.",
+            "So we meet again. I'd better warn you. We're going to crash!",
+            "No. The Emperor is just conferring with the various customs officers. And I'd rather not go into it with a nobody.",
+            "Ohh. I don't need your help.",
+            "Fry I don't believe that. No! My mommy put on the fake ring. My father -- uh my uncle -- put on the fake ring.",
+            "No, I was on the couch with Bender.",
+            "Hey!",
+            "Yes. It's infectious! Especially listening to him talk.",
+            "OK, now I'm listening. What if the worms aren't present?",
+            "Go on, give it up for me.",
+            "I'm a cook at an adult restaurant. I make good money.",
+            "I'm doing OK thank you. How are you doing?",
+            "To volunteer at a liquor kitchen for homeless robots.",
+            "I'm wearing a lime green tank top. I'm gonna go eat at your place and go hang out with the cool kids.",
+            "Heh heh heh heh heh heh heh!"
         ]
     }
 }
