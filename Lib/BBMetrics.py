@@ -474,6 +474,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
         elif name == "semantic classifier":
+            # Note: This Metric is not autonomous from project folder structure and datatypes! #
             self.compute_require_args = set(["sentences", "character", "character_dict", "base_folder"])
             self.compute_optional_args = set(["n_sentences", "verbose"])
             self.train_require_args = set(["character", "character_dict", "source_dict", "random_state", "base_folder"])
