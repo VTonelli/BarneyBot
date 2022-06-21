@@ -1,3 +1,5 @@
+# reference to https://matplotlib.org/stable/gallery/specialty_plots/radar_chart.html
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, RegularPolygon
@@ -125,6 +127,7 @@ class BBRadar:
         self.character = character
         
     def subplotEmotionsRadar(self, nrows, ncols, fig, idx, legend=None, colors=None):
+        # Plots a set of `nrows` rows and `ncols` columns subplots with index idx
         N = len(self.data[0])
         theta = radar_factory(N, frame='polygon')
         spoke_labels = self.data.pop(0)
@@ -147,6 +150,7 @@ class BBRadar:
                             labelspacing=0.1, fontsize='small')
 
     def plotEmotionsRadar(self):
+        # Plots a radar plot 
         N = len(self.data[0])
         theta = radar_factory(N, frame='polygon')
         spoke_labels = self.data.pop(0)
