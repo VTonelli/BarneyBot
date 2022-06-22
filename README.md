@@ -89,7 +89,7 @@ Assuming you want run the project for the character _Barney Stinson_
 Assuming you would like to perform some comparison between two character, e.g. _Barney_ vs _Sheldon_ you can (alternatively to 3. and 4. steps):
 1. run `Build Common Dataset` for building a common dataset to use for chatbots comparison
 2. run all the `Evaluation`, with instead the following setup:
-  ```
-  character = 'Barney'
-  character_2 = 'Sheldon'
-  ```
+   ```
+   character = 'Barney'
+   character_2 = 'Sheldon'
+   ```
