@@ -283,7 +283,7 @@ def distinct(sentences, ngram_size=3):
         distinct_ngrams = set(ngrams(sentence.split(), ngram_size))
         # Divide the length of this set by the number of tokens in the sentence (approx. = the number of ngrams) to get the distinct
         # score for this sentence
-        scores.append(len(distinct_ngrams) / len(sentence-(ngram_size-1)))
+        scores.append(len(distinct_ngrams) / len(sentence)-(ngram_size-1))
     # Compute mean and std of scores
     return np.mean(np.array(scores)), np.std(np.array(scores))
 
