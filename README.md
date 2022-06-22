@@ -93,3 +93,5 @@ Assuming you would like to perform some comparison between two character, e.g. _
    character = 'Barney'
    character_2 = 'Sheldon'
    ```
+
+We also deployed a drive folder, you can check it following this (drive link)[https://liveunibo-my.sharepoint.com/:f:/g/personal/valerio_tonelli2_studio_unibo_it/EtKOgjmlkslAgt44l2OVTdgBxRgqB7dq5yzzbMeLZfT8rQ?e=IX3suW]
