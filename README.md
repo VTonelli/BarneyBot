@@ -94,4 +94,4 @@ Assuming you would like to perform some comparison between two character, e.g. _
    character_2 = 'Sheldon'
    ```
 
-We also deployed a drive folder, you can check it following this [drive link](https://liveunibo-my.sharepoint.com/:f:/g/personal/valerio_tonelli2_studio_unibo_it/EtKOgjmlkslAgt44l2OVTdgBxRgqB7dq5yzzbMeLZfT8rQ?e=IX3suW)
+We also deployed a drive folder, you can check it following this [drive link](https://liveunibo-my.sharepoint.com/personal/valerio_tonelli2_studio_unibo_it/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fvalerio%5Ftonelli2%5Fstudio%5Funibo%5Fit%2FDocuments%2FNLP%20%2D%20BarneyBot&ga=1)
