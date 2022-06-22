@@ -1,9 +1,9 @@
 # Project of Natural Language Processing: BarneyBot
 
 ## Abstract
-We developed a chabot using pretrained model of DialoGPT from transformer library of 🤗 Hugginface performing a fine tuning of its small version on some corpus of data coming from tv show or movie saga.
+We developed several chabots using the pretrained model of DialoGPT from transformer library of 🤗 Hugginface by performing fine-tuning of its small version on some corpus of data coming from tv show and movies, for different characters.
 
-We choise to extend the work made by [Nguyen et al.](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1174/reports/2761115.pdf) who explored the task implementing a chatbot by a seq-to-seq model. As previously said we decided to approch the problem by implementing a more sophisticated model architecture i.e. DialoGPT. 
+We choose to extend the work made by [Nguyen et al.] (https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1174/reports/2761115.pdf) who explored the task by implementing a chatbot by a seq-to-seq model. This work is by all means a revision and extension of theirs.
 
 ### Datasets:
 | Character      | TV show/movie         |
@@ -20,10 +20,10 @@ We choise to extend the work made by [Nguyen et al.](https://web.stanford.edu/cl
 ## Initial setup
 To be able to run the project an initial setup is required. More details about it can be found in 🤗 Transformers [user guide](https://github.com/huggingface/transformers).
 
-You should install 🤗 Transformers in a virtual environment. If you're unfamiliar with Python virtual environments, check out the user guide.
+It is recommended to install 🤗 Transformers in a virtual environment. If you're unfamiliar with Python virtual environments, check out their user guide.
 
 * First thing to do is to create a virtual environment with the specified version of Python.
-* Then as required by the user guide of Transformers, you will need to install at least one of Flax, PyTorch or TensorFlow.
+* Then as required by the user guide of Transformers, you will need to install TensorFlow and PyTorch.
     - When one of those backends has been installed, 🤗 Transformers can be installed using pip as follows
     ```
     pip install transformers
@@ -53,14 +53,14 @@ You should install 🤗 Transformers in a virtual environment. If you're unfamil
     ```
 
 ## Repository structure
-The list of relevant folders for this repository is.
-* `Data` folder contains all the data we used to fine tune our models,
-* `Lib` folder contains library useful to compute metrics and plotting,
+The list of relevant folders for this repository is:
+* `Data` folder contains all the data we used to fine-tune our models and where we saved the models,
+* `Lib` folder contains custom libraries useful to compute metrics and plotting,
 * `Metrics` folder which contains metric results in json format and plots
 
 The list of notebooks is instead:
-* `Preprocessing` where the preprocessing data is performed
-* `Bot` in this notebook is performed the real fine tune of the models
+* `Preprocessing` where the preprocessing of data is performed
+* `Bot` where the real fine-tuning of the models happens
 * `Build Common Dataset` which allows us to construct a common dataset composed by a set of pre-selected sentences from each corpus
 * `Evaluation` where all the metrics selected are computed 
 * `Visualization` which has the goal to print all the plots of the selected metrics 
@@ -80,7 +80,7 @@ Assuming you want run the project for the character _Barney Stinson_
    ```
    character = 'Barney'
    ```
-   and ranning all the cells in the notebook under the following titles:
+   and running all the cells in the notebook under the following titles:
    - Metrics For Character 1
    - Metrics Between Different Sampling Methods
    - Metrics Between Character vs Non-Finetuned
