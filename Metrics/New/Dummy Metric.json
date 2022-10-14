@@ -1,0 +1,34 @@
+{
+    "220b59ba420e4af16b9217f05635815d": {
+        "metric_name": "dummy metric",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Barney"
+            ],
+            "training_set": [
+                1,
+                "Barney"
+            ]
+        },
+        "metric_dependency": 0,
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.9984034299850464,
+            "std": 0.027748608961701393
+        },
+        "hash": "220b59ba420e4af16b9217f05635815d"
+    }
+}

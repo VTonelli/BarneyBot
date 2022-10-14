@@ -1,0 +1,698 @@
+[
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Barney"
+            ],
+            "predictor": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 9.924334271801882,
+        "hash": "52b4cf705006ff16d2c0711a21fa17f4"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Barney"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 397.4605462062972,
+        "hash": "6887b45ce5e292db39adf990b56a3d90"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Bender"
+            ],
+            "predictor": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 13.04435696638766,
+        "hash": "55d208b4cdfa411459c13efc6e40d0d0"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Bender"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 499.5108290069499,
+        "hash": "401d7c1c034ecb592c4fdc36b47ddbe3"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Fry"
+            ],
+            "predictor": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 17.056882910377986,
+        "hash": "a62c925150a01c4bc04f7d63a4d13660"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Fry"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 434.67385127457675,
+        "hash": "ad9ff323bd118d2f00e10b7d71c892f9"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Harry"
+            ],
+            "predictor": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 11.419651231912358,
+        "hash": "82c22d38eed98fe3bcd54172fbb58e52"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Harry"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 365.74130287119874,
+        "hash": "4ed647a6fbb9c2c01e3856453ace19de"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Joey"
+            ],
+            "predictor": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 7.404697221141424,
+        "hash": "8f7d89d27f446f6b515ed774ecef7eda"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Joey"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 631.9276217495137,
+        "hash": "47b49cf7937ba33b77bee4af580bbd1b"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Phoebe"
+            ],
+            "predictor": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 9.345176794556709,
+        "hash": "3ef3dcbd3785d2c42eff0c94bb0c455f"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Phoebe"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 554.3108233120113,
+        "hash": "384b56f41fc25bf59fac2d648640e370"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Sheldon"
+            ],
+            "predictor": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 7.392588924432287,
+        "hash": "7e515c0f16d6b3764eb4a4c6b71ae1b8"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Sheldon"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 312.7172710644745,
+        "hash": "8ea8c32533ba7f636a69470b9e2746b6"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Vader"
+            ],
+            "predictor": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 20.615766981008772,
+        "hash": "bb0fe1b75e18fffd61d6cb3c57c0b35b"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Vader"
+            ],
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 618.6860775727047,
+        "hash": "58f0b0d8beb87a50d4507b900659dd8b"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 60.62977505345756,
+        "hash": "547e2db09a9ad479dc439284f44c5964"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 57.97443492558129,
+        "hash": "8db9b47b13d9a70c4a5971edb1304148"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 36.91676911812309,
+        "hash": "b3e08dd7cf01521959fadd790a4cdd9d"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 43.05399126504585,
+        "hash": "41366287be71e3a961c9b874956532b2"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 34.82308148324144,
+        "hash": "a59bf7b9330cd702074c7ef25bf8165a"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 58.51237563905788,
+        "hash": "4869f9445538c6b0872f94901bff8543"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 67.96138565177583,
+        "hash": "1de50186f96d680f4020d465487d20e2"
+    },
+    {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 2,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Common"
+            ],
+            "predictor": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 0,
+        "answer": 57.950867367315794,
+        "hash": "902666effc00dc60961cdb6b366f6c2d"
+    }
+]

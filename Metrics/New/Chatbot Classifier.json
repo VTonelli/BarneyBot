@@ -1,0 +1,1362 @@
+[
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Barney"
+            ],
+            "document": [
+                1,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.9984034299850464,
+            "std": 0.027748608961701393
+        },
+        "hash": "57fe33620598566b86936abb43de570b"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Barney"
+            ],
+            "document": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.3814893662929535,
+            "std": 0.44786402583122253
+        },
+        "hash": "3dfd97e27f7bd2421c08afcab68bc2af"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Barney"
+            ],
+            "document": [
+                11,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.3995751440525055,
+            "std": 0.4505580961704254
+        },
+        "hash": "51e898b0b52162ebf86bea4cdacc9310"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Barney"
+            ],
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.528874397277832,
+            "std": 0.46000248193740845
+        },
+        "hash": "42afc9540699ddf692a65beab20dd7e4"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Barney"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.40122997760772705,
+            "std": 0.4528234899044037
+        },
+        "hash": "c8c834324c1daf4a965a06e6cb1a5cf2"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Bender"
+            ],
+            "document": [
+                1,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.999417781829834,
+            "std": 0.017105400562286377
+        },
+        "hash": "033703c26fa1e35a1006f6e5015edf2d"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Bender"
+            ],
+            "document": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.3937167525291443,
+            "std": 0.4614381492137909
+        },
+        "hash": "96336778dbd41651a0b02c783ca6e175"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Bender"
+            ],
+            "document": [
+                11,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5705608129501343,
+            "std": 0.4667850434780121
+        },
+        "hash": "9a766207df430dce9dee01bbb74d4615"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Bender"
+            ],
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5989475250244141,
+            "std": 0.4621758460998535
+        },
+        "hash": "c0e546d0f115b65bc66f7ea5f00fa618"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Bender"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.27549079060554504,
+            "std": 0.4125666916370392
+        },
+        "hash": "2ca79edbc991da9231bc9e7ca754c63d"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Fry"
+            ],
+            "document": [
+                1,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.9986804127693176,
+            "std": 0.026258450001478195
+        },
+        "hash": "8b57a268ccdbfb7c7754db2311cd86d7"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Fry"
+            ],
+            "document": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.7446639537811279,
+            "std": 0.4076484441757202
+        },
+        "hash": "08d26bda9abc9b51aabf35e0e477db56"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Fry"
+            ],
+            "document": [
+                11,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.6555787324905396,
+            "std": 0.4404919445514679
+        },
+        "hash": "04eeaa45b618421675bc78fb1f26d2e3"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Fry"
+            ],
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.6302943229675293,
+            "std": 0.4461088478565216
+        },
+        "hash": "37af4c020def438295f54e4aeab8f4f0"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Fry"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.49922841787338257,
+            "std": 0.46343994140625
+        },
+        "hash": "0ea2fc4f39cb07b9302a302dcf4e8486"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Harry"
+            ],
+            "document": [
+                1,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.999803364276886,
+            "std": 0.0056923688389360905
+        },
+        "hash": "1b69ea8d28d0477e6f6135bab1d34c0b"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Harry"
+            ],
+            "document": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.780211329460144,
+            "std": 0.38100308179855347
+        },
+        "hash": "bec7f087211c69f5eec8226315b48b36"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Harry"
+            ],
+            "document": [
+                11,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.7538044452667236,
+            "std": 0.4018614888191223
+        },
+        "hash": "3048a4aa5e02617d869d121b6e60e810"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Harry"
+            ],
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5068908929824829,
+            "std": 0.4694424271583557
+        },
+        "hash": "8f3ffa364601c004768010309ed6ac70"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Harry"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5956745147705078,
+            "std": 0.452359676361084
+        },
+        "hash": "3acf8c95d2bd9fa5fca434e0b8a39bf6"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Joey"
+            ],
+            "document": [
+                1,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.9866443872451782,
+            "std": 0.09030620753765106
+        },
+        "hash": "2b7f9a8ea44d4623077ef8e9102874a8"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Joey"
+            ],
+            "document": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.6052398681640625,
+            "std": 0.4440087378025055
+        },
+        "hash": "aeb0d5a219d63c4aef0e8552fcecce22"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Joey"
+            ],
+            "document": [
+                11,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.4728991985321045,
+            "std": 0.44885891675949097
+        },
+        "hash": "2eb5632fbbf76f1f43d6128e42cda231"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Joey"
+            ],
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5667638778686523,
+            "std": 0.4465433955192566
+        },
+        "hash": "1120ed1419f1e0b956be5e5f556fe445"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Joey"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.4147748053073883,
+            "std": 0.4566928744316101
+        },
+        "hash": "456573f59484d2213b188b0efdde5e4b"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Phoebe"
+            ],
+            "document": [
+                1,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.9805834889411926,
+            "std": 0.10918779671192169
+        },
+        "hash": "2bcf34fd48c74ff42c3734f39705c6fb"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Phoebe"
+            ],
+            "document": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5739040970802307,
+            "std": 0.44013938307762146
+        },
+        "hash": "3b6d10ef5c55b6d102da343e23c38f98"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Phoebe"
+            ],
+            "document": [
+                11,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5988990068435669,
+            "std": 0.4445077180862427
+        },
+        "hash": "e796d518ea20224a06f9563afe46344a"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Phoebe"
+            ],
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5263374447822571,
+            "std": 0.4384518563747406
+        },
+        "hash": "6fdba8c622383ab7a8722aa6679529b6"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Phoebe"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.25861114263534546,
+            "std": 0.4015389680862427
+        },
+        "hash": "3d1b000320bb1f7616224ee1d022ea5b"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Sheldon"
+            ],
+            "document": [
+                1,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.9926677346229553,
+            "std": 0.06724108755588531
+        },
+        "hash": "26a2d3efb515adf68636284562b12820"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Sheldon"
+            ],
+            "document": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.28171461820602417,
+            "std": 0.415910005569458
+        },
+        "hash": "f2195a5a845193872ef52f69fd5d9a25"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Sheldon"
+            ],
+            "document": [
+                11,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.41786909103393555,
+            "std": 0.4575441777706146
+        },
+        "hash": "64cc36c9227aa5e6d30fa2de433e3268"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Sheldon"
+            ],
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.42602962255477905,
+            "std": 0.4622410237789154
+        },
+        "hash": "76d70a3b54c4d78dd660c86dbb673cd9"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Sheldon"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.34731024503707886,
+            "std": 0.44794681668281555
+        },
+        "hash": "6120cdddd9d5e9a2904a05a5dc4fa01a"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Vader"
+            ],
+            "document": [
+                1,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.9999648332595825,
+            "std": 1.0704990017984528e-05
+        },
+        "hash": "2950792ea64ddc8a4d502834e1badd5c"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Vader"
+            ],
+            "document": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.4008733034133911,
+            "std": 0.4590854346752167
+        },
+        "hash": "70261ce01e106a8eacf095a84339d381"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Vader"
+            ],
+            "document": [
+                11,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.4008733034133911,
+            "std": 0.4590854346752167
+        },
+        "hash": "1e67250e3855a30705ed07673ca70be0"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 1,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Vader"
+            ],
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.5757138133049011,
+            "std": 0.45974645018577576
+        },
+        "hash": "26c1f10bf60ca3a511943f26b0cc7569"
+    },
+    {
+        "metric_name": "chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_dependency": 0,
+        "metric_actors": {
+            "training_set": [
+                1,
+                "Vader"
+            ],
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {
+            "n_sentences": 75
+        },
+        "metric_arity": 2,
+        "metric_samples": "Unknown",
+        "metric_determinism": 1,
+        "answer": {
+            "score": 0.022517835721373558,
+            "std": 0.1236795037984848
+        },
+        "hash": "47f84b3b4310d6a4a89ee20be1a795a7"
+    }
+]
