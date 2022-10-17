@@ -1,0 +1,348 @@
+{
+    "metadata": {
+        "dataset name": "common small dataset",
+        "names": {
+            "context": "context",
+            "chatbota": "Barney",
+            "chatbotb": "Joey"
+        },
+        "semantic similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "perplexity": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "bleu": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "rouge l": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "distinct": {
+            "ordering": [
+                "context",
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "emotion": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "chatbotb-chatbota correlation"
+            ]
+        },
+        "semantic answer similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "semantic classifier": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        }
+    },
+    "semantic similarity": [
+        {
+            "score": 0.2933163046836853,
+            "std": 0.18459452688694
+        },
+        {
+            "score": 0.3603838384151459,
+            "std": 0.19928745925426483
+        },
+        {
+            "score": 0.25569403171539307,
+            "std": 0.1227368712425232
+        },
+        0.46787121223638595
+    ],
+    "perplexity": [
+        60.62977505345756,
+        34.82308148324144
+    ],
+    "bleu": [
+        {
+            "score": 0.02272033183638695
+        },
+        {
+            "score": 0.01385807968414101
+        },
+        {
+            "score": 0.009931057960181061
+        },
+        0.49122633056046333
+    ],
+    "rouge l": [
+        {
+            "score": 0.10831381474194389,
+            "std": 0.19997465467754333
+        },
+        {
+            "score": 0.14590359910479905,
+            "std": 0.2216201434511459
+        },
+        {
+            "score": 0.06321110385551156,
+            "std": 0.09822586605426548
+        },
+        0.4651145334066839
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.10200130053477839,
+            "std": 0.06743798915298448
+        },
+        {
+            "score": 0.12350601838662223,
+            "std": 0.06015132692700628
+        }
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.11865071407186666,
+                0.41757934925013357,
+                0.03285253073138717,
+                0.37294359336956406,
+                0.0548051281491228,
+                0.0031686794436869346
+            ],
+            "std": [
+                0.28930342320521174,
+                0.4363070982663459,
+                0.16474550997496998,
+                0.39044312765434674,
+                0.08834567470808836,
+                0.007960625038149278
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.04542806882860272,
+                0.5029353603745611,
+                0.0266215547790385,
+                0.2942628749795923,
+                0.09813864399953413,
+                0.03261350467343748
+            ],
+            "std": [
+                0.16546995759361235,
+                0.4282537471220899,
+                0.1388437514171785,
+                0.3488616752901485,
+                0.1814130241129838,
+                0.16443541653601013
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.9401941949086324
+    ],
+    "semantic answer similarity": [
+        {
+            "score": 0.0976436510682106,
+            "std": 0.2122155725955963
+        },
+        {
+            "score": 0.13983379304409027,
+            "std": 0.19888927042484283
+        },
+        {
+            "score": 0.07709655910730362,
+            "std": 0.1094585731625557
+        },
+        0.4616718017771857
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.3969308137893677,
+            "std": 0.4549808204174042
+        },
+        {
+            "score": 0.40194183588027954,
+            "std": 0.44940534234046936
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "Really? It's about...",
+            "Guys. Look. I'm going to go eat my cereal now, and there's going to be another snack.",
+            "Maybe there is, maybe there is.",
+            "Wait. She actually said that?",
+            "I don't even know if she's hot.",
+            "I can't believe they let you guys stay a pet for so long.",
+            "Hi, you...",
+            "It's his real name.",
+            "Yeah, you did.",
+            "Marshall?",
+            "Because the dog died.",
+            "Oh!",
+            "But you didn't like that movie as much as I did. I did.",
+            "No.",
+            "Oh, God. I just can't picture it. Look, Ted, I don't wanna be your boyfriend, okay?",
+            "Farewell, gentlemen. May your reign be well long and happy.",
+            "What are you talking about?",
+            "This is... not the place to go.",
+            "That night, Barney was trying to convince Lily to let him stay. But... she just gave up. And while the rest of the night went better, I had to go get some more ice  Or so I told Nora...",
+            "This is the easiest date ever! No holds barred!",
+            "I will not fight you.",
+            "And... you have my full support.",
+            "Guess who? It's me.",
+            "You're kidding me.",
+            "Sorry.",
+            "No.",
+            "Barney.",
+            "I'm fine. He just seems so...",
+            "Thank you.",
+            "Are you sure?",
+            "I'm the best architect available. In fact, if you want, I have a room in the architecture.",
+            "You are beautiful. And, I hope you get drunk.  I'm sorry, I did sleep with your mom.",
+            "You just see a woman sit on a motorcycle. That is an access problem.",
+            "I will tell you.",
+            "I'm not ready."
+        ],
+        "chatbotb": [
+            "Well, then why are you dressed like that? I mean, look at you, you're totally normal, you know?",
+            "Yes I'll do it. I'll do it.  Okay. I'll see you in the morning.",
+            "Hey, so, how are ya?",
+            "I love you too, Chandler.",
+            "Oh, okay, I'll see you later.",
+            "This is not how I want you. What is this?",
+            "What?",
+            "What? What-what about Chandlers last name?",
+            "Oh man, you broke my heart.",
+            "Youre right. Youre right, I didnt know that. But, you know what?",
+            "You're right. It's not very clean, but I gotta say, I'm really impressed with that dog.",
+            "Yeah, it's a famous saying. It's been used in Italy and parts of Western Europe for a while now.",
+            "Oh-oh, so youre saying that you want him as your roommate?",
+            "Thats the beauty part, you got a good laugh out of that.",
+            "Yes! And Im-Im sorry, I wasnt trying to make it up. My-my friends had a lot of fun with it at the bachelor party though, and yknow, I have a great agent! And, and my boss is good at math. So yknow what? I think Im gonna take this bet and bet that my equity is better than my equity.",
+            "No, no, no, no. Do it again, and again, and again, and again, and again, and again, and again.",
+            "Oh, oh, God!",
+            "I know. I know.",
+            "I dont know.",
+            "Thank God you found me!",
+            "I will not fight a man named Cotton.  If you will not be my pal.",
+            "Theyre in the movie.",
+            "Look at you, your little princess bride. That's not going anywhere.",
+            "Yeah.",
+            "They're fine.",
+            "I wish.  Oh my God, its beautiful!",
+            "Hey.",
+            "Yes. I know it. All right. I'll take that.",
+            "Noooo. Eight, eight, eight, eight...",
+            "Okay.  Hey, if you're gonna be around here a lot tonight, how come nobody's watching me?",
+            "Well, I do, I write for a living and I'm a paleontologist. Paleontologists are just people who want to look good, y'know? They can't do that for me.",
+            "Im fine.",
+            "Uh, to the bathroom.",
+            "Uhm, underwear that Chandler was wearing at the time.",
+            "Hey, listen, I got something for you. I was just gonna talk to you about something, you know."
+        ]
+    }
+}

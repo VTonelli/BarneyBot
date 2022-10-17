@@ -1,0 +1,677 @@
+{
+    "greedy_vs_nbeams": {
+        "metadata": {
+            "dataset name": "Phoebe dataset",
+            "names": {
+                "context": "context",
+                "chatbota": "Phoebe",
+                "chatbotb": "Phoebe"
+            },
+            "semantic similarity": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "bleu": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "rouge l": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "distinct": {
+                "ordering": [
+                    "context",
+                    "chatbota",
+                    "chatbotb"
+                ]
+            },
+            "emotion": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "chatbotb-chatbota correlation"
+                ]
+            },
+            "semantic answer similarity": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "semantic classifier": {
+                "ordering": [
+                    "chatbota",
+                    "chatbotb"
+                ]
+            }
+        },
+        "semantic similarity": [
+            {
+                "score": 0.40870147943496704,
+                "std": 0.23435261845588684
+            },
+            {
+                "score": 0.40870147943496704,
+                "std": 0.23435261845588684
+            },
+            {
+                "score": 1.0,
+                "std": 1.6428123217337998e-07
+            },
+            1.0
+        ],
+        "bleu": [
+            {
+                "score": 0.021513006029398707
+            },
+            {
+                "score": 0.021513006029398707
+            },
+            {
+                "score": 1.0
+            },
+            1.0
+        ],
+        "rouge l": [
+            {
+                "score": 0.1418503459634075,
+                "std": 0.24998874630474968
+            },
+            {
+                "score": 0.1418503459634075,
+                "std": 0.24998874630474968
+            },
+            {
+                "score": 1.0,
+                "std": 0.0
+            },
+            1.0
+        ],
+        "distinct": [
+            {
+                "score": 0.11213835763291326,
+                "std": 0.06894380853461023
+            },
+            {
+                "score": 0.07997516561679517,
+                "std": 0.06625687401822146
+            },
+            {
+                "score": 0.07997516561679517,
+                "std": 0.06625687401822146
+            }
+        ],
+        "emotion": [
+            {
+                "score": [
+                    0.06731360743103872,
+                    0.4401319045525031,
+                    0.018626827603474522,
+                    0.35452349197852145,
+                    0.1009300407474006,
+                    0.01847412650051856
+                ],
+                "std": [
+                    0.2049956795476677,
+                    0.4055472332376182,
+                    0.10306772031126891,
+                    0.3537320542664785,
+                    0.18486217511843914,
+                    0.1042451584749789
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.08710386491102459,
+                    0.6092642850502242,
+                    0.01932332022251419,
+                    0.20587626334509815,
+                    0.064718159839889,
+                    0.013714114964788748
+                ],
+                "std": [
+                    0.23287812236082056,
+                    0.3668043970649815,
+                    0.10289604911905235,
+                    0.27460940010047735,
+                    0.1203455190900329,
+                    0.035125290694579446
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.08710386491102459,
+                    0.6092642850502242,
+                    0.01932332022251419,
+                    0.20587626334509815,
+                    0.064718159839889,
+                    0.013714114964788748
+                ],
+                "std": [
+                    0.23287812236082056,
+                    0.3668043970649815,
+                    0.10289604911905235,
+                    0.27460940010047735,
+                    0.1203455190900329,
+                    0.035125290694579446
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            1.0
+        ],
+        "semantic answer similarity": [
+            {
+                "score": 0.25132864713668823,
+                "std": 0.2836090624332428
+            },
+            {
+                "score": 0.25132864713668823,
+                "std": 0.2836090624332428
+            },
+            {
+                "score": 0.9561010003089905,
+                "std": 0.03032536990940571
+            },
+            0.9570645613959261
+        ],
+        "semantic classifier": [
+            {
+                "score": 0.5102816820144653,
+                "std": 0.4368841350078583
+            },
+            {
+                "score": 0.5988990068435669,
+                "std": 0.4445077180862427
+            }
+        ]
+    },
+    "greedy_vs_sampling": {
+        "metadata": {
+            "dataset name": "Phoebe dataset",
+            "names": {
+                "context": "context",
+                "chatbota": "Phoebe",
+                "chatbotb": "Phoebe"
+            },
+            "semantic similarity": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "bleu": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "rouge l": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "distinct": {
+                "ordering": [
+                    "context",
+                    "chatbota",
+                    "chatbotb"
+                ]
+            },
+            "emotion": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "chatbotb-chatbota correlation"
+                ]
+            },
+            "semantic answer similarity": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "semantic classifier": {
+                "ordering": [
+                    "chatbota",
+                    "chatbotb"
+                ]
+            }
+        },
+        "semantic similarity": [
+            {
+                "score": 0.40870147943496704,
+                "std": 0.23435261845588684
+            },
+            {
+                "score": 0.3579091727733612,
+                "std": 0.17281627655029297
+            },
+            {
+                "score": 0.43033328652381897,
+                "std": 0.25215932726860046
+            },
+            0.5430909912915931
+        ],
+        "bleu": [
+            {
+                "score": 0.021513006029398707
+            },
+            {
+                "score": 0.0
+            },
+            {
+                "score": 0.019310083694320072
+            },
+            0.47890483835095266
+        ],
+        "rouge l": [
+            {
+                "score": 0.1418503459634075,
+                "std": 0.24998874630474968
+            },
+            {
+                "score": 0.08867731687830424,
+                "std": 0.15094231440141523
+            },
+            {
+                "score": 0.21394453421039633,
+                "std": 0.29896149309694686
+            },
+            0.47112678828519106
+        ],
+        "distinct": [
+            {
+                "score": 0.11213835763291326,
+                "std": 0.06894380853461023
+            },
+            {
+                "score": 0.07997516561679517,
+                "std": 0.06625687401822146
+            },
+            {
+                "score": 0.10164457397898109,
+                "std": 0.07587802089752273
+            }
+        ],
+        "emotion": [
+            {
+                "score": [
+                    0.06731360743103872,
+                    0.4401319045525031,
+                    0.018626827603474522,
+                    0.35452349197852145,
+                    0.1009300407474006,
+                    0.01847412650051856
+                ],
+                "std": [
+                    0.2049956795476677,
+                    0.4055472332376182,
+                    0.10306772031126891,
+                    0.3537320542664785,
+                    0.18486217511843914,
+                    0.1042451584749789
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.08710386491102459,
+                    0.6092642850502242,
+                    0.01932332022251419,
+                    0.20587626334509815,
+                    0.064718159839889,
+                    0.013714114964788748
+                ],
+                "std": [
+                    0.23287812236082056,
+                    0.3668043970649815,
+                    0.10289604911905235,
+                    0.27460940010047735,
+                    0.1203455190900329,
+                    0.035125290694579446
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.06649272101299206,
+                    0.5217359952934609,
+                    0.024287310231391145,
+                    0.2926405082771174,
+                    0.08251949522071739,
+                    0.012323976133868052
+                ],
+                "std": [
+                    0.19688051286343394,
+                    0.39421745673755,
+                    0.12516380068017768,
+                    0.3291422016301095,
+                    0.1555258263293717,
+                    0.05685080736941324
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            0.9726768631749092
+        ],
+        "semantic answer similarity": [
+            {
+                "score": 0.25132864713668823,
+                "std": 0.2836090624332428
+            },
+            {
+                "score": 0.1472337394952774,
+                "std": 0.195856973528862
+            },
+            {
+                "score": 0.29232320189476013,
+                "std": 0.31775376200675964
+            },
+            0.44404939444002844
+        ],
+        "semantic classifier": [
+            {
+                "score": 0.6468185782432556,
+                "std": 0.42580094933509827
+            },
+            {
+                "score": 0.603722870349884,
+                "std": 0.43202823400497437
+            }
+        ]
+    },
+    "nbeams_vs_sampling": {
+        "metadata": {
+            "dataset name": "Phoebe dataset",
+            "names": {
+                "context": "context",
+                "chatbota": "Phoebe",
+                "chatbotb": "Phoebe"
+            },
+            "semantic similarity": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "bleu": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "rouge l": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "distinct": {
+                "ordering": [
+                    "context",
+                    "chatbota",
+                    "chatbotb"
+                ]
+            },
+            "emotion": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "chatbotb-chatbota correlation"
+                ]
+            },
+            "semantic answer similarity": {
+                "ordering": [
+                    "context-chatbota",
+                    "context-chatbotb",
+                    "chatbotb-chatbota",
+                    "ccl"
+                ]
+            },
+            "semantic classifier": {
+                "ordering": [
+                    "chatbota",
+                    "chatbotb"
+                ]
+            }
+        },
+        "semantic similarity": [
+            {
+                "score": 0.40870147943496704,
+                "std": 0.23435261845588684
+            },
+            {
+                "score": 0.3579091727733612,
+                "std": 0.17281627655029297
+            },
+            {
+                "score": 0.43033328652381897,
+                "std": 0.25215932726860046
+            },
+            0.5430909912915931
+        ],
+        "bleu": [
+            {
+                "score": 0.021513006029398707
+            },
+            {
+                "score": 0.0
+            },
+            {
+                "score": 0.019310083694320072
+            },
+            0.47890483835095266
+        ],
+        "rouge l": [
+            {
+                "score": 0.1418503459634075,
+                "std": 0.24998874630474968
+            },
+            {
+                "score": 0.08867731687830424,
+                "std": 0.15094231440141523
+            },
+            {
+                "score": 0.21394453421039633,
+                "std": 0.29896149309694686
+            },
+            0.47112678828519106
+        ],
+        "distinct": [
+            {
+                "score": 0.11213835763291326,
+                "std": 0.06894380853461023
+            },
+            {
+                "score": 0.07997516561679517,
+                "std": 0.06625687401822146
+            },
+            {
+                "score": 0.10164457397898109,
+                "std": 0.07587802089752273
+            }
+        ],
+        "emotion": [
+            {
+                "score": [
+                    0.06731360743103872,
+                    0.4401319045525031,
+                    0.018626827603474522,
+                    0.35452349197852145,
+                    0.1009300407474006,
+                    0.01847412650051856
+                ],
+                "std": [
+                    0.2049956795476677,
+                    0.4055472332376182,
+                    0.10306772031126891,
+                    0.3537320542664785,
+                    0.18486217511843914,
+                    0.1042451584749789
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.08710386491102459,
+                    0.6092642850502242,
+                    0.01932332022251419,
+                    0.20587626334509815,
+                    0.064718159839889,
+                    0.013714114964788748
+                ],
+                "std": [
+                    0.23287812236082056,
+                    0.3668043970649815,
+                    0.10289604911905235,
+                    0.27460940010047735,
+                    0.1203455190900329,
+                    0.035125290694579446
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.06649272101299206,
+                    0.5217359952934609,
+                    0.024287310231391145,
+                    0.2926405082771174,
+                    0.08251949522071739,
+                    0.012323976133868052
+                ],
+                "std": [
+                    0.19688051286343394,
+                    0.39421745673755,
+                    0.12516380068017768,
+                    0.3291422016301095,
+                    0.1555258263293717,
+                    0.05685080736941324
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            0.9726768631749092
+        ],
+        "semantic answer similarity": [
+            {
+                "score": 0.25132864713668823,
+                "std": 0.2836090624332428
+            },
+            {
+                "score": 0.1472337394952774,
+                "std": 0.195856973528862
+            },
+            {
+                "score": 0.29232320189476013,
+                "std": 0.31775376200675964
+            },
+            0.44404939444002844
+        ],
+        "semantic classifier": [
+            {
+                "score": 0.5982050895690918,
+                "std": 0.42410773038864136
+            },
+            {
+                "score": 0.5263374447822571,
+                "std": 0.4384518563747406
+            }
+        ]
+    }
+}

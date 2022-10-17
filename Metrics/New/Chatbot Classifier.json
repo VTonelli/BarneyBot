@@ -1,5 +1,5 @@
-[
-    {
+{
+    "57fe33620598566b86936abb43de570b": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -33,7 +33,7 @@
         },
         "hash": "57fe33620598566b86936abb43de570b"
     },
-    {
+    "3dfd97e27f7bd2421c08afcab68bc2af": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -67,7 +67,7 @@
         },
         "hash": "3dfd97e27f7bd2421c08afcab68bc2af"
     },
-    {
+    "51e898b0b52162ebf86bea4cdacc9310": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -101,7 +101,7 @@
         },
         "hash": "51e898b0b52162ebf86bea4cdacc9310"
     },
-    {
+    "42afc9540699ddf692a65beab20dd7e4": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -135,7 +135,7 @@
         },
         "hash": "42afc9540699ddf692a65beab20dd7e4"
     },
-    {
+    "c8c834324c1daf4a965a06e6cb1a5cf2": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -169,7 +169,7 @@
         },
         "hash": "c8c834324c1daf4a965a06e6cb1a5cf2"
     },
-    {
+    "033703c26fa1e35a1006f6e5015edf2d": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -203,7 +203,7 @@
         },
         "hash": "033703c26fa1e35a1006f6e5015edf2d"
     },
-    {
+    "96336778dbd41651a0b02c783ca6e175": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -237,7 +237,7 @@
         },
         "hash": "96336778dbd41651a0b02c783ca6e175"
     },
-    {
+    "9a766207df430dce9dee01bbb74d4615": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -271,7 +271,7 @@
         },
         "hash": "9a766207df430dce9dee01bbb74d4615"
     },
-    {
+    "c0e546d0f115b65bc66f7ea5f00fa618": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -305,7 +305,7 @@
         },
         "hash": "c0e546d0f115b65bc66f7ea5f00fa618"
     },
-    {
+    "2ca79edbc991da9231bc9e7ca754c63d": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -339,7 +339,7 @@
         },
         "hash": "2ca79edbc991da9231bc9e7ca754c63d"
     },
-    {
+    "8b57a268ccdbfb7c7754db2311cd86d7": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -373,7 +373,7 @@
         },
         "hash": "8b57a268ccdbfb7c7754db2311cd86d7"
     },
-    {
+    "08d26bda9abc9b51aabf35e0e477db56": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -407,7 +407,7 @@
         },
         "hash": "08d26bda9abc9b51aabf35e0e477db56"
     },
-    {
+    "04eeaa45b618421675bc78fb1f26d2e3": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -441,7 +441,7 @@
         },
         "hash": "04eeaa45b618421675bc78fb1f26d2e3"
     },
-    {
+    "37af4c020def438295f54e4aeab8f4f0": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -475,7 +475,7 @@
         },
         "hash": "37af4c020def438295f54e4aeab8f4f0"
     },
-    {
+    "0ea2fc4f39cb07b9302a302dcf4e8486": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -509,7 +509,7 @@
         },
         "hash": "0ea2fc4f39cb07b9302a302dcf4e8486"
     },
-    {
+    "1b69ea8d28d0477e6f6135bab1d34c0b": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -543,7 +543,7 @@
         },
         "hash": "1b69ea8d28d0477e6f6135bab1d34c0b"
     },
-    {
+    "bec7f087211c69f5eec8226315b48b36": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -577,7 +577,7 @@
         },
         "hash": "bec7f087211c69f5eec8226315b48b36"
     },
-    {
+    "3048a4aa5e02617d869d121b6e60e810": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -611,7 +611,7 @@
         },
         "hash": "3048a4aa5e02617d869d121b6e60e810"
     },
-    {
+    "8f3ffa364601c004768010309ed6ac70": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -645,7 +645,7 @@
         },
         "hash": "8f3ffa364601c004768010309ed6ac70"
     },
-    {
+    "3acf8c95d2bd9fa5fca434e0b8a39bf6": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -679,7 +679,7 @@
         },
         "hash": "3acf8c95d2bd9fa5fca434e0b8a39bf6"
     },
-    {
+    "2b7f9a8ea44d4623077ef8e9102874a8": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -713,7 +713,7 @@
         },
         "hash": "2b7f9a8ea44d4623077ef8e9102874a8"
     },
-    {
+    "aeb0d5a219d63c4aef0e8552fcecce22": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -747,7 +747,7 @@
         },
         "hash": "aeb0d5a219d63c4aef0e8552fcecce22"
     },
-    {
+    "2eb5632fbbf76f1f43d6128e42cda231": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -781,7 +781,7 @@
         },
         "hash": "2eb5632fbbf76f1f43d6128e42cda231"
     },
-    {
+    "1120ed1419f1e0b956be5e5f556fe445": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -815,7 +815,7 @@
         },
         "hash": "1120ed1419f1e0b956be5e5f556fe445"
     },
-    {
+    "456573f59484d2213b188b0efdde5e4b": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -849,7 +849,7 @@
         },
         "hash": "456573f59484d2213b188b0efdde5e4b"
     },
-    {
+    "2bcf34fd48c74ff42c3734f39705c6fb": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -883,7 +883,7 @@
         },
         "hash": "2bcf34fd48c74ff42c3734f39705c6fb"
     },
-    {
+    "3b6d10ef5c55b6d102da343e23c38f98": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -917,7 +917,7 @@
         },
         "hash": "3b6d10ef5c55b6d102da343e23c38f98"
     },
-    {
+    "e796d518ea20224a06f9563afe46344a": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -951,7 +951,7 @@
         },
         "hash": "e796d518ea20224a06f9563afe46344a"
     },
-    {
+    "6fdba8c622383ab7a8722aa6679529b6": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -985,7 +985,7 @@
         },
         "hash": "6fdba8c622383ab7a8722aa6679529b6"
     },
-    {
+    "3d1b000320bb1f7616224ee1d022ea5b": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1019,7 +1019,7 @@
         },
         "hash": "3d1b000320bb1f7616224ee1d022ea5b"
     },
-    {
+    "26a2d3efb515adf68636284562b12820": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1053,7 +1053,7 @@
         },
         "hash": "26a2d3efb515adf68636284562b12820"
     },
-    {
+    "f2195a5a845193872ef52f69fd5d9a25": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1087,7 +1087,7 @@
         },
         "hash": "f2195a5a845193872ef52f69fd5d9a25"
     },
-    {
+    "64cc36c9227aa5e6d30fa2de433e3268": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1121,7 +1121,7 @@
         },
         "hash": "64cc36c9227aa5e6d30fa2de433e3268"
     },
-    {
+    "76d70a3b54c4d78dd660c86dbb673cd9": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1155,7 +1155,7 @@
         },
         "hash": "76d70a3b54c4d78dd660c86dbb673cd9"
     },
-    {
+    "6120cdddd9d5e9a2904a05a5dc4fa01a": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1189,7 +1189,7 @@
         },
         "hash": "6120cdddd9d5e9a2904a05a5dc4fa01a"
     },
-    {
+    "2950792ea64ddc8a4d502834e1badd5c": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1223,7 +1223,7 @@
         },
         "hash": "2950792ea64ddc8a4d502834e1badd5c"
     },
-    {
+    "70261ce01e106a8eacf095a84339d381": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1257,7 +1257,7 @@
         },
         "hash": "70261ce01e106a8eacf095a84339d381"
     },
-    {
+    "1e67250e3855a30705ed07673ca70be0": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1291,7 +1291,7 @@
         },
         "hash": "1e67250e3855a30705ed07673ca70be0"
     },
-    {
+    "26c1f10bf60ca3a511943f26b0cc7569": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1325,7 +1325,7 @@
         },
         "hash": "26c1f10bf60ca3a511943f26b0cc7569"
     },
-    {
+    "47f84b3b4310d6a4a89ee20be1a795a7": {
         "metric_name": "chatbot classifier",
         "metric_version": 1,
         "metric_attempt": 0,
@@ -1359,4 +1359,4 @@
         },
         "hash": "47f84b3b4310d6a4a89ee20be1a795a7"
     }
-]
+}
