@@ -6,6 +6,7 @@ cache/
 !.gitignore
 __pycache__/
 .ipynb_checkpoints/
+todo.md
 
 # Environments
 .env
