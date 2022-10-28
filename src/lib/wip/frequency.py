@@ -41,6 +41,13 @@ def freq_pairwise_sim(v1, v2):
         np.array(v1_ord).reshape(1, -1),
         np.array(v2_ord).reshape(1, -1))[0][0]
 
+def most_similar_words(v1, v2, max_words=15):
+    wordlist = list(set(v1.keys()).intersection((v2.keys())))
+    wordlist.sort(key=lambda word: abs(v1[word]-v2[word]))
+    if max_words > len(wordlist):
+        max_words = len(wordlist)
+    return wordlist[:max_words]
+
 def sentence_preprocess(sentence, stopwords=stopwords.words(), min_sentence_len=3):
     sentence = re.sub(r'[^A-Za-z\s]', ' ', sentence)
     sentence = re.sub(r'\s+', ' ', sentence)
@@ -100,11 +107,12 @@ class FrequencyChatbotClassifier:
             }
         self.loaded = True
 
-    def predict(self, doc, mass=0.5):
+    def predict(self, doc, mass=0.5, nwords=15):
         if not self.loaded:
             raise Exception("Classifier must be trained first!")
         doc = ' '.join(doc)
         predictions = dict()
+        msw_predictions = dict()
         if self.mode == 'word frequency':
             v1 = filter_by_weights(get_word_frequency(doc), mass)
         elif self.mode == 'tf-idf':
@@ -121,4 +129,5 @@ class FrequencyChatbotClassifier:
                 w = tfidfs[character]
             v2 = filter_by_weights(w, mass)
             predictions[character] = freq_pairwise_sim(v1, v2)
-        return predictions
+            msw_predictions[character] = most_similar_words(v1, v2, max_words=nwords)
+        return predictions, msw_predictions
