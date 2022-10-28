@@ -60,7 +60,7 @@ def get_tfidfs(docs, characters, tfidf_vectorizer):
     tfidf_matrix = tfidf_vectorizer.fit_transform(docs)
     tfidf_df = pd.DataFrame(tfidf_matrix.toarray(),
                             index=characters,
-                            columns=tfidf_vectorizer.get_feature_names())
+                            columns=tfidf_vectorizer.get_feature_names_out())
 
     tfidfs = dict()
 
