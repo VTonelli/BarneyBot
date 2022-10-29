@@ -1,3 +1,4 @@
+from regex import D
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import pandas as pd
@@ -107,19 +108,18 @@ class FrequencyChatbotClassifier:
             }
         self.loaded = True
 
-    def predict(self, doc, mass=0.5, nwords=15):
+    def predict(self, doc, mass=0.5):
         if not self.loaded:
             raise Exception("Classifier must be trained first!")
-        doc = ' '.join(doc)
+        doc1 = ' '.join(doc)
         predictions = dict()
-        msw_predictions = dict()
         if self.mode == 'word frequency':
-            v1 = filter_by_weights(get_word_frequency(doc), mass)
+            v1 = filter_by_weights(get_word_frequency(doc1), mass)
         elif self.mode == 'tf-idf':
             doc_names = self.characters.copy()
             doc_names.append('input')
             all_docs = self.model['docs'].copy()
-            all_docs.append(doc)
+            all_docs.append(doc1)
             tfidfs = get_tfidfs(all_docs, doc_names, self.model['vectorizer'])
             v1 = filter_by_weights(tfidfs['input'], mass)
         for character in self.characters:
@@ -129,5 +129,27 @@ class FrequencyChatbotClassifier:
                 w = tfidfs[character]
             v2 = filter_by_weights(w, mass)
             predictions[character] = freq_pairwise_sim(v1, v2)
+        return predictions
+
+    def get_MSW(self, doc, mass=0.5, nwords=15):
+        if not self.loaded:
+            raise Exception("Classifier must be trained first!")
+        doc1 = ' '.join(doc)
+        msw_predictions = dict()
+        if self.mode == 'word frequency':
+            v1 = filter_by_weights(get_word_frequency(doc1), mass)
+        elif self.mode == 'tf-idf':
+            doc_names = self.characters.copy()
+            doc_names.append('input')
+            all_docs = self.model['docs'].copy()
+            all_docs.append(doc1)
+            tfidfs = get_tfidfs(all_docs, doc_names, self.model['vectorizer'])
+            v1 = filter_by_weights(tfidfs['input'], mass)
+        for character in self.characters:
+            if self.mode == 'word frequency':
+                w = self.model[character]
+            elif self.mode == 'tf-idf':
+                w = tfidfs[character]
+            v2 = filter_by_weights(w, mass)
             msw_predictions[character] = most_similar_words(v1, v2, max_words=nwords)
-        return predictions, msw_predictions
+        return msw_predictions
