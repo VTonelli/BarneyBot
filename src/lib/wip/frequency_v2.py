@@ -129,7 +129,7 @@ def get_ctfidfs(docs, characters, ctfidf_vectorizer, count_vectorizer):
     vector = ctfidf_vectorizer.transform(count)
     tfidf_df = pd.DataFrame(vector.toarray(),
                             index=characters,
-                            columns=tfidf_vectorizer.get_feature_names_out())
+                            columns=ctfidf_vectorizer.get_feature_names_out())
 
     tfidfs = dict()
 
@@ -141,15 +141,32 @@ def get_ctfidfs(docs, characters, ctfidf_vectorizer, count_vectorizer):
     return tfidfs
 
 class FrequencyChatbotClassifier:
+    """
+    A word frequency classifier for characters classification
+    """
     def __init__(self, characters, mode):
+        """
+        Construct a `FrequencyChatbotClassifier` 
+        ## Params
+        * `characters`: list of characters which corresponds to the labels of the model
+        * `mode`: set the modality of the classifier based on the following possibilities:
+           (`word frequency`: based on a count frecquency vectorizer, `tf-idf`: based on a 
+            list of tf-idf, `c-tf-idf`: based on a class defined tf-idf 
+        """
         self.characters = characters
-        if mode != "word frequency" and mode != "tf-idf":
+        if mode != "word frequency" and mode != "tf-idf" and mode != "c-tf-idf":
             raise Exception("Unknown mode!")
         self.mode = mode
         self.loaded = False
         self.model = None
 
     def train(self, docs):
+        """
+        Train the model
+        ## Params
+        `docs`: list of document of for which the len is equal to the number of 
+        characters
+        """
         self.model = None
         self.loaded = False
         if len(docs) != len(self.characters):
@@ -169,13 +186,15 @@ class FrequencyChatbotClassifier:
             }
         elif self.mode == 'c-tf-idf':
             # fit count vectorizer
-            count_vectorizer = CountVectorizer().fit(docs.Document)
-            count = count_vectorizer.transform(docs.Document)
+            count_vectorizer = CountVectorizer().fit(docs)
+            count = count_vectorizer.transform(docs)
             # fit c-tf-idf vectorizer
-            ctfidf = CTFIDFVectorizer().fit(count, n_samples=len(docs))
+            ctfidf_vectorizer = CTFIDFVectorizer().fit(count, n_samples=len(docs))
+            ctfidf = ctfidf_vectorizer.transform(count)
             self.model = {
                 'count_vectorizer': count_vectorizer,
-                'vectorizer': ctfidf,
+                'vectorizer': ctfidf_vectorizer,
+                'vectors': ctfidf,
                 'docs': docs
             }
         self.loaded = True
@@ -195,19 +214,15 @@ class FrequencyChatbotClassifier:
             tfidfs = get_tfidfs(all_docs, doc_names, self.model['vectorizer'])
             v1 = filter_by_weights(tfidfs['input'], mass)
         elif self.mode == 'c-tf-idf':
-            doc_names = self.characters.copy()
-            doc_names.append('input')
-            all_docs = self.model['docs'].copy()
-            all_docs.append(doc1)
-            ctfidfs = get_ctfidfs(all_docs, doc_names, self.model['vectorizer'])
-            v1 = filter_by_weights(tfidfs['input'], mass)
-
+            count = self.model['count_vectorizer'].transform([doc1])
+            vector = self.model['vectorizer'].transform(count)
+            distances = cosine_similarity(vector, self.model['vectors'])[0]
+            return distances
+            
         for character in self.characters:
             if self.mode == 'word frequency':
                 w = self.model[character]
             elif self.mode == 'tf-idf':
-                w = tfidfs[character]
-            elif self.mode == 'c-tf-idf':
                 w = tfidfs[character]
             v2 = filter_by_weights(w, mass)
             predictions[character] = freq_pairwise_sim(v1, v2)
