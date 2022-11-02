@@ -1,10 +1,15 @@
 character_dict = {
     'Barney': {
-        'df_filename':'Barney.csv',
-        'prediction_filename':'barney_prediction',
-        'checkpoint_folder':'barney_model',
-        'classifier_folder':'barney_classifier',
-        'source':'HIMYM',
+        'df_filename':
+        'Barney.csv',
+        'prediction_filename':
+        'barney_prediction',
+        'checkpoint_folder':
+        'barney_model',
+        'classifier_folder':
+        'barney_classifier',
+        'source':
+        'HIMYM',
         'delete_names': [
             "Barney's Secretary", 'Marshall to Barney', "Barney's mom",
             'Ted, from seeing Barney', 'Lily, holding Barney',
@@ -17,7 +22,7 @@ character_dict = {
         'df_filename': 'Sheldon.csv',
         'prediction_filename': 'sheldon_prediction',
         'checkpoint_folder': 'sheldon_model',
-        'classifier_folder':'sheldon_classifier',
+        'classifier_folder': 'sheldon_classifier',
         'source': 'TBBT',
         'delete_names': []
     },
@@ -25,7 +30,7 @@ character_dict = {
         'df_filename': 'Harry.csv',
         'prediction_filename': 'harry_prediction',
         'checkpoint_folder': 'harry_model',
-        'classifier_folder':'harry_classifier',
+        'classifier_folder': 'harry_classifier',
         'source': 'HP',
         'delete_names': []
     },
@@ -54,11 +59,16 @@ character_dict = {
         'delete_names': ["INT. DARTH VADER'S WINGMAN - COCKPIT"]
     },
     'Joey': {
-        'df_filename':'Joey.csv',
-        'prediction_filename':'joey_prediction',
-        'checkpoint_folder':'joey_model',
-        'classifier_folder':'joey_classifier',
-        'source':'Friends',
+        'df_filename':
+        'Joey.csv',
+        'prediction_filename':
+        'joey_prediction',
+        'checkpoint_folder':
+        'joey_model',
+        'classifier_folder':
+        'joey_classifier',
+        'source':
+        'Friends',
         'delete_names': [
             "Joeys Sisters", 'Joey\'s Date', "Joey's Look-A-Like",
             'Joeys Sister', "Joey's Doctor", "Joey's Hand Twin", 'Joeys Date',
@@ -105,7 +115,7 @@ source_dict = {
 
 random_state = 31239812
 
-model_name = 'microsoft/DialoGPT-small'
+model_name = 'microsoft/DialoGPT-medium'
 n_beams = 3
 top_k = 50
 top_p = 0.92
