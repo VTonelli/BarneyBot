@@ -1,4 +1,3 @@
-from regex import D
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import pandas as pd
@@ -6,10 +5,6 @@ import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
 from nltk.corpus import stopwords
-
-import scipy.sparse as sp
-from sklearn.preprocessing import normalize
-from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 
 nltk.download('stopwords')
 
@@ -46,13 +41,6 @@ def freq_pairwise_sim(v1, v2):
         np.array(v1_ord).reshape(1, -1),
         np.array(v2_ord).reshape(1, -1))[0][0]
 
-def most_similar_words(v1, v2, max_words=15):
-    wordlist = list(set(v1.keys()).intersection((v2.keys())))
-    wordlist.sort(key=lambda word: abs(v1[word]-v2[word]))
-    if max_words > len(wordlist):
-        max_words = len(wordlist)
-    return wordlist[:max_words]
-
 def sentence_preprocess(sentence, stopwords=stopwords.words(), min_sentence_len=3):
     sentence = re.sub(r'[^A-Za-z\s]', ' ', sentence)
     sentence = re.sub(r'\s+', ' ', sentence)
@@ -72,64 +60,7 @@ def get_tfidfs(docs, characters, tfidf_vectorizer):
     tfidf_matrix = tfidf_vectorizer.fit_transform(docs)
     tfidf_df = pd.DataFrame(tfidf_matrix.toarray(),
                             index=characters,
-                            columns=tfidf_vectorizer.get_feature_names_out())
-
-    tfidfs = dict()
-
-    for character in characters:
-        tfidf_char = tfidf_df.loc[character].to_dict()
-        tfidfs[character] = dict(
-            sorted(tfidf_char.items(), key=lambda k: k[1], reverse=True))
-
-    return tfidfs
-
-class CTFIDFVectorizer(TfidfTransformer):
-    """
-    The goal of the class-based TF-IDF is to supply all documents within a single class
-    with the same class vector. In order to do so, we have to start looking at TF-IDF 
-    from a class-based point of view instead of individual documents.
-    If documents are not individuals, but part of a larger collective, then it might be 
-    interesting to actually regard them as such by joining all documents in a class together.
-    """
-    def __init__(self, *args, **kwargs):
-        super(CTFIDFVectorizer, self).__init__(*args, **kwargs)
-
-    def fit(self, X: sp.csr_matrix, n_samples: int):
-        """Learn the idf vector (global term weights) 
-        `n_samples`: is the total number of unjoined documents.
-        This is necessary as the IDF values become too small if the number of joined documents 
-        is passed instead."""
-        _, n_features = X.shape
-        df = np.squeeze(np.asarray(X.sum(axis=0)))
-        idf = np.log(n_samples / df)
-        self._idf_diag = sp.diags(idf, offsets=0,
-                                  shape=(n_features, n_features),
-                                  format='csr',
-                                  dtype=np.float64)
-        return self
-
-    def transform(self, X: sp.csr_matrix) -> sp.csr_matrix:
-        """Transform a count-based matrix to c-TF-IDF """
-        X = X * self._idf_diag
-        X = normalize(X, axis=1, norm='l1', copy=False)
-        return X
-
-def get_ctfidfs(docs, characters, ctfidf_vectorizer, count_vectorizer):
-    """Return a dictionary containing words and their corresponding c-tf-idf scores
-    
-    ## Parameters
-
-    `docs`: collection of documents, it requires to be a  
-    `charcters`: collection of class, namely the list of charcaters
-    `ctfidf_vectorizer`: list of tfidf_vectorizers
-    `count_vectorizer`: list of count_vectorizer
-    """
-    # tfidf_matrix = tfidf_vectorizer.fit_transform(docs)
-    count = count_vectorizer.transform(docs)
-    vector = ctfidf_vectorizer.transform(count)
-    tfidf_df = pd.DataFrame(vector.toarray(),
-                            index=characters,
-                            columns=tfidf_vectorizer.get_feature_names_out())
+                            columns=tfidf_vectorizer.get_feature_names())
 
     tfidfs = dict()
 
@@ -167,71 +98,27 @@ class FrequencyChatbotClassifier:
                 'docs':
                 docs
             }
-        elif self.mode == 'c-tf-idf':
-            # fit count vectorizer
-            count_vectorizer = CountVectorizer().fit(docs.Document)
-            count = count_vectorizer.transform(docs.Document)
-            # fit c-tf-idf vectorizer
-            ctfidf = CTFIDFVectorizer().fit(count, n_samples=len(docs))
-            self.model = {
-                'count_vectorizer': count_vectorizer,
-                'vectorizer': ctfidf,
-                'docs': docs
-            }
         self.loaded = True
 
     def predict(self, doc, mass=0.5):
         if not self.loaded:
             raise Exception("Classifier must be trained first!")
-        doc1 = ' '.join(doc)
+        doc = ' '.join(doc)
         predictions = dict()
         if self.mode == 'word frequency':
-            v1 = filter_by_weights(get_word_frequency(doc1), mass)
+            v1 = filter_by_weights(get_word_frequency(doc), mass)
         elif self.mode == 'tf-idf':
             doc_names = self.characters.copy()
             doc_names.append('input')
             all_docs = self.model['docs'].copy()
-            all_docs.append(doc1)
+            all_docs.append(doc)
             tfidfs = get_tfidfs(all_docs, doc_names, self.model['vectorizer'])
             v1 = filter_by_weights(tfidfs['input'], mass)
-        elif self.mode == 'c-tf-idf':
-            doc_names = self.characters.copy()
-            doc_names.append('input')
-            all_docs = self.model['docs'].copy()
-            all_docs.append(doc1)
-            ctfidfs = get_ctfidfs(all_docs, doc_names, self.model['vectorizer'])
-            v1 = filter_by_weights(tfidfs['input'], mass)
-
         for character in self.characters:
             if self.mode == 'word frequency':
                 w = self.model[character]
             elif self.mode == 'tf-idf':
-                w = tfidfs[character]
-            elif self.mode == 'c-tf-idf':
                 w = tfidfs[character]
             v2 = filter_by_weights(w, mass)
             predictions[character] = freq_pairwise_sim(v1, v2)
         return predictions
-
-    def get_MSW(self, doc, mass=0.5, nwords=15):
-        if not self.loaded:
-            raise Exception("Classifier must be trained first!")
-        doc1 = ' '.join(doc)
-        msw_predictions = dict()
-        if self.mode == 'word frequency':
-            v1 = filter_by_weights(get_word_frequency(doc1), mass)
-        elif self.mode == 'tf-idf':
-            doc_names = self.characters.copy()
-            doc_names.append('input')
-            all_docs = self.model['docs'].copy()
-            all_docs.append(doc1)
-            tfidfs = get_tfidfs(all_docs, doc_names, self.model['vectorizer'])
-            v1 = filter_by_weights(tfidfs['input'], mass)
-        for character in self.characters:
-            if self.mode == 'word frequency':
-                w = self.model[character]
-            elif self.mode == 'tf-idf':
-                w = tfidfs[character]
-            v2 = filter_by_weights(w, mass)
-            msw_predictions[character] = most_similar_words(v1, v2, max_words=nwords)
-        return msw_predictions
