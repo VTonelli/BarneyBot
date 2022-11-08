@@ -78,48 +78,48 @@ class FrequencyChatbotClassifier:
         self.model = None
         self.distances = None
 
-    def train(self, docs):
+    def train(self, docs_per_class, n_tot_docs=None):
         """
         Train the model
         ## Params
-        `docs`: list of document of for which the len is equal to the number of 
+        `docs_per_class`: list of document of for which the len is equal to the number of 
         characters
         """
         self.model = None
         self.loaded = False
-        if len(docs) != len(self.characters):
+        if len(docs_per_class) != len(self.characters):
             raise Exception(
                 "Mismatch between classifier classes and provided documents!")
-        docs = [' '.join(doc) for doc in docs]
+        docs_per_class = [' '.join(doc) for doc in docs_per_class]
         if self.mode == 'word frequency':
             # fit count vectorizer
-            vectorizer = CountVectorizer(stop_words='english').fit(docs)
-            count = vectorizer.transform(docs)
+            vectorizer = CountVectorizer(stop_words='english').fit(docs_per_class)
+            count = vectorizer.transform(docs_per_class)
             self.model = {
                 'vectorizer': vectorizer,
                 'vectors': count,
-                'docs': docs
+                'docs_per_class': docs_per_class
             }
         elif self.mode == 'tf-idf':
             tfidf_vectorizer = TfidfVectorizer(input='content', stop_words='english')
-            vectors = tfidf_vectorizer.fit_transform(docs)
+            vectors = tfidf_vectorizer.fit_transform(docs_per_class)
             self.model = {
                 'vectorizer': tfidf_vectorizer,
                 'vectors': vectors,
-                'docs': docs
+                'docs_per_class': docs_per_class
             }
         elif self.mode == 'c-tf-idf':
             # fit count vectorizer
-            count_vectorizer = CountVectorizer(stop_words='english').fit(docs)
-            count = count_vectorizer.transform(docs)
+            count_vectorizer = CountVectorizer(stop_words='english').fit(docs_per_class)
+            count = count_vectorizer.transform(docs_per_class)
             # fit c-tf-idf vectorizer
-            ctfidf_vectorizer = CTFIDFVectorizer().fit(count, n_samples=len(docs))
+            ctfidf_vectorizer = CTFIDFVectorizer().fit(count, n_samples=n_tot_docs)
             ctfidf = ctfidf_vectorizer.transform(count)
             self.model = {
                 'count_vectorizer': count_vectorizer,
                 'vectorizer': ctfidf_vectorizer,
                 'vectors': ctfidf,
-                'docs': docs
+                'docs_per_class': docs_per_class
             }
         self.loaded = True
 
