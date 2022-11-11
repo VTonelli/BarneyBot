@@ -1,0 +1,4 @@
+[MV] MOVERScore -> Requires Pytorch with CUDA (NVidia only)
+[MV] NUBIA -> Enormous to Download
+[MV] PRISM -> Raises a "max_tokens not set" error
+[MV] MAUVE -> 3GB model, too much for a metric?
