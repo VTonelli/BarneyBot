@@ -63,7 +63,7 @@ def get_metric_arity(metric_name):
        metric_name == "word mover distance" or metric_name == metric_name == "extended edit distance":
         return MetricArity.PAIRWISE
     elif metric_name == 'distinct' or metric_name == 'emotion classifier' or metric_name == 'lines count' or \
-         metric_name == 'repetitiveness':
+         metric_name == 'repetitiveness' or metric_name == "t5 grammar correction edit distance":
         return MetricArity.SINGLE
     elif metric_name == 'comet':
         return MetricArity.TRIPLET
@@ -109,6 +109,8 @@ def get_metric_determinism(metric_name, metric_version):
         return MetricDeterminism.PROBABILISTIC
     elif metric_name == 'extended edit distance' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
+    elif metric_name == 't5 grammar correction edit distance' and metric_version == 1:
+        return MetricDeterminism.NEURAL
     elif metric_name == 'dummy metric':
         return MetricDeterminism.DETERMINISTIC
     else:
@@ -118,7 +120,8 @@ def get_metric_dependency(metric_name, metric_actors):
     actors_order = ['training_set', 'predictor', 'reference', 'document', 'document0', 'document1'] 
     actor_types = [metric_actors[key][0] for key in actors_order if key in metric_actors]
     actor_chars = [metric_actors[key][1] for key in actors_order if key in metric_actors]
-    if metric_name == 'lines count' or metric_name == 'distinct' or metric_name == 'emotion classifier':
+    if metric_name == 'lines count' or metric_name == 'distinct' or metric_name == 'emotion classifier' or \
+       metric_name == "t5 grammar correction edit distance":
         if all(at.value < 10 for at in actor_types):
             return MetricDependency.DATASET
         elif actor_chars[0] == 'Base':

@@ -10,6 +10,8 @@ import tensorflow as tf
 import nlgmetricverse
 from nlgmetricverse import NLGMetricverse
 from torchmetrics import ExtendedEditDistance
+from happytransformer import HappyTextToText, TTSettings
+from nltk.metrics import edit_distance
 
 from .metrics.triplet_nn_classifier import BarneyBotTripletClassifier
 from .metrics.distinct import distinct
@@ -24,7 +26,7 @@ class BBMetric:
         "google bleu", "mpnet embedding similarity", "rouge l", "meteor", "emotion classifier",
         "roberta crossencoding similarity", "distinct", "neural chatbot classifier",
         "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", "bartscore",
-        "extended edit distance"
+        "extended edit distance", "t5 grammar correction edit distance"
     ]
 
     # Initialization
@@ -61,6 +63,13 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+        elif name == "t5 grammar correction edit distance":
+            self.compute_require_args = set(["sentences"])
+            self.compute_optional_args = set()
+            self.train_require_args = set()
+            self.train_optional_args = set()
+            self.return_args = ['score', 'std']
+            self.save_actors = ['document']            
         elif name == "bartscore":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -201,7 +210,9 @@ class BBMetric:
         elif name == "word mover distance":
             metric = BBMetric(name, lambda a, b: wmd(a, b))
         elif name == "extended edit distance":
-            metric = BBMetric(name, ExtendedEditDistance())
+            metric = BBMetric(name, ExtendedEditDistance(return_sentence_level_score=True))
+        elif name == "t5 grammar correction edit distance":
+            metric = BBMetric(name, HappyTextToText("T5", "vennify/t5-base-grammar-correction"))
         elif name == "meteor":
             metric = BBMetric(name, evaluate.load('meteor'))
         elif name == "roberta crossencoding similarity":
@@ -318,6 +329,17 @@ class BBMetric:
                                                   references[i]).item())
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
+        elif self.name == "t5 grammar correction edit distance":
+            sentences = kwargs['sentences'] if type(
+                kwargs['sentences']) is list else [kwargs['sentences']]
+            single_outputs = []
+            for i in range(len(sentences)):
+                single_outputs.append(
+                    1/len(sentences[i]) * edit_distance(sentences[i],
+                                  self.metric.generate_text("grammar: " + sentences[i], args=TTSettings(num_beams=5, min_length=1)).text)
+                )
+            result['score'] = np.mean(np.array(single_outputs))
+            result['std'] = np.std(np.array(single_outputs))            
         elif self.name == "bartscore":
             # Cast predictions and references as lists
             predictions = kwargs['predictions'] if type(
@@ -519,6 +541,7 @@ class BBMetric:
            self.name == "perplexity" or \
            self.name == "word mover distance" or \
            self.name == "extended edit distance" or \
+           self.name == "t5 grammar correction edit distance" or \
            self.name == "bartscore":
             return
         # Otherwise, train the given metric, simply passing the required params
