@@ -3,9 +3,7 @@ import json
 from enum import Enum
 import os
 
-import sys
-sys.path.append("..") # Adds higher directory to python modules path.
-from Data.data_dicts import character_dict
+from .BBData import character_dict
 
 class MetricDependency(int, Enum):
     DATASET = 0      # Metric depends on datasets only and/or base DialoGPT model

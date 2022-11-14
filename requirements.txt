@@ -1,21 +1,35 @@
+# Base
 ipykernel 
 pylint
 yapf
 
+# Numerical
 numpy
 pandas
 sklearn
 
-datasets
-transformers
-sentence_transformers
+# NLP
+nltk
 
+# Neural Networks
 tensorflow
 keras
 
-nltk
+# General Purpose Metrics
+evaluate
+datasets
+transformers
+sentence_transformers
+torchmetrics
+
+# Visualization
+matplotlib
+tqdm
 wordcloud
 
-matplotlib
-
-tqdm
+# NLP Metrics
+nlg-metricverse
+pyemd
+sacrebleu
+unbabel-comet
+git+https://github.com/google-research/bleurt.git
