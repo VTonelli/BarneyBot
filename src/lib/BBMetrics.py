@@ -12,8 +12,10 @@ from nlgmetricverse import NLGMetricverse
 from torchmetrics import ExtendedEditDistance
 from happytransformer import HappyTextToText, TTSettings
 from nltk.metrics import edit_distance
+from collections import Counter
 
 from .metrics.triplet_nn_classifier import BarneyBotTripletClassifier
+from .metrics.distil_bert_classifier import DistilBertClassifier
 from .metrics.distinct import distinct
 from .metrics.perplexity import perplexity
 from .metrics.human import conversation, single_answers, consistency_questions
@@ -25,8 +27,9 @@ class BBMetric:
     metrics_list = [
         "google bleu", "mpnet embedding similarity", "rouge l", "meteor", "emotion classifier",
         "roberta crossencoding similarity", "distinct", "neural chatbot classifier",
-        "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", "bartscore",
-        "extended edit distance", "t5 grammar correction edit distance"
+        "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", 
+        "bartscore", "extended edit distance", "t5 grammar correction edit distance",
+        "distilbert-embedded chatbot classifier"
     ]
 
     # Initialization
@@ -156,7 +159,8 @@ class BBMetric:
                 "random_state", "save_path"
             ])
             self.train_optional_args = set(
-                ["shutdown_at_end", "n_shuffles"])
+                ["shutdown_at_end", "n_shuffles"]
+            )
             self.return_args = ['score', 'std']
             self.save_actors = ['training_set', 'document']
         elif name == "perplexity":
@@ -173,6 +177,16 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference', 'document']
+        elif name == "distilbert-embedded chatbot classifier":
+            self.compute_require_args = set(["sentences"])
+            self.compute_optional_args = set(["verbose"])
+            self.train_require_args = set(["characters_path", "save_path"])
+            self.train_optional_args = set([
+                "train_embedder", "override_data", "merge_sentences",
+                "verbose", "shutdown_at_end"
+            ])
+            self.return_args = ['score', 'label']
+            self.save_actors = ['document']
 
     # Pretty print metric
     def __str__(self):
@@ -247,6 +261,11 @@ class BBMetric:
             metric = BBMetric(name, lambda s, n: distinct(s, n))
         elif name == "neural chatbot classifier":
             metric = BBMetric(name, BarneyBotTripletClassifier())
+        elif name == "distilbert-embedded chatbot classifier":
+            embedder_path = None if 'embedder_path' not in kwargs else kwargs['embedder_path']
+            from_pretrained = False if 'from_pretrained' not in kwargs else kwargs['from_pretrained']
+            use_cuda = False if 'use_cuda' not in kwargs else kwargs['use_cuda']
+            metric = BBMetric(name, DistilBertClassifier(embedder_path, from_pretrained, use_cuda))
         else:
             raise Exception("Metric " + name + " is not supported!\n" +
                             "Supported metrics are " + str(BBMetric.metrics_list))
@@ -503,7 +522,18 @@ class BBMetric:
             # Compute mean and std for these values
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
-
+        elif self.name == "distilbert-embedded chatbot classifier":
+            # Cast sentences as a list
+            sentences = kwargs['sentences'] if type(
+                kwargs['sentences']) is list else [kwargs['sentences']]
+            verbose = kwargs['verbose'] if 'verbose' in kwargs else False
+            outputs = self.metric.compute(sentences=sentences, verbose=verbose)
+            labels = self.metric.characters
+            print(labels)
+            # Compute mean and std for these values
+            result['score'] = Counter(outputs).values()
+            result['score'] = np.mean(np.array(outputs))
+            
         # Sanitize type for the values of the result dictionary, so that it can be serialized
         for key in result:
             try:
@@ -557,3 +587,11 @@ class BBMetric:
                 kwargs['source_save_path'], kwargs['save_path'], 
                 kwargs['random_state'], kwargs['n_shuffles'] if 'n_shuffles' in kwargs else 10,
                 kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
+        elif self.name == "distilbert-embedded chatbot classifier":
+            self.metric.train(characters_path=kwargs['characters_path'],
+                              model_path=kwargs['save_path'],
+                              train_embedder=kwargs['train_embedder'] if 'train_embedder' in kwargs else False,
+                              override_data=kwargs['override_data'] if 'override_data' in kwargs else True,
+                              merge_sentences=kwargs['merge_sentences'] if 'merge_sentences' in kwargs else True,
+                              verbose=kwargs['verbose'] if 'verbose' in kwargs else False,
+                              shutdown_at_end=kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)

@@ -9,7 +9,7 @@ from pandas import DataFrame, read_csv
 from os.path import join
 from sklearn.neighbors import KNeighborsClassifier
 
-from distil_bert_embedder import BarneyEmbedder
+from .distil_bert_embedder import BarneyEmbedder
 from sentence_transformers.readers import InputExample
 
 from lib.BBData import character_dict, random_state
@@ -163,11 +163,11 @@ class DistilBertClassifier:
             df_list_test = json.load(
                 join(source_path, 'embedder_dataset_test.json'))
             df_list_train = [DataFrame.from_dict(d) for d in df_list_train]
-
-        X_train = df_list_train['line'].tolist()
-        y_train = df_list_train['character'].tolist()
-        X_test = df_list_test['line'].tolist()
-        y_test = df_list_test['character'].tolist()
+        
+        X_train = sum([df['line'].tolist() for df in df_list_train], [])
+        y_train = sum([df['character'].tolist() for df in df_list_train], [])
+        X_test = sum([df['line'].tolist() for df in df_list_test], [])
+        y_test = sum([df['character'].tolist() for df in df_list_test], [])
 
         return X_train, y_train, X_test, y_test
 
