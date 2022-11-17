@@ -88,20 +88,27 @@ class FrequencyChatbotClassifier:
         self.model = None
         self.distances = None
 
-    def train(self, docs, n_tot_docs=None):
+    def train(self, docs):
         """
         Train the model
         ## Params
         * `docs`: list of documents, in order to be done correctly the training, `len(docs)` must
         be equal to the number of characters you want to consider
-        * `n_tot_docs`: default value is `None` and it is not required if the `mode != c-tf-idf`,
-        otherwise you need to specify
         """
+
+        assert len(docs) == len(self.characters)
+
         self.model = None
         self.loaded = False
         if len(docs) != len(self.characters):
             raise Exception(
                 "Mismatch between classifier classes and provided documents!")
+        
+        # compute total length of the unjoined documents
+        n_tot_docs = 0
+        for doc_character in docs:
+            n_tot_docs +=  len(doc_character)
+
         docs = [' '.join(doc) for doc in docs]
         if self.mode == 'word frequency':
             # fit count vectorizer
@@ -136,6 +143,14 @@ class FrequencyChatbotClassifier:
         self.loaded = True
 
     def predict(self, doc):
+        """
+        Classify a new document based on the technology previously selected in the `mode` parameter
+        ## Params
+        * `doc`: new document do classify
+        ## Returns
+        a dictionary where the keys are the character' names and their corresponding values are the 
+        cosine similarity among the new document and the training documents
+        """
         if not self.loaded:
             raise Exception("Classifier must be trained first!")
         doc1 = ' '.join(doc)
