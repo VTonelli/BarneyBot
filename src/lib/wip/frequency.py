@@ -172,3 +172,26 @@ class FrequencyChatbotClassifier:
             predictions[character] = self.distances[idx_ch]
         
         return predictions
+
+    def score(self, doc, character):
+        """
+        Computes the wip score based on the classification, giving a proportional penalty in 
+        case of misclassification
+        ## Params
+        * `doc`: document to evaluate
+        * `character`: target character name 
+        ## Returns
+        a score in range [0, 1] of affinity personality for the document `doc` given the target 
+        character named as specified in `character`, based on a IR techniques 
+        """
+
+        def zero_class(mu, pc):
+            return 0 if mu == pc else mu
+        
+        predictions = self.predict(doc)
+        values = np.array(list(predictions.values()))
+
+        mu = np.max(values)
+        pc = predictions[character]
+
+        return pc * (1 - zero_class(mu, pc))
