@@ -173,7 +173,7 @@ class FrequencyChatbotClassifier:
         
         return predictions
 
-    def score(self, doc, character):
+    def compute(self, doc, character):
         """
         Computes the wip score based on the classification, giving a proportional penalty in 
         case of misclassification

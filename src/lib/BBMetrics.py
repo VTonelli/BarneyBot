@@ -1,5 +1,4 @@
 # All imports required by metrics in this library
-import evaluate
 from sentence_transformers import CrossEncoder, SentenceTransformer
 from transformers import pipeline, DistilBertTokenizer, DistilBertModel
 from sklearn.metrics.pairwise import cosine_similarity
@@ -16,6 +15,9 @@ from .metrics.distinct import distinct
 from .metrics.perplexity import perplexity
 from .metrics.human import conversation, single_answers, consistency_questions
 from .metrics.wmd import wmd
+from .wip.wip import WIP
+
+import evaluate
 
 # Class defining a wrapper for any of the supported metrics, so that they can be loaded and computed seamlessly
 class BBMetric:
@@ -24,7 +26,7 @@ class BBMetric:
         "google bleu", "mpnet embedding similarity", "rouge l", "meteor", "emotion classifier",
         "roberta crossencoding similarity", "distinct", "neural chatbot classifier",
         "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", "bartscore",
-        "extended edit distance"
+        "extended edit distance", "wip"
     ]
 
     # Initialization
@@ -164,6 +166,13 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference', 'document']
+        elif name == "wip":
+            self.compute_require_args = set(["sentences", "character"])
+            self.compute_optional_args = set([])
+            self.train_require_args = set(["source_path", "mode"])
+            self.train_optional_args = set()
+            self.return_args = ['score']
+            self.save_actors = ['training_set', 'document']
 
     # Pretty print metric
     def __str__(self):
@@ -236,6 +245,8 @@ class BBMetric:
             metric = BBMetric(name, lambda s, n: distinct(s, n))
         elif name == "neural chatbot classifier":
             metric = BBMetric(name, BarneyBotTripletClassifier())
+        elif name == "wip":
+            metric == BBMetric(name, WIP())
         else:
             raise Exception("Metric " + name + " is not supported!\n" +
                             "Supported metrics are " + str(BBMetric.metrics_list))
@@ -481,6 +492,13 @@ class BBMetric:
             # Compute mean and std for these values
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
+        elif self.name == "wip":
+            # Cast sentences as a list
+            sentences = kwargs['sentences'] if type(
+                kwargs['sentences']) is list else [kwargs['sentences']]
+            # Compute the semantic classifier metric, returning scores for each sentences triple
+            outputs = self.metric.compute(sentences, kwargs['character'])
+            result['score'] = np.array(outputs)
 
         # Sanitize type for the values of the result dictionary, so that it can be serialized
         for key in result:
@@ -534,3 +552,7 @@ class BBMetric:
                 kwargs['source_save_path'], kwargs['save_path'], 
                 kwargs['random_state'], kwargs['n_shuffles'] if 'n_shuffles' in kwargs else 10,
                 kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
+        elif self.name == "wip":
+            if not kwargs['source_path']:
+                raise Exception("Source data path must be provided!")
+            self.metric.train(kwargs['source_path'], kwargs['mode'])
