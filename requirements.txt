@@ -1,36 +1,33 @@
+# Base
 ipykernel 
 pylint
 yapf
 
+# Numerical
 numpy
 pandas
 sklearn
 
-datasets
-transformers
-sentence_transformers
+# NLP
+nltk
 
+# Neural Networks
 tensorflow
 keras
 
-<<<<<<< Updated upstream
-nltk
-wordcloud
-=======
 # General Purpose Metrics
 evaluate
 datasets
 transformers
-happytransformer
+happytransformers
 sentence_transformers
 torchmetrics
->>>>>>> Stashed changes
 
+# Visualization
 matplotlib
-
-<<<<<<< Updated upstream
 tqdm
-=======
+wordcloud
+
 # NLP Metrics
 nlg-metricverse
 pyemd
