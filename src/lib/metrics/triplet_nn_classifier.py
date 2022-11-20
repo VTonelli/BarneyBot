@@ -129,8 +129,7 @@ class BarneyBotTripletClassifier:
                 verbose=False):
         # If cached classifier is not the required one, re-load it
         if not self.classifier_model or character != self.character:
-            self.classifier_model = keras.models.load_model(
-                os.path.join(load_path, character.lower() + "_classifier"))
+            self.classifier_model = keras.models.load_model(load_path)
             self.character = character
         if not self.sentence_transformer:
             self.sentence_transformer = SentenceTransformer(
