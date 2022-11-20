@@ -1,4 +1,5 @@
 # All imports required by metrics in this library
+import evaluate
 from sentence_transformers import CrossEncoder, SentenceTransformer
 from transformers import pipeline, DistilBertTokenizer, DistilBertModel
 from sklearn.metrics.pairwise import cosine_similarity
@@ -9,15 +10,16 @@ import tensorflow as tf
 import nlgmetricverse
 from nlgmetricverse import NLGMetricverse
 from torchmetrics import ExtendedEditDistance
+from happytransformer import HappyTextToText, TTSettings
+from nltk.metrics import edit_distance
+from collections import Counter
 
 from .metrics.triplet_nn_classifier import BarneyBotTripletClassifier
+from .metrics.distil_bert_classifier import DistilBertClassifier
 from .metrics.distinct import distinct
 from .metrics.perplexity import perplexity
 from .metrics.human import conversation, single_answers, consistency_questions
 from .metrics.wmd import wmd
-from .wip.wip import WIP
-
-import evaluate
 
 # Class defining a wrapper for any of the supported metrics, so that they can be loaded and computed seamlessly
 class BBMetric:
@@ -25,8 +27,9 @@ class BBMetric:
     metrics_list = [
         "google bleu", "mpnet embedding similarity", "rouge l", "meteor", "emotion classifier",
         "roberta crossencoding similarity", "distinct", "neural chatbot classifier",
-        "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", "bartscore",
-        "extended edit distance", "wip"
+        "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", 
+        "bartscore", "extended edit distance", "t5 grammar correction edit distance",
+        "distilbert-embedded chatbot classifier", "wip"
     ]
 
     # Initialization
@@ -63,6 +66,13 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+        elif name == "t5 grammar correction edit distance":
+            self.compute_require_args = set(["sentences"])
+            self.compute_optional_args = set()
+            self.train_require_args = set()
+            self.train_optional_args = set()
+            self.return_args = ['score', 'std']
+            self.save_actors = ['document']            
         elif name == "bartscore":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -149,7 +159,8 @@ class BBMetric:
                 "random_state", "save_path"
             ])
             self.train_optional_args = set(
-                ["shutdown_at_end", "n_shuffles"])
+                ["shutdown_at_end", "n_shuffles"]
+            )
             self.return_args = ['score', 'std']
             self.save_actors = ['training_set', 'document']
         elif name == "perplexity":
@@ -166,6 +177,16 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference', 'document']
+        elif name == "distilbert-embedded chatbot classifier":
+            self.compute_require_args = set(["sentences"])
+            self.compute_optional_args = set(["verbose"])
+            self.train_require_args = set(["characters_path", "save_path"])
+            self.train_optional_args = set([
+                "train_embedder", "override_data", "merge_sentences",
+                "verbose", "shutdown_at_end"
+            ])
+            self.return_args = ['score', 'label']
+            self.save_actors = ['document']
         elif name == "wip":
             self.compute_require_args = set(["sentences", "character"])
             self.compute_optional_args = set([])
@@ -210,7 +231,9 @@ class BBMetric:
         elif name == "word mover distance":
             metric = BBMetric(name, lambda a, b: wmd(a, b))
         elif name == "extended edit distance":
-            metric = BBMetric(name, ExtendedEditDistance())
+            metric = BBMetric(name, ExtendedEditDistance(return_sentence_level_score=True))
+        elif name == "t5 grammar correction edit distance":
+            metric = BBMetric(name, HappyTextToText("T5", "vennify/t5-base-grammar-correction"))
         elif name == "meteor":
             metric = BBMetric(name, evaluate.load('meteor'))
         elif name == "roberta crossencoding similarity":
@@ -245,6 +268,11 @@ class BBMetric:
             metric = BBMetric(name, lambda s, n: distinct(s, n))
         elif name == "neural chatbot classifier":
             metric = BBMetric(name, BarneyBotTripletClassifier())
+        elif name == "distilbert-embedded chatbot classifier":
+            embedder_path = None if 'embedder_path' not in kwargs else kwargs['embedder_path']
+            from_pretrained = False if 'from_pretrained' not in kwargs else kwargs['from_pretrained']
+            use_cuda = False if 'use_cuda' not in kwargs else kwargs['use_cuda']
+            metric = BBMetric(name, DistilBertClassifier(embedder_path, from_pretrained, use_cuda))
         elif name == "wip":
             metric == BBMetric(name, WIP())
         else:
@@ -329,6 +357,17 @@ class BBMetric:
                                                   references[i]).item())
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
+        elif self.name == "t5 grammar correction edit distance":
+            sentences = kwargs['sentences'] if type(
+                kwargs['sentences']) is list else [kwargs['sentences']]
+            single_outputs = []
+            for i in range(len(sentences)):
+                single_outputs.append(
+                    1/len(sentences[i]) * edit_distance(sentences[i],
+                                  self.metric.generate_text("grammar: " + sentences[i], args=TTSettings(num_beams=5, min_length=1)).text)
+                )
+            result['score'] = np.mean(np.array(single_outputs))
+            result['std'] = np.std(np.array(single_outputs))            
         elif self.name == "bartscore":
             # Cast predictions and references as lists
             predictions = kwargs['predictions'] if type(
@@ -492,6 +531,17 @@ class BBMetric:
             # Compute mean and std for these values
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
+        elif self.name == "distilbert-embedded chatbot classifier":
+            # Cast sentences as a list
+            sentences = kwargs['sentences'] if type(
+                kwargs['sentences']) is list else [kwargs['sentences']]
+            verbose = kwargs['verbose'] if 'verbose' in kwargs else False
+            outputs = self.metric.compute(sentences=sentences, verbose=verbose)
+            labels = self.metric.characters
+            print(labels)
+            # Compute mean and std for these values
+            result['score'] = Counter(outputs).values()
+            result['score'] = np.mean(np.array(outputs))
         elif self.name == "wip":
             # Cast sentences as a list
             sentences = kwargs['sentences'] if type(
@@ -499,7 +549,7 @@ class BBMetric:
             # Compute the semantic classifier metric, returning scores for each sentences triple
             outputs = self.metric.compute(sentences, kwargs['character'])
             result['score'] = np.array(outputs)
-
+            
         # Sanitize type for the values of the result dictionary, so that it can be serialized
         for key in result:
             try:
@@ -537,6 +587,7 @@ class BBMetric:
            self.name == "perplexity" or \
            self.name == "word mover distance" or \
            self.name == "extended edit distance" or \
+           self.name == "t5 grammar correction edit distance" or \
            self.name == "bartscore":
             return
         # Otherwise, train the given metric, simply passing the required params
@@ -552,6 +603,14 @@ class BBMetric:
                 kwargs['source_save_path'], kwargs['save_path'], 
                 kwargs['random_state'], kwargs['n_shuffles'] if 'n_shuffles' in kwargs else 10,
                 kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
+        elif self.name == "distilbert-embedded chatbot classifier":
+            self.metric.train(characters_path=kwargs['characters_path'],
+                              model_path=kwargs['save_path'],
+                              train_embedder=kwargs['train_embedder'] if 'train_embedder' in kwargs else False,
+                              override_data=kwargs['override_data'] if 'override_data' in kwargs else True,
+                              merge_sentences=kwargs['merge_sentences'] if 'merge_sentences' in kwargs else True,
+                              verbose=kwargs['verbose'] if 'verbose' in kwargs else False,
+                              shutdown_at_end=kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
         elif self.name == "wip":
             if not kwargs['source_path']:
                 raise Exception("Source data path must be provided!")

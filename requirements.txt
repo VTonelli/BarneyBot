@@ -19,7 +19,7 @@ keras
 evaluate
 datasets
 transformers
-happytransformers
+happytransformer
 sentence_transformers
 torchmetrics
 
