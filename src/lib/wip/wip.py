@@ -56,14 +56,14 @@ class WIP:
                 if relevant:
                     self.character_docs[c][i] = sentence
         print("Training model")
-        self.classifier_model = FrequencyChatbotClassifier(
-            self.characters, mode=mode)
-        self.classifier_model.train(
-            list(self.character_docs.values()))
-        print("Training done!")
-        
+        self.classifier_model = FrequencyChatbotClassifier(self.characters, mode=mode)
+        self.classifier_model.train(list(self.character_docs.values()))
+        print("Training done!")        
 
     def compute(self,
                 sentences,
-                character) -> float:
-        return self.classifier_model.compute(sentences, character) 
+                character=None):
+        if character == None:
+            return self.classifier_model.predict(sentences)
+        else:
+            return self.classifier_model.compute(sentences, character) 
