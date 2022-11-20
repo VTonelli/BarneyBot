@@ -13,9 +13,31 @@ sentence_transformers
 tensorflow
 keras
 
+<<<<<<< Updated upstream
 nltk
 wordcloud
+=======
+# General Purpose Metrics
+evaluate
+datasets
+transformers
+happytransformer
+sentence_transformers
+torchmetrics
+>>>>>>> Stashed changes
 
 matplotlib
 
+<<<<<<< Updated upstream
 tqdm
+=======
+# NLP Metrics
+nlg-metricverse
+pyemd
+sacrebleu
+unbabel-comet
+git+https://github.com/google-research/bleurt.git
+
+# missing
+gensim
+>>>>>>> Stashed changes
