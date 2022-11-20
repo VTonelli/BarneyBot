@@ -20,6 +20,7 @@ from .metrics.distinct import distinct
 from .metrics.perplexity import perplexity
 from .metrics.human import conversation, single_answers, consistency_questions
 from .metrics.wmd import wmd
+from .wip.wip import WIP
 
 # Class defining a wrapper for any of the supported metrics, so that they can be loaded and computed seamlessly
 class BBMetric:
@@ -192,7 +193,7 @@ class BBMetric:
             self.compute_optional_args = set([])
             self.train_require_args = set(["source_path", "mode"])
             self.train_optional_args = set()
-            self.return_args = ['score']
+            self.return_args = ['score', 'classification']
             self.save_actors = ['training_set', 'document']
 
     # Pretty print metric
@@ -274,7 +275,7 @@ class BBMetric:
             use_cuda = False if 'use_cuda' not in kwargs else kwargs['use_cuda']
             metric = BBMetric(name, DistilBertClassifier(embedder_path, from_pretrained, use_cuda))
         elif name == "wip":
-            metric == BBMetric(name, WIP())
+            metric = BBMetric(name, WIP())
         else:
             raise Exception("Metric " + name + " is not supported!\n" +
                             "Supported metrics are " + str(BBMetric.metrics_list))
@@ -546,9 +547,11 @@ class BBMetric:
             # Cast sentences as a list
             sentences = kwargs['sentences'] if type(
                 kwargs['sentences']) is list else [kwargs['sentences']]
-            # Compute the semantic classifier metric, returning scores for each sentences triple
+            # Compute the wip classifier metric, returning scores for the list of sentence
             outputs = self.metric.compute(sentences, kwargs['character'])
             result['score'] = np.array(outputs)
+            predictions = self.metric.compute(sentences, None)
+            result['classification'] = predictions
             
         # Sanitize type for the values of the result dictionary, so that it can be serialized
         for key in result:
