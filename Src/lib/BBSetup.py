@@ -30,11 +30,16 @@ def colab_setup(mount_folder):
     BASE_FOLDER = mount_folder
     _common_setup()
 
-def anaconda_setup(base_folder, env_name):
+def anaconda_manual_setup(base_folder, env_name):
     global BASE_FOLDER
     BASE_FOLDER = base_folder
     _common_setup()
     anaconda_base_folder = next(p for p in sys.path if p.endswith("Anaconda"))
     sys.path.insert(1, os.path.join(anaconda_base_folder, "envs", env_name,
                                     "Lib", "site-packages"))
+
+def anaconda_auto_setup(base_folder):
+    global BASE_FOLDER
+    BASE_FOLDER = base_folder   
+    _common_setup()
     

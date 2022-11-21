@@ -1,5 +1,5 @@
 # Base
-ipykernel 
+ipykernel
 pylint
 yapf
 
@@ -9,7 +9,15 @@ pandas
 sklearn
 
 # NLP
+gensim
 nltk
+
+# NLP Metrics
+nlg-metricverse
+pyemd
+sacrebleu
+unbabel-comet
+git+https://github.com/google-research/bleurt.git
 
 # Neural Networks
 tensorflow
@@ -26,10 +34,3 @@ torchmetrics
 matplotlib
 tqdm
 wordcloud
-
-# NLP Metrics
-nlg-metricverse
-pyemd
-sacrebleu
-unbabel-comet
-git+https://github.com/google-research/bleurt.git

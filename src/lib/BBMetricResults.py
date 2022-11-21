@@ -60,11 +60,11 @@ def get_metric_arity(metric_name):
        metric_name == 'mpnet embedding similarity' or metric_name == 'roberta crossencoding similarity' or \
        metric_name == 'meteor' or metric_name == 'neural chatbot classifier' or metric_name == 'perplexity' or \
        metric_name == 'bertscore' or metric_name == 'term error rate' or metric_name == 'bleurt' or metric_name == 'bartscore' or \
-       metric_name == "word mover distance" or metric_name == metric_name == "extended edit distance"
+       metric_name == "word mover distance" or metric_name == "extended edit distance":
         return MetricArity.PAIRWISE
     elif metric_name == 'distinct' or metric_name == 'emotion classifier' or metric_name == 'lines count' or \
          metric_name == 'repetitiveness' or metric_name == "t5 grammar correction edit distance" or \
-         metric_name == 'distilbert-embedded chatbot classifier':
+         metric_name == 'distilbert-embedded chatbot classifier' or metric_name == "frequency chatbot classifier":
         return MetricArity.SINGLE
     elif metric_name == 'comet':
         return MetricArity.TRIPLET
@@ -116,6 +116,8 @@ def get_metric_determinism(metric_name, metric_version):
         return MetricDeterminism.NEURAL
     elif metric_name == 'dummy metric':
         return MetricDeterminism.DETERMINISTIC
+    elif metric_name == 'frequency chatbot classifier':
+        return MetricDeterminism.DETERMINISTIC
     else:
         raise Exception("Unknown determinism for metric " + metric_name)
 
@@ -124,7 +126,8 @@ def get_metric_dependency(metric_name, metric_actors):
     actor_types = [metric_actors[key][0] for key in actors_order if key in metric_actors]
     actor_chars = [metric_actors[key][1] for key in actors_order if key in metric_actors]
     if metric_name == 'lines count' or metric_name == 'distinct' or metric_name == 'emotion classifier' or \
-       metric_name == "t5 grammar correction edit distance" or metric_name == "distilbert-embedded chatbot classifier":
+       metric_name == "t5 grammar correction edit distance" or metric_name == "distilbert-embedded chatbot classifier" \
+       or metric_name == "frequency chatbot classifier":
         if all(at.value < 10 for at in actor_types):
             return MetricDependency.DATASET
         elif actor_chars[0] == 'Base':
