@@ -4,10 +4,10 @@ import os
 
 from lib.BBData import character_dict, random_state
 
-from lib.wip.frequency import sentence_preprocess, FrequencyChatbotClassifier
+from .frequency import sentence_preprocess, FrequencyClassifier
 
 
-class WIP:
+class FrequencyChatbotClassifier:
     def __init__(self) -> None:
         self.train_size = 0.85
         self.test_size = 0.10
@@ -56,14 +56,10 @@ class WIP:
                 if relevant:
                     self.character_docs[c][i] = sentence
         print("Training model")
-        self.classifier_model = FrequencyChatbotClassifier(self.characters, mode=mode)
+        self.classifier_model = FrequencyClassifier(self.characters, mode=mode)
         self.classifier_model.train(list(self.character_docs.values()))
         print("Training done!")        
 
     def compute(self,
-                sentences,
-                character=None):
-        if character == None:
+                sentences):
             return self.classifier_model.predict(sentences)
-        else:
-            return self.classifier_model.compute(sentences, character) 

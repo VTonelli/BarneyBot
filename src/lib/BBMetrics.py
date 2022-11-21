@@ -20,7 +20,7 @@ from .metrics.distinct import distinct
 from .metrics.perplexity import perplexity
 from .metrics.human import conversation, single_answers, consistency_questions
 from .metrics.wmd import wmd
-from .wip.wip import WIP
+from .metrics.fcc import FrequencyChatbotClassifier
 
 # Class defining a wrapper for any of the supported metrics, so that they can be loaded and computed seamlessly
 class BBMetric:
@@ -30,7 +30,7 @@ class BBMetric:
         "roberta crossencoding similarity", "distinct", "neural chatbot classifier",
         "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", 
         "bartscore", "extended edit distance", "t5 grammar correction edit distance",
-        "distilbert-embedded chatbot classifier", "wip"
+        "distilbert-embedded chatbot classifier", "frequency chatbot classifier"
     ]
 
     # Initialization
@@ -188,13 +188,13 @@ class BBMetric:
             ])
             self.return_args = ['score', 'label']
             self.save_actors = ['document']
-        elif name == "wip":
-            self.compute_require_args = set(["sentences", "character"])
+        elif name == "frequency chatbot classifier":
+            self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set([])
-            self.train_require_args = set(["source_path", "mode"])
-            self.train_optional_args = set()
-            self.return_args = ['score', 'classification']
-            self.save_actors = ['training_set', 'document']
+            self.train_require_args = set(["characters_path"])
+            self.train_optional_args = set(["mode"])
+            self.return_args = ['score', 'label']
+            self.save_actors = ['document']
 
     # Pretty print metric
     def __str__(self):
@@ -274,8 +274,8 @@ class BBMetric:
             from_pretrained = False if 'from_pretrained' not in kwargs else kwargs['from_pretrained']
             use_cuda = False if 'use_cuda' not in kwargs else kwargs['use_cuda']
             metric = BBMetric(name, DistilBertClassifier(embedder_path, from_pretrained, use_cuda))
-        elif name == "wip":
-            metric = BBMetric(name, WIP())
+        elif name == "frequency chatbot classifier":
+            metric = BBMetric(name, FrequencyChatbotClassifier())
         else:
             raise Exception("Metric " + name + " is not supported!\n" +
                             "Supported metrics are " + str(BBMetric.metrics_list))
@@ -543,15 +543,14 @@ class BBMetric:
             # Compute mean and std for these values
             result['score'] = Counter(outputs).values()
             result['score'] = np.mean(np.array(outputs))
-        elif self.name == "wip":
+        elif self.name == "frequency chatbot classifier":
             # Cast sentences as a list
             sentences = kwargs['sentences'] if type(
                 kwargs['sentences']) is list else [kwargs['sentences']]
-            # Compute the wip classifier metric, returning scores for the list of sentence
-            outputs = self.metric.compute(sentences, kwargs['character'])
-            result['score'] = np.array(outputs)
-            predictions = self.metric.compute(sentences, None)
-            result['classification'] = predictions
+            # Compute the frequency chatbot classifier metric, returning scores for the list of sentence
+            outputs = self.metric.compute(sentences)
+            result['score'] = np.array(outputs.values())
+            result['label'] = np.array(outputs.keys())
             
         # Sanitize type for the values of the result dictionary, so that it can be serialized
         for key in result:
@@ -614,7 +613,7 @@ class BBMetric:
                               merge_sentences=kwargs['merge_sentences'] if 'merge_sentences' in kwargs else True,
                               verbose=kwargs['verbose'] if 'verbose' in kwargs else False,
                               shutdown_at_end=kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
-        elif self.name == "wip":
-            if not kwargs['source_path']:
-                raise Exception("Source data path must be provided!")
-            self.metric.train(kwargs['source_path'], kwargs['mode'])
+        elif self.name == "frequency chatbot classifier":
+            if not kwargs['characters_path']:
+                raise Exception("Characters folder must be provided!")
+            self.metric.train(kwargs['characters_path'], kwargs['mode'] if 'mode' in kwargs else 'c-tf-idf')

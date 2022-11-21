@@ -67,13 +67,13 @@ class CTFIDFVectorizer(TfidfTransformer):
         X = normalize(X, axis=1, norm='l1', copy=False)
         return X
 
-class FrequencyChatbotClassifier:
+class FrequencyClassifier:
     """
     A word frequency classifier for characters classification
     """
     def __init__(self, characters, mode):
         """
-        Construct a `FrequencyChatbotClassifier` 
+        Construct a `FrequencyClassifier` 
         ## Params
         * `characters`: list of characters which corresponds to the labels of the model
         * `mode`: set the modality of the classifier based on the following possibilities:
@@ -173,25 +173,25 @@ class FrequencyChatbotClassifier:
         
         return predictions
 
-    def compute(self, doc, character):
-        """
-        Computes the wip score based on the classification, giving a proportional penalty in 
-        case of misclassification
-        ## Params
-        * `doc`: document to evaluate
-        * `character`: target character name 
-        ## Returns
-        a score in range [0, 1] of affinity personality for the document `doc` given the target 
-        character named as specified in `character`, based on a IR techniques 
-        """
+    # def compute(self, doc, character):
+    #     """
+    #     Computes the wip score based on the classification, giving a proportional penalty in 
+    #     case of misclassification
+    #     ## Params
+    #     * `doc`: document to evaluate
+    #     * `character`: target character name 
+    #     ## Returns
+    #     a score in range [0, 1] of affinity personality for the document `doc` given the target 
+    #     character named as specified in `character`, based on a IR techniques 
+    #     """
 
-        def zero_class(mu, pc):
-            return 0 if mu == pc else mu
+    #     def zero_class(mu, pc):
+    #         return 0 if mu == pc else mu
         
-        predictions = self.predict(doc)
-        values = np.array(list(predictions.values()))
+    #     predictions = self.predict(doc)
+    #     values = np.array(list(predictions.values()))
 
-        mu = np.max(values)
-        pc = predictions[character]
+    #     mu = np.max(values)
+    #     pc = predictions[character]
 
-        return pc * (1 - zero_class(mu, pc))
+    #     return pc * (1 - zero_class(mu, pc))
