@@ -1,0 +1,42 @@
+# Base
+ipykernel 
+pylint
+yapf
+
+# Numerical
+numpy
+pandas
+sklearn
+
+# NLP
+nltk
+
+# Neural Networks
+tensorflow
+keras
+torch
+
+# General Purpose Metrics
+evaluate
+datasets
+transformers
+# for cpu-support
+# transformers[tf-cpu]
+happytransformer
+sentence_transformers
+torchmetrics
+
+# Visualization
+matplotlib
+tqdm
+wordcloud
+
+# NLP Metrics
+nlg-metricverse
+pyemd
+sacrebleu
+unbabel-comet
+git+https://github.com/google-research/bleurt.git
+
+# missing
+gensim
