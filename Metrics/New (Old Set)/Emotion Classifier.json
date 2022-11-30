@@ -1,0 +1,1970 @@
+{
+    "2c2c3465d7084641c206e7fefab998ae": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08497935035153915,
+                0.3949466109114074,
+                0.03405219267864651,
+                0.37644495442322873,
+                0.09448788868157375,
+                0.015089005140782381
+            ],
+            "std": [
+                0.22714533024768307,
+                0.40926561646374365,
+                0.15936516671585726,
+                0.3703567983737339,
+                0.18550369524407007,
+                0.0911965552497208
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Barney_df"
+    },
+    "cc397ceb7defe5eedf3b63a8c1d8e5ab": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08216332453260596,
+                0.4117479200960588,
+                0.02091454547213895,
+                0.3934890758647574,
+                0.0749480934920939,
+                0.01673704493311258
+            ],
+            "std": [
+                0.22827820909580038,
+                0.40903970078813684,
+                0.1132092037536279,
+                0.3856237545020503,
+                0.17087921779548867,
+                0.1004992683775623
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Bender_df"
+    },
+    "c129ef4e44e6948b06be78a4cc6733ec": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.12285097107735135,
+                0.3539836170764183,
+                0.02945597244251985,
+                0.3915784833289686,
+                0.08990899527611956,
+                0.01222196708675542
+            ],
+            "std": [
+                0.2852300899741906,
+                0.40624847257089586,
+                0.15123419785290926,
+                0.3821119476969729,
+                0.1958963317405619,
+                0.08837143035034452
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Fry_df"
+    },
+    "4f9fe1eb9113cee3624e7db00c5e7fab": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.0736290662565667,
+                0.3562623449828467,
+                0.0044706559491225146,
+                0.4603414569282904,
+                0.10208629952774992,
+                0.003210174100016817
+            ],
+            "std": [
+                0.17789684059130093,
+                0.3653247376757471,
+                0.00862262748582302,
+                0.33003897230320844,
+                0.15888330991835972,
+                0.0026092836163760036
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Harry_df"
+    },
+    "8e0a33f6da8dd8cc99135f2cf4c9c3b7": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.06534399628640489,
+                0.43852016672145316,
+                0.01954132901699459,
+                0.37874036603409106,
+                0.08352586526958154,
+                0.014328276453882289
+            ],
+            "std": [
+                0.19354978470680445,
+                0.40382128180472093,
+                0.11255646208943317,
+                0.3622227614404217,
+                0.15752404997964903,
+                0.07539540021470598
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Joey_df"
+    },
+    "73bb9e2be64b1c139d26a33fc222b890": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.06731360743103872,
+                0.4401319045525031,
+                0.018626827603474522,
+                0.35452349197852145,
+                0.1009300407474006,
+                0.01847412650051856
+            ],
+            "std": [
+                0.2049956795476677,
+                0.4055472332376182,
+                0.10306772031126891,
+                0.3537320542664785,
+                0.18486217511843914,
+                0.1042451584749789
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "d0ea82a3612e3b4e577334f02de755e7": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.06945153043650659,
+                0.411096372140266,
+                0.01826799809558339,
+                0.37104864403270643,
+                0.11584916250352001,
+                0.014286293120029667
+            ],
+            "std": [
+                0.20487228500072424,
+                0.4138182172086002,
+                0.1092536265406593,
+                0.36610100107397825,
+                0.21380750504784274,
+                0.088951021989969
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "27b78cbd15343b20e7bab3bf7db0db89": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.03771194361979724,
+                0.3086916868633125,
+                0.0028261127226869576,
+                0.46144579228712246,
+                0.17504403311977512,
+                0.01428043059331685
+            ],
+            "std": [
+                0.08578421763279184,
+                0.36904829280560575,
+                0.0027072039533586954,
+                0.3735566079126503,
+                0.20110207065098584,
+                0.044106013655653725
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Vader_df"
+    },
+    "fde9f415e5833ec253d4e4974ef9bd7f": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Common_df"
+    },
+    "fba937f44ac2a754022e48d468e66e04": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08338458265166866,
+                0.38902365875618744,
+                0.024806545307496035,
+                0.40497622549917656,
+                0.08848321566827828,
+                0.00932577022948622
+            ],
+            "std": [
+                0.2240997757287796,
+                0.4004565899027035,
+                0.1225137788424608,
+                0.37169900770676767,
+                0.18269038815068375,
+                0.062167484450228766
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Barney_df"
+    },
+    "1f764069788a6552d08a15a730751fd4": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08200411834059196,
+                0.3773772721615387,
+                0.016590788750909267,
+                0.444190118946608,
+                0.07006231415701526,
+                0.00977538833246096
+            ],
+            "std": [
+                0.2220353026111512,
+                0.40530532892948357,
+                0.10365562881975281,
+                0.3913755627912468,
+                0.15740007755478455,
+                0.0753239367308374
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Bender_df"
+    },
+    "6a723c83797e6501dc4145be331c79f3": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.122115671974965,
+                0.40544639565323515,
+                0.013492491009426406,
+                0.3531882612093526,
+                0.09310079060903526,
+                0.012656393258215352
+            ],
+            "std": [
+                0.28988956621838496,
+                0.4129743230099096,
+                0.08149235351457321,
+                0.3724436807390631,
+                0.19086688085032255,
+                0.08256612300248761
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Fry_df"
+    },
+    "6b20d6d0a73657a80cb9e29e2e937d60": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.05320345371364965,
+                0.3303961798133409,
+                0.01247607932768565,
+                0.43012300456309904,
+                0.16629365674326926,
+                0.007507631345456152
+            ],
+            "std": [
+                0.14855255581384996,
+                0.382560213609378,
+                0.09580973707706471,
+                0.34851213196303876,
+                0.23281855120720119,
+                0.035813074510751115
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Harry_df"
+    },
+    "68e47566755424e49985eeea38221221": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.060330592999742264,
+                0.4773554601704453,
+                0.02523445408767936,
+                0.33654368845110355,
+                0.08781468286506293,
+                0.012721120280702753
+            ],
+            "std": [
+                0.18554137091471928,
+                0.40619236720869756,
+                0.13309675270249668,
+                0.34912280460761186,
+                0.18098532968722125,
+                0.07861462396027569
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Joey_df"
+    },
+    "f01bdf1e5785cd9609d38c1907565c77": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08715738682793274,
+                0.45262476321996203,
+                0.029280852985170115,
+                0.3419202249775425,
+                0.07765435347388852,
+                0.011362421029342599
+            ],
+            "std": [
+                0.23090353612967318,
+                0.4080945468753374,
+                0.14004641399079448,
+                0.35269704823977277,
+                0.1594253771649069,
+                0.07260009011787077
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "e1ea9ad2e106255d103ab5acf2765562": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08065154371728661,
+                0.4289167251868117,
+                0.018929427284804574,
+                0.3512944918250865,
+                0.10498895649350463,
+                0.015218856556891537
+            ],
+            "std": [
+                0.22052709368220696,
+                0.41507642139429285,
+                0.10634142124074045,
+                0.368381140561346,
+                0.2093122087806091,
+                0.09553790196881094
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "50fce9a3d56091da03c2cd390ad2eb6b": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.09321644622832537,
+                0.4917986299897166,
+                0.005095473637993564,
+                0.32870645810180577,
+                0.07919873658102006,
+                0.0019842915035042097
+            ],
+            "std": [
+                0.21205984751483212,
+                0.4378304869670238,
+                0.0070275803922158885,
+                0.3781002741798295,
+                0.1928358104243509,
+                0.0024241419183065696
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Vader_df"
+    },
+    "4ac3fb4efea4bc99cc0c25018f711fa7": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.2631594263007086,
+                0.32270602501813506,
+                0.024232649487624804,
+                0.27420083777143817,
+                0.09310905970434265,
+                0.022591996236822044
+            ],
+            "std": [
+                0.40931651781866646,
+                0.39947015604512776,
+                0.13249640421238187,
+                0.35618690135200254,
+                0.19246898589239944,
+                0.09686640062168361
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Barney_df"
+    },
+    "62e88ec5e55f35d4e3bf26ef0e2479b1": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.18168753477208763,
+                0.2921770362358075,
+                0.012909019090723934,
+                0.37830341830400965,
+                0.13324592112676328,
+                0.0016770802885427353
+            ],
+            "std": [
+                0.3503189408896599,
+                0.4073377742173697,
+                0.08889975552908018,
+                0.41374719062831045,
+                0.2955662267412886,
+                0.002995320275864722
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Bender_df"
+    },
+    "48ba17479572b8091781cbc5ef21a9f1": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.34258068877488934,
+                0.15926831838921746,
+                0.008498417498307617,
+                0.3923005386187559,
+                0.09237067784473658,
+                0.004981361897506635
+            ],
+            "std": [
+                0.4221431432761345,
+                0.3261909248773398,
+                0.0788205670076635,
+                0.399318801471587,
+                0.2335593871039962,
+                0.059720677726492116
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Fry_df"
+    },
+    "ca8368f340e933985b1bbb70f5b68a83": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.1182500040690334,
+                0.1982630739960139,
+                0.0032651835601707436,
+                0.5563925731761489,
+                0.11199622190780736,
+                0.011832940424238377
+            ],
+            "std": [
+                0.24081829926317372,
+                0.2952943574338549,
+                0.0038469440079018486,
+                0.36542939545638164,
+                0.21274233493337522,
+                0.09641059478905671
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Harry_df"
+    },
+    "ba8b4bd5a099cebc96aed4ffaed77cc9": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.12319498171328405,
+                0.5628161963443403,
+                0.013232308842331574,
+                0.22118987275814053,
+                0.06561910744681043,
+                0.013947536867255717
+            ],
+            "std": [
+                0.2882785125291666,
+                0.3776395978406936,
+                0.08059547252948722,
+                0.2894411361876967,
+                0.12494111344710097,
+                0.05456873966056762
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Joey_df"
+    },
+    "bf9113fda8acb493c7a79c9f97ffd14a": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08710386491102459,
+                0.6092642850502242,
+                0.01932332022251419,
+                0.20587626334509815,
+                0.064718159839889,
+                0.013714114964788748
+            ],
+            "std": [
+                0.23287812236082056,
+                0.3668043970649815,
+                0.10289604911905235,
+                0.27460940010047735,
+                0.1203455190900329,
+                0.035125290694579446
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "a5b91ac53d9bd99ef9dada74dbc995be": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08092468301802934,
+                0.4809294385243626,
+                0.029503503105064364,
+                0.3138473310227057,
+                0.08565021272962385,
+                0.009144838467437095
+            ],
+            "std": [
+                0.20631324386626343,
+                0.41722311512970617,
+                0.14551422590147087,
+                0.35004522095077234,
+                0.17629517625900887,
+                0.06746376022027092
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "4102da79d74bcd4bb1facc0d43d54453": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.11372547360952012,
+                0.3822097205265891,
+                0.03265330982321757,
+                0.358829681732459,
+                0.10793059322895715,
+                0.004651219400329865
+            ],
+            "std": [
+                0.2158833609059244,
+                0.3765417575013274,
+                0.09553062465635066,
+                0.36344891732747475,
+                0.13852242597426473,
+                0.003624156518952487
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Vader_df"
+    },
+    "1a55d3834d2d294109179b71c7e33bb4": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.2631594263007086,
+                0.32270602501813506,
+                0.024232649487624804,
+                0.27420083777143817,
+                0.09310905970434265,
+                0.022591996236822044
+            ],
+            "std": [
+                0.40931651781866646,
+                0.39947015604512776,
+                0.13249640421238187,
+                0.35618690135200254,
+                0.19246898589239944,
+                0.09686640062168361
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Barney_df"
+    },
+    "59f49da236ad85f94034b4ffc2975fad": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.18168753477208763,
+                0.2921770362358075,
+                0.012909019090723934,
+                0.37830341830400965,
+                0.13324592112676328,
+                0.0016770802885427353
+            ],
+            "std": [
+                0.3503189408896599,
+                0.4073377742173697,
+                0.08889975552908018,
+                0.41374719062831045,
+                0.2955662267412886,
+                0.002995320275864722
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Bender_df"
+    },
+    "8975b6930d58d077a3a67d59ae4fe5fd": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.34258068877488934,
+                0.15926831838921746,
+                0.008498417498307617,
+                0.3923005386187559,
+                0.09237067784473658,
+                0.004981361897506635
+            ],
+            "std": [
+                0.4221431432761345,
+                0.3261909248773398,
+                0.0788205670076635,
+                0.399318801471587,
+                0.2335593871039962,
+                0.059720677726492116
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Fry_df"
+    },
+    "e855a4f98b58c72765cac875ba004fac": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.1182500040690334,
+                0.1982630739960139,
+                0.0032651835601707436,
+                0.5563925731761489,
+                0.11199622190780736,
+                0.011832940424238377
+            ],
+            "std": [
+                0.24081829926317372,
+                0.2952943574338549,
+                0.0038469440079018486,
+                0.36542939545638164,
+                0.21274233493337522,
+                0.09641059478905671
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Harry_df"
+    },
+    "5023ec8127eb165713d1564e29e94b09": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.12319498171328405,
+                0.5628161963443403,
+                0.013232308842331574,
+                0.22118987275814053,
+                0.06561910744681043,
+                0.013947536867255717
+            ],
+            "std": [
+                0.2882785125291666,
+                0.3776395978406936,
+                0.08059547252948722,
+                0.2894411361876967,
+                0.12494111344710097,
+                0.05456873966056762
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Joey_df"
+    },
+    "40b8aa3c2af5afb4eec7736a13ce6bf1": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08710386491102459,
+                0.6092642850502242,
+                0.01932332022251419,
+                0.20587626334509815,
+                0.064718159839889,
+                0.013714114964788748
+            ],
+            "std": [
+                0.23287812236082056,
+                0.3668043970649815,
+                0.10289604911905235,
+                0.27460940010047735,
+                0.1203455190900329,
+                0.035125290694579446
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "7de54a3943ed8b6ef6863df2c53f3d01": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08092468301802934,
+                0.4809294385243626,
+                0.029503503105064364,
+                0.3138473310227057,
+                0.08565021272962385,
+                0.009144838467437095
+            ],
+            "std": [
+                0.20631324386626343,
+                0.41722311512970617,
+                0.14551422590147087,
+                0.35004522095077234,
+                0.17629517625900887,
+                0.06746376022027092
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "065b6cd5b3a47d9914612ee2ffd9962f": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                11,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.11372547360952012,
+                0.3822097205265891,
+                0.03265330982321757,
+                0.358829681732459,
+                0.10793059322895715,
+                0.004651219400329865
+            ],
+            "std": [
+                0.2158833609059244,
+                0.3765417575013274,
+                0.09553062465635066,
+                0.36344891732747475,
+                0.13852242597426473,
+                0.003624156518952487
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Vader_df"
+    },
+    "dae923a6a765336e6333ad684569ca83": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.09835122590913559,
+                0.39691383352077664,
+                0.02341386584227283,
+                0.39206531766689,
+                0.07623958591179923,
+                0.01301616883988729
+            ],
+            "std": [
+                0.25322227165373334,
+                0.41108044081976103,
+                0.12311367560755417,
+                0.379278355644879,
+                0.16481735391097704,
+                0.0916967398128707
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Barney_df"
+    },
+    "76f5cfe803c61ee75a331cf123b4c823": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.11416021062262492,
+                0.4213767562307112,
+                0.010887207025189128,
+                0.34376674136959384,
+                0.0919881291743271,
+                0.017820954959976612
+            ],
+            "std": [
+                0.27575262149602847,
+                0.40637530527031834,
+                0.06573053417653713,
+                0.34766315508884615,
+                0.17433366822148227,
+                0.11225914530936049
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Bender_df"
+    },
+    "b9058519563d21ab9267df91e673f6d6": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08896204180627014,
+                0.44947490876543955,
+                0.010055290868826937,
+                0.3463949607277968,
+                0.09730831365241335,
+                0.0078044833332699326
+            ],
+            "std": [
+                0.22740494412160975,
+                0.42414398379242857,
+                0.08310886012645663,
+                0.36875511263042254,
+                0.2063506635875329,
+                0.032642132895067066
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Fry_df"
+    },
+    "d2d0eed7752149e3f43c6ab41c4a124b": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.1239019645397023,
+                0.342324031951788,
+                0.0049554472291045105,
+                0.43844787893753023,
+                0.08781365875200628,
+                0.002557021764005185
+            ],
+            "std": [
+                0.25884771216491625,
+                0.38869417692786656,
+                0.014484306380703438,
+                0.3736880338247347,
+                0.17427217332498535,
+                0.003545189339406501
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Harry_df"
+    },
+    "9e7de79e17f2cecf81d1bce7e793f308": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.07444807359824668,
+                0.5094399057851691,
+                0.026963929958680098,
+                0.27809484072661184,
+                0.09290688813735565,
+                0.018146364736942824
+            ],
+            "std": [
+                0.21566335179593538,
+                0.40266923298586405,
+                0.13415215715181358,
+                0.3247572573324774,
+                0.18275353423738633,
+                0.09007338478650209
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Joey_df"
+    },
+    "58a6c7be00fa8e6b162ec7d9554d03e7": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.06649272101299206,
+                0.5217359952934609,
+                0.024287310231391145,
+                0.2926405082771174,
+                0.08251949522071739,
+                0.012323976133868052
+            ],
+            "std": [
+                0.19688051286343394,
+                0.39421745673755,
+                0.12516380068017768,
+                0.3291422016301095,
+                0.1555258263293717,
+                0.05685080736941324
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "c6eca3c08d207d000d31cd3b53018840": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.08362291352870639,
+                0.4418460294800193,
+                0.020347330993219004,
+                0.34973728877561155,
+                0.09169803019586287,
+                0.012748410224426502
+            ],
+            "std": [
+                0.22846217470597358,
+                0.4204797018207777,
+                0.11427387323314078,
+                0.36400996016584675,
+                0.18239552950537732,
+                0.08919112669807445
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "aa87dafdcd6e71071287396a89f56e42": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "answer": {
+            "score": [
+                0.07762571314015076,
+                0.5378564742750314,
+                0.0037301316178854904,
+                0.2282645753257384,
+                0.15003503431580612,
+                0.0024880491714611708
+            ],
+            "std": [
+                0.23809589927850858,
+                0.41998112194903053,
+                0.0022385134046295466,
+                0.295545727451606,
+                0.29033684412268246,
+                0.00244285479263692
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        "reference_set": "Vader_df"
+    }
+}

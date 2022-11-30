@@ -5,12 +5,6 @@ import os
 
 from .BBData import character_dict
 
-class MetricDependency(int, Enum):
-    DATASET = 0      # Metric depends on datasets only and/or base DialoGPT model
-    COHERENT = 1     # Metric depends on chatbot trained on its dataset
-    ADVERSARIAL = 2  # Metric depends on chatbot trained on a dataset but with another dataset of reference
-    COMPARATIVE = 3  # Metric depends on comparison between chatbots
-
 class MetricArity(int, Enum):
     SINGLE = 1  # Metric depends on a single actor
     PAIRWISE = 2  # Metric depends on two actors
@@ -114,52 +108,12 @@ def get_metric_determinism(metric_name, metric_version):
         return MetricDeterminism.NEURAL
     elif metric_name == 'distilbert-embedded chatbot classifier' and metric_version == 1:
         return MetricDeterminism.NEURAL
-    elif metric_name == 'dummy metric':
+    elif metric_name == 'frequency chatbot classifier' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
-    elif metric_name == 'frequency chatbot classifier':
+    elif metric_name == 'dummy metric':
         return MetricDeterminism.DETERMINISTIC
     else:
         raise Exception("Unknown determinism for metric " + metric_name)
-
-def get_metric_dependency(metric_name, metric_actors):
-    actors_order = ['training_set', 'predictor', 'reference', 'document', 'document0', 'document1'] 
-    actor_types = [metric_actors[key][0] for key in actors_order if key in metric_actors]
-    actor_chars = [metric_actors[key][1] for key in actors_order if key in metric_actors]
-    if metric_name == 'lines count' or metric_name == 'distinct' or metric_name == 'emotion classifier' or \
-       metric_name == "t5 grammar correction edit distance" or metric_name == "distilbert-embedded chatbot classifier" \
-       or metric_name == "frequency chatbot classifier":
-        if all(at.value < 10 for at in actor_types):
-            return MetricDependency.DATASET
-        elif actor_chars[0] == 'Base':
-            return MetricDependency.DATASET
-        else:
-            return MetricDependency.COHERENT
-    elif metric_name == 'google bleu' or metric_name == 'rouge l' or \
-       metric_name == 'mpnet embedding similarity' or metric_name == 'roberta crossencoding similarity' or \
-       metric_name == 'meteor' or metric_name == 'neural chatbot classifier' or metric_name == 'perplexity' or \
-       metric_name == 'bertscore' or metric_name == 'term error rate' or metric_name == 'bleurt' or metric_name == 'bartscore' or \
-       metric_name == "word mover distance" or metric_name == "extended edit distance":
-        if all((actor_types[i].value < 10 or actor_chars[i] == 'Base') for i in range(len(metric_actors))):
-            return MetricDependency.DATASET
-        elif all(ac == actor_chars[0] for ac in actor_chars):
-            return MetricDependency.COHERENT
-        elif all(at.value >= 10 for at in actor_types):
-            return MetricDependency.COMPARATIVE
-        else:
-            return MetricDependency.ADVERSARIAL
-    elif metric_name == 'comet':
-        if all((actor_types[i].value < 10 or actor_chars[i] == 'Base') for i in range(len(metric_actors))):
-            return MetricDependency.DATASET
-        elif all(ac == actor_chars[0] for ac in actor_chars):
-            return MetricDependency.COHERENT
-        elif actor_chars[0] == actor_chars[2] and actor_types[0].value >= 10 and actor_types[1].value >= 10:
-            return MetricDependency.COMPARATIVE
-        else:
-            return MetricDependency.ADVERSARIAL        
-    elif metric_name == 'dummy metric':
-        return MetricDependency.DATASET
-    else:
-        raise Exception("Unknown dependency for metric " + metric_name)
 
 def save_metric_by_name(path, filename, metric_dict):
     if os.path.exists(os.path.join(path, filename)):
@@ -174,7 +128,6 @@ def load_metric_by_name(path, filename):
     for entry in metrics.values():
         for actor in entry['metric_actors'].values():
             actor[0] = MetricActor(actor[0])
-        entry['metric_dependency'] = MetricDependency(entry['metric_dependency'])
-        entry['metric_determinism'] = MetricDependency(entry['metric_determinism'])
+        entry['metric_determinism'] = MetricDeterminism(entry['metric_determinism'])
         entry['metric_arity'] = MetricArity(entry['metric_arity'])
     return metrics

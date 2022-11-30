@@ -1,0 +1,218 @@
+{
+    "dc57fc696ba68eabd532d108cef12023": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 4414,
+            "test": 522,
+            "val": 258
+        },
+        "reference_set": "Barney_df"
+    },
+    "e19c89381d42ab33b061beca7877c78e": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 2029,
+            "test": 240,
+            "val": 119
+        },
+        "reference_set": "Bender_df"
+    },
+    "9b247aed92b52dd372be80d7d3b62f04": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 2308,
+            "test": 273,
+            "val": 135
+        },
+        "reference_set": "Fry_df"
+    },
+    "11b4bb74deea8a1b1040a64c61e138e0": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 881,
+            "test": 104,
+            "val": 52
+        },
+        "reference_set": "Harry_df"
+    },
+    "fc5ab8c74d4cc8205a0db2e20afb7fd5": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 6994,
+            "test": 827,
+            "val": 408
+        },
+        "reference_set": "Joey_df"
+    },
+    "7ed02980050f22f3db4cb8c63bd00ec0": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 6354,
+            "test": 751,
+            "val": 371
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "ea185169ca9f1aa741f4dc52c2368e91": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 9895,
+            "test": 1170,
+            "val": 577
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "6a9e29397f3bdbdfb760235199156c7c": {
+        "metric_name": "lines count",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": {
+            "train": 136,
+            "test": 16,
+            "val": 8
+        },
+        "reference_set": "Vader_df"
+    }
+}

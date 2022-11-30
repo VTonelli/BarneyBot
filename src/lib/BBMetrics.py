@@ -54,19 +54,19 @@ class BBMetric:
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
         elif name == "word mover distance":
-            self.compute_require_args = set(["predictions", "references"])
+            self.compute_require_args = set(["sentences_a", "sentences_b"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
-            self.save_actors = ['predictor', 'reference']
+            self.save_actors = ['document0', 'document1']
         elif name == "extended edit distance":
-            self.compute_require_args = set(["predictions", "references"])
+            self.compute_require_args = set(["sentences_a", "sentences_b"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
-            self.save_actors = ['predictor', 'reference']
+            self.save_actors = ['document0', 'document1']
         elif name == "t5 grammar correction edit distance":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set()
@@ -163,21 +163,21 @@ class BBMetric:
                 ["shutdown_at_end", "n_shuffles"]
             )
             self.return_args = ['score', 'std']
-            self.save_actors = ['training_set', 'document']
+            self.save_actors = ['document']
         elif name == "perplexity":
             self.compute_require_args = set(["model", "encoded_test_set"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
             self.return_args = ['score']
-            self.save_actors = ['training_set', 'predictor']
+            self.save_actors = ['predictor']
         elif name == "comet":
             self.compute_require_args = set(["sources", "predictions", "references"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
-            self.save_actors = ['predictor', 'reference', 'document']
+            self.save_actors = ['document', 'predictor', 'reference']
         elif name == "distilbert-embedded chatbot classifier":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set(["verbose"])
@@ -232,7 +232,7 @@ class BBMetric:
         elif name == "word mover distance":
             metric = BBMetric(name, lambda a, b: wmd(a, b))
         elif name == "extended edit distance":
-            metric = BBMetric(name, ExtendedEditDistance(return_sentence_level_score=True))
+            metric = BBMetric(name, ExtendedEditDistance())
         elif name == "t5 grammar correction edit distance":
             metric = BBMetric(name, HappyTextToText("T5", "vennify/t5-base-grammar-correction"))
         elif name == "meteor":
@@ -331,13 +331,13 @@ class BBMetric:
             result['std'] = np.std(np.array(single_outputs))
         elif self.name == "word mover distance":
             # Cast predictions and references as lists
-            predictions = kwargs['predictions'] if type(
-                kwargs['predictions']) is list else [kwargs['predictions']]
-            references = kwargs['references'] if type(
-                kwargs['references']) is list else [kwargs['references']]
+            sentences_a = kwargs['sentences_a'] if type(
+                kwargs['sentences_a']) is list else [kwargs['sentences_a']]
+            sentences_b = kwargs['sentences_b'] if type(
+                kwargs['sentences_b']) is list else [kwargs['sentences_b']]
             single_outputs = []
-            for i in range(len(predictions)):
-                prediction = self.metric(predictions[i], references[i])
+            for i in range(len(sentences_a)):
+                prediction = self.metric(sentences_a[i], sentences_b[i])
                 if prediction is not None and not math.isinf(prediction):
                     single_outputs.append(prediction)
             # Write mean and std of these scores (if any)
@@ -348,14 +348,14 @@ class BBMetric:
                 result['score'] = float('inf')
                 result['std'] = float('nan')              
         elif self.name == "extended edit distance":
-            predictions = kwargs['predictions'] if type(
-                kwargs['predictions']) is list else [kwargs['predictions']]
-            references = kwargs['references'] if type(
-                kwargs['references']) is list else [kwargs['references']]
+            sentences_a = kwargs['sentences_a'] if type(
+                kwargs['sentences_a']) is list else [kwargs['sentences_a']]
+            sentences_b = kwargs['sentences_b'] if type(
+                kwargs['sentences_b']) is list else [kwargs['sentences_b']]
             single_outputs = []
-            for i in range(len(predictions)):
-                single_outputs.append(self.metric(predictions[i],
-                                                  references[i]).item())
+            for i in range(len(sentences_a)):
+                single_outputs.append(self.metric(sentences_a[i],
+                                                  sentences_b[i]).item())
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
         elif self.name == "t5 grammar correction edit distance":

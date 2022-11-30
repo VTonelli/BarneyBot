@@ -1,0 +1,2912 @@
+{
+    "e2cf0258acb1168994f0daf9c4040be2": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Barney_df"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07826181007958406,
+            "std": 0.12965623985665536
+        },
+        "reference_set": "Barney_df"
+    },
+    "d98b1f9da0fcc65cf4857df6dcd0aafd": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Bender_df"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.06699352279684892,
+            "std": 0.10473504501625344
+        },
+        "reference_set": "Bender_df"
+    },
+    "6ae91f2833959a3bb2c3655d9015fd74": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Fry_df"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.06177255394239813,
+            "std": 0.08456638792213277
+        },
+        "reference_set": "Fry_df"
+    },
+    "187fd8dda2e1a175384609a5c88be8f2": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Harry_df"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.10230491458983361,
+            "std": 0.20059405165241131
+        },
+        "reference_set": "Harry_df"
+    },
+    "1dfca7cab009dc83cd957a5f1802e873": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Joey_df"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07125980167680869,
+            "std": 0.12594333548402128
+        },
+        "reference_set": "Joey_df"
+    },
+    "783a8fe2fd31de27d1753ed2229a82c9": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Phoebe_df"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08097928033195112,
+            "std": 0.15763869721674936
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "3360a469def7de9ffe4f2ab9e2bf89e7": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Sheldon_df"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.06885311385329769,
+            "std": 0.1123980096444849
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "4394c214a58644b05dae9a611feb9d16": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Vader_df"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07925918737060042,
+            "std": 0.07479345524211507
+        },
+        "reference_set": "Vader_df"
+    },
+    "df6c9e81c3bcedb3dbf4155eae957998": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.16704633473926525,
+            "std": 0.25031123190233606
+        },
+        "reference_set": "Barney_df"
+    },
+    "48ed2dae074e83065eb19c96ad972c46": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Barney"
+            ],
+            "reference": [
+                1,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.0757481545440385,
+            "std": 0.14821992258864114
+        },
+        "reference_set": "Barney_df"
+    },
+    "c32fbc90f0ca7dd5886d0093eaf4e6be": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1283842370721314,
+            "std": 0.18856636471525662
+        },
+        "reference_set": "Bender_df"
+    },
+    "8062b40cf7c329655a18379e82298073": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Bender"
+            ],
+            "reference": [
+                1,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08316660509143343,
+            "std": 0.1407194630356777
+        },
+        "reference_set": "Bender_df"
+    },
+    "4336051d04a8e327bcd35774c566fbd5": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1541177193215843,
+            "std": 0.21837302019350713
+        },
+        "reference_set": "Fry_df"
+    },
+    "93ca2981c33ba551e46e38a7c8f62a0e": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Fry"
+            ],
+            "reference": [
+                1,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08155140539291518,
+            "std": 0.11875006054327453
+        },
+        "reference_set": "Fry_df"
+    },
+    "7e34af22b1bfe227512166c5d9d37091": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.2232842395317531,
+            "std": 0.3113668953008883
+        },
+        "reference_set": "Harry_df"
+    },
+    "7b6f052a53a86a8553bcaec68decda8a": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Harry"
+            ],
+            "reference": [
+                1,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.09629202928691291,
+            "std": 0.17451560047143733
+        },
+        "reference_set": "Harry_df"
+    },
+    "fc78b452be5ce000c3a69801cd7025bf": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.13669308960112977,
+            "std": 0.2520226463338668
+        },
+        "reference_set": "Joey_df"
+    },
+    "9d9bf6b94557050fefaaa23d52851676": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Joey"
+            ],
+            "reference": [
+                1,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08346704615290745,
+            "std": 0.17515473755725286
+        },
+        "reference_set": "Joey_df"
+    },
+    "f54ac5975bf2ac991981712909ac8dc8": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1418503459634075,
+            "std": 0.24998874630474968
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "17e04fd25f64267ebd52ce76cb4f293d": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Phoebe"
+            ],
+            "reference": [
+                1,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.12563029623047645,
+            "std": 0.23558911588391676
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "e439af363b931511a084ddd5dd5ab393": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1163776020054345,
+            "std": 0.1972480013006129
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "e8ab5fbf393e0634b47f70ad4612fb10": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Sheldon"
+            ],
+            "reference": [
+                1,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.0875695867440709,
+            "std": 0.1585814395675917
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "c40a25b5cfa05607522a987135741518": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.2783069336058467,
+            "std": 0.32252310998200084
+        },
+        "reference_set": "Vader_df"
+    },
+    "b029d9212160ef5a7e090450cb41aae6": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Vader"
+            ],
+            "reference": [
+                1,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.05853002070393374,
+            "std": 0.0998893999786502
+        },
+        "reference_set": "Vader_df"
+    },
+    "f303262f14064ee6636a6fd346993bb6": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.16704633473926525,
+            "std": 0.25031123190233606
+        },
+        "reference_set": "Barney_df"
+    },
+    "90fc93a571e29b2baae602ff9f7abae0": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Barney"
+            ],
+            "reference": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Barney_df"
+    },
+    "8c15e8df0cb9e331836d9e079de1e1c2": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1283842370721314,
+            "std": 0.18856636471525662
+        },
+        "reference_set": "Bender_df"
+    },
+    "db68bca65103f862cc8da86744eadf38": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Bender"
+            ],
+            "reference": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Bender_df"
+    },
+    "1b30457f090bff1a0e5e4ba0f4d11ecc": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1541177193215843,
+            "std": 0.21837302019350713
+        },
+        "reference_set": "Fry_df"
+    },
+    "7b326f60bc951b0c49c315b93ede155f": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Fry"
+            ],
+            "reference": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Fry_df"
+    },
+    "4a8fe9cb3e5d427633181b157b7b8de9": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.2232842395317531,
+            "std": 0.3113668953008883
+        },
+        "reference_set": "Harry_df"
+    },
+    "6f4320cb6992a90c1f3545ab8bf8c9bf": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Harry"
+            ],
+            "reference": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Harry_df"
+    },
+    "47d1873400cc65efca5517a83686d786": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.13669308960112977,
+            "std": 0.2520226463338668
+        },
+        "reference_set": "Joey_df"
+    },
+    "eeabbe154f6289173f67f1c063a6494b": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Joey"
+            ],
+            "reference": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Joey_df"
+    },
+    "71b1772d7ca2b74f593b08f7bf2333b4": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1418503459634075,
+            "std": 0.24998874630474968
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "ac37539082cb2fac940780c6a3beb477": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Phoebe"
+            ],
+            "reference": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "d72406d9242e691951956470931271ad": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1163776020054345,
+            "std": 0.1972480013006129
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "e2a723052bba8761870119dadf7e8858": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Sheldon"
+            ],
+            "reference": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "ac8f03c51e446e8f8173ea85e6fa7f86": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.2783069336058467,
+            "std": 0.32252310998200084
+        },
+        "reference_set": "Vader_df"
+    },
+    "286d8f5172244dda4cb0c919da779fc2": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Vader"
+            ],
+            "reference": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 1.0,
+            "std": 0.0
+        },
+        "reference_set": "Vader_df"
+    },
+    "38309bc76ad379b7d2a4825fad3cfb1c": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.11548029249055757,
+            "std": 0.15823243713713475
+        },
+        "reference_set": "Barney_df"
+    },
+    "2ab55d8b41ca4d4f3bf9a6ad66c88d80": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.13463484979482235,
+            "std": 0.23701449760077317
+        },
+        "reference_set": "Common_df"
+    },
+    "ce1f0fd1c79928583b224a3b18ef4558": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.16276034644698822,
+            "std": 0.2329300350199674
+        },
+        "reference_set": "Barney_df"
+    },
+    "da107c6d9209b660fa8a8918c55a2663": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                11,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.16276034644698822,
+            "std": 0.2329300350199674
+        },
+        "reference_set": "Barney_df"
+    },
+    "75482e2b920a89295f9318800c2f625e": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.05532937808324578,
+            "std": 0.08392613126702762
+        },
+        "reference_set": "Common_df"
+    },
+    "0a67e77609ee607fb93c58c8b470f5cb": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.09355169667610982,
+            "std": 0.13202964799388084
+        },
+        "reference_set": "Bender_df"
+    },
+    "64aadda41769e21a42a5675babdd27f8": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.0667127386605109,
+            "std": 0.08928293132601728
+        },
+        "reference_set": "Common_df"
+    },
+    "fa65ba1a1f080ff792a57407f81df24d": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.12778496145095433,
+            "std": 0.19065741183158724
+        },
+        "reference_set": "Bender_df"
+    },
+    "d1fcb57e9c77047279eac77479e42ea5": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                11,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.12778496145095433,
+            "std": 0.19065741183158724
+        },
+        "reference_set": "Bender_df"
+    },
+    "d8f70d53699c19b10e2c5b634985c233": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07796926562397727,
+            "std": 0.09331284821706533
+        },
+        "reference_set": "Common_df"
+    },
+    "750f34d76d5cd7319239959073a8f13a": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08047601956512634,
+            "std": 0.17889809164805645
+        },
+        "reference_set": "Common_df"
+    },
+    "2e59f634472169bd310be6dcaa427c91": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07700019567554747,
+            "std": 0.09229886271670522
+        },
+        "reference_set": "Fry_df"
+    },
+    "6da5c8ff0d79966b6484faaa2e08fe32": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.09812797597671548,
+            "std": 0.18721662875063022
+        },
+        "reference_set": "Common_df"
+    },
+    "90e8fc46595b63f5bb78f629b7111880": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.12691603042517777,
+            "std": 0.1682845850291776
+        },
+        "reference_set": "Fry_df"
+    },
+    "f2e99cb3cc7e874264d0709f935da3af": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                11,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.12691603042517777,
+            "std": 0.1682845850291776
+        },
+        "reference_set": "Fry_df"
+    },
+    "3402b5e113a064a4e3cb7f7d81d5c830": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.056059637139408314,
+            "std": 0.07858249548733318
+        },
+        "reference_set": "Common_df"
+    },
+    "7db331cbf4718905bcaad6da1fae486e": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.12464420132909396,
+            "std": 0.19385224855642835
+        },
+        "reference_set": "Harry_df"
+    },
+    "82b993982200acccedc79322844d8773": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.04650724380047688,
+            "std": 0.0916035087950407
+        },
+        "reference_set": "Common_df"
+    },
+    "22699c98b4beb12972df12139e4887e5": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.14532344848951895,
+            "std": 0.17976608021537685
+        },
+        "reference_set": "Harry_df"
+    },
+    "ff2696562c5ec429e653c6eadc67018a": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                11,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.14532344848951895,
+            "std": 0.17976608021537685
+        },
+        "reference_set": "Harry_df"
+    },
+    "5483d11d4edc3826be84204c3b6402e4": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.05239776329508857,
+            "std": 0.08257612131931524
+        },
+        "reference_set": "Common_df"
+    },
+    "9443bfa4f294a90b1c6859d01961b469": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.04586046369757049,
+            "std": 0.06578308887442816
+        },
+        "reference_set": "Common_df"
+    },
+    "29e8eb961478a0b52e798d419b5c2949": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.09719916427873311,
+            "std": 0.16096947641987605
+        },
+        "reference_set": "Joey_df"
+    },
+    "fb87867d5b8b00527af156f10a9ac983": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.14590359910479905,
+            "std": 0.2216201434511459
+        },
+        "reference_set": "Common_df"
+    },
+    "652c1ce54dc05895689851b0bd33d418": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.17256834702502158,
+            "std": 0.26175040112942866
+        },
+        "reference_set": "Joey_df"
+    },
+    "93295d2670a2cd57ace4f24b36db8b79": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                11,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.17256834702502158,
+            "std": 0.26175040112942866
+        },
+        "reference_set": "Joey_df"
+    },
+    "a4603a55b052ab35ed4bc573c16adf73": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.06321110385551156,
+            "std": 0.09822586605426548
+        },
+        "reference_set": "Common_df"
+    },
+    "3c7a64a6b0659e61f88e5b4b41c5e7e8": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08321588226695593,
+            "std": 0.10736429835092554
+        },
+        "reference_set": "Common_df"
+    },
+    "48c6b8addae53c9e3a59b48c81df6ecd": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08867731687830424,
+            "std": 0.15094231440141523
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "6432374ca21a5bdff4c55302411c133b": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.09323450207587171,
+            "std": 0.18688973471165363
+        },
+        "reference_set": "Common_df"
+    },
+    "90ae30a44f2b80a89aa2f37600b0116d": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.21394453421039633,
+            "std": 0.29896149309694686
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "d57dfc509d8a83c9962279feb751c4c1": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                11,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.21394453421039633,
+            "std": 0.29896149309694686
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "8984b02fd63cddf1a99b71ea74455291": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.0862945980773195,
+            "std": 0.1848857025520762
+        },
+        "reference_set": "Common_df"
+    },
+    "12cbe96fb063aa14d154ddacdd01ffbd": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07599241650804076,
+            "std": 0.11374051234006612
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "f1c3d5eaadb57bc5ba854dee1667f438": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.10198249912870752,
+            "std": 0.1652669007884761
+        },
+        "reference_set": "Common_df"
+    },
+    "01c01c01fc24a0556e7047347525fe40": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.15408542949331672,
+            "std": 0.2291546736303199
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "09df7d2da963594caab1ecf5ac642c84": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                11,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.15408542949331672,
+            "std": 0.2291546736303199
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "76e14ba43111f54fc2f6d2efa8747bb7": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.09847999222999224,
+            "std": 0.1373275181825641
+        },
+        "reference_set": "Vader_df"
+    },
+    "261b8abaa38df0419330ca9796a7a526": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.08072591008481493,
+            "std": 0.18044734026922646
+        },
+        "reference_set": "Common_df"
+    },
+    "517121c7670c655af65c0e81800254d6": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07510976466455918,
+            "std": 0.12417556847526161
+        },
+        "reference_set": "Vader_df"
+    },
+    "7d02f75736633defe416aad1b5a95986": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                11,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07510976466455918,
+            "std": 0.12417556847526161
+        },
+        "reference_set": "Vader_df"
+    },
+    "5c071d3954c13d773c30042d885f731d": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1334648539618806,
+            "std": 0.17028648010312403
+        },
+        "reference_set": "Barney_df"
+    },
+    "5c6d9ab6f03743169ca9a4198d6cfda2": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1132471856066592,
+            "std": 0.1416715105573758
+        },
+        "reference_set": "Bender_df"
+    },
+    "31370d1ca2f6be624103bf1a22451093": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.11408994083211019,
+            "std": 0.14629763080945332
+        },
+        "reference_set": "Fry_df"
+    },
+    "a7a4755493bbba56e2d22b7f4a6d51af": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.1224257943886431,
+            "std": 0.18231530990042852
+        },
+        "reference_set": "Harry_df"
+    },
+    "135813bd6edfa08a6d8a249cb565f3ed": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.10245038635580044,
+            "std": 0.14924115482219882
+        },
+        "reference_set": "Joey_df"
+    },
+    "463cc2c54a76520b93a00fba44f03d1e": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.10220650859228979,
+            "std": 0.14935899551933282
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "9e6f4b911daf71dfbda2df6791ddf12b": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.09488605775910229,
+            "std": 0.13957123367857874
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "cf9cb1d9cdaefb26e287b41643482b5c": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.14702797202797202,
+            "std": 0.23287952919309832
+        },
+        "reference_set": "Vader_df"
+    },
+    "423772c93362130bd72db5ea0c471097": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07774604266498007,
+            "std": 0.10261740510642083
+        },
+        "reference_set": "Barney_df"
+    },
+    "09afcd54c852a742cee4afceba0f5186": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.071011161208903,
+            "std": 0.08886963826845866
+        },
+        "reference_set": "Bender_df"
+    },
+    "e72b0d78a3706b73db00467d2fc2dc32": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07123385427469513,
+            "std": 0.08918912521102183
+        },
+        "reference_set": "Fry_df"
+    },
+    "b940ae5bb33f2e89405a85da61834f69": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07606180599422391,
+            "std": 0.10253249834882759
+        },
+        "reference_set": "Harry_df"
+    },
+    "7c4c23bac810dd6988f4419a817719f3": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.0628930590244885,
+            "std": 0.09643035519571833
+        },
+        "reference_set": "Joey_df"
+    },
+    "f629baaa7ca88f6dfde4e6fb0cb9b32f": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.05568689762845867,
+            "std": 0.09431554112454041
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "239952439eb38965b811e2f83c3993b2": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.06209536123898968,
+            "std": 0.09023133473108576
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "9087edd12c7d6e90d68972f0dd1ceabe": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "answer": {
+            "score": 0.07723891397192614,
+            "std": 0.07397117808598219
+        },
+        "reference_set": "Vader_df"
+    }
+}

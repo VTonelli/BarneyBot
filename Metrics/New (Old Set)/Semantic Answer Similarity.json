@@ -1,0 +1,2912 @@
+{
+    "88d28e0a166f19fd79151255fcb42210": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Barney_df"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.0954231321811676,
+            "std": 0.1555822789669037
+        },
+        "reference_set": "Barney_df"
+    },
+    "ff7834f1463c60137f434eff669fbd1e": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Bender_df"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06588819622993469,
+            "std": 0.12825320661067963
+        },
+        "reference_set": "Bender_df"
+    },
+    "fea9df97f7a068468af4d2acd70543d5": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Fry_df"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07855339348316193,
+            "std": 0.12220790237188339
+        },
+        "reference_set": "Fry_df"
+    },
+    "0ef4fb64849526ed6b0bc4d54cb70eac": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Harry_df"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1269083172082901,
+            "std": 0.21907082200050354
+        },
+        "reference_set": "Harry_df"
+    },
+    "e3db83a8092a87d06d7c9698d9142245": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Joey_df"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.10879044234752655,
+            "std": 0.1628325879573822
+        },
+        "reference_set": "Joey_df"
+    },
+    "69a74c628a62e9427d5a03a98edcc264": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Phoebe_df"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.12391137331724167,
+            "std": 0.18481643497943878
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "1ff0b1e7df608c5293f341819bcbbf12": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Sheldon_df"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.09554316103458405,
+            "std": 0.1425400674343109
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "e7e59cce5d3dedeafb42b0a3ef289dfe": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                1,
+                "Vader_df"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06030791625380516,
+            "std": 0.08577671647071838
+        },
+        "reference_set": "Vader_df"
+    },
+    "ccc5144cf2f8f4fca736a1f2f66353df": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.22096222639083862,
+            "std": 0.27295225858688354
+        },
+        "reference_set": "Barney_df"
+    },
+    "3973f07fe2f8e1b016448439d607314c": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Barney"
+            ],
+            "reference": [
+                1,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.10819100588560104,
+            "std": 0.1865965574979782
+        },
+        "reference_set": "Barney_df"
+    },
+    "b42569c2e117d28d94933bce8a44bdc2": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.15634091198444366,
+            "std": 0.2311418056488037
+        },
+        "reference_set": "Bender_df"
+    },
+    "31461243b956fa291d077dc7d16596ad": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Bender"
+            ],
+            "reference": [
+                1,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07990489155054092,
+            "std": 0.16170476377010345
+        },
+        "reference_set": "Bender_df"
+    },
+    "cafbb06156b5eb091af68849cb1734fb": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.15537619590759277,
+            "std": 0.2249882072210312
+        },
+        "reference_set": "Fry_df"
+    },
+    "c32840a623d2645b15be78f3625f720f": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Fry"
+            ],
+            "reference": [
+                1,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07036576420068741,
+            "std": 0.14391390979290009
+        },
+        "reference_set": "Fry_df"
+    },
+    "35ff7e327be920b7b0ff1f8de71fbe0a": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.25757744908332825,
+            "std": 0.3137426972389221
+        },
+        "reference_set": "Harry_df"
+    },
+    "ee95740faa5a9fc9fd2f8f9d364b7193": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Harry"
+            ],
+            "reference": [
+                1,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.106035515666008,
+            "std": 0.19614888727664948
+        },
+        "reference_set": "Harry_df"
+    },
+    "d040c5d6fd63ead5cd34673b40034286": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.3128598630428314,
+            "std": 0.30283358693122864
+        },
+        "reference_set": "Joey_df"
+    },
+    "7a56307b6ed047d049c2bd628a1c8606": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Joey"
+            ],
+            "reference": [
+                1,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.2363346517086029,
+            "std": 0.2677971422672272
+        },
+        "reference_set": "Joey_df"
+    },
+    "b75fa4f6e150b9eb4271fbe59bf266b4": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.25132864713668823,
+            "std": 0.2836090624332428
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "07e21c152cb70c42f21cf45803c35849": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Phoebe"
+            ],
+            "reference": [
+                1,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.19651198387145996,
+            "std": 0.26331019401550293
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "f36677d8225bd981f55a61b39ba91b68": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.16858674585819244,
+            "std": 0.20107915997505188
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "41d61398299d70b631a5bc67c22a9737": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Sheldon"
+            ],
+            "reference": [
+                1,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.10067107528448105,
+            "std": 0.18070517480373383
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "6d9d8ea86b4ed026ad23b3d93c35c607": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.43145668506622314,
+            "std": 0.3515917956829071
+        },
+        "reference_set": "Vader_df"
+    },
+    "5f8ebb0a3f9eef39e9ab36b8277f1a40": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Vader"
+            ],
+            "reference": [
+                1,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.0975886881351471,
+            "std": 0.15125875174999237
+        },
+        "reference_set": "Vader_df"
+    },
+    "d49d9a37d26450a7e13876f9561b9b13": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.22096222639083862,
+            "std": 0.27295225858688354
+        },
+        "reference_set": "Barney_df"
+    },
+    "154515f88b709067fc9ed0340595ed4b": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Barney"
+            ],
+            "reference": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9615481495857239,
+            "std": 0.012907635420560837
+        },
+        "reference_set": "Barney_df"
+    },
+    "2916f6bd3f8c0417f9f1e1a4172fcf49": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.15634091198444366,
+            "std": 0.2311418056488037
+        },
+        "reference_set": "Bender_df"
+    },
+    "88bf5b02ecfa96583252ef521f10ee44": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Bender"
+            ],
+            "reference": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9667684435844421,
+            "std": 0.008424346335232258
+        },
+        "reference_set": "Bender_df"
+    },
+    "ec05092fcf489fff8e852631cfce73b2": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.15537619590759277,
+            "std": 0.2249882072210312
+        },
+        "reference_set": "Fry_df"
+    },
+    "b328be367b340e741695a79794821984": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Fry"
+            ],
+            "reference": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9669368267059326,
+            "std": 0.007902765646576881
+        },
+        "reference_set": "Fry_df"
+    },
+    "dcc1512291db887f4e8cda1bf2b770e5": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.25757744908332825,
+            "std": 0.3137426972389221
+        },
+        "reference_set": "Harry_df"
+    },
+    "d963961444505882d78cc1537fca772d": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Harry"
+            ],
+            "reference": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9643433094024658,
+            "std": 0.007067976985126734
+        },
+        "reference_set": "Harry_df"
+    },
+    "82d018c40117ec93def4fe2d8e17ffa2": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.3128598630428314,
+            "std": 0.30283358693122864
+        },
+        "reference_set": "Joey_df"
+    },
+    "cfe3f355eeb7cbaf44578053c30dccee": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Joey"
+            ],
+            "reference": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9572924971580505,
+            "std": 0.0173258725553751
+        },
+        "reference_set": "Joey_df"
+    },
+    "3319bf5202e5c016d9857853f35fef2a": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.25132864713668823,
+            "std": 0.2836090624332428
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "4925a01a8f1f3631901225e84796eb3f": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Phoebe"
+            ],
+            "reference": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9561010003089905,
+            "std": 0.03032536990940571
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "55713f37b9bab2e0d86f1c2fef176acf": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.16858674585819244,
+            "std": 0.20107915997505188
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "439e498dcbe433ab00fc9d62df889870": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Sheldon"
+            ],
+            "reference": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9572110176086426,
+            "std": 0.04765286669135094
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "928f5d94d25140d8dc3dcd9054c42028": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.43145668506622314,
+            "std": 0.3515917956829071
+        },
+        "reference_set": "Vader_df"
+    },
+    "ef21c0384254d1b0a14f015f027235ab": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                11,
+                "Vader"
+            ],
+            "reference": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.9619050025939941,
+            "std": 0.011696180328726768
+        },
+        "reference_set": "Vader_df"
+    },
+    "a47833be96b308da6586cf6529c65cfa": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.13325540721416473,
+            "std": 0.1807650476694107
+        },
+        "reference_set": "Barney_df"
+    },
+    "1303131a4621f90b6adfa40e91c65655": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.12114743888378143,
+            "std": 0.205666646361351
+        },
+        "reference_set": "Common_df"
+    },
+    "ca0ed422dda842fa3fd1804ed1df5702": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1768861711025238,
+            "std": 0.2504567801952362
+        },
+        "reference_set": "Barney_df"
+    },
+    "e2c63035a27d59b8704164e9494304a9": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                11,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1768861711025238,
+            "std": 0.2504567801952362
+        },
+        "reference_set": "Barney_df"
+    },
+    "7e21bf649ddbdbe63482e46ed507e458": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.04989274963736534,
+            "std": 0.09017149358987808
+        },
+        "reference_set": "Common_df"
+    },
+    "4e3bef5c55317c24b662e7b4200f89f2": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.10403890907764435,
+            "std": 0.1572832465171814
+        },
+        "reference_set": "Bender_df"
+    },
+    "868f2aab869d32ad57efeb191ec111b8": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07718358933925629,
+            "std": 0.1284705251455307
+        },
+        "reference_set": "Common_df"
+    },
+    "df7fb48a5a04742d5df201052079688e": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1152978464961052,
+            "std": 0.21283802390098572
+        },
+        "reference_set": "Bender_df"
+    },
+    "737d65dfc509a2fad021b414b358ae4b": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                11,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1152978464961052,
+            "std": 0.21283802390098572
+        },
+        "reference_set": "Bender_df"
+    },
+    "8819c6aab5fd02bea815ff389d36a518": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.08210457861423492,
+            "std": 0.13307474553585052
+        },
+        "reference_set": "Common_df"
+    },
+    "fd4d3d65b5aef9175a3cc7bebcdcde1a": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ],
+            "reference": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07512711733579636,
+            "std": 0.16961495578289032
+        },
+        "reference_set": "Common_df"
+    },
+    "14bfe3bf38cae9b645e63a28f26fb491": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.09097552299499512,
+            "std": 0.1254374384880066
+        },
+        "reference_set": "Fry_df"
+    },
+    "da6aa24be2043818dd2d1578c2f2f023": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.10778234899044037,
+            "std": 0.18908455967903137
+        },
+        "reference_set": "Common_df"
+    },
+    "5faf598828afe3cd3f71aceb0b2af4bb": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.09935818612575531,
+            "std": 0.1810017228126526
+        },
+        "reference_set": "Fry_df"
+    },
+    "446e8e854ecb03f2114ee0163a652a26": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                11,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.09935818612575531,
+            "std": 0.1810017228126526
+        },
+        "reference_set": "Fry_df"
+    },
+    "8eb14849c8805c19264bf1a0bacf86b7": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06481119245290756,
+            "std": 0.11592230200767517
+        },
+        "reference_set": "Common_df"
+    },
+    "b92fbad09dbe961ab7488fe4f29e75fb": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.13897696137428284,
+            "std": 0.20519106090068817
+        },
+        "reference_set": "Harry_df"
+    },
+    "fd2fed93264447e2257228f70d993dc1": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.04163864254951477,
+            "std": 0.04812183231115341
+        },
+        "reference_set": "Common_df"
+    },
+    "9c212925bdb1f5385253e3f77d3fd0a3": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.11399802565574646,
+            "std": 0.18154780566692352
+        },
+        "reference_set": "Harry_df"
+    },
+    "618ac7a6bcfca3dbe6887844efab380f": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                11,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.11399802565574646,
+            "std": 0.18154780566692352
+        },
+        "reference_set": "Harry_df"
+    },
+    "939ad591a74e77f54f60bf5d47f52a88": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06684468686580658,
+            "std": 0.0827639251947403
+        },
+        "reference_set": "Common_df"
+    },
+    "6afdae5ee79a7f45fc5037d5936d0bd2": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ],
+            "reference": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.04826530069112778,
+            "std": 0.07943227887153625
+        },
+        "reference_set": "Common_df"
+    },
+    "d16e1f0b9e280b1c2625770cad2f1961": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1587643176317215,
+            "std": 0.2047007977962494
+        },
+        "reference_set": "Joey_df"
+    },
+    "aa3e87e3506d9882ceae68db46ad99fe": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.13983379304409027,
+            "std": 0.19888927042484283
+        },
+        "reference_set": "Common_df"
+    },
+    "28b024821487980dee82b9a7219965ed": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.3542647659778595,
+            "std": 0.31076982617378235
+        },
+        "reference_set": "Joey_df"
+    },
+    "6f9bbd9bd45de2ae5788e776e1f84a2d": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                11,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.3542647659778595,
+            "std": 0.31076982617378235
+        },
+        "reference_set": "Joey_df"
+    },
+    "40c63cc280ded27769645785fd21bddf": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07709655910730362,
+            "std": 0.1094585731625557
+        },
+        "reference_set": "Common_df"
+    },
+    "151be1d14d0455075d25bd6c9665343a": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ],
+            "reference": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.08227801322937012,
+            "std": 0.16908758878707886
+        },
+        "reference_set": "Common_df"
+    },
+    "1a9e0bebe3f5ea0471eba03f9c851f0f": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1472337394952774,
+            "std": 0.195856973528862
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "4b3bbd529134a04b7f613715eaa09d84": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.09469698369503021,
+            "std": 0.1719447821378708
+        },
+        "reference_set": "Common_df"
+    },
+    "db9a31ccddef645229b7a656386eccd3": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.29232320189476013,
+            "std": 0.31775376200675964
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "ad575dc37c4f3263a4b3ca9934bdf574": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                11,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.29232320189476013,
+            "std": 0.31775376200675964
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "da3840ce6d5bc2e9efcb8e8786160d19": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.10803481936454773,
+            "std": 0.2115294337272644
+        },
+        "reference_set": "Common_df"
+    },
+    "adf003d08ed1c1f5721e5ed1f810b16c": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.115158811211586,
+            "std": 0.150193989276886
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "7ec8ffab7658d4044ed89df05589da9b": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.11646623909473419,
+            "std": 0.16821114718914032
+        },
+        "reference_set": "Common_df"
+    },
+    "fea834140d792b02285dcba0615aab1e": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1742340624332428,
+            "std": 0.24637289345264435
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "59459efe32c1869df8a958e297d7d695": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ],
+            "reference": [
+                11,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1742340624332428,
+            "std": 0.24637289345264435
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "1669a7d913d66dbfc9ae21137169b556": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.11872637271881104,
+            "std": 0.15523985028266907
+        },
+        "reference_set": "Vader_df"
+    },
+    "1d879a4749543d2f31dfe2c81883e3b8": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                0,
+                "Common_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07973115146160126,
+            "std": 0.18138636648654938
+        },
+        "reference_set": "Common_df"
+    },
+    "6edc0d2619dc5e66e3ff179b31280a55": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.17902281880378723,
+            "std": 0.23241934180259705
+        },
+        "reference_set": "Vader_df"
+    },
+    "3a8d3fa3a1a26add4d918966ccf53fc6": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                11,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.17902281880378723,
+            "std": 0.23241934180259705
+        },
+        "reference_set": "Vader_df"
+    },
+    "593870cda083f04f43bb4bb5876f39af": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Barney_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.16058360040187836,
+            "std": 0.19952630996704102
+        },
+        "reference_set": "Barney_df"
+    },
+    "0265bc1a4fa66313322d86a1f5a62e3e": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Bender_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1360611915588379,
+            "std": 0.18262410163879395
+        },
+        "reference_set": "Bender_df"
+    },
+    "acad8a918b6f4d20b5be48c19c2f29dc": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Fry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.14942489564418793,
+            "std": 0.18512175977230072
+        },
+        "reference_set": "Fry_df"
+    },
+    "c508e81daaab14cd517a56812495d873": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Harry_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1611328423023224,
+            "std": 0.21485421061515808
+        },
+        "reference_set": "Harry_df"
+    },
+    "33a94297b3d174b591742c3e77019ca6": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Joey_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.13808822631835938,
+            "std": 0.17456436157226562
+        },
+        "reference_set": "Joey_df"
+    },
+    "dfa3a9957d28b85fc4264d6b81683925": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Phoebe_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.14200961589813232,
+            "std": 0.18686166405677795
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "f28e05cd7f2e234b626f12398f435ed9": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Sheldon_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.1323009580373764,
+            "std": 0.1771412342786789
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "3461f180e276a637fb179b7559cd2acb": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                0,
+                "Vader_df"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.17227619886398315,
+            "std": 0.2542980909347534
+        },
+        "reference_set": "Vader_df"
+    },
+    "b2bcbcedf029bb723e4f72a87a024b01": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.0675484761595726,
+            "std": 0.1105000227689743
+        },
+        "reference_set": "Barney_df"
+    },
+    "e042b6e89bf7fafd2342dba7a361d7b4": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.05379039794206619,
+            "std": 0.09545431286096573
+        },
+        "reference_set": "Bender_df"
+    },
+    "90f6c78d1e680be93bbd5498dfce2ce6": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06485215574502945,
+            "std": 0.09589964896440506
+        },
+        "reference_set": "Fry_df"
+    },
+    "1cdd6cca3ced6c54f52bf2767adb4823": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06332900375127792,
+            "std": 0.0901428684592247
+        },
+        "reference_set": "Harry_df"
+    },
+    "19bef4f360a0b6cdae3b9f44867acf92": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.08199851214885712,
+            "std": 0.12175822257995605
+        },
+        "reference_set": "Joey_df"
+    },
+    "acf3f6ba9328823caebd6eaa1dc1e96f": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.07806624472141266,
+            "std": 0.118334099650383
+        },
+        "reference_set": "Phoebe_df"
+    },
+    "25275f189d34e46d4584e6c3f6fb4165": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06353232264518738,
+            "std": 0.10538678616285324
+        },
+        "reference_set": "Sheldon_df"
+    },
+    "b93d51ab67af3735525a5c1b50234438": {
+        "metric_name": "semantic answer similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ],
+            "reference": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "answer": {
+            "score": 0.06617921590805054,
+            "std": 0.11741730570793152
+        },
+        "reference_set": "Vader_df"
+    }
+}

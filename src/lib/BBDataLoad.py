@@ -425,19 +425,19 @@ def get_chatbot_predictions(sample_questions,
                            character,
                            tokenizer,
                            base_folder,
+                           file_caching=True,
                            override_predictions=False):
 
     prediction_path = join(base_folder, 'Data', 'Characters', character,
                            filename)
     # If the predictions have already been created
-    if exists(prediction_path) and not override_predictions:
+    if exists(prediction_path) and not override_predictions and file_caching:
         # It loads them
         print("Loading predictions from stored file")
         with open(prediction_path, 'r', encoding='utf-8') as file:
             json_string = file.read()
         predictions = json.loads(json_string)
         print("Loaded predictions from stored file")
-
     else:
         # Otherwise they are created
         print("Creating predictions")
@@ -447,18 +447,18 @@ def get_chatbot_predictions(sample_questions,
                                                   return_tensors='tf')
             # Max length of each tokenized sequence must be the following
             max_length = 128 + tokenized_question.shape[1]
-            if generation_method == "Greedy":  # Greedy generation method
+            if generation_method == "greedy":  # Greedy generation method
                 generated_answer = model.generate(
                     tokenized_question,
                     pad_token_id=tokenizer.eos_token_id,
                     max_length=max_length)[0].numpy().tolist()
-            elif generation_method == "Beam Search":  # Beam Search generation method
+            elif generation_method == "nbeams":  # Beam Search generation method
                 generated_answer = model.generate(
                     tokenized_question,
                     pad_token_id=tokenizer.eos_token_id,
                     max_length=max_length,
                     n_beams=n_beams)[0].numpy().tolist()
-            elif generation_method == "Sampling":  # Sampling generation method
+            elif generation_method == "sampling":  # Sampling generation method
                 b = True
                 c = 0
                 while b:
@@ -480,11 +480,11 @@ def get_chatbot_predictions(sample_questions,
                         break
             # Append predictions
             predictions.append(generated_answer[len(tokenized_question[0]):])
-
-        # Save predictions as a JSON file
-        output_string = json.dumps(predictions)
-        with open(prediction_path, 'w', encoding='utf-8') as file:
-            file.write(output_string)
+        if file_caching:
+            # Save predictions as a JSON file
+            output_string = json.dumps(predictions)
+            with open(prediction_path, 'w', encoding='utf-8') as file:
+                file.write(output_string)
 
         assert all([len(p) > 1 for p in predictions])
 

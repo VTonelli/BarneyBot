@@ -1,0 +1,554 @@
+{
+    "b4088d0824c59341d7bb5ae20dd89c08": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 9.924334271801882,
+        "reference_set": "Barney_df"
+    },
+    "f4e4a9be760b57e8b54f8784cc66b8d8": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 397.4605462062972,
+        "reference_set": "Barney_df"
+    },
+    "b3b35bf55f558ec4671ded49302810c5": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 13.04435696638766,
+        "reference_set": "Bender_df"
+    },
+    "ac7ab6f3dbd761dd776c2cfb9f6b39cf": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 499.5108290069499,
+        "reference_set": "Bender_df"
+    },
+    "2d6d53f483332cfbbb59285390dc4c4f": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 17.056882910377986,
+        "reference_set": "Fry_df"
+    },
+    "6d7841c9799d7ae1030b2c4ed4b38754": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 434.67385127457675,
+        "reference_set": "Fry_df"
+    },
+    "a9a739c337e500fea5801c2987319e00": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 11.419651231912358,
+        "reference_set": "Harry_df"
+    },
+    "e7b8a4b2fec6ad45569590c4ac016893": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 365.74130287119874,
+        "reference_set": "Harry_df"
+    },
+    "8411877fa3de6b971edab36d6bc11f63": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 7.404697221141424,
+        "reference_set": "Joey_df"
+    },
+    "6c2c5ac38635c19f7893b373545435f1": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 631.9276217495137,
+        "reference_set": "Joey_df"
+    },
+    "b65ca91dac5601de313046f652f5316c": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 9.345176794556709,
+        "reference_set": "Phoebe_df"
+    },
+    "5d5889203b94192311b4f422d11311f0": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 554.3108233120113,
+        "reference_set": "Phoebe_df"
+    },
+    "80cf08c18ae187015150b247a385929e": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 7.392588924432287,
+        "reference_set": "Sheldon_df"
+    },
+    "522ef04895bdea0f1f77938df3f66dfc": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 312.7172710644745,
+        "reference_set": "Sheldon_df"
+    },
+    "eb8370580894ce002ccac8e7a64a5f32": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                10,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 20.615766981008772,
+        "reference_set": "Vader_df"
+    },
+    "05dd57d432a46e522a837aa136ac624a": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Base"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 618.6860775727047,
+        "reference_set": "Vader_df"
+    },
+    "4587868bdc421db9c2c64b3f7c37ed65": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 60.62977505345756,
+        "reference_set": "Common_df"
+    },
+    "800ccdc5983957851fcac24660f50679": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Bender"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 57.97443492558129,
+        "reference_set": "Common_df"
+    },
+    "bde20e0f64ab92e0b2b8b80094b19e36": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Fry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 36.91676911812309,
+        "reference_set": "Common_df"
+    },
+    "312a24c9793c4e27286e36fa38dc0e10": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Harry"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 43.05399126504585,
+        "reference_set": "Common_df"
+    },
+    "32c8cc62af491801f9d9b5cbd14372ca": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Joey"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 34.82308148324144,
+        "reference_set": "Common_df"
+    },
+    "2cfbfbc52e3ddb78ece839ba69e5421f": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 58.51237563905788,
+        "reference_set": "Common_df"
+    },
+    "8054b5fd5a97b77504fbcbe70b6794cd": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 67.96138565177583,
+        "reference_set": "Common_df"
+    },
+    "a4e8dfa0498f97fb2fd3e691fe6a1400": {
+        "metric_name": "perplexity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ]
+        },
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_params": {},
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "answer": 57.950867367315794,
+        "reference_set": "Common_df"
+    }
+}

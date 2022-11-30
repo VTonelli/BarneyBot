@@ -5,7 +5,7 @@ from .visualizations.wordcloud import plot_wordcloud
 
 class BBVisualization:
     visualizations_list = [
-        "emotions radar"
+        "emotions radar", "wordcloud"
     ]
     
     def __init__(self, name, visualization):
