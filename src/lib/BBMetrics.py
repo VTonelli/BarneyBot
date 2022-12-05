@@ -180,7 +180,7 @@ class BBMetric:
             self.save_actors = ['document', 'predictor', 'reference']
         elif name == "distilbert-embedded chatbot classifier":
             self.compute_require_args = set(["sentences"])
-            self.compute_optional_args = set(["verbose"])
+            self.compute_optional_args = set(["verbose", "count_neighbors"])
             self.train_require_args = set(["characters_path", "save_path"])
             self.train_optional_args = set([
                 "train_embedder", "override_data", "merge_sentences",
@@ -537,8 +537,11 @@ class BBMetric:
             sentences = kwargs['sentences'] if type(
                 kwargs['sentences']) is list else [kwargs['sentences']]
             verbose = kwargs['verbose'] if 'verbose' in kwargs else False
-            outputs = self.metric.compute(sentences=sentences, verbose=verbose)
-            labels = self.metric.characters
+            count_neighbors = kwargs['count_neighbors'] if 'count_neighbors' in kwargs else False
+            outputs = self.metric.compute(sentences=sentences, verbose=verbose,
+                                          count_neighbors=count_neighbors)
+            result['label'] = self.metric.characters
+            result['score'] = outputs
             # Compute mean and std for these values
             result['score'] = Counter(outputs).values()
             result['score'] = np.mean(np.array(outputs))

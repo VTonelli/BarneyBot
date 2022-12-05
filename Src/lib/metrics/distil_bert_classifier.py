@@ -270,7 +270,17 @@ class DistilBertClassifier:
 
     #
 
-    def compute(self, sentences: List[str], verbose: bool = False) -> NDArray:
+    def compute(self,
+                sentences: List[str],
+                verbose: bool = False,
+                count_neighbors: bool = False) -> NDArray:
         embeddings = self.embedder.compute(sentences=sentences,
                                            verbose=verbose)
-        return self.classifier.predict(embeddings)
+        if count_neighbors:
+            predictions = self.classifier.kneighbors(
+                embeddings, return_distance=False).ravel()
+        else:
+            predictions = self.classifier.predict(embeddings)
+
+        predictions = np.array(list(collections.Counter(predictions).values()))
+        return predictions / sum(predictions)

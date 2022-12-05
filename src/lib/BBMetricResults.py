@@ -68,9 +68,7 @@ def get_metric_arity(metric_name):
         raise Exception("Unknown arity for metric " + metric_name)
 
 def get_metric_determinism(metric_name, metric_version):
-    if metric_name == 'lines count' and metric_version == 1:
-        return MetricDeterminism.DETERMINISTIC
-    elif metric_name == 'google bleu' and metric_version == 1:
+    if metric_name == 'google bleu' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
     elif metric_name == 'rouge l' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
