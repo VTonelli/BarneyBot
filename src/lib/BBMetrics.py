@@ -21,17 +21,34 @@ from .metrics.perplexity import perplexity
 from .metrics.human import conversation, single_answers, consistency_questions
 from .metrics.wmd import wmd
 from .metrics.fcc import FrequencyChatbotClassifier
+from .BBData import EnumBase
+
+class MetricsEnum(EnumBase):
+    """Enumeration of all possible metrics used in this project"""
+    BLEU = "google bleu"
+    MPNETEM_SIM = "mpnet embedding similarity"
+    ROUGE = "rouge l"
+    METEOR = "meteor"
+    EMOTION_CLS = "emotion classifier"
+    ROBERTACROSS_CLS = "roberta crossencoding similarity"
+    DISTINCT = "distinct"
+    NEURALCHATBOT_CLS = "neural chatbot classifier"
+    PERPLEXITY = "perplexity"
+    REPETITIVENESS = "repetitiveness"
+    TERMERRORRATE = "term error rate"
+    BERTSCORE = "bertscore"
+    COMET = "comet"
+    BLEURT = "bleurt"
+    WORDMOVER_DIST = "word mover distance"
+    BARTSCORE = "bartscore"
+    EXTENDEDEDIT_DIST = "extended edit distance"
+    T5GRAMCORREDIT_DIST = "t5 grammar correction edit distance"
+    DISTILBERT_CLS = "distilbert-embedded chatbot classifier"
+    FREQUENCY_CLS = "frequency chatbot classifier"
 
 # Class defining a wrapper for any of the supported metrics, so that they can be loaded and computed seamlessly
 class BBMetric:
-    # List of supported metrics
-    metrics_list = [
-        "google bleu", "mpnet embedding similarity", "rouge l", "meteor", "emotion classifier",
-        "roberta crossencoding similarity", "distinct", "neural chatbot classifier",
-        "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", 
-        "bartscore", "extended edit distance", "t5 grammar correction edit distance",
-        "distilbert-embedded chatbot classifier", "frequency chatbot classifier"
-    ]
+    metrics_list = MetricsEnum.tolist()
 
     # Initialization
     def __init__(self, name, metric):
@@ -464,12 +481,12 @@ class BBMetric:
             # Initialize lists of scores for each emotion
             for emotion_dict in output[0]:
                 result['score'][emotion_dict['label']] = []
-            # For each sentence...
+            # For each sentence
             for elem in output:
                 # Append scores to the scores list for each emotion
                 for emotion_dict in elem:
                     result['score'][emotion_dict['label']].append(emotion_dict['score'])
-            # For each emotion label...
+            # For each emotion label
             for emotion_dict in output[0]:
                 # Append emotion as a separate entry in the result dictionary
                 emotion = emotion_dict['label']
