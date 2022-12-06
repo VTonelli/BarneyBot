@@ -16,3 +16,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# bert classifier gpu notebook
+Src/bertclassifier_gpu.ipynb
