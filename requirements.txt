@@ -6,7 +6,7 @@ yapf
 # Numerical
 numpy
 pandas
-sklearn
+scikit-learn
 
 # NLP
 gensim
