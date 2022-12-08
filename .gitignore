@@ -20,3 +20,4 @@ venv.bak/
 
 # bert classifier gpu notebook
 Src/bertclassifier_gpu.ipynb
+Metrics/distilbert_embedder/*
