@@ -22,15 +22,19 @@ from .metrics.human import conversation, single_answers, consistency_questions
 from .metrics.wmd import wmd
 from .metrics.fcc import FrequencyChatbotClassifier
 
+
 # Class defining a wrapper for any of the supported metrics, so that they can be loaded and computed seamlessly
 class BBMetric:
     # List of supported metrics
     metrics_list = [
-        "google bleu", "mpnet embedding similarity", "rouge l", "meteor", "emotion classifier",
-        "roberta crossencoding similarity", "distinct", "neural chatbot classifier",
-        "perplexity", "repetitiveness", "term error rate", "bertscore", "comet", "bleurt", "word mover distance", 
-        "bartscore", "extended edit distance", "t5 grammar correction edit distance",
-        "distilbert-embedded chatbot classifier", "frequency chatbot classifier"
+        "google bleu", "mpnet embedding similarity", "rouge l", "meteor",
+        "emotion classifier", "roberta crossencoding similarity", "distinct",
+        "neural chatbot classifier", "perplexity", "repetitiveness",
+        "term error rate", "bertscore", "comet", "bleurt",
+        "word mover distance", "bartscore", "extended edit distance",
+        "t5 grammar correction edit distance",
+        "distilbert-embedded chatbot classifier",
+        "frequency chatbot classifier"
     ]
 
     # Initialization
@@ -73,7 +77,7 @@ class BBMetric:
             self.train_require_args = set()
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
-            self.save_actors = ['document']            
+            self.save_actors = ['document']
         elif name == "bartscore":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -156,12 +160,10 @@ class BBMetric:
                 ["sentences", "character", "load_path"])
             self.compute_optional_args = set(["n_sentences", "verbose"])
             self.train_require_args = set([
-                "character", "source_path", "source_encoded_path", "source_save_path",
-                "random_state", "save_path"
+                "character", "source_path", "source_encoded_path",
+                "source_save_path", "random_state", "save_path"
             ])
-            self.train_optional_args = set(
-                ["shutdown_at_end", "n_shuffles"]
-            )
+            self.train_optional_args = set(["shutdown_at_end", "n_shuffles"])
             self.return_args = ['score', 'std']
             self.save_actors = ['document']
         elif name == "perplexity":
@@ -172,7 +174,8 @@ class BBMetric:
             self.return_args = ['score']
             self.save_actors = ['predictor']
         elif name == "comet":
-            self.compute_require_args = set(["sources", "predictions", "references"])
+            self.compute_require_args = set(
+                ["sources", "predictions", "references"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
@@ -184,7 +187,7 @@ class BBMetric:
             self.train_require_args = set(["characters_path", "save_path"])
             self.train_optional_args = set([
                 "train_embedder", "override_data", "merge_sentences",
-                "verbose", "shutdown_at_end"
+                "n_sentences", "verbose", "test", "shutdown_at_end"
             ])
             self.return_args = ['score', 'label']
             self.save_actors = ['document']
@@ -224,9 +227,15 @@ class BBMetric:
         if name == "google bleu":
             metric = BBMetric(name, evaluate.load('google_bleu'))
         elif name == "repetitiveness":
-            metric = BBMetric(name, NLGMetricverse(metrics=nlgmetricverse.load_metric("repetitiveness")))
+            metric = BBMetric(
+                name,
+                NLGMetricverse(
+                    metrics=nlgmetricverse.load_metric("repetitiveness")))
         elif name == "bartscore":
-            metric = BBMetric(name, NLGMetricverse(metrics=nlgmetricverse.load_metric("bartscore")))
+            metric = BBMetric(
+                name,
+                NLGMetricverse(
+                    metrics=nlgmetricverse.load_metric("bartscore")))
         elif name == "term error rate":
             metric = BBMetric(name, evaluate.load('ter'))
         elif name == "word mover distance":
@@ -234,7 +243,9 @@ class BBMetric:
         elif name == "extended edit distance":
             metric = BBMetric(name, ExtendedEditDistance())
         elif name == "t5 grammar correction edit distance":
-            metric = BBMetric(name, HappyTextToText("T5", "vennify/t5-base-grammar-correction"))
+            metric = BBMetric(
+                name,
+                HappyTextToText("T5", "vennify/t5-base-grammar-correction"))
         elif name == "meteor":
             metric = BBMetric(name, evaluate.load('meteor'))
         elif name == "roberta crossencoding similarity":
@@ -243,13 +254,15 @@ class BBMetric:
         elif name == "rouge l":
             metric = BBMetric(name, evaluate.load('rouge'))
         elif name == "bleurt":
-            metric = BBMetric(name, evaluate.load('bleurt', module_type="metric"))
+            metric = BBMetric(name,
+                              evaluate.load('bleurt', module_type="metric"))
         elif name == "bertscore":
             DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
             DistilBertModel.from_pretrained("distilbert-base-uncased")
             metric = BBMetric(name, evaluate.load('bertscore'))
         elif name == "comet":
-            metric = BBMetric(name, evaluate.load('comet', "eamt22-cometinho-da"))
+            metric = BBMetric(name,
+                              evaluate.load('comet', "eamt22-cometinho-da"))
         elif name == "emotion classifier":
             metric = BBMetric(
                 name,
@@ -270,15 +283,23 @@ class BBMetric:
         elif name == "neural chatbot classifier":
             metric = BBMetric(name, BarneyBotTripletClassifier())
         elif name == "distilbert-embedded chatbot classifier":
-            embedder_path = None if 'embedder_path' not in kwargs else kwargs['embedder_path']
-            from_pretrained = False if 'from_pretrained' not in kwargs else kwargs['from_pretrained']
+            embedder_path = None if 'embedder_path' not in kwargs else kwargs[
+                'embedder_path']
+            from_pretrained = False if 'from_pretrained' not in kwargs else kwargs[
+                'from_pretrained']
+            embedding_size = 32 if 'embedding_size' not in kwargs else kwargs[
+                'embedding_size']
             use_cuda = False if 'use_cuda' not in kwargs else kwargs['use_cuda']
-            metric = BBMetric(name, DistilBertClassifier(embedder_path, from_pretrained, use_cuda))
+            metric = BBMetric(
+                name,
+                DistilBertClassifier(embedder_path, from_pretrained,
+                                     embedding_size, use_cuda))
         elif name == "frequency chatbot classifier":
             metric = BBMetric(name, FrequencyChatbotClassifier())
         else:
             raise Exception("Metric " + name + " is not supported!\n" +
-                            "Supported metrics are " + str(BBMetric.metrics_list))
+                            "Supported metrics are " +
+                            str(BBMetric.metrics_list))
         return metric
 
     # Function to compute a metric on sentences/test set
@@ -302,7 +323,9 @@ class BBMetric:
             single_outputs = []
             for i in range(len(predictions)):
                 single_outputs.append(
-                    self.metric.compute(predictions=[predictions[i]], references=[references[i]])['google_bleu'])
+                    self.metric.compute(predictions=[predictions[i]],
+                                        references=[references[i]
+                                                    ])['google_bleu'])
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
         elif self.name == "roberta crossencoding similarity":
@@ -324,8 +347,10 @@ class BBMetric:
             single_outputs = []
             # Compute repetitiveness on single predictions
             for i in range(len(sentences)):
-                single_outputs.append(self.metric(predictions=[sentences[i]],
-                                                  references=[sentences[i]])['repetitiveness']['score'])
+                single_outputs.append(
+                    self.metric(predictions=[sentences[i]],
+                                references=[sentences[i]
+                                            ])['repetitiveness']['score'])
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
@@ -346,7 +371,7 @@ class BBMetric:
                 result['std'] = np.std(np.array(single_outputs))
             else:
                 result['score'] = float('inf')
-                result['std'] = float('nan')              
+                result['std'] = float('nan')
         elif self.name == "extended edit distance":
             sentences_a = kwargs['sentences_a'] if type(
                 kwargs['sentences_a']) is list else [kwargs['sentences_a']]
@@ -354,8 +379,8 @@ class BBMetric:
                 kwargs['sentences_b']) is list else [kwargs['sentences_b']]
             single_outputs = []
             for i in range(len(sentences_a)):
-                single_outputs.append(self.metric(sentences_a[i],
-                                                  sentences_b[i]).item())
+                single_outputs.append(
+                    self.metric(sentences_a[i], sentences_b[i]).item())
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
         elif self.name == "t5 grammar correction edit distance":
@@ -363,20 +388,22 @@ class BBMetric:
                 kwargs['sentences']) is list else [kwargs['sentences']]
             single_outputs = []
             for i in range(len(sentences)):
-                single_outputs.append(
-                    1/len(sentences[i]) * edit_distance(sentences[i],
-                                  self.metric.generate_text("grammar: " + sentences[i], args=TTSettings(num_beams=5, min_length=1)).text)
-                )
+                single_outputs.append(1 / len(sentences[i]) * edit_distance(
+                    sentences[i],
+                    self.metric.generate_text(
+                        "grammar: " + sentences[i],
+                        args=TTSettings(num_beams=5, min_length=1)).text))
             result['score'] = np.mean(np.array(single_outputs))
-            result['std'] = np.std(np.array(single_outputs))            
+            result['std'] = np.std(np.array(single_outputs))
         elif self.name == "bartscore":
             # Cast predictions and references as lists
             predictions = kwargs['predictions'] if type(
                 kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(
                 kwargs['references']) is list else [kwargs['references']]
-            result['score'] = self.metric(predictions=predictions,
-                                          references=references)['bartscore']['score']
+            result['score'] = self.metric(
+                predictions=predictions,
+                references=references)['bartscore']['score']
         elif self.name == "rouge l":
             # Cast predictions and references as lists
             predictions = kwargs['predictions'] if type(
@@ -386,8 +413,9 @@ class BBMetric:
             single_outputs = []
             # Compute separately for each prediction-reference pair the Rouge-L metric. Get the average f-measure
             for i in range(len(predictions)):
-                single_outputs.append(self.metric.compute(predictions=[predictions[i]],
-                                                          references=[references[i]])['rougeL'])
+                single_outputs.append(
+                    self.metric.compute(predictions=[predictions[i]],
+                                        references=[references[i]])['rougeL'])
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
@@ -397,8 +425,10 @@ class BBMetric:
                 kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(
                 kwargs['references']) is list else [kwargs['references']]
-            single_outputs = self.metric.compute(predictions=predictions, references=references,
-                                                 model_type="distilbert-base-uncased")['f1']
+            single_outputs = self.metric.compute(
+                predictions=predictions,
+                references=references,
+                model_type="distilbert-base-uncased")['f1']
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
@@ -408,7 +438,8 @@ class BBMetric:
                 kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(
                 kwargs['references']) is list else [kwargs['references']]
-            single_outputs = self.metric.compute(predictions=predictions, references=references)['scores']
+            single_outputs = self.metric.compute(
+                predictions=predictions, references=references)['scores']
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
@@ -420,7 +451,8 @@ class BBMetric:
                 kwargs['predictions']) is list else [kwargs['predictions']]
             references = kwargs['references'] if type(
                 kwargs['references']) is list else [kwargs['references']]
-            single_outputs = self.metric.compute(predictions=predictions, references=references,
+            single_outputs = self.metric.compute(predictions=predictions,
+                                                 references=references,
                                                  sources=sources)['scores']
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
@@ -435,7 +467,8 @@ class BBMetric:
             # Compute separately for each prediction-reference pair the Rouge-L metric. Get the average f-measure
             for i in range(len(predictions)):
                 single_outputs.append(
-                    self.metric.compute(predictions=[predictions[i]],references=[references[i]])['score'])
+                    self.metric.compute(predictions=[predictions[i]],
+                                        references=[references[i]])['score'])
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
@@ -449,7 +482,8 @@ class BBMetric:
             # Compute separately for each prediction-reference pair the METEOR metric
             for i in range(len(predictions)):
                 single_outputs.append(
-                    self.metric.compute(predictions=[predictions[i]], references=[references[i]])['meteor'])
+                    self.metric.compute(predictions=[predictions[i]],
+                                        references=[references[i]])['meteor'])
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
@@ -468,7 +502,8 @@ class BBMetric:
             for elem in output:
                 # Append scores to the scores list for each emotion
                 for emotion_dict in elem:
-                    result['score'][emotion_dict['label']].append(emotion_dict['score'])
+                    result['score'][emotion_dict['label']].append(
+                        emotion_dict['score'])
             # For each emotion label...
             for emotion_dict in output[0]:
                 # Append emotion as a separate entry in the result dictionary
@@ -528,7 +563,8 @@ class BBMetric:
             # Compute the semantic classifier metric, returning scores for each sentences triple
             outputs = self.metric.compute(
                 sentences, kwargs['character'], kwargs['load_path'],
-                n_sentences, kwargs['verbose'] if 'verbose' in kwargs else False)
+                n_sentences,
+                kwargs['verbose'] if 'verbose' in kwargs else False)
             # Compute mean and std for these values
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
@@ -537,8 +573,10 @@ class BBMetric:
             sentences = kwargs['sentences'] if type(
                 kwargs['sentences']) is list else [kwargs['sentences']]
             verbose = kwargs['verbose'] if 'verbose' in kwargs else False
-            count_neighbors = kwargs['count_neighbors'] if 'count_neighbors' in kwargs else False
-            outputs = self.metric.compute(sentences=sentences, verbose=verbose,
+            count_neighbors = kwargs[
+                'count_neighbors'] if 'count_neighbors' in kwargs else False
+            outputs = self.metric.compute(sentences=sentences,
+                                          verbose=verbose,
                                           count_neighbors=count_neighbors)
             result['label'] = self.metric.characters
             result['score'] = outputs
@@ -553,7 +591,7 @@ class BBMetric:
             outputs = self.metric.compute(sentences)
             result['score'] = np.array(outputs.values())
             result['label'] = np.array(outputs.keys())
-            
+
         # Sanitize type for the values of the result dictionary, so that it can be serialized
         for key in result:
             try:
@@ -596,26 +634,45 @@ class BBMetric:
             return
         # Otherwise, train the given metric, simply passing the required params
         elif self.name == "neural chatbot classifier":
-            if not xor(bool(kwargs['source_path']), bool(kwargs['source_encoded_path'])):
-                raise Exception("Exactly one between a source or an encoded source must be provided!")
+            if not xor(bool(kwargs['source_path']),
+                       bool(kwargs['source_encoded_path'])):
+                raise Exception(
+                    "Exactly one between a source or an encoded source must be provided!"
+                )
             if kwargs['source_path'] and not kwargs['source_save_path']:
-                raise Exception("When a non-encoded source is provided, a source save folder must also be provided!")
+                raise Exception(
+                    "When a non-encoded source is provided, a source save folder must also be provided!"
+                )
             if kwargs['source_encoded_path'] and kwargs['source_save_path']:
-                print("Warning! A source save path has been provided but is unnecessary, and will be ignored.")
+                print(
+                    "Warning! A source save path has been provided but is unnecessary, and will be ignored."
+                )
             self.metric.train(
-                kwargs['character'], kwargs['source_path'], kwargs['source_encoded_path'],
-                kwargs['source_save_path'], kwargs['save_path'], 
-                kwargs['random_state'], kwargs['n_shuffles'] if 'n_shuffles' in kwargs else 10,
-                kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
+                kwargs['character'], kwargs['source_path'],
+                kwargs['source_encoded_path'], kwargs['source_save_path'],
+                kwargs['save_path'], kwargs['random_state'],
+                kwargs['n_shuffles'] if 'n_shuffles' in kwargs else 10,
+                kwargs['shutdown_at_end']
+                if 'shutdown_at_end' in kwargs else False)
         elif self.name == "distilbert-embedded chatbot classifier":
-            self.metric.train(characters_path=kwargs['characters_path'],
-                              model_path=kwargs['save_path'],
-                              train_embedder=kwargs['train_embedder'] if 'train_embedder' in kwargs else False,
-                              override_data=kwargs['override_data'] if 'override_data' in kwargs else True,
-                              merge_sentences=kwargs['merge_sentences'] if 'merge_sentences' in kwargs else True,
-                              verbose=kwargs['verbose'] if 'verbose' in kwargs else False,
-                              shutdown_at_end=kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
+            self.metric.train(
+                characters_path=kwargs['characters_path'],
+                model_path=kwargs['save_path'],
+                train_embedder=kwargs['train_embedder']
+                if 'train_embedder' in kwargs else False,
+                override_data=kwargs['override_data']
+                if 'override_data' in kwargs else True,
+                merge_sentences=kwargs['merge_sentences']
+                if 'merge_sentences' in kwargs else True,
+                n_sentences=kwargs['n_sentences']
+                if 'n_sentences' in kwargs else 2,
+                verbose=kwargs['verbose'] if 'verbose' in kwargs else False,
+                test=kwargs['test'] if 'test' in kwargs else False,
+                shutdown_at_end=kwargs['shutdown_at_end']
+                if 'shutdown_at_end' in kwargs else False)
         elif self.name == "frequency chatbot classifier":
             if not kwargs['characters_path']:
                 raise Exception("Characters folder must be provided!")
-            self.metric.train(kwargs['characters_path'], kwargs['mode'] if 'mode' in kwargs else 'c-tf-idf')
+            self.metric.train(
+                kwargs['characters_path'],
+                kwargs['mode'] if 'mode' in kwargs else 'c-tf-idf')
