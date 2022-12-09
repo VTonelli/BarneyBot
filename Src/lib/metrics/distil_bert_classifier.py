@@ -1,15 +1,19 @@
 import json
 import random
 import torch
-from typing import List, Tuple
+import collections
+import numpy as np
+import matplotlib.pyplot as plt
+from typing import List, Tuple, Dict
 from numpy.typing import NDArray
 from os import system
 from tqdm import tqdm
 from pandas import DataFrame, read_csv
 from os.path import join
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-from .distil_bert_embedder import BarneyEmbedder
+from .distil_bert_embedder import BarneyEmbedder  # pylint: disable = relative-beyond-top-level
 from sentence_transformers.readers import InputExample
 
 from lib.BBData import character_dict, random_state
@@ -26,15 +30,16 @@ class DistilBertClassifier:
     def __init__(self,
                  embedder_path: str = None,
                  from_pretrained: bool = False,
+                 embedding_size: int = 32,
                  use_cuda: bool = False) -> None:
         self.characters = characters_all
 
         self.train_size = 0.9
 
         self.n_triplets_x_anchor: int = 2
-        self.n_sentences: int = 2
 
-        self.embedder = BarneyEmbedder(embedder_path=embedder_path,
+        self.embedder = BarneyEmbedder(embedding_size=embedding_size,
+                                       embedder_path=embedder_path,
                                        from_pretrained=from_pretrained,
                                        use_cuda=use_cuda)
         self.classifier = KNeighborsClassifier()
@@ -79,7 +84,7 @@ class DistilBertClassifier:
     def create_data(
             self,
             source_encoded_path: str,
-            n_shuffles: int = 10,
+            n_shuffles: int = 5,
             merge_sentences: bool = True,
             n_sentences: int = 1,
             verbose: bool = False) -> Tuple[List[DataFrame], List[DataFrame]]:
@@ -87,30 +92,17 @@ class DistilBertClassifier:
         # Flush the instance state cache
         # self.reset_state()
 
-        df_list = []
         if verbose:
             print('Loading encoded lines...')
-        for c in tqdm(range(len(self.characters)), disable=not verbose):
-            ### Load the preprocessed dataset
-            series_df = read_csv(join(
-                source_encoded_path, self.characters[c],
-                self.characters[c].lower() + '_classifier.csv'),
-                                 dtype={
-                                     'line': str,
-                                     'character': int
-                                 })
 
-            if merge_sentences:
-                tmp_df = self.get_character_df(series_df,
-                                               n_shuffles=n_shuffles,
-                                               n_sentences=n_sentences)
-            else:
-                tmp_df = series_df[series_df['character'] == 1].reset_index()[[
-                    'line', 'character'
-                ]]
-            tmp_df['character'] = [c for _ in range(len(tmp_df))]
-
-            df_list.append(tmp_df)
+        df_list = [
+            read_csv(join(source_encoded_path, self.characters[c],
+                          self.characters[c].lower() + '_classifier.csv'),
+                     dtype={
+                         'line': str,
+                         'character': int
+                     }) for c in range(len(self.characters))
+        ]
 
         ### balance dataset
         max_len = min([len(df) for df in df_list])
@@ -125,6 +117,40 @@ class DistilBertClassifier:
 
             df_list_train.append(df_shuffled[:train_len])
             df_list_test.append(df_shuffled[train_len:])
+
+        ### augment dataset
+        for c in tqdm(range(len(self.characters)), disable=not verbose):
+            ### Load the preprocessed dataset
+            series_df_train = df_list_train[c]
+            series_df_test = df_list_test[c]
+
+            if merge_sentences:
+                tmp_df_train = self.get_character_df(series_df_train,
+                                                     n_shuffles=n_shuffles,
+                                                     n_sentences=n_sentences)
+                tmp_df_test = self.get_character_df(series_df_test,
+                                                    n_shuffles=n_shuffles,
+                                                    n_sentences=n_sentences)
+            else:
+                series_df_train = series_df_train[series_df_train['character']
+                                                  == 1].reset_index()[[
+                                                      'line', 'character'
+                                                  ]]
+                series_df_test = series_df_test[series_df_test['character'] ==
+                                                1].reset_index()[[
+                                                    'line', 'character'
+                                                ]]
+
+            ### correct labels
+            series_df_train['character'] = [
+                c for _ in range(len(series_df_train))
+            ]
+            series_df_test['character'] = [
+                c for _ in range(len(series_df_test))
+            ]
+
+            df_list_train[c] = series_df_train
+            df_list_test[c] = series_df_test
 
         ### save train and test datasets
         with open(join(source_encoded_path, 'embedder_dataset_train.json'),
@@ -156,14 +182,18 @@ class DistilBertClassifier:
                 n_sentences=n_sentences,
                 verbose=verbose)
         else:
-            df_list_train = json.load(
-                join(source_path, 'embedder_dataset_train.json'))
+            with open(join(source_path, 'embedder_dataset_train.json'),
+                      'r',
+                      encoding='utf-8') as f:
+                df_list_train = json.load(f)
             df_list_train = [DataFrame.from_dict(d) for d in df_list_train]
 
-            df_list_test = json.load(
-                join(source_path, 'embedder_dataset_test.json'))
-            df_list_train = [DataFrame.from_dict(d) for d in df_list_train]
-        
+            with open(join(source_path, 'embedder_dataset_test.json'),
+                      'r',
+                      encoding='utf-8') as f:
+                df_list_test = json.load(f)
+            df_list_test = [DataFrame.from_dict(d) for d in df_list_test]
+
         X_train = sum([df['line'].tolist() for df in df_list_train], [])
         y_train = sum([df['character'].tolist() for df in df_list_train], [])
         X_test = sum([df['line'].tolist() for df in df_list_test], [])
@@ -235,15 +265,17 @@ class DistilBertClassifier:
               train_embedder: bool = False,
               override_data: bool = False,
               merge_sentences: bool = True,
+              n_sentences: int = 2,
               verbose: bool = False,
+              test: bool = False,
               shutdown_at_end: str = None) -> None:
 
         ### get/create dataset
-        X_train, y_train, _, _ = self.get_data(
+        X_train, y_train, X_test, y_test = self.get_data(
             source_path=characters_path,
             override=override_data,
             merge_sentences=merge_sentences,
-            n_sentences=self.n_sentences,
+            n_sentences=n_sentences,
             verbose=verbose,
         )
 
@@ -263,10 +295,33 @@ class DistilBertClassifier:
                               y_train=y_train,
                               verbose=verbose)
 
+        if test:
+            self.test(X_test=X_test, y_test=y_test, verbose=verbose)
+
         if shutdown_at_end is not None:
             if shutdown_at_end not in ['h', 's']:
                 shutdown_at_end = 's'
             system('shutdown -' + shutdown_at_end)
+
+    def test(self,
+             X_test: List[str],
+             y_test: List[str],
+             verbose: bool = False) -> None:
+        if verbose:
+            print('Testing')
+
+        embeddings = self.embedder.compute(sentences=X_test, verbose=verbose)
+        predictions = self.classifier.predict(embeddings)  # maybe .ravel()
+        assert len(characters_all) == len(set(y_test))
+
+        cm = confusion_matrix(y_true=y_test,
+                              y_pred=predictions,
+                              labels=list(range(len(characters_all))),
+                              normalize='pred')
+        disp = ConfusionMatrixDisplay(confusion_matrix=cm,
+                                      display_labels=characters_all)
+        disp.plot()
+        plt.show()
 
     #
 
