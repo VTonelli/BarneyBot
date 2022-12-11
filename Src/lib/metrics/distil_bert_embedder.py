@@ -11,6 +11,7 @@ from sentence_transformers import models, SentencesDataset
 from sentence_transformers.readers import InputExample
 from sentence_transformers.SentenceTransformer import SentenceTransformer
 from sentence_transformers.losses import TripletLoss, TripletDistanceMetric
+from sentence_transformers.evaluation import TripletEvaluator
 from torch.nn import Identity
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -177,9 +178,14 @@ class BarneyEmbedder:
     #
 
     def train(self,
+              patience: int,
               train_examples: List[InputExample],
+              val_examples: List[InputExample],
               save_path: str,
-              verbose: bool = False) -> None:
+              verbose: bool = False) -> List[float]:
+
+        ### if patience>0, create also validation set
+        val = isinstance(patience, int) and patience >= 0
 
         ### set loss
         train_loss = TripletLoss(
@@ -188,6 +194,21 @@ class BarneyEmbedder:
             distance_metric=TripletDistanceMetric.EUCLIDEAN,
         )
 
+        ### prepare evaluator and accuracy list
+        val_accuracy = None  # to avoid return error
+        if val:
+            triplet_evaluator = TripletEvaluator.from_input_examples(
+                examples=val_examples,
+                main_distance_function=1,  # Euclidean
+                batch_size=self.batch_size,
+                show_progress_bar=verbose,
+                write_csv=False,
+            )
+
+            val_accuracy = []
+            best_accuracy = np.inf
+            patience_count = 0
+
         self.lr /= 0.9
 
         ### train loop
@@ -195,6 +216,7 @@ class BarneyEmbedder:
             ### decrease lr
             self.lr *= 0.9
 
+            ### semi-hard negative mining
             if verbose:
                 print('#' * 100)
                 print(f'step {step+1}/{self.training_steps}')
@@ -208,6 +230,7 @@ class BarneyEmbedder:
                                           shuffle=True,
                                           batch_size=self.batch_size)
 
+            ### training
             if verbose:
                 print('Training...')
 
@@ -216,11 +239,33 @@ class BarneyEmbedder:
                            optimizer_params={'lr': self.lr},
                            show_progress_bar=verbose)
 
+            ### validation
+            if val:
+                assert len(val_examples) > 0
+
+                if verbose:
+                    print('Validation...')
+
+                last_accuracy = triplet_evaluator(model=self.model)
+
+                ### check improvements and patience
+                if last_accuracy <= best_accuracy:
+                    patience_count = 0
+                    best_accuracy = last_accuracy
+                else:
+                    patience_count += 1
+                    if patience_count > patience:
+                        break
+
+                val_accuracy.append(last_accuracy)
+
         ### save model
         if save_path is None:
             print('Save path not setted, model will note be saved')
         else:
             self.model.save(save_path)
+
+        return val_accuracy
 
     #
 
