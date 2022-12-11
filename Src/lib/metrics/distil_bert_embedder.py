@@ -27,16 +27,17 @@ random.seed(random_state)
 class BarneyEmbedder:
 
     def __init__(self,
+                 embedding_size: int,
                  embedder_path: str = None,
                  from_pretrained: bool = False,
                  use_cuda: bool = False) -> None:
         self.batch_size: int = 64
 
-        self.embedding_size: int = 32
+        self.embedding_size: int = embedding_size
 
-        self.lr: float = 1e-4
-        self.epochs: int = 10
-        self.training_steps: int = 30
+        self.lr: float = 1e-3
+        self.epochs: int = 2
+        self.training_steps: int = 3
         self.margin: int = self.embedding_size * 10
 
         self.model = self.create_model(embedder_path=embedder_path,
@@ -114,7 +115,8 @@ class BarneyEmbedder:
         assert example_len % 3 == 0
 
         concat_embeddings = model.encode(concat_examples,
-                                         show_progress_bar=verbose)
+                                         show_progress_bar=verbose,
+                                         batch_size=self.batch_size * 2)
         embeddings = [[
             concat_embeddings[i], concat_embeddings[i + 1],
             concat_embeddings[i + 2]
@@ -186,8 +188,13 @@ class BarneyEmbedder:
             distance_metric=TripletDistanceMetric.EUCLIDEAN,
         )
 
+        self.lr /= 0.9
+
         ### train loop
         for step in range(self.training_steps):
+            ### decrease lr
+            self.lr *= 0.9
+
             if verbose:
                 print('#' * 100)
                 print(f'step {step+1}/{self.training_steps}')
