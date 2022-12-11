@@ -125,12 +125,13 @@ class DistilBertClassifier:
             series_df_test = df_list_test[c]
 
             if merge_sentences:
-                tmp_df_train = self.get_character_df(series_df_train,
-                                                     n_shuffles=n_shuffles,
-                                                     n_sentences=n_sentences)
-                tmp_df_test = self.get_character_df(series_df_test,
-                                                    n_shuffles=n_shuffles,
-                                                    n_sentences=n_sentences)
+                series_df_train = self.get_character_df(
+                    series_df_train,
+                    n_shuffles=n_shuffles,
+                    n_sentences=n_sentences)
+                series_df_test = self.get_character_df(series_df_test,
+                                                       n_shuffles=n_shuffles,
+                                                       n_sentences=n_sentences)
             else:
                 series_df_train = series_df_train[series_df_train['character']
                                                   == 1].reset_index()[[
@@ -265,7 +266,7 @@ class DistilBertClassifier:
               train_embedder: bool = False,
               override_data: bool = False,
               merge_sentences: bool = True,
-              n_sentences: int = 2,
+              n_sentences: int = 4,
               verbose: bool = False,
               test: bool = False,
               shutdown_at_end: str = None) -> None:
