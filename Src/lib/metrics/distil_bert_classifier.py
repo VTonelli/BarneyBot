@@ -34,7 +34,8 @@ class DistilBertClassifier:
                  use_cuda: bool = False) -> None:
         self.characters = characters_all
 
-        self.train_size = 0.9
+        self.train_size = 0.85
+        self.val_size = 0.05
 
         self.n_triplets_x_anchor: int = 2
 
@@ -83,6 +84,7 @@ class DistilBertClassifier:
 
     def create_data(
             self,
+            val: bool,
             source_encoded_path: str,
             n_shuffles: int = 5,
             merge_sentences: bool = True,
@@ -107,30 +109,42 @@ class DistilBertClassifier:
         ### balance dataset
         max_len = min([len(df) for df in df_list])
         train_len = int(self.train_size * max_len)
+        val_len = int(self.val_size * max_len) if val else 0
+        val_end_idx = train_len + val_len
         df_list = [df[:max_len] for df in df_list]
 
         ### split in train and test
         df_list_train = []
+        df_list_val = [] if val else None
         df_list_test = []
         for df in df_list:
             df_shuffled = df.sample(frac=1, random_state=random_state)
 
             df_list_train.append(df_shuffled[:train_len])
-            df_list_test.append(df_shuffled[train_len:])
+            df_list_test.append(df_shuffled[val_end_idx:])
+            if val:
+                df_list_val.append(df_shuffled[train_len:val_end_idx])
 
         ### augment dataset
         for c in tqdm(range(len(self.characters)), disable=not verbose):
             ### Load the preprocessed dataset
             series_df_train = df_list_train[c]
             series_df_test = df_list_test[c]
+            if val: series_df_val = df_list_val[c]
 
             if merge_sentences:
-                tmp_df_train = self.get_character_df(series_df_train,
-                                                     n_shuffles=n_shuffles,
-                                                     n_sentences=n_sentences)
-                tmp_df_test = self.get_character_df(series_df_test,
-                                                    n_shuffles=n_shuffles,
-                                                    n_sentences=n_sentences)
+                series_df_train = self.get_character_df(
+                    series_df_train,
+                    n_shuffles=n_shuffles,
+                    n_sentences=n_sentences)
+                series_df_test = self.get_character_df(series_df_test,
+                                                       n_shuffles=n_shuffles,
+                                                       n_sentences=n_sentences)
+                if val:
+                    series_df_val = self.get_character_df(
+                        series_df_val,
+                        n_shuffles=n_shuffles,
+                        n_sentences=n_sentences)
             else:
                 series_df_train = series_df_train[series_df_train['character']
                                                   == 1].reset_index()[[
@@ -140,6 +154,11 @@ class DistilBertClassifier:
                                                 1].reset_index()[[
                                                     'line', 'character'
                                                 ]]
+                if val:
+                    series_df_val = series_df_val[series_df_val['character'] ==
+                                                  1].reset_index()[[
+                                                      'line', 'character'
+                                                  ]]
 
             ### correct labels
             series_df_train['character'] = [
@@ -148,9 +167,14 @@ class DistilBertClassifier:
             series_df_test['character'] = [
                 c for _ in range(len(series_df_test))
             ]
+            if val:
+                series_df_val['character'] = [
+                    c for _ in range(len(series_df_val))
+                ]
 
             df_list_train[c] = series_df_train
             df_list_test[c] = series_df_test
+            if val: df_list_val[c] = series_df_val
 
         ### save train and test datasets
         with open(join(source_encoded_path, 'embedder_dataset_train.json'),
@@ -163,11 +187,18 @@ class DistilBertClassifier:
                   encoding='utf-8') as file:
             json.dump([df.to_dict() for df in df_list_test], file)
 
-        return df_list_train, df_list_test
+        if val:
+            with open(join(source_encoded_path, 'embedder_dataset_val.json'),
+                      'w',
+                      encoding='utf-8') as file:
+                json.dump([df.to_dict() for df in df_list_val], file)
+
+        return df_list_train, df_list_val, df_list_test
 
     def get_data(
         self,
         source_path: str,
+        val: bool,
         override: bool = False,
         merge_sentences: bool = True,
         n_sentences: int = 2,
@@ -176,7 +207,8 @@ class DistilBertClassifier:
 
         ### create dataset if needed
         if override:
-            df_list_train, df_list_test = self.create_data(
+            df_list_train, df_list_val, df_list_test = self.create_data(
+                val=val,
                 source_encoded_path=source_path,
                 merge_sentences=merge_sentences,
                 n_sentences=n_sentences,
@@ -188,6 +220,13 @@ class DistilBertClassifier:
                 df_list_train = json.load(f)
             df_list_train = [DataFrame.from_dict(d) for d in df_list_train]
 
+            if val:
+                with open(join(source_path, 'embedder_dataset_val.json'),
+                          'r',
+                          encoding='utf-8') as f:
+                    df_list_val = json.load(f)
+                df_list_val = [DataFrame.from_dict(d) for d in df_list_val]
+
             with open(join(source_path, 'embedder_dataset_test.json'),
                       'r',
                       encoding='utf-8') as f:
@@ -196,10 +235,14 @@ class DistilBertClassifier:
 
         X_train = sum([df['line'].tolist() for df in df_list_train], [])
         y_train = sum([df['character'].tolist() for df in df_list_train], [])
+        X_val = sum([df['line'].tolist()
+                     for df in df_list_val], []) if val else None
+        y_val = sum([df['character'].tolist()
+                     for df in df_list_val], []) if val else None
         X_test = sum([df['line'].tolist() for df in df_list_test], [])
         y_test = sum([df['character'].tolist() for df in df_list_test], [])
 
-        return X_train, y_train, X_test, y_test
+        return X_train, y_train, X_val, y_val, X_test, y_test
 
     def get_triplet_dataset(self,
                             X: List[str],
@@ -238,14 +281,18 @@ class DistilBertClassifier:
     #
 
     def train_embedder(self,
+                       patience: int,
                        train_examples: List[InputExample],
+                       val_examples: List[InputExample],
                        save_path: str,
                        verbose: bool = False) -> None:
 
         if verbose:
             print('Training embedder')
 
-        return self.embedder.train(train_examples=train_examples,
+        return self.embedder.train(patience=patience,
+                                   train_examples=train_examples,
+                                   val_examples=val_examples,
                                    save_path=save_path,
                                    verbose=verbose)
 
@@ -265,18 +312,23 @@ class DistilBertClassifier:
               train_embedder: bool = False,
               override_data: bool = False,
               merge_sentences: bool = True,
-              n_sentences: int = 2,
+              n_sentences: int = 4,
               verbose: bool = False,
               test: bool = False,
+              patience: int = None,
               shutdown_at_end: str = None) -> None:
 
+        ### if patience>0, create also validation set
+        val = isinstance(patience, int) and patience >= 0
+
         ### get/create dataset
-        X_train, y_train, X_test, y_test = self.get_data(
+        X_train, y_train, X_val, y_val, X_test, y_test = self.get_data(
             source_path=characters_path,
             override=override_data,
             merge_sentences=merge_sentences,
             n_sentences=n_sentences,
             verbose=verbose,
+            val=val,
         )
 
         if train_embedder:
@@ -284,9 +336,14 @@ class DistilBertClassifier:
             train_examples = self.get_triplet_dataset(X_train,
                                                       y_train,
                                                       verbose=verbose)
+            ### create triplet for validation loss
+            val_examples = self.get_triplet_dataset(
+                X_val, y_val, verbose=verbose) if val else None
 
             ### train embedder
-            self.train_embedder(train_examples=train_examples,
+            self.train_embedder(patience=patience,
+                                train_examples=train_examples,
+                                val_examples=val_examples,
                                 save_path=model_path,
                                 verbose=verbose)
 
