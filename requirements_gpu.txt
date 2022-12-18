@@ -34,6 +34,7 @@ torchaudio
 evaluate
 datasets
 transformers
+happytransformer
 sentence_transformers
 torchmetrics
 

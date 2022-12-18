@@ -58,7 +58,8 @@ def get_metric_arity(metric_name):
         return MetricArity.PAIRWISE
     elif metric_name == 'distinct' or metric_name == 'emotion classifier' or metric_name == 'lines count' or \
          metric_name == 'repetitiveness' or metric_name == "t5 grammar correction edit distance" or \
-         metric_name == 'distilbert-embedded chatbot classifier' or metric_name == "frequency chatbot classifier":
+         metric_name == 'distilbert-embedded chatbot classifier' or metric_name == "frequency chatbot classifier" or \
+         metric_name == 'flesch-kincaid index':
         return MetricArity.SINGLE
     elif metric_name == 'comet':
         return MetricArity.TRIPLET
@@ -107,6 +108,8 @@ def get_metric_determinism(metric_name, metric_version):
     elif metric_name == 'distilbert-embedded chatbot classifier' and metric_version == 1:
         return MetricDeterminism.NEURAL
     elif metric_name == 'frequency chatbot classifier' and metric_version == 1:
+        return MetricDeterminism.DETERMINISTIC
+    elif metric_name == 'flesch-kincaid index' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
     elif metric_name == 'dummy metric':
         return MetricDeterminism.DETERMINISTIC

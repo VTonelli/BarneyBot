@@ -13,7 +13,7 @@ gensim
 nltk
 
 # NLP Metrics
-nlg-metricverse
+# nlg-metricverse
 pyemd
 sacrebleu
 unbabel-comet
@@ -27,6 +27,7 @@ keras
 evaluate
 datasets
 transformers
+happytransformer
 sentence_transformers
 torchmetrics
 

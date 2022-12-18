@@ -34,7 +34,7 @@ class BBMetric:
         "word mover distance", "bartscore", "extended edit distance",
         "t5 grammar correction edit distance",
         "distilbert-embedded chatbot classifier",
-        "frequency chatbot classifier"
+        "frequency chatbot classifier", "flesch-kincaid index"
     ]
 
     # Initialization
@@ -47,8 +47,7 @@ class BBMetric:
         self.train_optional_args = None
         self.return_args = None
         self.save_actors = None
-        self.description = None
-        self.paper = None
+        self.pretty_name = None
         # For each metric, define the required and optional parameters, as well as the dictionary entries returned
         if name == "google bleu":
             self.compute_require_args = set(["predictions", "references"])
@@ -57,6 +56,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "Google BLEU"
         elif name == "word mover distance":
             self.compute_require_args = set(["sentences_a", "sentences_b"])
             self.compute_optional_args = set()
@@ -64,6 +64,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['document0', 'document1']
+            self.pretty_name = "Word Mover Distance"
         elif name == "extended edit distance":
             self.compute_require_args = set(["sentences_a", "sentences_b"])
             self.compute_optional_args = set()
@@ -71,6 +72,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['document0', 'document1']
+            self.pretty_name = "Extended Edit Distance"
         elif name == "t5 grammar correction edit distance":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set()
@@ -78,6 +80,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['document']
+            self.pretty_name = "T5 Grammar Correction Edit Distance"
         elif name == "bartscore":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -85,6 +88,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "BARTScore"
         elif name == "repetitiveness":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set()
@@ -92,6 +96,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['document']
+            self.pretty_name = "Repetitiveness"
         elif name == "term error rate":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -99,6 +104,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "Term Error Rate"
         elif name == "meteor":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -106,6 +112,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "METEOR"
         elif name == "rouge l":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -113,6 +120,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "Rouge L"
         elif name == "bleurt":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -120,6 +128,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "BLEURT"
         elif name == "mpnet embedding similarity":
             self.compute_require_args = set(["sentences_a", "sentences_b"])
             self.compute_optional_args = set()
@@ -127,6 +136,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['document0', 'document1']
+            self.pretty_name = "MPNet Embedding Similarity"
         elif name == "bertscore":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -134,6 +144,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "BERTScore"
         elif name == "emotion classifier":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set()
@@ -141,6 +152,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['label', 'score', 'std']
             self.save_actors = ['document']
+            self.pretty_name = "Emotion Classifier"
         elif name == "roberta crossencoding similarity":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -148,6 +160,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
+            self.pretty_name = "RoBERTa Cross-Encoding Similarity"
         elif name == "distinct":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set(["ngram_size"])
@@ -155,6 +168,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['document']
+            self.pretty_name = "Distinct"
         elif name == "neural chatbot classifier":
             self.compute_require_args = set(
                 ["sentences", "character", "load_path"])
@@ -166,6 +180,7 @@ class BBMetric:
             self.train_optional_args = set(["shutdown_at_end", "n_shuffles"])
             self.return_args = ['score', 'std']
             self.save_actors = ['document']
+            self.pretty_name = "Neural Chatbot Classifier"
         elif name == "perplexity":
             self.compute_require_args = set(["model", "encoded_test_set"])
             self.compute_optional_args = set()
@@ -173,6 +188,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score']
             self.save_actors = ['predictor']
+            self.pretty_name = "Perplexity"
         elif name == "comet":
             self.compute_require_args = set(
                 ["sources", "predictions", "references"])
@@ -181,6 +197,7 @@ class BBMetric:
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['document', 'predictor', 'reference']
+            self.pretty_name = "COMET"
         elif name == "distilbert-embedded chatbot classifier":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set(["verbose", "count_neighbors"])
@@ -191,6 +208,7 @@ class BBMetric:
             ])
             self.return_args = ['score', 'label']
             self.save_actors = ['document']
+            self.pretty_name = "DistilBERT-Embedded Chatbot Classifier"
         elif name == "frequency chatbot classifier":
             self.compute_require_args = set(["sentences"])
             self.compute_optional_args = set([])
@@ -198,6 +216,15 @@ class BBMetric:
             self.train_optional_args = set(["mode"])
             self.return_args = ['score', 'label']
             self.save_actors = ['document']
+            self.pretty_name = "Frequency Chatbot Classifier"
+        elif name == "flesch-kincaid index":
+            self.compute_require_args = set(["sentences"])
+            self.compute_optional_args = set()
+            self.train_require_args = set()
+            self.train_optional_args = set()
+            self.return_args = ['score', 'std']
+            self.save_actors = ['document']
+            self.pretty_name = "Flesch-Kincaid Index"
 
     # Pretty print metric
     def __str__(self):
@@ -214,9 +241,8 @@ class BBMetric:
                 }
             },
             "returns": self.return_args,
-            "description": self.description,
-            "paper": self.paper,
-            "save_actors": self.save_actors
+            "save_actors": self.save_actors,
+            "pretty_name": self.pretty_name
         })
 
     # Function to load a metric, given its name
@@ -296,6 +322,11 @@ class BBMetric:
                                      embedding_size, use_cuda))
         elif name == "frequency chatbot classifier":
             metric = BBMetric(name, FrequencyChatbotClassifier())
+        elif name == "flesch-kincaid index":
+            metric = BBMetric(
+                name,
+                NLGMetricverse(
+                    metrics=nlgmetricverse.load_metric("flesch_kincaid")))
         else:
             raise Exception("Metric " + name + " is not supported!\n" +
                             "Supported metrics are " +
@@ -591,7 +622,14 @@ class BBMetric:
             outputs = self.metric.compute(sentences)
             result['score'] = np.array(outputs.values())
             result['label'] = np.array(outputs.keys())
-
+        elif self.name == "flesch-kincaid index":
+            sentences = kwargs['sentences'] if type(
+                kwargs['sentences']) is list else [kwargs['sentences']]
+            outputs = list()
+            for i in range(len(sentences)):
+                outputs.append(self.metric(predictions=[sentences[i]], references=[sentences[i]])['flesch_kincaid']['score'])
+            result['score'] = np.mean(np.array(outputs))
+            result['std'] = np.std(np.array(outputs))
         # Sanitize type for the values of the result dictionary, so that it can be serialized
         for key in result:
             try:
@@ -630,7 +668,8 @@ class BBMetric:
            self.name == "word mover distance" or \
            self.name == "extended edit distance" or \
            self.name == "t5 grammar correction edit distance" or \
-           self.name == "bartscore":
+           self.name == "bartscore" or \
+           self.name == "flesch-kincaid index":
             return
         # Otherwise, train the given metric, simply passing the required params
         elif self.name == "neural chatbot classifier":
