@@ -1,17 +1,20 @@
 import random
 from multiprocessing import cpu_count
-from os.path import exists
+from os.path import exists, join
+from os import mkdir
 from typing import List, Tuple
 
 import numpy as np
 import torch
+import json
 from joblib import Parallel, delayed
 from numpy.typing import NDArray
 from sentence_transformers import models, SentencesDataset
 from sentence_transformers.readers import InputExample
 from sentence_transformers.SentenceTransformer import SentenceTransformer
 from sentence_transformers.losses import TripletLoss, TripletDistanceMetric
-from sentence_transformers.evaluation import TripletEvaluator
+#from sentence_transformers.evaluation import TripletEvaluator
+from .triplet_evaluator import TripletEvaluator  # pylin: disable = relative-beyond-top-level
 from torch.nn import Identity
 from torch.utils.data import DataLoader
 from tqdm import tqdm
@@ -22,7 +25,7 @@ characters_all = list(character_dict.keys())
 if 'Default' in characters_all:
     characters_all.remove('Default')
 
-random.seed(random_state)
+# random.seed(random_state)
 
 
 class BarneyEmbedder:
@@ -37,8 +40,8 @@ class BarneyEmbedder:
         self.embedding_size: int = embedding_size
 
         self.lr: float = 1e-3
-        self.epochs: int = 2
-        self.training_steps: int = 3
+        self.epochs: int = 5
+        self.training_steps: int = 50
         self.margin: int = self.embedding_size * 10
 
         self.model = self.create_model(embedder_path=embedder_path,
@@ -166,14 +169,7 @@ class BarneyEmbedder:
         hard_negatives_count = sum(hard_idxs)
         easy_positives_count = sum(easy_idxs)
 
-        if verbose:
-            print('#' * 30)
-            print('Dataset length:      ', dataset_count)
-            print('Hard negatives count:', hard_negatives_count)
-            print('Easy positives count:', easy_positives_count)
-            print('#' * 30, '\n')
-
-        return filtered
+        return filtered, dataset_count, hard_negatives_count, easy_positives_count
 
     #
 
@@ -182,7 +178,8 @@ class BarneyEmbedder:
               train_examples: List[InputExample],
               val_examples: List[InputExample],
               save_path: str,
-              verbose: bool = False) -> List[float]:
+              verbose: bool = False,
+              statistics_path: str = None) -> List[float]:
 
         ### if patience>0, create also validation set
         val = isinstance(patience, int) and patience >= 0
@@ -194,41 +191,96 @@ class BarneyEmbedder:
             distance_metric=TripletDistanceMetric.EUCLIDEAN,
         )
 
-        ### prepare evaluator and accuracy list
+        ### prepare evaluator and statistics
+        train_accuracy = []
+        train_accuracy_max = 0
+        train_length = len(train_examples)
+        easy_positives_max = 0
+
         val_accuracy = None  # to avoid return error
+        val_length = len(val_examples)
         if val:
             triplet_evaluator = TripletEvaluator.from_input_examples(
                 examples=val_examples,
-                main_distance_function=1,  # Euclidean
                 batch_size=self.batch_size,
-                show_progress_bar=verbose,
-                write_csv=False,
+                verbose=verbose,
             )
 
             val_accuracy = []
-            best_accuracy = np.inf
+            val_accuracy_max = 0
             patience_count = 0
 
-        self.lr /= 0.9
+        ### set learning rate steps
+        decrease_factor = 0.5
+        self.lr /= decrease_factor
 
         ### train loop
         for step in range(self.training_steps):
-            ### decrease lr
-            self.lr *= 0.9
 
             ### semi-hard negative mining
             if verbose:
                 print('#' * 100)
                 print(f'step {step+1}/{self.training_steps}')
 
-            filtered_examples = self.semi_hard_negative_mining(train_examples,
-                                                               self.model,
-                                                               self.margin,
-                                                               verbose=verbose)
+            filtered_examples, dataset_count, hard_negatives_count, easy_positives_count = self.semi_hard_negative_mining(
+                train_examples, self.model, self.margin, verbose=verbose)
             train_dataset = SentencesDataset(filtered_examples, self.model)
             train_dataloader = DataLoader(train_dataset,
                                           shuffle=True,
                                           batch_size=self.batch_size)
+
+            ### update train accuracy
+            last_train_accuracy = 1 - hard_negatives_count / train_length
+            train_accuracy.append(last_train_accuracy)
+            train_accuracy_improvement = last_train_accuracy - train_accuracy_max
+            if train_accuracy_improvement > 0:
+                train_accuracy_max = last_train_accuracy
+            dataset_line = f'\nDataset lenght    : {dataset_count}'
+            train_accuracy_line = f'\nTrain Accuracy    : {last_train_accuracy:6.2%}\t({round(train_accuracy_improvement*100, 2):+}%)'
+
+            ### check easy positives increment
+            easy_positives_improvement = easy_positives_count - easy_positives_max
+            if easy_positives_improvement > 0:
+                easy_positives_max = easy_positives_count
+            easy_positives_line = f'\nEasy Positives    : {easy_positives_count:6}\t({easy_positives_improvement:+})'
+
+            ### validation
+            if val:
+                assert val_length > 0
+
+                if verbose:
+                    print('Validation...')
+
+                last_val_accuracy = triplet_evaluator(model=self.model)
+
+                val_accuracy.append(last_val_accuracy)
+
+                ### check improvements and update patience_count
+                val_accuracy_improvement = last_val_accuracy - val_accuracy_max
+                if val_accuracy_improvement > 0:
+                    val_accuracy_max = last_val_accuracy
+                val_accuracy_line = f'\nVal Accuracy      : {last_val_accuracy:6.2%}\t({round(val_accuracy_improvement*100, 2):+}%)'
+
+                patience_reset = val_accuracy_improvement > 0 or (
+                    last_val_accuracy == val_accuracy_max
+                    and train_accuracy_improvement > 0) or (
+                        last_val_accuracy == val_accuracy_max
+                        and last_train_accuracy == train_accuracy_max
+                        and easy_positives_improvement > 0)
+
+                patience_count = 0 if patience_reset else patience_count + 1
+
+            if verbose:
+                print('#' * 60)
+                if val:
+                    print(val_accuracy_line)
+                print(dataset_line)
+                print(train_accuracy_line)
+                print(easy_positives_line)
+                print('#' * 60, '\n')
+
+            if patience_count >= patience:
+                break
 
             ### training
             if verbose:
@@ -239,25 +291,8 @@ class BarneyEmbedder:
                            optimizer_params={'lr': self.lr},
                            show_progress_bar=verbose)
 
-            ### validation
-            if val:
-                assert len(val_examples) > 0
-
-                if verbose:
-                    print('Validation...')
-
-                last_accuracy = triplet_evaluator(model=self.model)
-
-                ### check improvements and patience
-                if last_accuracy <= best_accuracy:
-                    patience_count = 0
-                    best_accuracy = last_accuracy
-                else:
-                    patience_count += 1
-                    if patience_count > patience:
-                        break
-
-                val_accuracy.append(last_accuracy)
+            ### decrease lr
+            self.lr *= decrease_factor
 
         ### save model
         if save_path is None:
@@ -265,7 +300,19 @@ class BarneyEmbedder:
         else:
             self.model.save(save_path)
 
-        return val_accuracy
+        if statistics_path is not None:
+            if not exists(statistics_path):
+                mkdir(statistics_path)
+            with open(join(statistics_path, 'train_accuracy.json'),
+                      'w',
+                      encoding='utf-8') as file:
+                json.dump(train_accuracy, file)
+            with open(join(statistics_path, 'val_accuracy.json'),
+                      'w',
+                      encoding='utf-8') as file:
+                json.dump(val_accuracy, file)
+
+        return train_accuracy, val_accuracy
 
     #
 

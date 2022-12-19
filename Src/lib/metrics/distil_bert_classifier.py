@@ -9,7 +9,7 @@ from numpy.typing import NDArray
 from os import system
 from tqdm import tqdm
 from pandas import DataFrame, read_csv
-from os.path import join
+from os.path import join, exists
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
@@ -22,7 +22,7 @@ characters_all = list(character_dict.keys())
 if 'Default' in characters_all:
     characters_all.remove('Default')
 
-random.seed(random_state)
+# random.seed(random_state)
 
 
 class DistilBertClassifier:
@@ -37,7 +37,7 @@ class DistilBertClassifier:
         self.train_size = 0.85
         self.val_size = 0.05
 
-        self.n_triplets_x_anchor: int = 2
+        self.n_triplets_x_anchor: int = 10
 
         self.embedder = BarneyEmbedder(embedding_size=embedding_size,
                                        embedder_path=embedder_path,
@@ -86,9 +86,10 @@ class DistilBertClassifier:
             self,
             val: bool,
             source_encoded_path: str,
-            n_shuffles: int = 5,
+            n_shuffles: int = 2,
             merge_sentences: bool = True,
             n_sentences: int = 1,
+            save_dataset: bool = True,
             verbose: bool = False) -> Tuple[List[DataFrame], List[DataFrame]]:
 
         # Flush the instance state cache
@@ -177,21 +178,23 @@ class DistilBertClassifier:
             if val: df_list_val[c] = series_df_val
 
         ### save train and test datasets
-        with open(join(source_encoded_path, 'embedder_dataset_train.json'),
-                  'w',
-                  encoding='utf-8') as file:
-            json.dump([df.to_dict() for df in df_list_train], file)
-
-        with open(join(source_encoded_path, 'embedder_dataset_test.json'),
-                  'w',
-                  encoding='utf-8') as file:
-            json.dump([df.to_dict() for df in df_list_test], file)
-
-        if val:
-            with open(join(source_encoded_path, 'embedder_dataset_val.json'),
+        if save_dataset:
+            with open(join(source_encoded_path, 'embedder_dataset_train.json'),
                       'w',
                       encoding='utf-8') as file:
-                json.dump([df.to_dict() for df in df_list_val], file)
+                json.dump([df.to_dict() for df in df_list_train], file)
+
+            with open(join(source_encoded_path, 'embedder_dataset_test.json'),
+                      'w',
+                      encoding='utf-8') as file:
+                json.dump([df.to_dict() for df in df_list_test], file)
+
+            if val:
+                with open(join(source_encoded_path,
+                               'embedder_dataset_val.json'),
+                          'w',
+                          encoding='utf-8') as file:
+                    json.dump([df.to_dict() for df in df_list_val], file)
 
         return df_list_train, df_list_val, df_list_test
 
@@ -203,7 +206,8 @@ class DistilBertClassifier:
         merge_sentences: bool = True,
         n_sentences: int = 2,
         verbose: bool = False,
-    ) -> Tuple[List[str], List[int], List[str], List[int]]:
+    ) -> Tuple[List[str], List[int], List[str], List[int], List[str],
+               List[int]]:
 
         ### create dataset if needed
         if override:
@@ -285,7 +289,8 @@ class DistilBertClassifier:
                        train_examples: List[InputExample],
                        val_examples: List[InputExample],
                        save_path: str,
-                       verbose: bool = False) -> None:
+                       verbose: bool = False,
+                       statistics_path: str = None) -> None:
 
         if verbose:
             print('Training embedder')
@@ -294,7 +299,8 @@ class DistilBertClassifier:
                                    train_examples=train_examples,
                                    val_examples=val_examples,
                                    save_path=save_path,
-                                   verbose=verbose)
+                                   verbose=verbose,
+                                   statistics_path=statistics_path)
 
     def train_classifier(self,
                          X_train: List[str],
@@ -316,10 +322,15 @@ class DistilBertClassifier:
               verbose: bool = False,
               test: bool = False,
               patience: int = None,
+              save_statistics: bool = False,
               shutdown_at_end: str = None) -> None:
 
         ### if patience>0, create also validation set
         val = isinstance(patience, int) and patience >= 0
+
+        ### if save statistics, define statistics folder
+        statistics_path = join(model_path,
+                               'statistics') if save_statistics else None
 
         ### get/create dataset
         X_train, y_train, X_val, y_val, X_test, y_test = self.get_data(
@@ -345,7 +356,8 @@ class DistilBertClassifier:
                                 train_examples=train_examples,
                                 val_examples=val_examples,
                                 save_path=model_path,
-                                verbose=verbose)
+                                verbose=verbose,
+                                statistics_path=statistics_path)
 
         ### train classifier
         self.train_classifier(X_train=X_train,
@@ -353,7 +365,10 @@ class DistilBertClassifier:
                               verbose=verbose)
 
         if test:
-            self.test(X_test=X_test, y_test=y_test, verbose=verbose)
+            self.test(X_test=X_test,
+                      y_test=y_test,
+                      verbose=verbose,
+                      statistics_path=statistics_path)
 
         if shutdown_at_end is not None:
             if shutdown_at_end not in ['h', 's']:
@@ -362,23 +377,30 @@ class DistilBertClassifier:
 
     def test(self,
              X_test: List[str],
-             y_test: List[str],
-             verbose: bool = False) -> None:
+             y_test: List[int],
+             verbose: bool = False,
+             statistics_path: str = None) -> None:
         if verbose:
             print('Testing')
 
         embeddings = self.embedder.compute(sentences=X_test, verbose=verbose)
         predictions = self.classifier.predict(embeddings)  # maybe .ravel()
-        assert len(characters_all) == len(set(y_test))
+        assert len(self.characters) == len(
+            set(y_test)
+        ), f'Length of self.characters=={len(self.characters)} while y_test has {len(set(y_test))} different labels'
 
         cm = confusion_matrix(y_true=y_test,
                               y_pred=predictions,
-                              labels=list(range(len(characters_all))),
+                              labels=list(range(len(self.characters))),
                               normalize='pred')
         disp = ConfusionMatrixDisplay(confusion_matrix=cm,
-                                      display_labels=characters_all)
+                                      display_labels=self.characters)
         disp.plot()
         plt.show()
+
+        if statistics_path is not None:
+            assert exists(statistics_path)
+            disp.figure_.savefig(join(statistics_path, 'cm.png'))
 
     #
 
