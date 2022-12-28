@@ -417,5 +417,11 @@ class DistilBertClassifier:
         else:
             predictions = self.classifier.predict(embeddings)
 
+        ### normalize
         predictions = np.array(list(collections.Counter(predictions).values()))
-        return predictions / sum(predictions)
+        predictions /= sum(predictions)
+
+        # ### softmax
+        # predictions = np.exp(predictions) / sum(np.exp(predictions))
+
+        return predictions
