@@ -1,0 +1,912 @@
+{
+    "aadc05aeb82a8a473bacd03944d901a3": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Barney_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "4dcef5fdb9c89940f8d16acd161cc506": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "7d1a460f894011ee00f216d6a8fc211a": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Harry_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.12499999999999999
+        }
+    },
+    "45089686dff976a31ca7591d69afe387": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Fry_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "ed98064d0fa97ff6b99cb4ff52df578e": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Bender_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "492d4edf9dd7ab9ebbb989f8a57e34b8": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Vader_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.2
+        }
+    },
+    "12d29ed2196478e3b86f02fe2bcb5209": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Joey_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "17a5d614c9f2f9a7b81efb6c6ceb2f36": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "c01afb44fc417b1cc9cba4d817df4c3d": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Common"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "bf3da305b89718694243c21cf74ec82b": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Barney_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.12499999999999999
+        }
+    },
+    "70837c0ecfb96007bbd6b36f1e03dc3a": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "bd6be497984911c4f334c2610d481da4": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Harry_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "af26ecad91a3380d71ae2036c833d87d": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Fry_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "aa8f0511269c6dbf2d05b39355d3c328": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Bender_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "4b9fad5167bb27f22033e3ef8aa7a680": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Vader_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.16666666666666666
+        }
+    },
+    "442692271838580268342da9afa13278": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Joey_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "94c6062526f6e90e5721ba6faa7bebdd": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "43bf395c7cd54eda835c926613e5aeed": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "a4fa38b8cc7c5bec0d1d361ecd5f5e83": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.16666666666666666
+        }
+    },
+    "60e10c736efbf2bd1fbc1d726e43570b": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "9e69be74e6609ede50e11a264b724476": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.16666666666666666
+        }
+    },
+    "c163f566d2ed3d385f7e82c417051875": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.14285714285714285
+        }
+    },
+    "9247999e65859e0e3b9422f97082a3c8": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "c6222d6cd4e1997badefe1505047d50a": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.14285714285714285
+        }
+    },
+    "42d9bc47cc29bd1ae9806dd8a887f630": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    },
+    "c199c9ff051a15f9d310438e93e1f308": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe"
+            ],
+            "score": 0.125
+        }
+    }
+}
