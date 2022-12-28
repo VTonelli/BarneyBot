@@ -106,7 +106,7 @@ def get_metric_determinism(metric_name, metric_version):
     elif metric_name == 't5 grammar correction edit distance' and metric_version == 1:
         return MetricDeterminism.NEURAL
     elif metric_name == 'distilbert-embedded chatbot classifier' and metric_version == 1:
-        return MetricDeterminism.NEURAL
+        return MetricDeterminism.PROBABILISTIC
     elif metric_name == 'frequency chatbot classifier' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
     elif metric_name == 'flesch-kincaid index' and metric_version == 1:

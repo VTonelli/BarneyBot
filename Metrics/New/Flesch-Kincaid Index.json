@@ -1,0 +1,678 @@
+{
+    "a0113265ff8b087b732a522649bc9912": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": 1.6233716475095785,
+            "std": 3.663309556651627
+        }
+    },
+    "6a1d08a036aab162c6f5afc48df95eb7": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": 3.3472649572649575,
+            "std": 4.451262785186817
+        }
+    },
+    "a68ea4808b213e0fa0936fc7cb9c9885": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": 2.5115384615384615,
+            "std": 6.247065583325252
+        }
+    },
+    "632f99f49dd00d3ac38f3d9a8b5125c1": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": 1.4622710622710622,
+            "std": 3.4067383087855783
+        }
+    },
+    "f425212b42119beffe4fb771d67d4e97": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": 1.3125,
+            "std": 3.3410966887136526
+        }
+    },
+    "08edb77fbe9048735db0366688a14010": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": 1.2937500000000002,
+            "std": 2.739404303402475
+        }
+    },
+    "c5307357379f8c5dfc13b918f69b5653": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": 1.13857315598549,
+            "std": 4.005404377552852
+        }
+    },
+    "589d0452b60f9a48ae48510b30567938": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": 1.1587217043941411,
+            "std": 4.259855084779747
+        }
+    },
+    "acb3c2d0f1bc5cf5d04f0d8badd0093b": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Common"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 2.5942857142857143,
+            "std": 5.435909326330014
+        }
+    },
+    "473092c3bcf68aed485fead1b7e40dd5": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": 0.6040229885057471,
+            "std": 3.160175304234643
+        }
+    },
+    "a6ef8fe72626611dd2ba2cd9f455f5d0": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": 1.364957264957265,
+            "std": 3.833826417324305
+        }
+    },
+    "d9a3a4ff7d5ccd51ea24a56ba4928ed5": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": 0.5673076923076924,
+            "std": 3.194118462342825
+        }
+    },
+    "883fb11def98628d41107bc479d116c4": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": 0.6117216117216118,
+            "std": 3.2676135789371648
+        }
+    },
+    "368616d9892caa64c8118da16be7a940": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": 0.8358333333333334,
+            "std": 3.1139684175591045
+        }
+    },
+    "73cc689ed75b2a44eea3671598dcdf49": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": 0.3687499999999999,
+            "std": 2.988251735965362
+        }
+    },
+    "b28259d19fa7dbe63a60a658542bc276": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": -0.11160822249093105,
+            "std": 3.300505358883614
+        }
+    },
+    "6dbdab12e5f31827cc039fc97e4fe080": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": -0.26724367509986685,
+            "std": 3.5432263529950396
+        }
+    },
+    "1a7af83e90077a483b7c9f5b6b924ab9": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8085714285714286,
+            "std": 3.10762853347063
+        }
+    },
+    "7ec8f0141d622e160aed103815d3177c": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 1.5657142857142854,
+            "std": 2.9729199554015056
+        }
+    },
+    "8bf36f69ec28ec1a1cbd431d0ea13bab": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 1.2485714285714287,
+            "std": 3.356390189182541
+        }
+    },
+    "3d58180c3a9653cc2e2ccc701c82e67d": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 1.9228571428571433,
+            "std": 3.359003739570556
+        }
+    },
+    "97b0c700e2733adbc4aa0d3d0b791175": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 1.0914285714285714,
+            "std": 3.057017353899192
+        }
+    },
+    "8c7095d0e1cf7c7a87f8fa9dc3e91338": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.34857142857142864,
+            "std": 3.0824268202247427
+        }
+    },
+    "ca8802e249f8a354305f8b365ab73e68": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.30571428571428577,
+            "std": 3.397389153633197
+        }
+    },
+    "12310fd43d0987160d439dcdc532c1b6": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.2942857142857143,
+            "std": 2.969458137885271
+        }
+    },
+    "3999c3a2a13e87fea56708581cfe36f8": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.34857142857142853,
+            "std": 3.773469144932167
+        }
+    }
+}

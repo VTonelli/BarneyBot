@@ -620,8 +620,8 @@ class BBMetric:
                 kwargs['sentences']) is list else [kwargs['sentences']]
             # Compute the frequency chatbot classifier metric, returning scores for the list of sentence
             outputs = self.metric.compute(sentences)
-            result['score'] = np.array(outputs.values())
-            result['label'] = np.array(outputs.keys())
+            result['score'] = np.array(list(outputs.values()))
+            result['label'] = np.array(list(outputs.keys()))
         elif self.name == "flesch-kincaid index":
             sentences = kwargs['sentences'] if type(
                 kwargs['sentences']) is list else [kwargs['sentences']]
@@ -707,8 +707,7 @@ class BBMetric:
                 if 'n_sentences' in kwargs else 2,
                 verbose=kwargs['verbose'] if 'verbose' in kwargs else False,
                 test=kwargs['test'] if 'test' in kwargs else False,
-                shutdown_at_end=kwargs['shutdown_at_end']
-                if 'shutdown_at_end' in kwargs else False)
+                shutdown_at_end=kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
         elif self.name == "frequency chatbot classifier":
             if not kwargs['characters_path']:
                 raise Exception("Characters folder must be provided!")

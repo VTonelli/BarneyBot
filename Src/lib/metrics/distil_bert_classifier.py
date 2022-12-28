@@ -308,6 +308,7 @@ class DistilBertClassifier:
                          verbose: bool = False) -> None:
         if verbose:
             print('Training classifier')
+        self.classifier = KNeighborsClassifier()
         train_embeddings = self.embedder.model.encode(
             X_train, show_progress_bar=verbose)
         self.classifier.fit(train_embeddings, y_train)

@@ -1,0 +1,678 @@
+{
+    "8265d5e2227b1fc3d26252cde371c33a": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": 0.05434769507704417,
+            "std": 0.20008351566692148
+        }
+    },
+    "9f56ecf5a2b9db7e89f155644fad3409": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": 0.05124046096812583,
+            "std": 0.21865510271504338
+        }
+    },
+    "48c26cf94e542eda54826b1ec39996b6": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": 0.01404544797138809,
+            "std": 0.04760537053086852
+        }
+    },
+    "fd23bfb98fc351a5bbeb4e581c01784c": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": 0.03536497677431927,
+            "std": 0.15753586816425133
+        }
+    },
+    "97c5aec748a2e6d566c0ff421fb0d68a": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": 0.02753575927813486,
+            "std": 0.07747560377070463
+        }
+    },
+    "1b3050cb853040ff7659a968a42bf547": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": 0.08158234979703277,
+            "std": 0.12832381208415908
+        }
+    },
+    "777134de11d142220910b47775bd0d85": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": 0.0630779446908307,
+            "std": 0.29383278541105307
+        }
+    },
+    "3557f4dddea4b50ca43ec1d47b94d05b": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": 0.1236392064191394,
+            "std": 1.431882121789168
+        }
+    },
+    "9c5986f7b70675988b86ca2a73082bec": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Common"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.07039596610562522,
+            "std": 0.14298452531188624
+        }
+    },
+    "c582c271a86d3589e8247337b4d19f8b": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": 0.011605222840187486,
+            "std": 0.03913130134508325
+        }
+    },
+    "46f1821b788854dbeedf9a251e43ecdc": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": 0.029742776387275505,
+            "std": 0.05359100662073076
+        }
+    },
+    "22c39e4976f53bbd200252dea11fbe39": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": 0.008406547964823992,
+            "std": 0.03001383392662123
+        }
+    },
+    "eb4d3da1b4599cfb901f3d12c1a9e6eb": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": 0.004807393978709575,
+            "std": 0.0231129779741593
+        }
+    },
+    "ba3cd7a81940ece340c01cba0b088757": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": 0.012212482290965516,
+            "std": 0.05050980934284701
+        }
+    },
+    "11ebf2f3c4f7a18771d9beebf466425d": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": 0.017159605100781572,
+            "std": 0.03426938495572011
+        }
+    },
+    "53502b0ad08ea844274b8576b62cc4f3": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": 0.04063163708527833,
+            "std": 0.26849577039653455
+        }
+    },
+    "5e9ac261479250a8bfdc0966cf63f4ed": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": 0.05375870020794508,
+            "std": 0.4190926561845978
+        }
+    },
+    "17f25356067c5cb9b2185fda6bb406d9": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.00979521167456476,
+            "std": 0.03288401957715534
+        }
+    },
+    "db0140ba99f297299aafc5e402f7b4f3": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.022255303871470674,
+            "std": 0.0409488228260634
+        }
+    },
+    "6ec5ab5a76a9d5bb6a36ae22013a72f5": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.0,
+            "std": 0.0
+        }
+    },
+    "c4bd3e08e586f49dc19ee76e3b3d1015": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.008724714717261918,
+            "std": 0.039190724981496464
+        }
+    },
+    "a2321255d542aab3b862d4f361d109d2": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.01858150186251871,
+            "std": 0.04004589356401729
+        }
+    },
+    "a02e15e8657f549598e65ba8b8610d58": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.09510877111803875,
+            "std": 0.49862718745293033
+        }
+    },
+    "a6609277450ef19f1b5ae4cd58880518": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.05717668595794287,
+            "std": 0.135146597824923
+        }
+    },
+    "975fc05218d87187a9489216359948ab": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.031978786285798186,
+            "std": 0.06491755443550157
+        }
+    },
+    "3cbf2dd50718b39910bafb182d8fe11b": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 3.0042635573551713,
+            "std": 15.687585675943616
+        }
+    }
+}

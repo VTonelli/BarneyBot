@@ -109,3 +109,4 @@ model_name = 'microsoft/DialoGPT-small'
 n_beams = 3
 top_k = 50
 top_p = 0.92
+context_n = 5

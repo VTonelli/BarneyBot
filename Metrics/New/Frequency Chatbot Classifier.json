@@ -1,0 +1,1152 @@
+{
+    "77c3c9d7d824f67f33cb9bdc49f739e6": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": [
+                0.8515518826254315,
+                0.42759749881581977,
+                0.2821479452914345,
+                0.4630411906805002,
+                0.4683430220091864,
+                0.09592396880449527,
+                0.5237118462300229,
+                0.529077323337765,
+                0.49870294818223593
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "982b7c69d682a817737e68169abef6e9": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": [
+                0.46668666318244606,
+                0.907540326511602,
+                0.2621668772734895,
+                0.4051328942574914,
+                0.4053200090210823,
+                0.09965610163767435,
+                0.5637932365163645,
+                0.5839434631194259,
+                0.5099720851292744
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "e52d5bfa67d71501620b7b91d56a0c18": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": [
+                0.18719141813471196,
+                0.14710202671412687,
+                0.687836845824273,
+                0.20466325842546274,
+                0.20860614643636838,
+                0.047434617274303245,
+                0.17247370001683207,
+                0.1636407467895677,
+                0.20517637671439642
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "6742ea8fc23a182722aec23bb1d5dd9c": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": [
+                0.42980903155854233,
+                0.33308980252620407,
+                0.28794534409275846,
+                0.7629821872625706,
+                0.6238333874167197,
+                0.09677022827185779,
+                0.4378815039758982,
+                0.4155496971494981,
+                0.43933621102388865
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "5dd977d238f51f063789aaa991966ea8": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": [
+                0.4534579262851154,
+                0.34120422169950404,
+                0.282957858583587,
+                0.5907548733719981,
+                0.7298709228794705,
+                0.10285216995909807,
+                0.4885042449948397,
+                0.4479401009666191,
+                0.4627950078265574
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "f781a28b13456b88c76fe3aba8580216": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": [
+                0.07049948667142908,
+                0.056485777538319744,
+                0.05470755441903938,
+                0.05969135462614257,
+                0.06170173321776662,
+                0.41106140664184704,
+                0.043771125117972286,
+                0.04336386886690904,
+                0.07532094812723314
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "5711f5d945de1f26d303d15f99eddd78": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": [
+                0.5954023466010504,
+                0.5900777655770721,
+                0.3238172181203896,
+                0.5793659356978929,
+                0.5951309330917313,
+                0.0753013908992933,
+                0.939001664442534,
+                0.8166769049591742,
+                0.5128441718322273
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "3fe066b8098f1b6fdfbc87f81651a756": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                1,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": [
+                0.5990104590794013,
+                0.6031471013714123,
+                0.319380157010272,
+                0.5427546242423938,
+                0.5546866164341672,
+                0.08301534737946081,
+                0.8220750206225372,
+                0.9331499004766666,
+                0.525296995482774
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "fdc2306d7aaf7a065c94605a78c2e6fe": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": [
+                0.7780692336616495,
+                0.46405844512267375,
+                0.34107287287137905,
+                0.5238616886994418,
+                0.5178582611604217,
+                0.08576638434562389,
+                0.6058697409461853,
+                0.6464573274657834,
+                0.51991792014912
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "e54260bb548562399e4589f22d6cfa12": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": [
+                0.4448215465387904,
+                0.8310014274891502,
+                0.25934049272994963,
+                0.37104063432774514,
+                0.3739036402096399,
+                0.07023644216365463,
+                0.616509909758877,
+                0.650736918321825,
+                0.4453313395768758
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "a5d52076ab29aab035f5673c6daad216": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": [
+                0.30113448582240615,
+                0.22196287198649825,
+                0.4523712604852708,
+                0.29693260668598476,
+                0.2992481531985202,
+                0.07606867685890485,
+                0.2590925943085091,
+                0.2593444515041091,
+                0.30370972395486445
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "6bd12040a164f7c731fb9944ee045462": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": [
+                0.4710882795821984,
+                0.3660302081257239,
+                0.3110397467553083,
+                0.6463758794435576,
+                0.6936598524184018,
+                0.09166259728473515,
+                0.5027332526315295,
+                0.49970895722884623,
+                0.4554392967321837
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "210d5194852e073e1b78994b76029520": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": [
+                0.450486785546734,
+                0.332300248379914,
+                0.28407838687300735,
+                0.6326615728869481,
+                0.6951014541849696,
+                0.10763776009172478,
+                0.4897867549516036,
+                0.4739061887504097,
+                0.4434677110657772
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "cf83edde46d77f7af28b49d0796d8edd": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": [
+                0.14154192202456328,
+                0.13165964064729282,
+                0.09928028019268309,
+                0.136272017098119,
+                0.15522688362083756,
+                0.34055317653394696,
+                0.12035775877778634,
+                0.1243690237014062,
+                0.10728989706593776
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "007a7da0c09726cf18535c6d7ee1f3d4": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": [
+                0.5490671841357514,
+                0.557547999223573,
+                0.313088762879826,
+                0.5129281422615,
+                0.5082940067393721,
+                0.07002866125403594,
+                0.8051096191250535,
+                0.8367189607583103,
+                0.476169041693423
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "2643978300bd98013b648b87b4ad97e7": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": [
+                0.5142101908835844,
+                0.5621377014922598,
+                0.27339089129229477,
+                0.4724154461367497,
+                0.49095073986748483,
+                0.05534974707231889,
+                0.8027036458856865,
+                0.8867774024882259,
+                0.4156532728335851
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "84d5d6276769cb86393720e63683e296": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.36673672597709317,
+                0.22284745825840455,
+                0.17191343268659917,
+                0.2310569391853138,
+                0.2199546427311596,
+                0.03780154029559434,
+                0.2600583742625666,
+                0.2904711722845902,
+                0.27161356059110253
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "9fc5579f8d297557e07bf12816a5d881": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.22573209712816583,
+                0.3303512681190703,
+                0.11075558966703307,
+                0.19605838340414464,
+                0.20469538596159756,
+                0.026220503836456906,
+                0.3065911172027329,
+                0.3177379337758737,
+                0.2307240482954529
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "ce07529d4bbd737a5d639e8c41a5dfd8": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.22628217242279763,
+                0.19279465446613658,
+                0.2962032545039721,
+                0.18567693759151968,
+                0.19039056515379194,
+                0.055123920441036756,
+                0.2034888317462501,
+                0.23377253503699386,
+                0.20701775435340466
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "ead964c0f3ac7a4950b5c88c79040cf5": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.26389647877222694,
+                0.1919225345883402,
+                0.16688067309424687,
+                0.43343989826932516,
+                0.4061016570598434,
+                0.06412499829803973,
+                0.284729976364444,
+                0.261948041504803,
+                0.25898798501310283
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "89bb6a0f3656245fccd0cd8e01b8df82": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.20989530851930058,
+                0.16656955664429499,
+                0.13464494009939668,
+                0.33390346273462057,
+                0.4067528186289641,
+                0.07235270656279656,
+                0.22795763448728912,
+                0.21991651523425051,
+                0.19375216625214267
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "8df42b8dbfe13c28c8440d18af9a2a26": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.21879706200098403,
+                0.14946618530711098,
+                0.18075083652280363,
+                0.22333069110967574,
+                0.23001747330129682,
+                0.27253437445013434,
+                0.1466141048034931,
+                0.16206343839659834,
+                0.2223237042265531
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "a0937170c5131f1b37b5b91d41692dde": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.10941704810284088,
+                0.08626251067903455,
+                0.06362189199529256,
+                0.09505473267275104,
+                0.10275978565701366,
+                0.015127358806823988,
+                0.1510355907007033,
+                0.14842721117195384,
+                0.08373021287940309
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "e7f703744cfa98ee6c8d11bc4b76d08e": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.2873837601196143,
+                0.29469686054026417,
+                0.13338278842761975,
+                0.27705529642463794,
+                0.30611110045113754,
+                0.04298782138723691,
+                0.4297057514011495,
+                0.45827044220621754,
+                0.24811614674563598
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    },
+    "33a18195fd8893b0c5d33ee9edcc50cf": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document": [
+                12,
+                "Base"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": [
+                0.17365011644029232,
+                0.15632998784045335,
+                0.08129946532106017,
+                0.15445569951475324,
+                0.1598080363563611,
+                0.09383748433969132,
+                0.17171631123015133,
+                0.16912856158635797,
+                0.19016041968169134
+            ],
+            "label": [
+                "Barney",
+                "Sheldon",
+                "Harry",
+                "Fry",
+                "Bender",
+                "Vader",
+                "Joey",
+                "Phoebe",
+                "Default"
+            ]
+        }
+    }
+}

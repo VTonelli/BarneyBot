@@ -1,0 +1,392 @@
+{
+    "3d943d1815ea173eb5ee5680d1c92002": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Phoebe"
+            ],
+            "document1": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8579528137105173,
+            "std": 0.34054266766018654
+        }
+    },
+    "56967884d2f7b3c839d04d613fadd597": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Sheldon"
+            ],
+            "document1": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.9429130329829615,
+            "std": 0.3093110723241382
+        }
+    },
+    "2efe532896fc515dfd9722928ecc80ac": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Fry"
+            ],
+            "document1": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8785332981247419,
+            "std": 0.2291671591207752
+        }
+    },
+    "ffa5a0b50f3777914e3da36f7b544ac8": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Barney"
+            ],
+            "document1": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.793358193311851,
+            "std": 0.1860746753941468
+        }
+    },
+    "967a955ee4bb25d347b54e67f332a301": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Harry"
+            ],
+            "document1": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.9073388596190624,
+            "std": 0.26332379767135233
+        }
+    },
+    "45607f54061e415fab01752eb6c52563": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Barney"
+            ],
+            "document1": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": 0.8562064839639636,
+            "std": 0.260741251630679
+        }
+    },
+    "0834eb48f9bda8cc26eb58cd0d8d00d0": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Sheldon"
+            ],
+            "document1": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": 0.8529228115238772,
+            "std": 0.24644801364179472
+        }
+    },
+    "3787806d7063cc27e9a7857a647b428b": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Harry"
+            ],
+            "document1": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": 0.9218240435011886,
+            "std": 0.282832036710769
+        }
+    },
+    "d09665100af05e377f5ee80f5018cb06": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Fry"
+            ],
+            "document1": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": 0.853469076340748,
+            "std": 0.2451938852280777
+        }
+    },
+    "8e82e6b868b71d17ba88142bc0696ff8": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Bender"
+            ],
+            "document1": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": 0.8652840471579558,
+            "std": 0.21984900834647791
+        }
+    },
+    "e583c785bd18e7b02c6b10429f49f81e": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Vader"
+            ],
+            "document1": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": 0.9653478188295604,
+            "std": 0.24088767568598204
+        }
+    },
+    "826023f0937a490fa8048b97eca1e0bc": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Joey"
+            ],
+            "document1": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": 0.8600810218646725,
+            "std": 0.28431236888337863
+        }
+    },
+    "470084ee94128a9eb87e375471e8c48f": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Phoebe"
+            ],
+            "document1": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": 0.8690138923151598,
+            "std": 0.30500527250673654
+        }
+    }
+}
