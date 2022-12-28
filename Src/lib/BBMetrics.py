@@ -610,10 +610,10 @@ class BBMetric:
                                           verbose=verbose,
                                           count_neighbors=count_neighbors)
             result['label'] = self.metric.characters
-            result['score'] = outputs
+            result['score'] = outputs.tolist()
             # Compute mean and std for these values
-            result['score'] = Counter(outputs).values()
-            result['score'] = np.mean(np.array(outputs))
+            # result['score'] = Counter(outputs).values()
+            # result['score'] = np.mean(np.array(outputs))
         elif self.name == "frequency chatbot classifier":
             # Cast sentences as a list
             sentences = kwargs['sentences'] if type(
@@ -627,7 +627,10 @@ class BBMetric:
                 kwargs['sentences']) is list else [kwargs['sentences']]
             outputs = list()
             for i in range(len(sentences)):
-                outputs.append(self.metric(predictions=[sentences[i]], references=[sentences[i]])['flesch_kincaid']['score'])
+                outputs.append(
+                    self.metric(predictions=[sentences[i]],
+                                references=[sentences[i]
+                                            ])['flesch_kincaid']['score'])
             result['score'] = np.mean(np.array(outputs))
             result['std'] = np.std(np.array(outputs))
         # Sanitize type for the values of the result dictionary, so that it can be serialized
@@ -707,7 +710,8 @@ class BBMetric:
                 if 'n_sentences' in kwargs else 2,
                 verbose=kwargs['verbose'] if 'verbose' in kwargs else False,
                 test=kwargs['test'] if 'test' in kwargs else False,
-                shutdown_at_end=kwargs['shutdown_at_end'] if 'shutdown_at_end' in kwargs else False)
+                shutdown_at_end=kwargs['shutdown_at_end']
+                if 'shutdown_at_end' in kwargs else False)
         elif self.name == "frequency chatbot classifier":
             if not kwargs['characters_path']:
                 raise Exception("Characters folder must be provided!")
