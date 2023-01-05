@@ -187,7 +187,7 @@ class BBVisualization:
                         m_value = mt_dict[key]
                         m_value[metrics_list.index(m)] = v['answer']['score']
                         mt_dict.update({key: m_value})
-                    title = PlotsEnum.TG.value + ' plot\n(over Common dataset)'
+                    title = PlotsEnum.SS.value + ' plot\n(over Common dataset)'
                 mt_dict1 = mt_dict.copy()
                 for k1, v1 in zip(mt_dict.keys(), mt_dict.values()):
                     if v1 == [0 for _ in metrics_list]: mt_dict1.pop(k1, None)
