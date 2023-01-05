@@ -55,7 +55,7 @@ class BBVisualization:
         """
         Load a visualization ready to be plotted later calling the method `plot`.
         """
-        adversarial_key = lambda c1, c2: c1+' vs '+c2 if c1 < c2 else c2+' vs '+c1
+        commondf_key = lambda c1, c2: c1+' vs '+c2 if c1 < c2 else c2+' vs '+c1
 
         visualization = None
         ###
@@ -64,14 +64,14 @@ class BBVisualization:
             characters = kwargs['characters'] if 'characters' in kwargs else [c for c in BBData.character_dict][:-1]
             metrics_list = kwargs['metrics'] if 'metrics' in kwargs else MetricsMTEnum.tolist()
             debug = kwargs['debug'] if 'debug' in kwargs else False
-            adversarial = kwargs['adversarial'] if 'adversarial' in kwargs else False
+            commondf = kwargs['commondf'] if 'commondf' in kwargs else False
             ##
-            if not adversarial:
+            if not commondf:
                 mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
                 for m in MetricsMTEnum.tolist(): 
                     if m in metrics_list:
                         metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
-                        if not adversarial:
+                        if not commondf:
                             for c in characters:
                                 for v in metric_dict_loaded.values():
                                     F_is_actor = True
@@ -82,13 +82,13 @@ class BBVisualization:
                 title = PlotsEnum.MT.value + ' plot'
             else:
                 mt_dict = {'metrics': metrics_list} | \
-                          {adversarial_key(c1, c2): [0 for _ in metrics_list] \
+                          {commondf_key(c1, c2): [0 for _ in metrics_list] \
                             for c1 in characters for c2 in characters if c1 < c2}
                 for m in MetricsMTEnum.tolist(): 
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
                     for v in [v for v in metric_dict_loaded.values() if v['reference_set'] == 'Common_df']:
                         actors = list(v['metric_actors'].values())
-                        key = adversarial_key(actors[0][1], actors[1][1])
+                        key = commondf_key(actors[0][1], actors[1][1])
                         m_value = mt_dict[key]
                         m_value[metrics_list.index(m)] = v['answer']['score']
                         mt_dict.update({key: m_value})
@@ -106,10 +106,10 @@ class BBVisualization:
             characters = kwargs['characters'] if 'characters' in kwargs else [c for c in BBData.character_dict][:-1]
             metrics_list = kwargs['metrics'] if 'metrics' in kwargs else MetricsTGEnum.tolist()
             debug = kwargs['debug'] if 'debug' in kwargs else False
-            adversarial = kwargs['adversarial'] if 'adversarial' in kwargs else False
+            commondf = kwargs['commondf'] if 'commondf' in kwargs else False
             mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
             ##
-            if not adversarial:
+            if not commondf:
                 mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
                 for m in [m for m in MetricsTGEnum.tolist() if m in metrics_list]:
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
@@ -124,7 +124,7 @@ class BBVisualization:
                 title = PlotsEnum.TG.value + ' plot'
             else:
                 mt_dict = {'metrics': metrics_list} | \
-                          {adversarial_key(c1, c2): [0 for _ in metrics_list] \
+                          {commondf_key(c1, c2): [0 for _ in metrics_list] \
                             for c1 in characters for c2 in characters if c1 < c2} | \
                           {c: [0 for _ in metrics_list] for c in characters}
                 for m in MetricsTGEnum.tolist(): 
@@ -134,7 +134,7 @@ class BBVisualization:
                         if len(actors) == 1:
                             key = actors[0][1]
                         elif len(actors) == 2:
-                            key = adversarial_key(actors[0][1], actors[1][1])
+                            key = commondf_key(actors[0][1], actors[1][1])
                         else:
                             raise Exception('This metric has 3 or more actors! Metric name: '+m)
                         try:
