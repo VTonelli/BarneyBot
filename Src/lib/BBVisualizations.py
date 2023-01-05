@@ -23,7 +23,7 @@ class BBVisualization:
 
     # metric files location 
     METRIC_STORE_LOCATION_PATH = "../Metrics/New" 
-    
+
     def __init__(self, name, visualization):
         self.visualization = visualization
         self.name = name
@@ -55,6 +55,8 @@ class BBVisualization:
         """
         Load a visualization ready to be plotted later calling the method `plot`.
         """
+        adversarial_key = lambda c1, c2: c1+' vs '+c2 if c1 < c2 else c2+' vs '+c1
+
         visualization = None
         ###
         if name == PlotsEnum.MT.value:                  # Machine Translation plot
@@ -64,21 +66,35 @@ class BBVisualization:
             debug = kwargs['debug'] if 'debug' in kwargs else False
             adversarial = kwargs['adversarial'] if 'adversarial' in kwargs else False
             ##
-            mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
-            for m in MetricsMTEnum.tolist():
-                if m in metrics_list:
+            if not adversarial:
+                mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
+                for m in MetricsMTEnum.tolist(): 
+                    if m in metrics_list:
+                        metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
+                        if not adversarial:
+                            for c in characters:
+                                for v in metric_dict_loaded.values():
+                                    F_is_actor = True
+                                    for actor in v['metric_actors'].values():
+                                        F_is_actor = F_is_actor and (c in actor)
+                                
+                                    if (F_is_actor): mt_dict[c].append(v['answer']['score'])
+            else:
+                mt_dict = {'metrics': metrics_list} | \
+                          {adversarial_key(c1, c2): [0 for _ in metrics_list] \
+                            for c1 in characters for c2 in characters if c1 < c2}
+                for m in MetricsMTEnum.tolist(): 
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
-                    if not adversarial:
-                        for c in characters:
-                            for v in metric_dict_loaded.values():
-                                F_is_actor = True
-                                for actor in v['metric_actors'].values():
-                                    F_is_actor = F_is_actor and (c in actor)
-                            
-                                if (F_is_actor): mt_dict[c].append(v['answer']['score'])
-                    else:
-                        continue
-                            
+                    for v in [v for v in metric_dict_loaded.values() if v['reference_set'] == 'Common_df']:
+                        actors = list(v['metric_actors'].values())
+                        key = adversarial_key(actors[0][1], actors[1][1])
+                        m_value = mt_dict[key]
+                        m_value[metrics_list.index(m)] = v['answer']['score']
+                        mt_dict.update({key: m_value})
+                mt_dict1 = mt_dict.copy()
+                for k1, v1 in zip(mt_dict.keys(), mt_dict.values()):
+                    if v1 == [0 for _ in metrics_list]: mt_dict1.pop(k1, None)
+                    mt_dict = mt_dict1
             if debug: print(mt_dict)
             visualization = BBVisualization(name, lambda: barplot(mt_dict, PlotsEnum.MT.value + ' plot'))
         ###
@@ -87,9 +103,9 @@ class BBVisualization:
             characters = kwargs['characters'] if 'characters' in kwargs else [c for c in BBData.character_dict][:-1]
             metrics_list = kwargs['metrics'] if 'metrics' in kwargs else MetricsTGEnum.tolist()
             debug = kwargs['debug'] if 'debug' in kwargs else False
+            mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
             ##
-            mt_dict = {'metrics': MetricsTGEnum.tolist()} | {c: [] for c in characters}
-            for m in MetricsTGEnum.tolist():
+            for m in [m for m in MetricsTGEnum.tolist() if m in metrics_list]:
                 metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
                 for c in characters:
                     for v in metric_dict_loaded.values():
@@ -98,7 +114,7 @@ class BBVisualization:
                             F_is_actor = F_is_actor or ([MetricActor.DIALOGPT_SAMPLE, c] == actor)
                     
                         if (F_is_actor) and (v['reference_set'] == c + '_df'): 
-                            mt_dict[c].append(v['answer']['score'])
+                            mt_dict[c].append(v['answer']['score'])    
             if debug: print(mt_dict)
             visualization = BBVisualization(name, lambda l: barplot(mt_dict, PlotsEnum.TG.value + ' plot', 
                                                                     logscale=l))

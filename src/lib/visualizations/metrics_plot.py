@@ -11,6 +11,5 @@ def barplot(metrics: dict, title: str,
     ax.set_title(title, fontweight="bold")
     ax.set_ylabel('score')
     ax.tick_params(axis='x', rotation=45)
-    ax.set_ylim(bottom=-2)
     ax.grid()
     plt.show()
