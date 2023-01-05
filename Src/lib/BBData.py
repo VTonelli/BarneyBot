@@ -1,3 +1,29 @@
+from enum import Enum
+
+class EnumBase(Enum):
+    @classmethod
+    def tolist(cls):
+        """Returns the list of all possible values that can be used as metric"""
+        return list(map(lambda c: c.value, cls))
+    
+    @classmethod
+    def contains(cls, value):
+        """A classmethod for looking up values not found in cls."""
+        value = value.lower()
+        for member in cls:
+            if member.value == value:
+                return member
+        return None
+    
+    def __eq__(self, cls1):
+        """A classmethod for looking up members in cls."""
+        if type(cls1) == str:
+            value = cls1
+            value = value.lower()
+            return not self.contains(value) is None
+        else:
+            return self.__eq__(cls1)
+    
 character_dict = {
     'Barney': {
         'df_filename':'Barney.csv',

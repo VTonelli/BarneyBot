@@ -21,7 +21,37 @@ from .metrics.perplexity import perplexity
 from .metrics.human import conversation, single_answers, consistency_questions
 from .metrics.wmd import wmd
 from .metrics.fcc import FrequencyChatbotClassifier
+from .BBData import EnumBase
 
+class MetricsMTEnum(EnumBase):
+    """Enumeration of all enable metrics for Machine Translation (MT) used in this project"""
+    BLEU = "Google BLEU"
+    METEOR = "METEOR"
+    COMET = "COMET"
+    EXTENDEDEDIT_DIST = "Extended Edit Distance"
+    ROUGE = "Rouge L"
+    BERTSCORE = "BERTScore"
+
+class MetricsTGEnum(EnumBase):
+    """Enumeration of all enable metrics for Text Generation (TG) used in this project"""
+    DISTINCT = "DISTINCT"
+    REPETITIVENESS = "Repetitiveness"
+    BLEURT = "BLEURT"
+    PERPLEXITY = "Perplexity"
+    FKGL = "Flesch-Kincaid Index"
+    T5GRAMCORREDIT_DIST = "T5 Grammar Correction Edit Distance"
+    TERMERRORRATE = "Term Error Rate"
+    WORDMOVER_DIST = "Word Mover Distance"
+
+class MetricsSSIMEnum(EnumBase):
+    MPNETEM_SIM = "MPNet Embedding Similarity"
+    ROBERTACROSS_CLS = "RoBERTa Cross-Encoding Similarity"
+
+class MetricsClsEnum(EnumBase):
+    EMOTION_CLS = "Emotion Classifier"
+    NEURALCHATBOT_CLS = "neural chatbot classifier"
+    DISTILBERT_CLS = "distilbert-embedded chatbot classifier"
+    FREQUENCY_CLS = "Frequency Chatbot Classifier"
 
 # Class defining a wrapper for any of the supported metrics, so that they can be loaded and computed seamlessly
 class BBMetric:
