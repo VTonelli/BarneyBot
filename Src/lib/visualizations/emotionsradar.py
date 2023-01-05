@@ -148,7 +148,7 @@ class EmotionsRadar:
         legend = axs.legend(legend, loc=(0.9, .95),
                             labelspacing=0.1, fontsize='small')
 
-    def plotEmotionsRadar(self):
+    def plotEmotionsRadar(self, titleplot: str):
         # Plots a radar plot 
         N = len(self.data[0])
         theta = radar_factory(N, frame='polygon')
@@ -168,7 +168,7 @@ class EmotionsRadar:
         labels = ('Predictions', 'Labels')
         legend = axs.legend(labels, loc=(0.9, .95),
                             labelspacing=0.1, fontsize='small')
-        fig.text(0.5, 0.965, 'Emotions ' + self.character,
+        fig.text(0.5, 0.965, titleplot + ' ' + self.character,
                  horizontalalignment='center', color='black', weight='bold',
                  size='large')
         plt.show()

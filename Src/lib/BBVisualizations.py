@@ -13,8 +13,8 @@ class PlotsEnum(EnumBase):
     MT = "Machine Translation"
     TG = "Text Generation"
     SS = "Semantic Similarity"
-    PC = "Personality Classification"
-    ER = "Emotion Radar"
+    ECR = "Emotion Classifier Radar"
+    FCR = "Frequency Classifier Radar"
     WC = "Wordcloud"
 
 
@@ -37,8 +37,8 @@ class BBVisualization:
         elif name == PlotsEnum.SS.value:
             self.require_args = set()
             self.optional_args = set(['logscale'])
-        elif name == "emotions radar":
-            self.require_args = set(["emotions", "labels", "predictions", "character"])
+        elif self.name == PlotsEnum.ECR.value or self.name == PlotsEnum.FCR.value:
+            self.require_args = set([])
             self.optional_args = set()
         elif name == "wordcloud":
             self.require_args = set(['freqdict'])
@@ -154,7 +154,7 @@ class BBVisualization:
                                                                     logscale=l))
         ###
         elif name == PlotsEnum.SS.value:                # Semantic Similarity plot
-           # Parameters preparation
+            # Parameters preparation
             characters = kwargs['characters'] if 'characters' in kwargs else [c for c in BBData.character_dict][:-1]
             metrics_list = kwargs['metrics'] if 'metrics' in kwargs else MetricsSSIMEnum.tolist()
             debug = kwargs['debug'] if 'debug' in kwargs else False
@@ -196,8 +196,51 @@ class BBVisualization:
             visualization = BBVisualization(name, lambda l: barplot(mt_dict, title, 
                                                                     logscale=l))
         ### 
-        elif name == "emotions radar":
-            visualization = BBVisualization(name, lambda e, p, l, c: EmotionsRadar(e, p, l, c))
+        elif name == PlotsEnum.ECR.value:                # Emotion Radar
+            # Parameters preparation
+            character = kwargs['character']
+            debug = kwargs['debug'] if 'debug' in kwargs else False
+            commondf = kwargs['commondf'] if 'commondf' in kwargs else False
+            #
+            metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, 
+                                                     MetricsClsEnum.EMOTION_CLS.value)
+            sources = None
+            predictions = None
+            labels = None
+            for v in metric_dict_loaded.values():
+                actors = list(v['metric_actors'].values())[0]
+                if actors == [MetricActor.DATASET_CHAR, character]:
+                    sources = v['answer']['score']
+                    if debug: print(sources)
+                elif actors == [MetricActor.DIALOGPT_SAMPLE, character]:
+                    predictions = v['answer']['score']
+                    if debug: print(predictions)
+                    labels = v['answer']['label']
+                    if debug: print(labels)
+            visualization = BBVisualization(name, lambda : EmotionsRadar(labels, predictions, sources, character))
+        ###
+        elif name == PlotsEnum.FCR.value:                # Frequency Classifier Radar
+            # Parameters preparation
+            character = kwargs['character']
+            debug = kwargs['debug'] if 'debug' in kwargs else False
+            #
+            metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, 
+                                                     MetricsClsEnum.FREQUENCY_CLS.value)
+            sources = None
+            predictions = None
+            labels = None
+            for v in metric_dict_loaded.values():
+                actors = list(v['metric_actors'].values())[0]
+                if actors == [MetricActor.DATASET_CHAR, character]:
+                    sources = v['answer']['score']
+                    if debug: print(sources)
+                elif actors == [MetricActor.DIALOGPT_SAMPLE, character]:
+                    predictions = v['answer']['score']
+                    if debug: print(predictions)
+                    labels = v['answer']['label']
+                    if debug: print(labels)
+            visualization = BBVisualization(name, lambda : EmotionsRadar(labels, predictions, sources, character))
+        ###
         elif name == "wordcloud":
             visualization = BBVisualization(name, lambda f: plot_wordcloud(f))
         else:
@@ -221,8 +264,11 @@ class BBVisualization:
             self.visualization(kwargs['logscale'] if 'logscale' in kwargs else False)
         elif self.name == PlotsEnum.SS.value:
             self.visualization(kwargs['logscale'] if 'logscale' in kwargs else False)
-        # elif self.name == "emotions radar":
-        #     radar = self.visualization(kwargs['emotions'], kwargs['predictions'], kwargs['labels'], kwargs['character'])
-        #     radar.plotEmotionsRadar()
+        elif self.name == PlotsEnum.ECR.value:
+            radar = self.visualization()
+            radar.plotEmotionsRadar(PlotsEnum.ECR.value)
+        elif self.name == PlotsEnum.FCR.value:
+            radar = self.visualization()
+            radar.plotEmotionsRadar(PlotsEnum.FCR.value)
         # elif self.name == "wordcloud":
         #     self.visualization(kwargs['freqdict'])
