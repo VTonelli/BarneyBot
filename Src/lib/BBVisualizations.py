@@ -22,9 +22,10 @@ class BBVisualization:
     # metric files location 
     METRIC_STORE_LOCATION_PATH = "../Metrics/New" 
 
-    def __init__(self, name, visualization):
-        self.visualization = visualization
+    def __init__(self, name, visualization, metrics_data):
         self.name = name
+        self.visualization = visualization
+        self.metrics_data = metrics_data
         self.require_args = None
         self.optional_args = None
         
@@ -100,7 +101,7 @@ class BBVisualization:
                 title = PlotsEnum.MT.value + ' plot\n(over Common dataset)'
                 
             if debug: print(mt_dict)
-            visualization = BBVisualization(name, lambda: barplot(mt_dict, title))
+            visualization = BBVisualization(name, lambda: barplot(mt_dict, title), mt_dict)
         ###
         elif name == PlotsEnum.TG.value:                # Text Generation plot
             # Parameters preparation
@@ -150,8 +151,9 @@ class BBVisualization:
                     if v1 == [0 for _ in metrics_list]: mt_dict1.pop(k1, None)
                     mt_dict = mt_dict1
             if debug: print(mt_dict)
-            visualization = BBVisualization(name, lambda l: barplot(mt_dict, title, 
-                                                                    logscale=l))
+            visualization = BBVisualization(name, 
+                                            lambda l: barplot(mt_dict, title, logscale=l),
+                                            mt_dict)
         ###
         elif name == PlotsEnum.SS.value:                # Semantic Similarity plot
             # Parameters preparation
@@ -193,8 +195,9 @@ class BBVisualization:
                     if v1 == [0 for _ in metrics_list]: mt_dict1.pop(k1, None)
                     mt_dict = mt_dict1
             if debug: print(mt_dict)
-            visualization = BBVisualization(name, lambda l: barplot(mt_dict, title, 
-                                                                    logscale=l))
+            visualization = BBVisualization(name, 
+                                            lambda l: barplot(mt_dict, title, logscale=l),
+                                            mt_dict)
         ### 
         elif name == PlotsEnum.ECR.value:                # Emotion Radar
             # Parameters preparation
@@ -217,7 +220,9 @@ class BBVisualization:
                     if debug: print(predictions)
                     labels = v['answer']['label']
                     if debug: print(labels)
-            visualization = BBVisualization(name, lambda : EmotionsRadar(labels, predictions, sources, character))
+            visualization = BBVisualization(name, 
+                                            lambda : EmotionsRadar(labels, predictions, sources, character),
+                                            None)
         ###
         elif name == PlotsEnum.FCR.value:                # Frequency Classifier Radar
             # Parameters preparation
@@ -239,10 +244,12 @@ class BBVisualization:
                     if debug: print(predictions)
                     labels = v['answer']['label']
                     if debug: print(labels)
-            visualization = BBVisualization(name, lambda : EmotionsRadar(labels, predictions, sources, character))
+            visualization = BBVisualization(name, 
+                                            lambda : EmotionsRadar(labels, predictions, sources, character),
+                                            None)
         ###
         elif name == "wordcloud":
-            visualization = BBVisualization(name, lambda f: plot_wordcloud(f))
+            visualization = BBVisualization(name, lambda f: plot_wordcloud(f), None)
         else:
             raise Exception("Unknown visualization name!")
         return visualization
@@ -272,3 +279,15 @@ class BBVisualization:
             radar.plotEmotionsRadar(PlotsEnum.FCR.value)
         # elif self.name == "wordcloud":
         #     self.visualization(kwargs['freqdict'])
+
+    def corr(self, correlate='characters', debug=False):
+        '''
+        # Params
+        * `correlate` = 'characters' | 'metrics'
+        '''
+        if self.metrics_data is None:
+            raise("A metric set must be loaded before to run the correlation!")
+        if not (correlate in ['characters','metrics']):
+            raise("You can correlate only characters or metrics!")
+        corrplot(self.metrics_data, correlate=='metrics', self.name, debug)
+        
