@@ -31,7 +31,7 @@ class BBVisualization:
         
         if name == PlotsEnum.MT.value:
             self.require_args = set()
-            self.optional_args = set(['metrics'])
+            self.optional_args = set(['logscale'])
         elif name == PlotsEnum.TG.value:
             self.require_args = set()
             self.optional_args = set(['logscale'])
