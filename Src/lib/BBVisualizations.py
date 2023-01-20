@@ -97,10 +97,13 @@ class BBVisualization:
             if not commondf:
                 # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
+                # for each metric in the enumeration
                 for m in MetricsMTEnum.tolist(): 
+                    # s.t. m has been selected in metrics_list by the user
                     if m in metrics_list:
                         # load the results of the metric m
                         metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
+                        # search the right value to return given the actors
                         for c in characters:
                             for v in metric_dict_loaded.values():
                                 F_is_actor = True
@@ -108,26 +111,34 @@ class BBVisualization:
                                     F_is_actor = F_is_actor and (c in actor)
                             
                                 if (F_is_actor): mt_dict[c].append(v['answer']['score'])
+                # set the title
                 title = PlotsEnum.MT.value + ' plot'
             else:
+                # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | \
                           {commondf_key(c1, c2): [0 for _ in metrics_list] \
                             for c1 in characters for c2 in characters if c1 < c2}
+                # for each metric in the enumeration
                 for m in MetricsMTEnum.tolist(): 
+                    # load the results of the metric m
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
+                    # for eache value associated with the Common dataset search the right value to return
                     for v in [v for v in metric_dict_loaded.values() if v['reference_set'] == 'Common_df']:
                         actors = list(v['metric_actors'].values())
                         key = commondf_key(actors[0][1], actors[1][1])
                         m_value = mt_dict[key]
                         m_value[metrics_list.index(m)] = v['answer']['score']
                         mt_dict.update({key: m_value})
+                # remove each value associated with a metric not selected 
                 mt_dict1 = mt_dict.copy()
                 for k1, v1 in zip(mt_dict.keys(), mt_dict.values()):
                     if v1 == [0 for _ in metrics_list]: mt_dict1.pop(k1, None)
                     mt_dict = mt_dict1
+                # set the title for the plot
                 title = PlotsEnum.MT.value + ' plot\n(over Common dataset)'
                 
             if debug: print(mt_dict)
+            # set the visualization
             visualization = BBVisualization(name, lambda: barplot(mt_dict, title), mt_dict)
         ###
         elif name == PlotsEnum.TG.value:                # Text Generation plot
@@ -139,9 +150,13 @@ class BBVisualization:
             mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
             ##
             if not commondf:
+                # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
+                # for each metric in the enumeration s.t. m has been selected in metrics_list by the user
                 for m in [m for m in MetricsTGEnum.tolist() if m in metrics_list]:
+                    # load the results of the metric m
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
+                    # search the right value to return given the actors
                     for c in characters:
                         for v in metric_dict_loaded.values():
                             F_is_actor = False
@@ -150,13 +165,17 @@ class BBVisualization:
                         
                             if (F_is_actor) and (v['reference_set'] == c + '_df'): 
                                 mt_dict[c].append(v['answer']['score'])    
+                # set the title
                 title = PlotsEnum.TG.value + ' plot'
             else:
+                # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | \
                           {commondf_key(c1, c2): [0 for _ in metrics_list] \
                             for c1 in characters for c2 in characters if c1 < c2} | \
                           {c: [0 for _ in metrics_list] for c in characters}
+                # for each metric in the enumeration
                 for m in MetricsTGEnum.tolist(): 
+                    # load the results of the metric m
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
                     for v in [v for v in metric_dict_loaded.values() if v['reference_set'] == 'Common_df']:
                         actors = list(v['metric_actors'].values())
@@ -172,12 +191,15 @@ class BBVisualization:
                             mt_dict.update({key: m_value})
                         except:
                             continue
-                    title = PlotsEnum.TG.value + ' plot\n(over Common dataset)'
+                # remove each value associated with a metric not selected 
                 mt_dict1 = mt_dict.copy()
                 for k1, v1 in zip(mt_dict.keys(), mt_dict.values()):
                     if v1 == [0 for _ in metrics_list]: mt_dict1.pop(k1, None)
                     mt_dict = mt_dict1
+                # set the title for the plot
+                title = PlotsEnum.TG.value + ' plot\n(over Common dataset)'
             if debug: print(mt_dict)
+            # set the visualization
             visualization = BBVisualization(name, 
                                             lambda l: barplot(mt_dict, title, logscale=l),
                                             mt_dict)
@@ -191,9 +213,13 @@ class BBVisualization:
             mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
             ##
             if not commondf:
+                # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
+                # for each metric in the enumeration s.t. m has been selected in metrics_list by the user
                 for m in [m for m in MetricsSSIMEnum.tolist() if m in metrics_list]:
+                    # load the results of the metric m
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
+                    # search the right value to return given the actors
                     for c in characters:
                         for v in metric_dict_loaded.values():
                             F_is_actor = False
@@ -202,25 +228,31 @@ class BBVisualization:
                         
                             if (F_is_actor) and (v['reference_set'] == c + '_df'): 
                                 mt_dict[c].append(v['answer']['score'])    
+                # set the title
                 title = PlotsEnum.TG.value + ' plot'
             else:
+                # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | \
                           {commondf_key(c1, c2): [0 for _ in metrics_list] \
                             for c1 in characters for c2 in characters if c1 < c2} | \
                           {c: [0 for _ in metrics_list] for c in characters}
+                # for each metric in the enumeration
                 for m in MetricsSSIMEnum.tolist(): 
+                    # load the results of the metric m
                     metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
+                    # search the right value to return given the actors
                     for v in [v for v in metric_dict_loaded.values() if v['reference_set'] == 'Common_df']:
                         actors = list(v['metric_actors'].values())
                         key = commondf_key(actors[0][1], actors[1][1])
                         m_value = mt_dict[key]
                         m_value[metrics_list.index(m)] = v['answer']['score']
                         mt_dict.update({key: m_value})
-                    title = PlotsEnum.SS.value + ' plot\n(over Common dataset)'
                 mt_dict1 = mt_dict.copy()
                 for k1, v1 in zip(mt_dict.keys(), mt_dict.values()):
                     if v1 == [0 for _ in metrics_list]: mt_dict1.pop(k1, None)
                     mt_dict = mt_dict1
+                # set the title
+                title = PlotsEnum.SS.value + ' plot\n(over Common dataset)'
             if debug: print(mt_dict)
             visualization = BBVisualization(name, 
                                             lambda l: barplot(mt_dict, title, logscale=l),
@@ -232,11 +264,13 @@ class BBVisualization:
             debug = kwargs['debug'] if 'debug' in kwargs else False
             commondf = kwargs['commondf'] if 'commondf' in kwargs else False
             #
+            # initialize the dictionary containing the test results foreach character
             metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, 
                                                      MetricsClsEnum.EMOTION_CLS.value)
             sources = None
             predictions = None
             labels = None
+            # search the right value to return given the actors
             for v in metric_dict_loaded.values():
                 actors = list(v['metric_actors'].values())[0]
                 if actors == [MetricActor.DATASET_CHAR, character]:
@@ -256,11 +290,13 @@ class BBVisualization:
             character = kwargs['character']
             debug = kwargs['debug'] if 'debug' in kwargs else False
             #
+            # initialize the dictionary containing the test results foreach character
             metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, 
                                                      MetricsClsEnum.FREQUENCY_CLS.value)
             sources = None
             predictions = None
             labels = None
+            # search the right value to return given the actors
             for v in metric_dict_loaded.values():
                 actors = list(v['metric_actors'].values())[0]
                 if actors == [MetricActor.DATASET_CHAR, character]:
