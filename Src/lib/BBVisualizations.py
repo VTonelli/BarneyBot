@@ -16,6 +16,7 @@ class PlotsEnum(EnumBase):
     * `SS` = "Semantic Similarity"
     * `ECR` = "Emotion Classifier Radar"
     * `FCR` = "Frequency Classifier Radar"
+    * `DBCR` = "DistilBert Classifier Radar"
     * `WC` = "Wordcloud"
     """
     MT = "Machine Translation"
@@ -23,6 +24,7 @@ class PlotsEnum(EnumBase):
     SS = "Semantic Similarity"
     ECR = "Emotion Classifier Radar"
     FCR = "Frequency Classifier Radar"
+    DBCR = "DistilBert Classifier Radar"
     WC = "Wordcloud"
 
 
@@ -297,6 +299,34 @@ class BBVisualization:
             # initialize the dictionary containing the test results foreach character
             metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, 
                                                      MetricsClsEnum.FREQUENCY_CLS.value)
+            sources = None
+            predictions = None
+            labels = None
+            # search the right value to return given the actors
+            for v in metric_dict_loaded.values():
+                actors = list(v['metric_actors'].values())[0]
+                if actors == [MetricActor.DATASET_CHAR, character]:
+                    sources = v['answer']['score']
+                    if debug: print(sources)
+                elif actors == [MetricActor.DIALOGPT_SAMPLE, character]:
+                    predictions = v['answer']['score']
+                    if debug: print(predictions)
+                    labels = v['answer']['label']
+                    if debug: print(labels)
+            visualization = BBVisualization(name, 
+                                            lambda : EmotionsRadar(labels, predictions, sources, character),
+                                            None)
+        ###
+        elif name == PlotsEnum.DBCR.value:               # DistilBert Classifier Radar
+            # Parameters preparation
+            if not 'character' in kwargs or type(kwargs['character']) != str: 
+                raise Exception("One name of a character must be specified for visualize radarplot onclassification task")
+            character = kwargs['character']
+            debug = kwargs['debug'] if 'debug' in kwargs else False
+            #
+            # initialize the dictionary containing the test results foreach character
+            metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, 
+                                                     MetricsClsEnum.DISTILBERT_CLS.value)
             sources = None
             predictions = None
             labels = None
