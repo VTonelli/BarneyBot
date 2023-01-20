@@ -101,14 +101,13 @@ class BBVisualization:
                     if m in metrics_list:
                         # load the results of the metric m
                         metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
-                        if not commondf:
-                            for c in characters:
-                                for v in metric_dict_loaded.values():
-                                    F_is_actor = True
-                                    for actor in v['metric_actors'].values():
-                                        F_is_actor = F_is_actor and (c in actor)
-                                
-                                    if (F_is_actor): mt_dict[c].append(v['answer']['score'])
+                        for c in characters:
+                            for v in metric_dict_loaded.values():
+                                F_is_actor = True
+                                for actor in v['metric_actors'].values():
+                                    F_is_actor = F_is_actor and (c in actor)
+                            
+                                if (F_is_actor): mt_dict[c].append(v['answer']['score'])
                 title = PlotsEnum.MT.value + ' plot'
             else:
                 mt_dict = {'metrics': metrics_list} | \
