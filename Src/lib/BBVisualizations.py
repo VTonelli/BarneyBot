@@ -9,7 +9,15 @@ from .BBMetrics import MetricsMTEnum, MetricsTGEnum, MetricsSSIMEnum, MetricsCls
 from .BBMetricResults import load_metric_by_name, MetricActor
 
 class PlotsEnum(EnumBase):
-    """Plots"""
+    """
+    Enumeration of all possible Plots
+    * `MT` = "Machine Translation"
+    * `TG` = "Text Generation"
+    * `SS` = "Semantic Similarity"
+    * `ECR` = "Emotion Classifier Radar"
+    * `FCR` = "Frequency Classifier Radar"
+    * `WC` = "Wordcloud"
+    """
     MT = "Machine Translation"
     TG = "Text Generation"
     SS = "Semantic Similarity"
@@ -19,6 +27,12 @@ class PlotsEnum(EnumBase):
 
 
 class BBVisualization:
+    """
+    Manage the visualization for every esperiment performed over the chatbot, according to
+    a well defined list of tasks given by `PlotsEnum`.
+    
+    It is possible to load a BBVisualization object by the predefined static method `load_visualization`
+    """
     # metric files location 
     METRIC_STORE_LOCATION_PATH = "../Metrics/New" 
 
@@ -55,7 +69,19 @@ class BBVisualization:
     @staticmethod
     def load_visualization(name, **kwargs):
         """
-        Load a visualization ready to be plotted later calling the method `plot`.
+        Load a visualization ready to be plotted later calling the method `plot`, giving also different point of views of the evaluation.
+
+        PLease notice that for each task there is a set of metrics allowed to be shown.
+        ## Params
+        * `name`: is the name of the visualization to load, namely the task tested we performed over the chatbots. This is
+        a mandatory parameter
+        * `characters`: list of characters to show in the plot, e.g. `['Barney', 'Sheldon']`
+        * `metrics`: select the subset of metrics giving a list with name metrics which should be shown, e.g. if `name='Text Generation'`
+        then metrics could be something like that `['BLEURT', 'Perplexity']`
+        * `commondf`: asks to the visualizer to plot the test performed over the common dataset
+
+        ## Return
+        A `BBVisualization` initialize with the given parameters.
         """
         commondf_key = lambda c1, c2: c1+' vs '+c2 if c1 < c2 else c2+' vs '+c1
 
@@ -69,9 +95,11 @@ class BBVisualization:
             commondf = kwargs['commondf'] if 'commondf' in kwargs else False
             ##
             if not commondf:
+                # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | {c: [] for c in characters}
                 for m in MetricsMTEnum.tolist(): 
                     if m in metrics_list:
+                        # load the results of the metric m
                         metric_dict_loaded = load_metric_by_name(BBVisualization.METRIC_STORE_LOCATION_PATH, m)
                         if not commondf:
                             for c in characters:
@@ -282,6 +310,7 @@ class BBVisualization:
 
     def corr(self, correlate='characters', debug=False):
         '''
+        Allows to plot a correlation matrix over the task tested which had been previously loaded
         # Params
         * `correlate` = 'characters' | 'metrics'
         '''
