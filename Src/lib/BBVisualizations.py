@@ -260,6 +260,8 @@ class BBVisualization:
         ### 
         elif name == PlotsEnum.ECR.value:                # Emotion Radar
             # Parameters preparation
+            if not 'character' in kwargs or type(kwargs['character']) != str: 
+                raise Exception("One name of a character must be specified for visualize radarplot onclassification task")
             character = kwargs['character']
             debug = kwargs['debug'] if 'debug' in kwargs else False
             commondf = kwargs['commondf'] if 'commondf' in kwargs else False
@@ -287,6 +289,8 @@ class BBVisualization:
         ###
         elif name == PlotsEnum.FCR.value:                # Frequency Classifier Radar
             # Parameters preparation
+            if not 'character' in kwargs or type(kwargs['character']) != str: 
+                raise Exception("One name of a character must be specified for visualize radarplot onclassification task")
             character = kwargs['character']
             debug = kwargs['debug'] if 'debug' in kwargs else False
             #
