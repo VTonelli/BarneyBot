@@ -1,0 +1,3968 @@
+{
+    "test_additional_data": {
+        "generated_sentences": {
+            "Barney": [
+                "No, this is about believing that you can rule the galaxy by making all the wrong decisions for your lover girlfriend.",
+                "Barney, you are a disgrace.",
+                "That's not the point. You're trying to fill a hole in the story of a really big problem that I've been trying to solve. Now, where are you going to put the tape?",
+                "I'm pretty sure it's about a girl.",
+                "Why do I keep doing that? I mean, who is this guy?",
+                "I am not sure I like this story.",
+                "No, this is about the girl.",
+                "We're not going to get that.",
+                "No, this is about the building.",
+                "My building? It is on the property of a small local company. It was run by a woman. This woman's website said it's a women's only club."
+            ],
+            "Vader": [
+                "What is your destiny.",
+                "I will not",
+                "That is not a true statement.",
+                "We will not fight you. If you fight us.",
+                "That's why you fail.",
+                "You have not done well. Perhaps we should have a surprise meet.",
+                "The Rebellion will not fight you, Commander. We will not fight you. The Empire has not broken you. The Empire has only broken your faith. You will not destroy us.",
+                "I promise you my word.",
+                "Don't do this to me.",
+                "Lord Vader, I suggest you not try to keep this ship afloat. This ship has been constructed in perfect condition. And your men have only taken a few months to fix the damages."
+            ]
+        }
+    },
+    "human_ranking": {
+        "Barney": [
+            28,
+            4,
+            20,
+            27,
+            9,
+            16,
+            21,
+            9,
+            12,
+            19
+        ],
+        "Vader": [
+            19,
+            15,
+            19,
+            21,
+            30,
+            7,
+            15,
+            15,
+            19,
+            5
+        ]
+    },
+    "891736ac9ad299537f5db6796986dda8": {
+        "metric_name": "google bleu",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.038461538461538464,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.02564102564102564,
+                "std": 0.0
+            },
+            {
+                "score": 0.038461538461538464,
+                "std": 0.0
+            },
+            {
+                "score": 0.02564102564102564,
+                "std": 0.0
+            },
+            {
+                "score": 0.02564102564102564,
+                "std": 0.0
+            },
+            {
+                "score": 0.043478260869565216,
+                "std": 0.0
+            },
+            {
+                "score": 0.02564102564102564,
+                "std": 0.0
+            },
+            {
+                "score": 0.02564102564102564,
+                "std": 0.0
+            },
+            {
+                "score": 0.056338028169014086,
+                "std": 0.0
+            }
+        ]
+    },
+    "c791d7e81cb174a73b0194364dae222c": {
+        "metric_name": "mpnet embedding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document0": [
+                12,
+                "Vader"
+            ],
+            "document1": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.4189852774143219,
+                "std": 0.0
+            },
+            {
+                "score": 0.333687424659729,
+                "std": 0.0
+            },
+            {
+                "score": 0.1825406551361084,
+                "std": 0.0
+            },
+            {
+                "score": 0.42863398790359497,
+                "std": 0.0
+            },
+            {
+                "score": 0.36784255504608154,
+                "std": 0.0
+            },
+            {
+                "score": 0.328643262386322,
+                "std": 0.0
+            },
+            {
+                "score": 0.3373473882675171,
+                "std": 0.0
+            },
+            {
+                "score": 0.4330925941467285,
+                "std": 0.0
+            },
+            {
+                "score": 0.40305474400520325,
+                "std": 0.0
+            },
+            {
+                "score": 0.2830768823623657,
+                "std": 0.0
+            }
+        ]
+    },
+    "8802c648f13be294f50c49a02828d8ad": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.1818181818181818,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.08333333333333333,
+                "std": 0.0
+            },
+            {
+                "score": 0.07407407407407407,
+                "std": 0.0
+            },
+            {
+                "score": 0.08695652173913045,
+                "std": 0.0
+            },
+            {
+                "score": 0.06666666666666667,
+                "std": 0.0
+            },
+            {
+                "score": 0.16666666666666669,
+                "std": 0.0
+            },
+            {
+                "score": 0.08695652173913045,
+                "std": 0.0
+            },
+            {
+                "score": 0.08333333333333333,
+                "std": 0.0
+            },
+            {
+                "score": 0.0784313725490196,
+                "std": 0.0
+            }
+        ]
+    },
+    "098581e8d1581f275cca61bc983cd563": {
+        "metric_name": "meteor",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.07731958762886597,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0510204081632653,
+                "std": 0.0
+            },
+            {
+                "score": 0.075,
+                "std": 0.0
+            },
+            {
+                "score": 0.05128205128205128,
+                "std": 0.0
+            },
+            {
+                "score": 0.09852216748768472,
+                "std": 0.0
+            },
+            {
+                "score": 0.19999999999999998,
+                "std": 0.0
+            },
+            {
+                "score": 0.05128205128205128,
+                "std": 0.0
+            },
+            {
+                "score": 0.0510204081632653,
+                "std": 0.0
+            },
+            {
+                "score": 0.22123893805309733,
+                "std": 0.0
+            }
+        ]
+    },
+    "05aaad344b87694079928c792fdef372": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": [
+                    0.016223197802901268,
+                    0.9312185049057007,
+                    0.004522710107266903,
+                    0.04061068594455719,
+                    0.00633203936740756,
+                    0.0010928827105090022
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.1359989196062088,
+                    0.11917370557785034,
+                    0.007639125920832157,
+                    0.6818104386329651,
+                    0.0531172938644886,
+                    0.002260530134662986
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.04564990848302841,
+                    0.11706126481294632,
+                    0.004737847484648228,
+                    0.8013817667961121,
+                    0.02798491343855858,
+                    0.0031842885073274374
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.0031794612295925617,
+                    0.002453515073284507,
+                    0.0006441237637773156,
+                    0.9899800419807434,
+                    0.0034637467470020056,
+                    0.00027908451738767326
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.9309395551681519,
+                    0.009060924872756004,
+                    0.0010357206920161843,
+                    0.054749466478824615,
+                    0.003309855470433831,
+                    0.000904493557754904
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.0005163419991731644,
+                    0.9980522394180298,
+                    0.0003193529264535755,
+                    0.00035771558759734035,
+                    0.00028256321093067527,
+                    0.000471697625471279
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.9866974949836731,
+                    0.0009424003073945642,
+                    0.0004086113767698407,
+                    0.011053342372179031,
+                    0.0006110179238021374,
+                    0.00028710655169561505
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.0012333368649706244,
+                    0.9876118302345276,
+                    0.00855430867522955,
+                    0.0017727738013491035,
+                    0.0006367242895066738,
+                    0.00019099652126897126
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.03552329167723656,
+                    0.006637761369347572,
+                    0.001952198101207614,
+                    0.946993887424469,
+                    0.008379057981073856,
+                    0.0005137963453307748
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.0004875641025137156,
+                    0.9979287385940552,
+                    0.0004345277848187834,
+                    0.00046892339014448225,
+                    0.00028470068355090916,
+                    0.00039554754039272666
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            }
+        ]
+    },
+    "1e95bec54b617d16d9d00e29814f615e": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.09341902285814285,
+                "std": 0.0
+            },
+            {
+                "score": 0.046626295894384384,
+                "std": 0.0
+            },
+            {
+                "score": 0.03716656565666199,
+                "std": 0.0
+            },
+            {
+                "score": 0.06631358712911606,
+                "std": 0.0
+            },
+            {
+                "score": 0.10442881286144257,
+                "std": 0.0
+            },
+            {
+                "score": 0.022332077845931053,
+                "std": 0.0
+            },
+            {
+                "score": 0.09104787558317184,
+                "std": 0.0
+            },
+            {
+                "score": 0.12280319631099701,
+                "std": 0.0
+            },
+            {
+                "score": 0.030789099633693695,
+                "std": 0.0
+            },
+            {
+                "score": 0.023223891854286194,
+                "std": 0.0
+            }
+        ]
+    },
+    "cdf2ec0e63bbd0e7d293e036253a4b44": {
+        "metric_name": "distinct",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.10526315789473684,
+                "std": 0.0
+            },
+            {
+                "score": 0.125,
+                "std": 0.0
+            },
+            {
+                "score": 0.14814814814814814,
+                "std": 0.0
+            },
+            {
+                "score": 0.1891891891891892,
+                "std": 0.0
+            },
+            {
+                "score": 0.1111111111111111,
+                "std": 0.0
+            },
+            {
+                "score": 0.16393442622950818,
+                "std": 0.0
+            },
+            {
+                "score": 0.15625,
+                "std": 0.0
+            },
+            {
+                "score": 0.15,
+                "std": 0.0
+            },
+            {
+                "score": 0.16666666666666666,
+                "std": 0.0
+            },
+            {
+                "score": 0.18023255813953487,
+                "std": 0.0
+            }
+        ]
+    },
+    "836213d879f4ad78df66e08b0a6fb2c2": {
+        "metric_name": "neural chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {
+            "classifier_char": "Vader"
+        },
+        "answer": [
+            {
+                "score": 0.33148887753486633,
+                "std": 0.24728287756443024
+            },
+            {
+                "score": 0.3526667058467865,
+                "std": 0.21446742117404938
+            },
+            {
+                "score": 0.43745312094688416,
+                "std": 0.32531410455703735
+            },
+            {
+                "score": 0.5835187435150146,
+                "std": 0.19569212198257446
+            },
+            {
+                "score": 0.6654592156410217,
+                "std": 0.23185615241527557
+            },
+            {
+                "score": 0.7386255264282227,
+                "std": 0.1387956291437149
+            },
+            {
+                "score": 0.5958791375160217,
+                "std": 0.2775837182998657
+            },
+            {
+                "score": 0.6604947447776794,
+                "std": 0.24680311977863312
+            },
+            {
+                "score": 0.8244593739509583,
+                "std": 0.2703433036804199
+            },
+            {
+                "score": 0.9077591896057129,
+                "std": 0.06694119423627853
+            }
+        ]
+    },
+    "1946e660e7c122e00328b39c5141ac43": {
+        "metric_name": "repetitiveness",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.4,
+                "std": 0.0
+            },
+            {
+                "score": 0.3,
+                "std": 0.0
+            },
+            {
+                "score": 0.6,
+                "std": 0.0
+            },
+            {
+                "score": 1.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.4,
+                "std": 0.0
+            },
+            {
+                "score": 1.3,
+                "std": 0.0
+            },
+            {
+                "score": 3.8,
+                "std": 0.0
+            },
+            {
+                "score": 0.5,
+                "std": 0.0
+            },
+            {
+                "score": 0.5,
+                "std": 0.0
+            },
+            {
+                "score": 3.5,
+                "std": 0.0
+            }
+        ]
+    },
+    "b82b198f406615c309c5d84e1a680f20": {
+        "metric_name": "term error rate",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 88.88888888888889,
+                "std": 0.0
+            },
+            {
+                "score": 100.0,
+                "std": 0.0
+            },
+            {
+                "score": 94.44444444444444,
+                "std": 0.0
+            },
+            {
+                "score": 94.44444444444444,
+                "std": 0.0
+            },
+            {
+                "score": 94.44444444444444,
+                "std": 0.0
+            },
+            {
+                "score": 100.0,
+                "std": 0.0
+            },
+            {
+                "score": 150.0,
+                "std": 0.0
+            },
+            {
+                "score": 94.44444444444444,
+                "std": 0.0
+            },
+            {
+                "score": 100.0,
+                "std": 0.0
+            },
+            {
+                "score": 172.22222222222223,
+                "std": 0.0
+            }
+        ]
+    },
+    "925ff48217b83b8f504a7461749849b8": {
+        "metric_name": "bertscore",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.7724868059158325,
+                "std": 0.0
+            },
+            {
+                "score": 0.6636420488357544,
+                "std": 0.0
+            },
+            {
+                "score": 0.7202168107032776,
+                "std": 0.0
+            },
+            {
+                "score": 0.754953145980835,
+                "std": 0.0
+            },
+            {
+                "score": 0.7536935806274414,
+                "std": 0.0
+            },
+            {
+                "score": 0.6930814385414124,
+                "std": 0.0
+            },
+            {
+                "score": 0.7547609210014343,
+                "std": 0.0
+            },
+            {
+                "score": 0.695192813873291,
+                "std": 0.0
+            },
+            {
+                "score": 0.6858178973197937,
+                "std": 0.0
+            },
+            {
+                "score": 0.7145442962646484,
+                "std": 0.0
+            }
+        ]
+    },
+    "d2b234bed27aa950352a817e10edbbfa": {
+        "metric_name": "comet",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 3,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                "I will not fight you."
+            ],
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": -1.3657000064849854,
+                "std": 0.0
+            },
+            {
+                "score": -1.7606441974639893,
+                "std": 0.0
+            },
+            {
+                "score": -1.4778432846069336,
+                "std": 0.0
+            },
+            {
+                "score": -0.9741343855857849,
+                "std": 0.0
+            },
+            {
+                "score": -1.013718843460083,
+                "std": 0.0
+            },
+            {
+                "score": -0.9966011643409729,
+                "std": 0.0
+            },
+            {
+                "score": -0.9224832653999329,
+                "std": 0.0
+            },
+            {
+                "score": -1.5237987041473389,
+                "std": 0.0
+            },
+            {
+                "score": -1.4904987812042236,
+                "std": 0.0
+            },
+            {
+                "score": -0.9067333340644836,
+                "std": 0.0
+            }
+        ]
+    },
+    "c52e739369c612c175ff8e2f57630e7d": {
+        "metric_name": "bleurt",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": -1.2177722454071045,
+                "std": 0.0
+            },
+            {
+                "score": -1.81069016456604,
+                "std": 0.0
+            },
+            {
+                "score": -1.4160146713256836,
+                "std": 0.0
+            },
+            {
+                "score": -1.2858928442001343,
+                "std": 0.0
+            },
+            {
+                "score": -0.8255825638771057,
+                "std": 0.0
+            },
+            {
+                "score": -1.326612114906311,
+                "std": 0.0
+            },
+            {
+                "score": -1.0913077592849731,
+                "std": 0.0
+            },
+            {
+                "score": -1.1257295608520508,
+                "std": 0.0
+            },
+            {
+                "score": -1.4073678255081177,
+                "std": 0.0
+            },
+            {
+                "score": -1.2991650104522705,
+                "std": 0.0
+            }
+        ]
+    },
+    "b06699d1cec6705bbdb0bf16615fd15a": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document0": [
+                12,
+                "Vader"
+            ],
+            "document1": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": Infinity,
+                "std": NaN
+            },
+            {
+                "score": Infinity,
+                "std": NaN
+            },
+            {
+                "score": 0.7811277952957654,
+                "std": 0.0
+            },
+            {
+                "score": 0.7767227537626539,
+                "std": 0.0
+            },
+            {
+                "score": Infinity,
+                "std": NaN
+            },
+            {
+                "score": 0.7425992095314076,
+                "std": 0.0
+            },
+            {
+                "score": 0.7369406427366467,
+                "std": 0.0
+            },
+            {
+                "score": 0.8078059832019281,
+                "std": 0.0
+            },
+            {
+                "score": 1.142166016647143,
+                "std": 0.0
+            },
+            {
+                "score": 0.7239999547849432,
+                "std": 0.0
+            }
+        ]
+    },
+    "68441ceca75e1709bd7246ff1d8c7713": {
+        "metric_name": "bartscore",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Vader"
+            ],
+            "reference": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": -3.3798635005950928
+            },
+            {
+                "score": -3.4205849170684814
+            },
+            {
+                "score": -3.5971381664276123
+            },
+            {
+                "score": -3.5411410331726074
+            },
+            {
+                "score": -3.4228131771087646
+            },
+            {
+                "score": -3.5302581787109375
+            },
+            {
+                "score": -3.42842173576355
+            },
+            {
+                "score": -3.405855655670166
+            },
+            {
+                "score": -3.355250120162964
+            },
+            {
+                "score": -3.8336429595947266
+            }
+        ]
+    },
+    "d63d6f68611768963a12b57f263194d4": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document0": [
+                12,
+                "Vader"
+            ],
+            "document1": [
+                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.8165137767791748,
+                "std": 0.0
+            },
+            {
+                "score": 0.7575757503509521,
+                "std": 0.0
+            },
+            {
+                "score": 0.8496240377426147,
+                "std": 0.0
+            },
+            {
+                "score": 0.8433734774589539,
+                "std": 0.0
+            },
+            {
+                "score": 0.7924528121948242,
+                "std": 0.0
+            },
+            {
+                "score": 0.9075630307197571,
+                "std": 0.0
+            },
+            {
+                "score": 0.9519408345222473,
+                "std": 0.0
+            },
+            {
+                "score": 0.8035714030265808,
+                "std": 0.0
+            },
+            {
+                "score": 0.7547169923782349,
+                "std": 0.0
+            },
+            {
+                "score": 0.9653379321098328,
+                "std": 0.0
+            }
+        ]
+    },
+    "a0f750ce7fb82c9a0ea3c6e4b38a7b3f": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.047619047619047616,
+                "std": 0.0
+            },
+            {
+                "score": 0.1,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.05128205128205128,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            }
+        ]
+    },
+    "b04566679265cc0f8f95b78487386bbe": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {
+            "with_barney": true,
+            "count_neighbors": true
+        },
+        "answer": [
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        ]
+    },
+    "762d90990a5b2295d1c59a0fb2652477": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {
+            "mode": "c-tf-idf"
+        },
+        "answer": [
+            {
+                "score": [
+                    0.0028041973663774636,
+                    0.0,
+                    0.0,
+                    0.0029928949031457473,
+                    0.003348364558895209,
+                    0.09093182330827962,
+                    0.0017203940793939733,
+                    0.0018384587607896622,
+                    0.0
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.021692315463655975,
+                    0.017756284830131735,
+                    0.007300627301483665,
+                    0.006461027531354956,
+                    0.010842617081523504,
+                    0.024537823448694297,
+                    0.004312256844667944,
+                    0.005269666064880624,
+                    0.05272029007245095
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.010774561820715716,
+                    0.009536827682503508,
+                    0.007796368243468936,
+                    0.013799512777593054,
+                    0.025730828629024333,
+                    0.017469357960547636,
+                    0.007271293328117828,
+                    0.0070639063464187895,
+                    0.008162361760538937
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.0,
+                    0.0032488849196973,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.01983746081482385,
+                    0.0,
+                    0.0,
+                    0.017301818397333135
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.021338907503737427,
+                    0.02117908360179024,
+                    0.01835497235984053,
+                    0.017086481030338795,
+                    0.013589748649598006,
+                    0.023900152324563384,
+                    0.015142406698509716,
+                    0.019226821059507904,
+                    0.009885969697171629
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.009024591376961637,
+                    0.011393148289312299,
+                    0.014057213106425593,
+                    0.008412281849435316,
+                    0.02555540692302403,
+                    0.10964580179577754,
+                    0.004809899694896573,
+                    0.006579773411456704,
+                    0.01035048039862857
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.027659378696048988,
+                    0.017048626451775344,
+                    0.006154142503780657,
+                    0.009043777632237404,
+                    0.019376090985700405,
+                    0.0,
+                    0.014139406673174431,
+                    0.013844069301476823,
+                    0.02580873082034949
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.14364388904114708,
+                    0.0004985988731114697,
+                    0.16304207436555948,
+                    0.17314994250387578,
+                    0.16277454861068155,
+                    0.06393259622760003,
+                    0.08985446951177781,
+                    0.0967594923251435,
+                    0.21052499065054187
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.021096281951398697,
+                    0.03164089512549523,
+                    0.00868537282882062,
+                    0.03289001327919698,
+                    0.03506752907596014,
+                    0.23925395901050467,
+                    0.009307729187693363,
+                    0.011142681662125141,
+                    0.030219937794253908
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            }
+        ]
+    },
+    "0cf92a460a4eedc239981b54ca010f93": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "I will not fight you."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 1.3,
+                "std": 0.0
+            },
+            {
+                "score": -2.7,
+                "std": 0.0
+            },
+            {
+                "score": 0.9,
+                "std": 0.0
+            },
+            {
+                "score": -2.1,
+                "std": 0.0
+            },
+            {
+                "score": -2.3,
+                "std": 0.0
+            },
+            {
+                "score": 0.9,
+                "std": 0.0
+            },
+            {
+                "score": 2.1,
+                "std": 0.0
+            },
+            {
+                "score": 0.5,
+                "std": 0.0
+            },
+            {
+                "score": -1.9,
+                "std": 0.0
+            },
+            {
+                "score": 4.0,
+                "std": 0.0
+            }
+        ]
+    },
+    "3b7f352d1aca3f6a0fee4b943a56d6aa": {
+        "metric_name": "google bleu",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.046511627906976744,
+                "std": 0.0
+            },
+            {
+                "score": 0.029411764705882353,
+                "std": 0.0
+            },
+            {
+                "score": 0.02112676056338028,
+                "std": 0.0
+            },
+            {
+                "score": 0.11764705882352941,
+                "std": 0.0
+            },
+            {
+                "score": 0.018518518518518517,
+                "std": 0.0
+            },
+            {
+                "score": 0.029411764705882353,
+                "std": 0.0
+            },
+            {
+                "score": 0.3235294117647059,
+                "std": 0.0
+            },
+            {
+                "score": 0.029411764705882353,
+                "std": 0.0
+            },
+            {
+                "score": 0.14705882352941177,
+                "std": 0.0
+            },
+            {
+                "score": 0.059322033898305086,
+                "std": 0.0
+            }
+        ]
+    },
+    "6006521a3abe1c0bb910c527e72b9310": {
+        "metric_name": "mpnet embedding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document0": [
+                12,
+                "Barney"
+            ],
+            "document1": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.42082706093788147,
+                "std": 0.0
+            },
+            {
+                "score": 0.3012784421443939,
+                "std": 0.0
+            },
+            {
+                "score": 0.24272792041301727,
+                "std": 0.0
+            },
+            {
+                "score": 0.7247164249420166,
+                "std": 0.0
+            },
+            {
+                "score": 0.29905450344085693,
+                "std": 0.0
+            },
+            {
+                "score": 0.27579134702682495,
+                "std": 0.0
+            },
+            {
+                "score": 0.8804501891136169,
+                "std": 0.0
+            },
+            {
+                "score": 0.1779053509235382,
+                "std": 0.0
+            },
+            {
+                "score": 0.2044784426689148,
+                "std": 0.0
+            },
+            {
+                "score": 0.17855626344680786,
+                "std": 0.0
+            }
+        ]
+    },
+    "bd4a7143d71c2c87d9c81444aa1fd81b": {
+        "metric_name": "rouge l",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.27586206896551724,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.04545454545454545,
+                "std": 0.0
+            },
+            {
+                "score": 0.23529411764705882,
+                "std": 0.0
+            },
+            {
+                "score": 0.1,
+                "std": 0.0
+            },
+            {
+                "score": 0.125,
+                "std": 0.0
+            },
+            {
+                "score": 0.7142857142857143,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.5714285714285715,
+                "std": 0.0
+            },
+            {
+                "score": 0.10526315789473685,
+                "std": 0.0
+            }
+        ]
+    },
+    "5b792c2a1a7ddb6ef6ff5f2097493980": {
+        "metric_name": "meteor",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.45231071779744353,
+                "std": 0.0
+            },
+            {
+                "score": 0.05154639175257732,
+                "std": 0.0
+            },
+            {
+                "score": 0.11538461538461538,
+                "std": 0.0
+            },
+            {
+                "score": 0.25555555555555554,
+                "std": 0.0
+            },
+            {
+                "score": 0.14285714285714285,
+                "std": 0.0
+            },
+            {
+                "score": 0.10101010101010102,
+                "std": 0.0
+            },
+            {
+                "score": 0.600907029478458,
+                "std": 0.0
+            },
+            {
+                "score": 0.10204081632653061,
+                "std": 0.0
+            },
+            {
+                "score": 0.45510204081632655,
+                "std": 0.0
+            },
+            {
+                "score": 0.34386200716845877,
+                "std": 0.0
+            }
+        ]
+    },
+    "f0af5c6321eb3257cc48ebe6e93ca3cc": {
+        "metric_name": "emotion classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": [
+                    0.022421350702643394,
+                    0.0012736894423142076,
+                    0.00044787739170715213,
+                    0.9741072058677673,
+                    0.0015640411293134093,
+                    0.00018579274183139205
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.6311329007148743,
+                    0.00593560840934515,
+                    0.0012290161103010178,
+                    0.3589939773082733,
+                    0.0017682056641206145,
+                    0.0009403451695106924
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.02169860526919365,
+                    0.31495580077171326,
+                    0.002445170423015952,
+                    0.6221386790275574,
+                    0.035187117755413055,
+                    0.0035745908971875906
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.0006414809031412005,
+                    0.9969373941421509,
+                    0.00043123975046910346,
+                    0.000932225666474551,
+                    0.0007598057854920626,
+                    0.0002977736003231257
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.004752787295728922,
+                    0.00533923739567399,
+                    0.0005899823736399412,
+                    0.9668635725975037,
+                    0.021650737151503563,
+                    0.0008036912186071277
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.0005131844081915915,
+                    0.9963850975036621,
+                    0.00038403351209126413,
+                    0.0008475376525893807,
+                    0.0014423199463635683,
+                    0.00042783524258993566
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.018839340656995773,
+                    0.016949666664004326,
+                    0.0026320640463382006,
+                    0.8727741241455078,
+                    0.0870615541934967,
+                    0.0017433853354305029
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.052509669214487076,
+                    0.13512174785137177,
+                    0.0036250746343284845,
+                    0.795146644115448,
+                    0.012268775142729282,
+                    0.0013280834536999464
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.011169474571943283,
+                    0.012884275987744331,
+                    0.001493218820542097,
+                    0.7733597159385681,
+                    0.1986682116985321,
+                    0.0024250661954283714
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            },
+            {
+                "score": [
+                    0.003908326383680105,
+                    0.004457743838429451,
+                    0.0006625383393839002,
+                    0.9506009817123413,
+                    0.03981616348028183,
+                    0.0005542123108170927
+                ],
+                "std": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "label": [
+                    "sadness",
+                    "joy",
+                    "love",
+                    "anger",
+                    "fear",
+                    "surprise"
+                ]
+            }
+        ]
+    },
+    "81f6572f9407ba02a20ce33eae9552e3": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.298549085855484,
+                "std": 0.0
+            },
+            {
+                "score": 0.055809393525123596,
+                "std": 0.0
+            },
+            {
+                "score": 0.03843824565410614,
+                "std": 0.0
+            },
+            {
+                "score": 0.8015159964561462,
+                "std": 0.0
+            },
+            {
+                "score": 0.011258108541369438,
+                "std": 0.0
+            },
+            {
+                "score": 0.25827065110206604,
+                "std": 0.0
+            },
+            {
+                "score": 0.8960195779800415,
+                "std": 0.0
+            },
+            {
+                "score": 0.06175138056278229,
+                "std": 0.0
+            },
+            {
+                "score": 0.17544227838516235,
+                "std": 0.0
+            },
+            {
+                "score": 0.07810114324092865,
+                "std": 0.0
+            }
+        ]
+    },
+    "6644da323531cfdd5791bfebb1d33d64": {
+        "metric_name": "distinct",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.16521739130434782,
+                "std": 0.0
+            },
+            {
+                "score": 0.12,
+                "std": 0.0
+            },
+            {
+                "score": 0.1949685534591195,
+                "std": 0.0
+            },
+            {
+                "score": 0.15625,
+                "std": 0.0
+            },
+            {
+                "score": 0.20833333333333334,
+                "std": 0.0
+            },
+            {
+                "score": 0.2,
+                "std": 0.0
+            },
+            {
+                "score": 0.16,
+                "std": 0.0
+            },
+            {
+                "score": 0.15384615384615385,
+                "std": 0.0
+            },
+            {
+                "score": 0.13793103448275862,
+                "std": 0.0
+            },
+            {
+                "score": 0.18796992481203006,
+                "std": 0.0
+            }
+        ]
+    },
+    "2ac91a1f6fe1b24b13ec84b7f855b2a4": {
+        "metric_name": "neural chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {
+            "classifier_char": "Barney"
+        },
+        "answer": [
+            {
+                "score": 0.9872376918792725,
+                "std": 0.02592119388282299
+            },
+            {
+                "score": 0.6145961880683899,
+                "std": 0.43838948011398315
+            },
+            {
+                "score": 0.5597754120826721,
+                "std": 0.40195825695991516
+            },
+            {
+                "score": 0.2005591243505478,
+                "std": 0.36243540048599243
+            },
+            {
+                "score": 0.4959650933742523,
+                "std": 0.47701606154441833
+            },
+            {
+                "score": 0.25789859890937805,
+                "std": 0.35273557901382446
+            },
+            {
+                "score": 0.8542631268501282,
+                "std": 0.150433748960495
+            },
+            {
+                "score": 0.9999914169311523,
+                "std": 1.0158060831599869e-05
+            },
+            {
+                "score": 0.9999974370002747,
+                "std": 2.827715434250422e-06
+            },
+            {
+                "score": 0.9999927878379822,
+                "std": 5.6623889577167574e-06
+            }
+        ]
+    },
+    "5b850668f4cab31cf5e84fa5fb0accb9": {
+        "metric_name": "repetitiveness",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 2.2,
+                "std": 0.0
+            },
+            {
+                "score": 0.5,
+                "std": 0.0
+            },
+            {
+                "score": 3.7,
+                "std": 0.0
+            },
+            {
+                "score": 0.7,
+                "std": 0.0
+            },
+            {
+                "score": 1.3,
+                "std": 0.0
+            },
+            {
+                "score": 0.9,
+                "std": 0.0
+            },
+            {
+                "score": 0.6,
+                "std": 0.0
+            },
+            {
+                "score": 0.6,
+                "std": 0.0
+            },
+            {
+                "score": 0.6,
+                "std": 0.0
+            },
+            {
+                "score": 2.9,
+                "std": 0.0
+            }
+        ]
+    },
+    "869233490311507b6c99f56ed69df183": {
+        "metric_name": "term error rate",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 237.5,
+                "std": 0.0
+            },
+            {
+                "score": 100.0,
+                "std": 0.0
+            },
+            {
+                "score": 400.0,
+                "std": 0.0
+            },
+            {
+                "score": 75.0,
+                "std": 0.0
+            },
+            {
+                "score": 150.0,
+                "std": 0.0
+            },
+            {
+                "score": 100.0,
+                "std": 0.0
+            },
+            {
+                "score": 37.5,
+                "std": 0.0
+            },
+            {
+                "score": 100.0,
+                "std": 0.0
+            },
+            {
+                "score": 50.0,
+                "std": 0.0
+            },
+            {
+                "score": 325.0,
+                "std": 0.0
+            }
+        ]
+    },
+    "689bdcfe4ac1caba9dc8511353bab33a": {
+        "metric_name": "bertscore",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.7332802414894104,
+                "std": 0.0
+            },
+            {
+                "score": 0.7372366189956665,
+                "std": 0.0
+            },
+            {
+                "score": 0.6900606155395508,
+                "std": 0.0
+            },
+            {
+                "score": 0.7538647055625916,
+                "std": 0.0
+            },
+            {
+                "score": 0.7037937045097351,
+                "std": 0.0
+            },
+            {
+                "score": 0.7161977291107178,
+                "std": 0.0
+            },
+            {
+                "score": 0.8733206987380981,
+                "std": 0.0
+            },
+            {
+                "score": 0.6645330786705017,
+                "std": 0.0
+            },
+            {
+                "score": 0.8252564668655396,
+                "std": 0.0
+            },
+            {
+                "score": 0.7112306952476501,
+                "std": 0.0
+            }
+        ]
+    },
+    "1d83a26fcffd27719afac5a1bb9114bc": {
+        "metric_name": "comet",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 3,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                "Barney, this is about the building."
+            ],
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": -1.2295200824737549,
+                "std": 0.0
+            },
+            {
+                "score": -1.3640871047973633,
+                "std": 0.0
+            },
+            {
+                "score": -1.410437822341919,
+                "std": 0.0
+            },
+            {
+                "score": -0.15627159178256989,
+                "std": 0.0
+            },
+            {
+                "score": -0.8375906348228455,
+                "std": 0.0
+            },
+            {
+                "score": -1.1675935983657837,
+                "std": 0.0
+            },
+            {
+                "score": 0.4884725511074066,
+                "std": 0.0
+            },
+            {
+                "score": -1.5419384241104126,
+                "std": 0.0
+            },
+            {
+                "score": -0.2853378355503082,
+                "std": 0.0
+            },
+            {
+                "score": -1.5452609062194824,
+                "std": 0.0
+            }
+        ]
+    },
+    "fcd1a78186e45d9bfed14302a4cee98f": {
+        "metric_name": "bleurt",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": -1.3626177310943604,
+                "std": 0.0
+            },
+            {
+                "score": -1.7282220125198364,
+                "std": 0.0
+            },
+            {
+                "score": -1.5534873008728027,
+                "std": 0.0
+            },
+            {
+                "score": -0.03808927908539772,
+                "std": 0.0
+            },
+            {
+                "score": -1.383285641670227,
+                "std": 0.0
+            },
+            {
+                "score": -0.9301585555076599,
+                "std": 0.0
+            },
+            {
+                "score": -0.3693649172782898,
+                "std": 0.0
+            },
+            {
+                "score": -1.4993623495101929,
+                "std": 0.0
+            },
+            {
+                "score": -1.3932442665100098,
+                "std": 0.0
+            },
+            {
+                "score": -1.2826886177062988,
+                "std": 0.0
+            }
+        ]
+    },
+    "fc3480de8a4c0d54dcf1ab1f170aeb32": {
+        "metric_name": "word mover distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 1,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document0": [
+                12,
+                "Barney"
+            ],
+            "document1": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 1.1822056829762588,
+                "std": 0.0
+            },
+            {
+                "score": Infinity,
+                "std": NaN
+            },
+            {
+                "score": 1.1550469034570838,
+                "std": 0.0
+            },
+            {
+                "score": 0.731761090875313,
+                "std": 0.0
+            },
+            {
+                "score": 1.21962485313304,
+                "std": 0.0
+            },
+            {
+                "score": 1.2191643917185842,
+                "std": 0.0
+            },
+            {
+                "score": 0.7749513877093318,
+                "std": 0.0
+            },
+            {
+                "score": 0.8961292786907207,
+                "std": 0.0
+            },
+            {
+                "score": Infinity,
+                "std": NaN
+            },
+            {
+                "score": 1.1937268648059132,
+                "std": 0.0
+            }
+        ]
+    },
+    "9592ed44d184020677a523ca97ef8da2": {
+        "metric_name": "bartscore",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "predictor": [
+                12,
+                "Barney"
+            ],
+            "reference": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": -3.586169958114624
+            },
+            {
+                "score": -3.906346559524536
+            },
+            {
+                "score": -3.7803478240966797
+            },
+            {
+                "score": -3.64630389213562
+            },
+            {
+                "score": -3.859205961227417
+            },
+            {
+                "score": -4.165988445281982
+            },
+            {
+                "score": -2.712712049484253
+            },
+            {
+                "score": -3.7789618968963623
+            },
+            {
+                "score": -3.8308918476104736
+            },
+            {
+                "score": -3.9517288208007812
+            }
+        ]
+    },
+    "f4ef0d4afa51e9ad8cd181c02bf9d8cd": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document0": [
+                12,
+                "Barney"
+            ],
+            "document1": [
+                "Come on. This is so about the girl."
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.949999988079071,
+                "std": 0.0
+            },
+            {
+                "score": 0.8529411554336548,
+                "std": 0.0
+            },
+            {
+                "score": 0.9776951670646667,
+                "std": 0.0
+            },
+            {
+                "score": 0.8513513803482056,
+                "std": 0.0
+            },
+            {
+                "score": 0.9306930899620056,
+                "std": 0.0
+            },
+            {
+                "score": 0.8591549396514893,
+                "std": 0.0
+            },
+            {
+                "score": 0.8307692408561707,
+                "std": 0.0
+            },
+            {
+                "score": 0.8307692408561707,
+                "std": 0.0
+            },
+            {
+                "score": 0.8591549396514893,
+                "std": 0.0
+            },
+            {
+                "score": 0.9521738886833191,
+                "std": 0.0
+            }
+        ]
+    },
+    "2c4d6b164d8a4a8d2b4e63482aa23ed1": {
+        "metric_name": "t5 grammar correction edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 2,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.0,
+                "std": 0.0
+            },
+            {
+                "score": 0.02962962962962963,
+                "std": 0.0
+            }
+        ]
+    },
+    "5b6b754daa84993ea9424403ed5212cf": {
+        "metric_name": "distilbert-embedded chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 1,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {
+            "with_barney": true,
+            "count_neighbors": true
+        },
+        "answer": [
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            {
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe"
+                ],
+                "score": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        ]
+    },
+    "24677c316f4dbb31fefd75c05a89c092": {
+        "metric_name": "frequency chatbot classifier",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {
+            "mode": "c-tf-idf"
+        },
+        "answer": [
+            {
+                "score": [
+                    0.029142514698773287,
+                    0.03287157756057796,
+                    0.008946703481372505,
+                    0.02826392198819112,
+                    0.013440403185688569,
+                    0.02320689554077163,
+                    0.011378210612514476,
+                    0.013952294709715025,
+                    0.029433298574843447
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.056408508161838136,
+                    0.0006419697971365271,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.00033383231777242567,
+                    0.00035674207240914797,
+                    0.00027481091503844525
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.11211387208310805,
+                    0.08296884050887962,
+                    0.06707892976269503,
+                    0.09497676372030646,
+                    0.08441190199066657,
+                    0.015880363238757012,
+                    0.07784715230667641,
+                    0.06993436922846144,
+                    0.12602379120025808
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.10951351065603776,
+                    0.038983069328073286,
+                    0.016756428203482544,
+                    0.046836749932246916,
+                    0.05105631064548101,
+                    0.006228715042187666,
+                    0.06811814977226774,
+                    0.046584072436750536,
+                    0.10355147922422304
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.09296253001812547,
+                    0.057655085577195224,
+                    0.06915449019224627,
+                    0.08672379415780239,
+                    0.08818659762544567,
+                    0.006104943328288957,
+                    0.11637230948147216,
+                    0.1047559684140554,
+                    0.08729738350222947
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.10385609366894036,
+                    0.08617072425542854,
+                    0.027386922942381653,
+                    0.10440532168357095,
+                    0.08274322915119528,
+                    0.006739787008245161,
+                    0.09210575031084277,
+                    0.09199430868099734,
+                    0.14804109660217368
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.1198766579917985,
+                    0.011581966352982706,
+                    0.01832568696185203,
+                    0.016218163604579047,
+                    0.024192552019054157,
+                    0.0,
+                    0.033665029651674366,
+                    0.01826440537808456,
+                    0.019185969905709983
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.10716174792301927,
+                    0.1277705216899977,
+                    0.05473496440249908,
+                    0.04978579846311138,
+                    0.042150531356501764,
+                    0.01022040707763826,
+                    0.06574445824490359,
+                    0.06571027838859066,
+                    0.06048802868905497
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.015543835978004407,
+                    0.013758228660613823,
+                    0.008033834773918678,
+                    0.0023699711231707746,
+                    0.005302910774507508,
+                    0.0,
+                    0.004768124331807504,
+                    0.005095344174535739,
+                    0.005046585566610793
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            },
+            {
+                "score": [
+                    0.06718585549240308,
+                    0.047027761229180294,
+                    0.017044804481364754,
+                    0.02776105267559604,
+                    0.02475942391932585,
+                    0.004201864653241344,
+                    0.03871784205376536,
+                    0.02767342050719649,
+                    0.05308821672453519
+                ],
+                "label": [
+                    "Barney",
+                    "Sheldon",
+                    "Harry",
+                    "Fry",
+                    "Bender",
+                    "Vader",
+                    "Joey",
+                    "Phoebe",
+                    "Default"
+                ]
+            }
+        ]
+    },
+    "504fb1538fe9bff8e772e8d0aca4f475": {
+        "metric_name": "flesch-kincaid index",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 1,
+        "metric_determinism": 0,
+        "reference_set": [
+            "Barney, this is about the building."
+        ],
+        "metric_actors": {
+            "document": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "answer": [
+            {
+                "score": 7.9,
+                "std": 0.0
+            },
+            {
+                "score": 2.9,
+                "std": 0.0
+            },
+            {
+                "score": 2.9,
+                "std": 0.0
+            },
+            {
+                "score": 0.1,
+                "std": 0.0
+            },
+            {
+                "score": -0.4,
+                "std": 0.0
+            },
+            {
+                "score": 0.5,
+                "std": 0.0
+            },
+            {
+                "score": -1.5,
+                "std": 0.0
+            },
+            {
+                "score": 0.9,
+                "std": 0.0
+            },
+            {
+                "score": 0.9,
+                "std": 0.0
+            },
+            {
+                "score": 4.4,
+                "std": 0.0
+            }
+        ]
+    }
+}

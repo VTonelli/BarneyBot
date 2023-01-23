@@ -416,6 +416,13 @@ class DistilBertClassifier:
                 embeddings, return_distance=False).ravel()
         else:
             predictions = self.classifier.predict(embeddings)
+        
+        predictions_count = np.zeros(len(self.characters))
+        for pred in predictions:
+            predictions_count[pred] += 1
+        predictions_count = predictions_count / float(sum(predictions_count))
 
-        predictions = np.array(list(collections.Counter(predictions).values()))
-        return predictions / sum(predictions)
+        # ### softmax
+        # predictions = np.exp(predictions) / sum(np.exp(predictions))
+
+        return predictions_count
