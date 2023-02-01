@@ -53,7 +53,7 @@ def get_metric_arity(metric_name):
     if metric_name == 'google bleu' or metric_name == 'rouge l' or \
        metric_name == 'mpnet embedding similarity' or metric_name == 'roberta crossencoding similarity' or \
        metric_name == 'meteor' or metric_name == 'neural chatbot classifier' or metric_name == 'perplexity' or \
-       metric_name == 'bertscore' or metric_name == 'term error rate' or metric_name == 'bleurt' or metric_name == 'bartscore' or \
+       metric_name == 'bertscore' or metric_name == 'translation error rate' or metric_name == 'bleurt' or metric_name == 'bartscore' or \
        metric_name == "word mover distance" or metric_name == "extended edit distance":
         return MetricArity.PAIRWISE
     elif metric_name == 'distinct' or metric_name == 'emotion classifier' or metric_name == 'lines count' or \
@@ -89,7 +89,7 @@ def get_metric_determinism(metric_name, metric_version):
         return MetricDeterminism.NEURAL
     elif metric_name == 'repetitiveness' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
-    elif metric_name == 'term error rate' and metric_version == 1:
+    elif metric_name == 'translation error rate' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
     elif metric_name == 'bertscore' and metric_version == 1:
         return MetricDeterminism.NEURAL

@@ -30,7 +30,7 @@ class MetricsMTEnum(EnumBase):
     COMET = "COMET"
     EXTENDEDEDIT_DIST = "Extended Edit Distance"
     ROUGE = "Rouge L"
-    BERTSCORE = "BERTScore"
+    TRANSERRORRATE = "Translation Error Rate"
 
 class MetricsTGEnum(EnumBase):
     """Enumeration of all enable metrics for Text Generation (TG) used in this project"""
@@ -40,12 +40,12 @@ class MetricsTGEnum(EnumBase):
     PERPLEXITY = "Perplexity"
     FKGL = "Flesch-Kincaid Index"
     T5GRAMCORREDIT_DIST = "T5 Grammar Correction Edit Distance"
-    TERMERRORRATE = "Term Error Rate"
-    WORDMOVER_DIST = "Word Mover Distance"
 
 class MetricsSSIMEnum(EnumBase):
     MPNETEM_SIM = "MPNet Embedding Similarity"
     ROBERTACROSS_CLS = "RoBERTa Cross-Encoding Similarity"
+    #WORDMOVER_DIST = "Word Mover Distance"
+    BERTSCORE = "BERTScore"
 
 class MetricsClsEnum(EnumBase):
     EMOTION_CLS = "Emotion Classifier"
@@ -60,7 +60,7 @@ class BBMetric:
         "google bleu", "mpnet embedding similarity", "rouge l", "meteor",
         "emotion classifier", "roberta crossencoding similarity", "distinct",
         "neural chatbot classifier", "perplexity", "repetitiveness",
-        "term error rate", "bertscore", "comet", "bleurt",
+        "translation error rate", "bertscore", "comet", "bleurt",
         "word mover distance", "bartscore", "extended edit distance",
         "t5 grammar correction edit distance",
         "distilbert-embedded chatbot classifier",
@@ -127,14 +127,14 @@ class BBMetric:
             self.return_args = ['score', 'std']
             self.save_actors = ['document']
             self.pretty_name = "Repetitiveness"
-        elif name == "term error rate":
+        elif name == "translation error rate":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
             self.train_require_args = set()
             self.train_optional_args = set()
             self.return_args = ['score', 'std']
             self.save_actors = ['predictor', 'reference']
-            self.pretty_name = "Term Error Rate"
+            self.pretty_name = "Translation Error Rate"
         elif name == "meteor":
             self.compute_require_args = set(["predictions", "references"])
             self.compute_optional_args = set()
@@ -292,7 +292,7 @@ class BBMetric:
                 name,
                 NLGMetricverse(
                     metrics=nlgmetricverse.load_metric("bartscore")))
-        elif name == "term error rate":
+        elif name == "translation error rate":
             metric = BBMetric(name, evaluate.load('ter'))
         elif name == "word mover distance":
             metric = BBMetric(name, lambda a, b: wmd(a, b))
@@ -518,7 +518,7 @@ class BBMetric:
             # Write mean and std of these scores
             result['score'] = np.mean(np.array(single_outputs))
             result['std'] = np.std(np.array(single_outputs))
-        elif self.name == "term error rate":
+        elif self.name == "translation error rate":
             # Cast predictions and references as lists
             predictions = kwargs['predictions'] if type(
                 kwargs['predictions']) is list else [kwargs['predictions']]
@@ -684,7 +684,7 @@ class BBMetric:
         # If the metric does not require training, simply return
         if self.name == "google bleu" or \
            self.name == "repetitiveness" or \
-           self.name == "term error rate" or \
+           self.name == "translation error rate" or \
            self.name == "meteor" or \
            self.name == "mpnet embedding similarity" or \
            self.name == "rouge l" or \
