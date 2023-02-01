@@ -3,7 +3,8 @@ import subprocess
 import sys
 import shlex
 
-BASE_FOLDER = None
+# BASE_FOLDER = None
+BASE_FOLDER = 'C:\\Users\\User\\Documents\\Unibo\\NLP\\BarneyBot\\'
 
 def set_folder(path):
     if not os.path.exists(path):
