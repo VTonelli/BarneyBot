@@ -44,7 +44,7 @@ class MetricsTGEnum(EnumBase):
 class MetricsSSIMEnum(EnumBase):
     MPNETEM_SIM = "MPNet Embedding Similarity"
     ROBERTACROSS_CLS = "RoBERTa Cross-Encoding Similarity"
-    #WORDMOVER_DIST = "Word Mover Distance"
+    WORDMOVER_DIST = "Word Mover Distance"
     BERTSCORE = "BERTScore"
 
 class MetricsClsEnum(EnumBase):

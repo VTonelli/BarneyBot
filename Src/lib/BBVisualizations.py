@@ -231,7 +231,7 @@ class BBVisualization:
                             if (F_is_actor) and (v['reference_set'] == c + '_df'): 
                                 mt_dict[c].append(v['answer']['score'])    
                 # set the title
-                title = PlotsEnum.TG.value + ' plot'
+                title = PlotsEnum.SS.value + ' plot'
             else:
                 # initialize the dictionary containing the test results foreach character
                 mt_dict = {'metrics': metrics_list} | \
