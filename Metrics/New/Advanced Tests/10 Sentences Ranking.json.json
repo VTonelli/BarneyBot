@@ -684,72 +684,29 @@
             }
         ]
     },
-    "cdf2ec0e63bbd0e7d293e036253a4b44": {
-        "metric_name": "distinct",
-        "metric_version": 1,
-        "metric_attempt": 0,
-        "context": {
-            "dialogpt_size": "small",
-            "dialogpt_context_sentences": 5,
-            "dialogpt_nbeams_beams": 3,
-            "dialogpt_sample_top_p": 0.92,
-            "dialogpt_sample_top_k": 50
-        },
-        "metric_arity": 1,
-        "metric_determinism": 0,
-        "reference_set": [
-            "I will not fight you."
-        ],
-        "metric_actors": {
-            "document": [
-                12,
-                "Vader"
-            ]
-        },
-        "metric_params": {},
-        "answer": [
-            {
-                "score": 0.10526315789473684,
-                "std": 0.0
-            },
-            {
-                "score": 0.125,
-                "std": 0.0
-            },
-            {
-                "score": 0.14814814814814814,
-                "std": 0.0
-            },
-            {
-                "score": 0.1891891891891892,
-                "std": 0.0
-            },
-            {
-                "score": 0.1111111111111111,
-                "std": 0.0
-            },
-            {
-                "score": 0.16393442622950818,
-                "std": 0.0
-            },
-            {
-                "score": 0.15625,
-                "std": 0.0
-            },
-            {
-                "score": 0.15,
-                "std": 0.0
-            },
-            {
-                "score": 0.16666666666666666,
-                "std": 0.0
-            },
-            {
-                "score": 0.18023255813953487,
-                "std": 0.0
-            }
-        ]
-    },
+    "cdf2ec0e63bbd0e7d293e036253a4b44": {"metric_name": "distinct",
+  "metric_version": 1,
+  "metric_attempt": 0,
+  "context": {"dialogpt_size": "small",
+   "dialogpt_context_sentences": 5,
+   "dialogpt_nbeams_beams": 3,
+   "dialogpt_sample_top_p": 0.92,
+   "dialogpt_sample_top_k": 50},
+  "metric_arity": <MetricArity.SINGLE: 1>,
+  "metric_determinism": <MetricDeterminism.DETERMINISTIC: 0>,
+  "reference_set": ["I will not fight you."],
+  "metric_actors": {"document": (<MetricActor.DIALOGPT_SAMPLE: 12>, "Vader")},
+  "metric_params": {},
+  "answer": [{"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 0.8928571428571429, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0}]},
     "836213d879f4ad78df66e08b0a6fb2c2": {
         "metric_name": "neural chatbot classifier",
         "metric_version": 1,
@@ -2640,72 +2597,29 @@
             }
         ]
     },
-    "6644da323531cfdd5791bfebb1d33d64": {
-        "metric_name": "distinct",
-        "metric_version": 1,
-        "metric_attempt": 0,
-        "context": {
-            "dialogpt_size": "small",
-            "dialogpt_context_sentences": 5,
-            "dialogpt_nbeams_beams": 3,
-            "dialogpt_sample_top_p": 0.92,
-            "dialogpt_sample_top_k": 50
-        },
-        "metric_arity": 1,
-        "metric_determinism": 0,
-        "reference_set": [
-            "Barney, this is about the building."
-        ],
-        "metric_actors": {
-            "document": [
-                12,
-                "Barney"
-            ]
-        },
-        "metric_params": {},
-        "answer": [
-            {
-                "score": 0.16521739130434782,
-                "std": 0.0
-            },
-            {
-                "score": 0.12,
-                "std": 0.0
-            },
-            {
-                "score": 0.1949685534591195,
-                "std": 0.0
-            },
-            {
-                "score": 0.15625,
-                "std": 0.0
-            },
-            {
-                "score": 0.20833333333333334,
-                "std": 0.0
-            },
-            {
-                "score": 0.2,
-                "std": 0.0
-            },
-            {
-                "score": 0.16,
-                "std": 0.0
-            },
-            {
-                "score": 0.15384615384615385,
-                "std": 0.0
-            },
-            {
-                "score": 0.13793103448275862,
-                "std": 0.0
-            },
-            {
-                "score": 0.18796992481203006,
-                "std": 0.0
-            }
-        ]
-    },
+    "6644da323531cfdd5791bfebb1d33d64": {"metric_name": "distinct",
+  "metric_version": 1,
+  "metric_attempt": 0,
+  "context": {"dialogpt_size": "small",
+   "dialogpt_context_sentences": 5,
+   "dialogpt_nbeams_beams": 3,
+   "dialogpt_sample_top_p": 0.92,
+   "dialogpt_sample_top_k": 50},
+  "metric_arity": <MetricArity.SINGLE: 1>,
+  "metric_determinism": <MetricDeterminism.DETERMINISTIC: 0>,
+  "reference_set": ["Barney, this is about the building."],
+  "metric_actors": {"document": (<MetricActor.DIALOGPT_SAMPLE: 12>, "Barney")},
+  "metric_params": {},
+  "answer": [{"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0},
+   {"score": 1.0, "std": 0.0}]},
     "2ac91a1f6fe1b24b13ec84b7f855b2a4": {
         "metric_name": "neural chatbot classifier",
         "metric_version": 1,
