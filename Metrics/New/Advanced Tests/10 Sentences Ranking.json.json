@@ -692,10 +692,10 @@
    "dialogpt_nbeams_beams": 3,
    "dialogpt_sample_top_p": 0.92,
    "dialogpt_sample_top_k": 50},
-  "metric_arity": <MetricArity.SINGLE: 1>,
-  "metric_determinism": <MetricDeterminism.DETERMINISTIC: 0>,
+  "metric_arity": 1,
+  "metric_determinism": 0,
   "reference_set": ["I will not fight you."],
-  "metric_actors": {"document": (<MetricActor.DIALOGPT_SAMPLE: 12>, "Vader")},
+  "metric_actors": {"document": [12, "Vader"]},
   "metric_params": {},
   "answer": [{"score": 1.0, "std": 0.0},
    {"score": 1.0, "std": 0.0},
@@ -1116,75 +1116,6 @@
             },
             {
                 "score": -1.2991650104522705,
-                "std": 0.0
-            }
-        ]
-    },
-    "b06699d1cec6705bbdb0bf16615fd15a": {
-        "metric_name": "word mover distance",
-        "metric_version": 1,
-        "metric_attempt": 0,
-        "context": {
-            "dialogpt_size": "small",
-            "dialogpt_context_sentences": 5,
-            "dialogpt_nbeams_beams": 3,
-            "dialogpt_sample_top_p": 0.92,
-            "dialogpt_sample_top_k": 50
-        },
-        "metric_arity": 2,
-        "metric_determinism": 1,
-        "reference_set": [
-            "I will not fight you."
-        ],
-        "metric_actors": {
-            "document0": [
-                12,
-                "Vader"
-            ],
-            "document1": [
-                "Give yourself to the dark side. It is the only way you can save your friends. Yes, your"
-            ]
-        },
-        "metric_params": {},
-        "answer": [
-            {
-                "score": Infinity,
-                "std": NaN
-            },
-            {
-                "score": Infinity,
-                "std": NaN
-            },
-            {
-                "score": 0.7811277952957654,
-                "std": 0.0
-            },
-            {
-                "score": 0.7767227537626539,
-                "std": 0.0
-            },
-            {
-                "score": Infinity,
-                "std": NaN
-            },
-            {
-                "score": 0.7425992095314076,
-                "std": 0.0
-            },
-            {
-                "score": 0.7369406427366467,
-                "std": 0.0
-            },
-            {
-                "score": 0.8078059832019281,
-                "std": 0.0
-            },
-            {
-                "score": 1.142166016647143,
-                "std": 0.0
-            },
-            {
-                "score": 0.7239999547849432,
                 "std": 0.0
             }
         ]
@@ -2605,10 +2536,10 @@
    "dialogpt_nbeams_beams": 3,
    "dialogpt_sample_top_p": 0.92,
    "dialogpt_sample_top_k": 50},
-  "metric_arity": <MetricArity.SINGLE: 1>,
-  "metric_determinism": <MetricDeterminism.DETERMINISTIC: 0>,
+  "metric_arity": 1,
+  "metric_determinism": 0,
   "reference_set": ["Barney, this is about the building."],
-  "metric_actors": {"document": (<MetricActor.DIALOGPT_SAMPLE: 12>, "Barney")},
+  "metric_actors": {"document": [12, "Barney"]},
   "metric_params": {},
   "answer": [{"score": 1.0, "std": 0.0},
    {"score": 1.0, "std": 0.0},
@@ -3029,75 +2960,6 @@
             },
             {
                 "score": -1.2826886177062988,
-                "std": 0.0
-            }
-        ]
-    },
-    "fc3480de8a4c0d54dcf1ab1f170aeb32": {
-        "metric_name": "word mover distance",
-        "metric_version": 1,
-        "metric_attempt": 0,
-        "context": {
-            "dialogpt_size": "small",
-            "dialogpt_context_sentences": 5,
-            "dialogpt_nbeams_beams": 3,
-            "dialogpt_sample_top_p": 0.92,
-            "dialogpt_sample_top_k": 50
-        },
-        "metric_arity": 2,
-        "metric_determinism": 1,
-        "reference_set": [
-            "Barney, this is about the building."
-        ],
-        "metric_actors": {
-            "document0": [
-                12,
-                "Barney"
-            ],
-            "document1": [
-                "Come on. This is so about the girl."
-            ]
-        },
-        "metric_params": {},
-        "answer": [
-            {
-                "score": 1.1822056829762588,
-                "std": 0.0
-            },
-            {
-                "score": Infinity,
-                "std": NaN
-            },
-            {
-                "score": 1.1550469034570838,
-                "std": 0.0
-            },
-            {
-                "score": 0.731761090875313,
-                "std": 0.0
-            },
-            {
-                "score": 1.21962485313304,
-                "std": 0.0
-            },
-            {
-                "score": 1.2191643917185842,
-                "std": 0.0
-            },
-            {
-                "score": 0.7749513877093318,
-                "std": 0.0
-            },
-            {
-                "score": 0.8961292786907207,
-                "std": 0.0
-            },
-            {
-                "score": Infinity,
-                "std": NaN
-            },
-            {
-                "score": 1.1937268648059132,
                 "std": 0.0
             }
         ]
