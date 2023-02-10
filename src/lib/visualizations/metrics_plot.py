@@ -40,3 +40,10 @@ def corrplot(metrics: dict, inverted: bool, title: str, debug=False):
     sns.heatmap(corr, annot = True)
     plt.title(title)
     plt.show()
+
+def corrm(corr: any, title: str):
+    """plots a correlation matrix with its title"""
+    plt.figure(figsize=(18,16))
+    sns.heatmap(corr, annot = True)
+    plt.title(title)
+    plt.show()

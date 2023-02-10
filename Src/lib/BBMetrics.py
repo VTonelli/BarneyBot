@@ -35,10 +35,10 @@ class MetricsMTEnum(EnumBase):
 class MetricsTGEnum(EnumBase):
     """Enumeration of all enable metrics for Text Generation (TG) used in this project"""
     DISTINCT = "DISTINCT"
-    REPETITIVENESS = "Repetitiveness"
+    # REPETITIVENESS = "Repetitiveness"
     BLEURT = "BLEURT"
     PERPLEXITY = "Perplexity"
-    FKGL = "Flesch-Kincaid Index"
+    # FKGL = "Flesch-Kincaid Index"
     T5GRAMCORREDIT_DIST = "T5 Grammar Correction Edit Distance"
 
 class MetricsSSIMEnum(EnumBase):

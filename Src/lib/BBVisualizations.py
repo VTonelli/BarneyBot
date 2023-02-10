@@ -1,5 +1,7 @@
 # reference to https://matplotlib.org/stable/gallery/specialty_plots/radar_chart.html
-
+import os
+import numpy as np
+import json
 from .visualizations.emotionsradar import EmotionsRadar
 from .visualizations.wordcloud import plot_wordcloud
 from .visualizations.metrics_plot import *
@@ -18,6 +20,7 @@ class PlotsEnum(EnumBase):
     * `FCR` = "Frequency Classifier Radar"
     * `DBCR` = "DistilBert Classifier Radar"
     * `WC` = "Wordcloud"
+    * `CHR` = "Correlation Human Ranking"
     """
     MT = "Machine Translation"
     TG = "Text Generation"
@@ -26,7 +29,13 @@ class PlotsEnum(EnumBase):
     FCR = "Frequency Classifier Radar"
     DBCR = "DistilBert Classifier Radar"
     WC = "Wordcloud"
+    CHR = "Correlation Human Ranking"
 
+def load_from_json(filepath, filename):
+    if not os.path.exists(os.path.join(filepath, filename + '.json')):
+        return dict()
+    with open(os.path.join(filepath, filename + '.json'), 'r') as f:
+        return json.load(f)
 
 class BBVisualization:
     """
@@ -54,7 +63,7 @@ class BBVisualization:
         elif name == PlotsEnum.SS.value:
             self.require_args = set()
             self.optional_args = set(['logscale'])
-        elif self.name == PlotsEnum.ECR.value or self.name == PlotsEnum.FCR.value:
+        elif self.name in [PlotsEnum.ECR.value, PlotsEnum.FCR.value, PlotsEnum.CHR.value]:
             self.require_args = set([])
             self.optional_args = set()
         elif name == "wordcloud":
@@ -342,7 +351,36 @@ class BBVisualization:
                     labels = v['answer']['label']
                     if debug: print(labels)
             visualization = BBVisualization(name, 
-                                            lambda : EmotionsRadar(labels, predictions, sources, character),
+                                            lambda l: corr(mt_dict, title, logscale=l),
+                                            mt_dict)
+        ###
+        elif name == PlotsEnum.CHR.value:
+            if not 'character' in kwargs or type(kwargs['character']) != str: 
+                raise Exception("One name of a character must be specified for visualize radarplot onclassification task")
+            character = kwargs['character']
+            debug = kwargs['debug'] if 'debug' in kwargs else False
+            #
+            # initialize the dictionary containing the test results foreach character
+            path_metric = os.path.join(BBVisualization.METRIC_STORE_LOCATION_PATH, 'Advanced Tests')
+            metric_dict_loaded = load_from_json(path_metric, '10 Sentences Ranking.json')
+            columns = ['human_ranking']
+            df = [np.argsort(metric_dict_loaded['human_ranking'][character])]
+            for k in metric_dict_loaded.keys():
+                if k in ['test_additional_data', 'human_ranking']:
+                    continue
+                if metric_dict_loaded[k]['metric_name'] in ['emotion classifier', 'repetitiveness', 'flesch-kincaid index',
+                                                            'distilbert-embedded chatbot classifier',
+                                                            'frequency chatbot classifier']:
+                    continue
+                if character in [a for v in metric_dict_loaded[k]['metric_actors'].values() for a in v]:
+                    columns.append(metric_dict_loaded[k]['metric_name'])
+                    df.append(np.argsort([ans['score'] for ans in metric_dict_loaded[k]['answer']]))
+            if debug: print(df)
+            df = pd.DataFrame(np.array(df).T, columns=columns)
+            corr = df.corr(method='kendall')
+            if debug: print(df)
+            visualization = BBVisualization(name, 
+                                            lambda : corrm(corr, PlotsEnum.CHR.value + ' plot'),
                                             None)
         ###
         elif name == "wordcloud":
@@ -374,6 +412,8 @@ class BBVisualization:
         elif self.name == PlotsEnum.FCR.value:
             radar = self.visualization()
             radar.plotEmotionsRadar(PlotsEnum.FCR.value)
+        elif self.name == PlotsEnum.CHR.value:
+            self.visualization()
         # elif self.name == "wordcloud":
         #     self.visualization(kwargs['freqdict'])
 
