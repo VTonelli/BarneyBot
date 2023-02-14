@@ -1,21 +1,21 @@
-from wordcloud import WordCloud
+from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 
-def plot_wordcloud(freqdict, cmap='viridis', title=None):
+def plot_wordcloud(lines:str, cmap='viridis', title=None):
     """
-    Plots a WordCloud of a dictionary of frequencies of a given tv show character
+    Plots a WordCloud of a list of lines of a given tv show character
     ## Params 
-    * `freqdict`: dictionary of frequencies of a given tv show character
+    * `lines`: list of lines of a given tv show character
     * `cmap`: colormap for words in the wordcloud
     * `title`: title of plot
     """
     # initialize the wordcloud setting the plot parameters
     wordcloud = WordCloud(background_color = 'black', width = 800, height = 400,
-                          colormap = cmap, max_words = 180, contour_width = 3,
-                          max_font_size = 80, contour_color = 'steelblue',
-                          random_state = 0)
-    # generate the wordcloud from frequencies
-    wordcloud.generate_from_frequencies(freqdict)
+                          colormap = cmap, max_words = 100, contour_width = 3,
+                          max_font_size = 80, contour_color = 'steelblue', 
+                          stopwords = set(STOPWORDS), random_state = 0)
+    # generate the wordcloud from text
+    wordcloud.generate(lines.lower())
     # if title is not None
     if not (title is None):
         plt.title(title)
