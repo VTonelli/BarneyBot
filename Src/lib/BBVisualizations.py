@@ -4,7 +4,9 @@ import numpy as np
 import json
 from .visualizations.emotionsradar import EmotionsRadar
 from .visualizations.wordcloud import plot_wordcloud
+from .metrics.frequency import sentence_preprocess
 from .visualizations.metrics_plot import *
+from .BBSetup import BASE_FOLDER
 from . import BBData
 from .BBData import EnumBase
 from .BBMetrics import MetricsMTEnum, MetricsTGEnum, MetricsSSIMEnum, MetricsClsEnum
@@ -19,7 +21,6 @@ class PlotsEnum(EnumBase):
     * `ECR` = "Emotion Classifier Radar"
     * `FCR` = "Frequency Classifier Radar"
     * `DBCR` = "DistilBert Classifier Radar"
-    * `WC` = "Wordcloud"
     * `CHR` = "Correlation Human Ranking"
     """
     MT = "Machine Translation"
@@ -28,12 +29,22 @@ class PlotsEnum(EnumBase):
     ECR = "Emotion Classifier Radar"
     FCR = "Frequency Classifier Radar"
     DBCR = "DistilBert Classifier Radar"
-    WC = "Wordcloud"
     CHR = "Correlation Human Ranking"
+    WC = "Wordcloud"
 
 def load_from_json(filepath, filename):
+    """
+    Loads a json file from a filepath
+    ## Params
+    * `filepath`: path where the json file is stored
+    * `filename`: json file name to load
+    ## Returns
+    A dictionary of the json file to load if it exists, an empy dictionary otherwise
+    """
     if not os.path.exists(os.path.join(filepath, filename + '.json')):
+        # if the file doesn't exist returns an empty dictionary
         return dict()
+    # otherwise it is opened and a dictionary with its data is returned
     with open(os.path.join(filepath, filename + '.json'), 'r') as f:
         return json.load(f)
 
@@ -42,35 +53,46 @@ class BBVisualization:
     Manage the visualization for every esperiment performed over the chatbot, according to
     a well defined list of tasks given by `PlotsEnum`.
     
-    It is possible to load a BBVisualization object by the predefined static method `load_visualization`
+    It is possible to load a BBVisualization object by the predefined static method `load_visualization`, 
+    wich can be then plotted by call the method `plot()` or `corr()`
     """
     # metric files location 
     METRIC_STORE_LOCATION_PATH = "../Metrics/New" 
 
     def __init__(self, name, visualization, metrics_data):
+        """
+        Initialize a `BBVisualization` object
+        ## Params
+        * `name`: name of visualization, it can be one of `PlotsEnum`
+        * `visualization`: a visualization function
+        * `metrics_data`: data to plot
+        """
         self.name = name
         self.visualization = visualization
         self.metrics_data = metrics_data
         self.require_args = None
         self.optional_args = None
         
-        if name == PlotsEnum.MT.value:
+        if name == PlotsEnum.MT.value:      # machine translation
             self.require_args = set()
             self.optional_args = set(['logscale'])
-        elif name == PlotsEnum.TG.value:
+        elif name == PlotsEnum.TG.value:    # text generation
             self.require_args = set()
             self.optional_args = set(['logscale'])
-        elif name == PlotsEnum.SS.value:
+        elif name == PlotsEnum.SS.value:    # semantic similarity
             self.require_args = set()
             self.optional_args = set(['logscale'])
-        elif self.name in [PlotsEnum.ECR.value, PlotsEnum.FCR.value, PlotsEnum.CHR.value]:
+        elif self.name in [PlotsEnum.ECR.value, PlotsEnum.FCR.value, PlotsEnum.CHR.value]:  # classification based
             self.require_args = set([])
             self.optional_args = set()
-        elif name == "wordcloud":
-            self.require_args = set(['freqdict'])
+        elif name == PlotsEnum.WC.value:    # wordcloud
+            self.require_args = set()
             self.optional_args = set()
    
     def __str__(self):
+        """
+        Return the string description of the visualization
+        """
         return str({
             "instance": self,
             "name": self.name,
@@ -149,7 +171,7 @@ class BBVisualization:
                 title = PlotsEnum.MT.value + ' plot\n(over Common dataset)'
                 
             if debug: print(mt_dict)
-            # set the visualization
+            # store visulization
             visualization = BBVisualization(name, lambda: barplot(mt_dict, title), mt_dict)
         ###
         elif name == PlotsEnum.TG.value:                # Text Generation plot
@@ -209,8 +231,9 @@ class BBVisualization:
                     mt_dict = mt_dict1
                 # set the title for the plot
                 title = PlotsEnum.TG.value + ' plot\n(over Common dataset)'
+            # debug sanity check
             if debug: print(mt_dict)
-            # set the visualization
+            # store visulization
             visualization = BBVisualization(name, 
                                             lambda l: barplot(mt_dict, title, logscale=l),
                                             mt_dict)
@@ -264,7 +287,9 @@ class BBVisualization:
                     mt_dict = mt_dict1
                 # set the title
                 title = PlotsEnum.SS.value + ' plot\n(over Common dataset)'
+            # debug sanity check
             if debug: print(mt_dict)
+            # store visulization
             visualization = BBVisualization(name, 
                                             lambda l: barplot(mt_dict, title, logscale=l),
                                             mt_dict)
@@ -293,7 +318,9 @@ class BBVisualization:
                     predictions = v['answer']['score']
                     if debug: print(predictions)
                     labels = v['answer']['label']
+                    # debug sanity check
                     if debug: print(labels)
+            # store visulization
             visualization = BBVisualization(name, 
                                             lambda : EmotionsRadar(labels, predictions, sources, character),
                                             None)
@@ -321,7 +348,9 @@ class BBVisualization:
                     predictions = v['answer']['score']
                     if debug: print(predictions)
                     labels = v['answer']['label']
+                    # debug sanity check
                     if debug: print(labels)
+            # store visulization
             visualization = BBVisualization(name, 
                                             lambda : EmotionsRadar(labels, predictions, sources, character),
                                             None)
@@ -349,7 +378,9 @@ class BBVisualization:
                     predictions = v['answer']['score']
                     if debug: print(predictions)
                     labels = v['answer']['label']
+                    # debug sanity check
                     if debug: print(labels)
+            # store visulization
             visualization = BBVisualization(name, 
                                             lambda l: corr(mt_dict, title, logscale=l),
                                             mt_dict)
@@ -366,47 +397,68 @@ class BBVisualization:
             columns = ['human_ranking']
             df = [np.argsort(metric_dict_loaded['human_ranking'][character])]
             for k in metric_dict_loaded.keys():
+                # skip the following columns, they are not metrics
                 if k in ['test_additional_data', 'human_ranking']:
                     continue
+                # skip the following columns, they are metrics which we don't want their presence in correlation matrix
                 if metric_dict_loaded[k]['metric_name'] in ['emotion classifier', 'repetitiveness', 'flesch-kincaid index',
                                                             'distilbert-embedded chatbot classifier',
                                                             'frequency chatbot classifier']:
                     continue
+                # select value for the specific character
                 if character in [a for v in metric_dict_loaded[k]['metric_actors'].values() for a in v]:
                     columns.append(metric_dict_loaded[k]['metric_name'])
                     df.append(np.argsort([ans['score'] for ans in metric_dict_loaded[k]['answer']]))
+            # debug sanity check
             if debug: print(df)
+            # construct the dataframe
             df = pd.DataFrame(np.array(df).T, columns=columns)
             corr = df.corr(method='kendall')
+            # debug sanity check
             if debug: print(df)
+            # store visulization
             visualization = BBVisualization(name, 
                                             lambda : corrm(corr, PlotsEnum.CHR.value + ' plot'),
                                             None)
         ###
-        elif name == "wordcloud":
-            visualization = BBVisualization(name, lambda f: plot_wordcloud(f), None)
+        elif name == PlotsEnum.WC.value:
+            if not 'character' in kwargs or type(kwargs['character']) != str: 
+                raise Exception("One name of a character must be specified for visualize radarplot onclassification task")
+            character = kwargs['character']
+            # open data
+            df = pd.read_csv(os.path.join(BASE_FOLDER,'Data','Characters',character, f'{character}.csv'))
+            # preprocess lines
+            lines = df['response'].tolist()
+            lines_rel = []
+            for l in lines:
+                sentence, relevant = sentence_preprocess(l)
+                if relevant:
+                    lines_rel.append(sentence)
+            # store visualization
+            visualization = BBVisualization(name, lambda : plot_wordcloud(' '.join(lines_rel), title='WordCloud of '+character), None)
         else:
             raise Exception("Unknown visualization name!")
         return visualization
     
     def plot(self, **kwargs):
-        if not set(kwargs.keys()).issubset(
-                set(self.require_args).union(
-                    set(self.optional_args))):
+        """
+        Plots the visualization loaded
+        """
+        # checks if the required arguments are all present
+        if not set(kwargs.keys()).issubset(set(self.require_args).union(set(self.optional_args))):
             raise Exception("Unexpected arguments! Required arguments are",
                             self.require_args)
         if not set(self.require_args).issubset(set(kwargs.keys())):
             raise Exception("Missing arguments! Required arguments are",
                             self.require_args)
-        print(self.name)
-
-        if self.name == PlotsEnum.MT.value:
+        # execute the visualization according to the name
+        if self.name == PlotsEnum.MT.value:             # machine translation 
             self.visualization()
-        elif self.name == PlotsEnum.TG.value:
+        elif self.name == PlotsEnum.TG.value:           # text genration
             self.visualization(kwargs['logscale'] if 'logscale' in kwargs else False)
-        elif self.name == PlotsEnum.SS.value:
+        elif self.name == PlotsEnum.SS.value:           # semantic similarity
             self.visualization(kwargs['logscale'] if 'logscale' in kwargs else False)
-        elif self.name == PlotsEnum.ECR.value:
+        elif self.name == PlotsEnum.ECR.value:          # classification based
             radar = self.visualization()
             radar.plotEmotionsRadar(PlotsEnum.ECR.value)
         elif self.name == PlotsEnum.FCR.value:
@@ -414,8 +466,8 @@ class BBVisualization:
             radar.plotEmotionsRadar(PlotsEnum.FCR.value)
         elif self.name == PlotsEnum.CHR.value:
             self.visualization()
-        # elif self.name == "wordcloud":
-        #     self.visualization(kwargs['freqdict'])
+        elif self.name == PlotsEnum.WC.value:           # wordcloud
+            self.visualization()
 
     def corr(self, correlate='characters', debug=False):
         '''
@@ -423,8 +475,10 @@ class BBVisualization:
         # Params
         * `correlate` = 'characters' | 'metrics'
         '''
+        # data must be loaded
         if self.metrics_data is None:
             raise("A metric set must be loaded before to run the correlation!")
+        # it is possible to construct a correlation matrix among characters or metrics
         if not (correlate in ['characters','metrics']):
             raise("You can correlate only characters or metrics!")
         corrplot(self.metrics_data, correlate=='metrics', self.name, debug)
