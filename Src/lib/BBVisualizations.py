@@ -82,7 +82,8 @@ class BBVisualization:
         elif name == PlotsEnum.SS.value:    # semantic similarity
             self.require_args = set()
             self.optional_args = set(['logscale'])
-        elif self.name in [PlotsEnum.ECR.value, PlotsEnum.FCR.value, PlotsEnum.CHR.value]:  # classification based
+        elif self.name in [PlotsEnum.ECR.value, PlotsEnum.FCR.value, 
+                           PlotsEnum.DBCR.value, PlotsEnum.CHR.value]:  # classification based
             self.require_args = set([])
             self.optional_args = set()
         elif name == PlotsEnum.WC.value:    # wordcloud
@@ -382,8 +383,8 @@ class BBVisualization:
                     if debug: print(labels)
             # store visulization
             visualization = BBVisualization(name, 
-                                            lambda l: corr(mt_dict, title, logscale=l),
-                                            mt_dict)
+                                            lambda : EmotionsRadar(labels, predictions, sources, character),
+                                            None)
         ###
         elif name == PlotsEnum.CHR.value:
             if not 'character' in kwargs or type(kwargs['character']) != str: 
@@ -458,13 +459,12 @@ class BBVisualization:
             self.visualization(kwargs['logscale'] if 'logscale' in kwargs else False)
         elif self.name == PlotsEnum.SS.value:           # semantic similarity
             self.visualization(kwargs['logscale'] if 'logscale' in kwargs else False)
-        elif self.name == PlotsEnum.ECR.value:          # classification based
+        elif self.name in [PlotsEnum.ECR.value,         # classification based
+                           PlotsEnum.FCR.value, 
+                           PlotsEnum.DBCR.value]:
             radar = self.visualization()
-            radar.plotEmotionsRadar(PlotsEnum.ECR.value)
-        elif self.name == PlotsEnum.FCR.value:
-            radar = self.visualization()
-            radar.plotEmotionsRadar(PlotsEnum.FCR.value)
-        elif self.name == PlotsEnum.CHR.value:
+            radar.plotEmotionsRadar(self.name)
+        elif self.name == PlotsEnum.CHR.value:          # correlation human matrix
             self.visualization()
         elif self.name == PlotsEnum.WC.value:           # wordcloud
             self.visualization()
