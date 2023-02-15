@@ -35,17 +35,31 @@ class BarneyEmbedder:
                  embedder_path: str = None,
                  from_pretrained: bool = False,
                  use_cuda: bool = False) -> None:
-        self.batch_size: int = 64
 
+        """
+        initialize DistilBert Embedder
+
+        embedding_size (int): dimensionality of the embedder output
+        embedder_path (str): the path used to upload the embedder, if default (None) the embedder il built from zero with a default structure
+        from_pretrained (bool): if true the embedder is built starting from embedder_path (must be not None), otherwise the embedder is initialized randomly, default is False 
+        use_cuda (bool): if True the training tensors are transfered to the GPU, default is False
+        """
+
+        ### set model params
         self.embedding_size: int = embedding_size
 
+        ### set some training params
+        self.batch_size: int = 64
         self.lr: float = 1e-3
         self.epochs: int = 5
         self.training_steps: int = 50
         self.margin: int = self.embedding_size * 10
 
+        ### create the model
         self.model = self.create_model(embedder_path=embedder_path,
                                        from_pretrained=from_pretrained)
+        
+        ### move model to cude is asked
         if use_cuda:
             assert torch.cuda.is_available()
             device = torch.device('cuda')  # pylint: disable = no-member
@@ -56,7 +70,18 @@ class BarneyEmbedder:
     def create_model(self,
                      embedder_path: str = None,
                      from_pretrained: bool = False) -> SentenceTransformer:
+
+        """
+        create the embedder model
+
+        embedder_path (str): the path used to upload the embedder, if default (None) the embedder il built from zero with a default structure
+        from_pretrained (bool): if true the embedder is built starting from embedder_path (must be not None), otherwise the embedder is initialized randomly, default is False 
+
+        returns the embedder model
+        """
+
         if not from_pretrained:
+            ### build embedder from "scratch"
             model = SentenceTransformer('distilbert-base-nli-mean-tokens')
             model.train()
             dense = models.Dense(
@@ -65,6 +90,7 @@ class BarneyEmbedder:
                 activation_function=Identity())
             model.add_module('dense', dense)
         else:
+            ### load embedder from path
             assert embedder_path is not None, 'Give model path to start from pre-trained model'
             assert exists(embedder_path
                           ), f'Current path "{embedder_path}" does not exists'
@@ -78,9 +104,21 @@ class BarneyEmbedder:
             self,
             examples: List[InputExample],
             model: SentenceTransformer,
-            margin: int,
+            margin: float,
             verbose: bool = False,
             parallel: bool = False) -> List[InputExample]:
+
+        """
+        filters the dataset for the triplet loss training, splitting it into easy_positives, semi_hard_negatives and hard_negatives
+
+        examples (List[InputExample]): the dataset to filter
+        model (SentenceTransformer): model used to have a first estimation of the embeddings
+        margin (float): margin parameter of the triple loss
+        verbose (bool): verbose parameter, default is False
+        parallel (bool): parallel the mining work, highly discouraged if working with cuda, default is False
+
+        returns the semi_hard_negatives dataset, the dataset_length, the number of hard negatives and the number of easy positives
+        """
 
         def _check_triplet(
                 triplet_embedded: NDArray) -> Tuple[bool, bool, bool]:
@@ -91,13 +129,17 @@ class BarneyEmbedder:
                 - is triplet easy
             """
 
+            ### split the triplet in anchor, positive and negative
             anchor_emb = triplet_embedded[0]
             positive_emb = triplet_embedded[1]
             negative_emb = triplet_embedded[2]
 
+            ### compute the distance anchor-positive
             dist_ap = np.linalg.norm(anchor_emb - positive_emb)
+            ### compute the distance anchor-negative
             dist_an = np.linalg.norm(anchor_emb - negative_emb)
 
+            ### distinguish easy, semi-hard and hard cases
             if dist_ap < dist_an:
                 if dist_an < dist_ap + margin:
                     return True, False, False
@@ -125,6 +167,7 @@ class BarneyEmbedder:
             concat_embeddings[i], concat_embeddings[i + 1],
             concat_embeddings[i + 2]
         ] for i in range(0, example_len - 2, 3)]
+
         assert len(embeddings) == len(
             examples
         ), f'Lenght of embeddings ({len(embeddings)}) != lenght of examples ({len(examples)})'
@@ -181,6 +224,20 @@ class BarneyEmbedder:
               verbose: bool = False,
               statistics_path: str = None) -> List[float]:
 
+        """
+        train the DistilBert embedder with TripleLoss
+        and saves train and validation history (accuracy values over the epochs)
+
+        patience (int): patience parameter for early stopping
+        train_examples (List[InputExamples]): train dataset
+        val_examples (List[InputExamples]): validation dataset
+        save_path (str): path where to save the trained embedder
+        verbose (bool): verbose parameter, default is False
+        statistics_path (str): path where to save accuracy history and other training statistics, default is None
+
+        returns the train and validation history (of the accuracy metric)
+        """
+
         ### if patience>0, create also validation set
         val = isinstance(patience, int) and patience >= 0
 
@@ -224,6 +281,8 @@ class BarneyEmbedder:
 
             filtered_examples, dataset_count, hard_negatives_count, easy_positives_count = self.semi_hard_negative_mining(
                 train_examples, self.model, self.margin, verbose=verbose)
+            
+            ### prepare training set
             train_dataset = SentencesDataset(filtered_examples, self.model)
             train_dataloader = DataLoader(train_dataset,
                                           shuffle=True,
@@ -317,5 +376,8 @@ class BarneyEmbedder:
     #
 
     def compute(self, sentences: List[str], verbose: bool = False) -> NDArray:
-
+        """
+        run the DistilBert Embedder on a set of sentences,
+        returns a list of embeddings
+        """
         return self.model.encode(sentences, show_progress_bar=verbose)
