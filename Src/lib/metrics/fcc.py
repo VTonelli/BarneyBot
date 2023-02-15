@@ -6,7 +6,7 @@ from lib.BBData import character_dict, random_state
 
 from .frequency import sentence_preprocess, FrequencyClassifier
 
-
+# Class defining the frequency chatbot classifier
 class FrequencyChatbotClassifier:
     def __init__(self) -> None:
         self.train_size = 0.85

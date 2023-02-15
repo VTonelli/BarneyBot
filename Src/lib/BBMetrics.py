@@ -14,6 +14,7 @@ from happytransformer import HappyTextToText, TTSettings
 from nltk.metrics import edit_distance
 from collections import Counter
 
+# All internal imports for metrics computation in this library
 from .metrics.triplet_nn_classifier import BarneyBotTripletClassifier
 from .metrics.distil_bert_classifier import DistilBertClassifier
 from .metrics.distinct import distinct

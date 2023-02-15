@@ -1,8 +1,8 @@
+# See "Metrics Usage Example.ipynb" for how to save metrics using these functions.
 import hashlib
 import json
 from enum import Enum
 import os
-
 from .BBData import character_dict
 
 class MetricArity(int, Enum):
@@ -23,6 +23,7 @@ class MetricActor(int, Enum):
     DIALOGPT_NBEAMS = 11  # [any character including 'Base']
     DIALOGPT_SAMPLE = 12  # [any character including 'Base']
 
+# Simple function to distinguish character vs. non-character strings
 def is_character(char):
     if char in character_dict.keys() and char != 'Default':
         return True
@@ -30,25 +31,29 @@ def is_character(char):
         return False
     else:
         raise Exception("Unknown character name " + char + "!")
-        
+
+# Function to save a dictionary as a JSON
 def save_as_json(filepath, filename, data):
     if not os.path.exists(filepath):
         os.makedirs(filepath, exist_ok=True)
     with open(os.path.join(filepath, filename + ".json"), 'w') as f:
         f.write(json.dumps(data, indent=4))
 
+# Function to load a JSON as a dictionary
 def load_from_json(filepath, filename):
     if not os.path.exists(os.path.join(filepath, filename + '.json')):
         return dict()
     with open(os.path.join(filepath, filename + '.json'), 'r') as f:
         return json.load(f)
 
+# Function to compute the hash (MD5) of a metric dictionary entry.
 def dict_hash(dictionary):
     dhash = hashlib.md5()
     encoded = json.dumps(dictionary, sort_keys=True).encode()
     dhash.update(encoded)
     return dhash.hexdigest()
 
+# Function returning the arity of a metric given its name
 def get_metric_arity(metric_name):
     if metric_name == 'google bleu' or metric_name == 'rouge l' or \
        metric_name == 'mpnet embedding similarity' or metric_name == 'roberta crossencoding similarity' or \
@@ -68,6 +73,7 @@ def get_metric_arity(metric_name):
     else:
         raise Exception("Unknown arity for metric " + metric_name)
 
+# Function returning the determinism of a metric given its name and version
 def get_metric_determinism(metric_name, metric_version):
     if metric_name == 'google bleu' and metric_version == 1:
         return MetricDeterminism.DETERMINISTIC
@@ -116,6 +122,7 @@ def get_metric_determinism(metric_name, metric_version):
     else:
         raise Exception("Unknown determinism for metric " + metric_name)
 
+# Function to save a metric dictionary as a JSON
 def save_metric_by_name(path, filename, metric_dict):
     if os.path.exists(os.path.join(path, filename)):
         metrics = load_from_json(path, filename)
@@ -124,8 +131,10 @@ def save_metric_by_name(path, filename, metric_dict):
     metrics.update(metric_dict)
     save_as_json(path, filename, metrics)
 
+# Function to load metrics from a JSON into a dictionary
 def load_metric_by_name(path, filename):
     metrics = load_from_json(path, filename)
+    # Substitute integer entries for their corresponding enums
     for entry in metrics.values():
         for actor in entry['metric_actors'].values():
             actor[0] = MetricActor(actor[0])
