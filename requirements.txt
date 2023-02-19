@@ -1,0 +1,37 @@
+# Base
+ipykernel
+pylint
+yapf
+
+# Numerical
+numpy
+pandas
+scikit-learn
+
+# NLP
+gensim
+nltk
+
+# NLP Metrics
+# nlg-metricverse
+pyemd
+sacrebleu
+unbabel-comet
+git+https://github.com/google-research/bleurt.git
+
+# Neural Networks
+tensorflow
+keras
+
+# General Purpose Metrics
+evaluate
+datasets
+transformers
+happytransformer
+sentence_transformers
+torchmetrics
+
+# Visualization
+matplotlib
+tqdm
+wordcloud

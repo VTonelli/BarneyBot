@@ -1,0 +1,392 @@
+{
+    "041d650d664ed8dc7e470cc8cd198870": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Phoebe"
+            ],
+            "document1": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8297425261565617,
+            "std": 0.16751012445456454
+        }
+    },
+    "4f592889eff8491d4a1576d63d52d613": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Sheldon"
+            ],
+            "document1": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8257835558482579,
+            "std": 0.14788941315802875
+        }
+    },
+    "86d08d6c6eb77d21104ec7319a610ceb": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Fry"
+            ],
+            "document1": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8828421456473214,
+            "std": 0.11760041044989232
+        }
+    },
+    "60626854d66224bf7fe29e374ee9996b": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Barney"
+            ],
+            "document1": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8622143643242972,
+            "std": 0.1076238247360787
+        }
+    },
+    "43ef43dfcaf3b1cfe66741a731ea9d0b": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                12,
+                "Harry"
+            ],
+            "document1": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.8476545640400478,
+            "std": 0.08244317620997978
+        }
+    },
+    "dc4d616ba2bd1678463c50c7e9cba204": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Barney"
+            ],
+            "document1": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": 0.8740098770436656,
+            "std": 0.10995826162868404
+        }
+    },
+    "d171837b066e7ebfa0b62a840b6af4ad": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Sheldon"
+            ],
+            "document1": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": 0.8834918995443573,
+            "std": 0.11249528099483913
+        }
+    },
+    "d368ab0bf1250e61d727ee45a7817b03": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Harry"
+            ],
+            "document1": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": 0.810850121653997,
+            "std": 0.10998145141600772
+        }
+    },
+    "3a5df6d3f57460a0d4f0fdc54e417dea": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Fry"
+            ],
+            "document1": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": 0.8617927245386354,
+            "std": 0.13111204371444782
+        }
+    },
+    "5ed826e5926f19d1234a963619bcf4d0": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Bender"
+            ],
+            "document1": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": 0.8705640636384487,
+            "std": 0.11498087118216023
+        }
+    },
+    "8bc2d1c0a8b748808363ccd5c8192cad": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Vader"
+            ],
+            "document1": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": 0.8823286965489388,
+            "std": 0.05639356099886461
+        }
+    },
+    "78f1a6b7ad53925a3bfa7700f857de1b": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Joey"
+            ],
+            "document1": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": 0.850840229113128,
+            "std": 0.14208995600347313
+        }
+    },
+    "75637f1a65ddf4dd5be7de2f7e1326c6": {
+        "metric_name": "extended edit distance",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "document0": [
+                1,
+                "Phoebe"
+            ],
+            "document1": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 0,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": 0.8337059669623204,
+            "std": 0.16210591919446388
+        }
+    }
+}

@@ -1,0 +1,348 @@
+{
+    "metadata": {
+        "dataset name": "common small dataset",
+        "names": {
+            "context": "context",
+            "chatbota": "Sheldon",
+            "chatbotb": "Fry"
+        },
+        "semantic similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "perplexity": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "bleu": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "rouge l": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "distinct": {
+            "ordering": [
+                "context",
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "emotion": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "chatbotb-chatbota correlation"
+            ]
+        },
+        "semantic answer similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "semantic classifier": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        }
+    },
+    "semantic similarity": [
+        {
+            "score": 0.31417566537857056,
+            "std": 0.19841893017292023
+        },
+        {
+            "score": 0.3248026669025421,
+            "std": 0.19293555617332458
+        },
+        {
+            "score": 0.2608124613761902,
+            "std": 0.12203282117843628
+        },
+        0.523441035061277
+    ],
+    "perplexity": [
+        67.96138565177583,
+        36.91677615943866
+    ],
+    "bleu": [
+        {
+            "score": 0.0
+        },
+        {
+            "score": 0.01648900423155783
+        },
+        {
+            "score": 0.0
+        },
+        0.48364693939871634
+    ],
+    "rouge l": [
+        {
+            "score": 0.08413111205371446,
+            "std": 0.15510936605214753
+        },
+        {
+            "score": 0.12271833519732679,
+            "std": 0.20697247798089666
+        },
+        {
+            "score": 0.056059637139408314,
+            "std": 0.07858249548733318
+        },
+        0.46372860520945625
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.14160240539986466,
+            "std": 0.05871380051982244
+        },
+        {
+            "score": 0.12614055784300976,
+            "std": 0.062138340765343594
+        }
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.06169684605307079,
+                0.3717451795420077,
+                0.05900713044434919,
+                0.37227346430715574,
+                0.10278456894281719,
+                0.032492805220369646
+            ],
+            "std": [
+                0.20035293830240133,
+                0.41777523864203775,
+                0.22957396642902272,
+                0.3910769398221265,
+                0.2033683175183667,
+                0.1633998060481512
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.037250126061761486,
+                0.4921693303638936,
+                0.05806582438692983,
+                0.3557408454441299,
+                0.05448363286975239,
+                0.002290237176930532
+            ],
+            "std": [
+                0.16105078764968062,
+                0.4483539982708924,
+                0.224606528010099,
+                0.39840130167789883,
+                0.12906066247048986,
+                0.002887341825666087
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.973140695665939
+    ],
+    "semantic answer similarity": [
+        {
+            "score": 0.1165439635515213,
+            "std": 0.21197718381881714
+        },
+        {
+            "score": 0.1052745059132576,
+            "std": 0.18762339651584625
+        },
+        {
+            "score": 0.06481119245290756,
+            "std": 0.11592230200767517
+        },
+        0.49089428803305046
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.5541017055511475,
+            "std": 0.46650180220603943
+        },
+        {
+            "score": 0.22497250139713287,
+            "std": 0.3891255259513855
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "No it isnt.",
+            "Where? Oh, no, no, no. Never mind. I got it right.",
+            "Sheldon, thats an incredible coincidence. Maybe you should let her find you a place to stay.",
+            "And I love you, too. And lets keep it clean, shall we?",
+            "Of course not. The only reason Ive gone through this trouble is to pour a bouillabaisse on my shoulder, and I dont want to disappoint you.",
+            "Soft kitty, little ball of fur",
+            "Im surprised you two didnt wind up in a hotel room.",
+            "Oh. Its not romantic. It kind of comes down to personal narrative. You know, I didnt ask if you wanted to know.",
+            "No, he didnt. Stuart did.",
+            "What kind of doctor suspends a man after a long day?",
+            "So you could find out if you were a liar or a puss in the middle of the night.",
+            "What, you just got off the bus?",
+            "Me, too. Although that was after nine years of passing and barely showing up to my mothers drug intervention.",
+            "Penny, listen to me. Im sorry to interrupt, but your client does not have a standing TV schedule.",
+            "Yeah?",
+            "Now what?",
+            "You know, I dont know if I can stay here tonight.",
+            "Okay, lets talk about something other than trains. How about trains?",
+            "Im fine, thank you very much. Oh, and last but not least, the warranty is good.",
+            "Its okay, Sheldon. Ill make it easy for you. I thought I made things better.",
+            "Alfred knows that.",
+            "We watched the Clone Wars movie.",
+            "No. Its, like, three oclock in the morning on a Monday.",
+            "Only if you intend to use them as a weapon of mass derision.",
+            "I sense I may have crossed some sort of line.",
+            "No. But it was a different time. In my time I was working at the local liquor store, tending bar, and doing volunteer work for the university.",
+            "Hello.",
+            "He has a personality. Its one of the few attributes that make him a valuable roommate.",
+            "Seven.",
+            "Would you rather come over and watch the last 30 seconds of Raiders of the Lost Ark with us?",
+            "Its not my fault I have a roommate agreement which precludes me from owning more than one apt.",
+            "Not good. Apparently, Im suffering from a recent breakup.",
+            "To write an appeal to the Faculty Senate, I believe Ive made some progress.",
+            "I have dark underpants that I hid in my room.",
+            "Uh, just hang out with Penny and make out."
+        ],
+        "chatbotb": [
+            "Cool! I guess I could use that.",
+            "Look. I said I'd stop crime but there was a guy shooting at me.",
+            "You sure she's not gonna stare at me like that?",
+            "I love you, man.",
+            "They're not poisonous, they're harmless!",
+            "You'll be right, it's too soft.",
+            "Whoa, whoa. I'm an old, old lady. I'm only 53. Why would you turn me into a new-looking jerk?",
+            "That's my girl. And I don't even know her.",
+            "That poor, poor man!",
+            "Well, Fry, you have to. And I think Fry's just mad because there's a show he loves.",
+            "It's the new-school school cafeteria!",
+            "No! Stop!",
+            "Professor, what year is this?",
+            "Oh, yeah, it's crazy! It's like you're doing it on purpose.",
+            "You didn't know that about my dad back in the 20th century?",
+            "Oh Lord!",
+            "The hunt for Amy is as dark and gruesome as a thousand suns and a thousand suns.",
+            "This is my brother Fry's ghost ship, Bender, and I am the one who knocks it up!",
+            "Uh, I'm alright.",
+            "It was only a matter of time. This is where the show was heading.",
+            "I will.",
+            "Yeah. The royal jelly.",
+            "No, this isn't the Emperor. This is Shwab's nephew and nephew.",
+            "No. We're free to move back in here.",
+            "Uh, yes. Now that I know how it feels to be a slave, I can stop thinking about being slaves.",
+            "Yup.",
+            "Hey, you look.",
+            "Oh, Bender, you're so wonderful, aren't you?",
+            "Who's going on the hunt?",
+            "I can't. I got a life lesson from the other guy.",
+            "We're here to buy up your old toys.",
+            "I'm doing alright.",
+            "Now that I'm home I'm going to look for a fresh jar of olestra.",
+            "Nothing. It's the Hermes uniform.",
+            "I'm not doing anything tonight. If you want to join my little gang I can go find you in a costume and meet you in person."
+        ]
+    }
+}

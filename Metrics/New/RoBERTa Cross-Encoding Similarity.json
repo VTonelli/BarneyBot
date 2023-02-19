@@ -1,0 +1,362 @@
+{
+    "7365fc097899f69a2ee4cd902603cfe3": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Barney"
+            ],
+            "predictor": [
+                12,
+                "Barney"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Barney_df",
+        "answer": {
+            "score": 0.06928525865077972,
+            "std": 0.13436248898506165
+        }
+    },
+    "9d2f1738397e30323a7d716f0105b3dc": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Sheldon"
+            ],
+            "predictor": [
+                12,
+                "Sheldon"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Sheldon_df",
+        "answer": {
+            "score": 0.07278122007846832,
+            "std": 0.14435073733329773
+        }
+    },
+    "3a8e86f0ef75c31b54ce37e71dfd8e73": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Harry"
+            ],
+            "predictor": [
+                12,
+                "Harry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Harry_df",
+        "answer": {
+            "score": 0.05274807661771774,
+            "std": 0.09902114421129227
+        }
+    },
+    "3f82938ab24306b218d07acd1b43e1f0": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Fry"
+            ],
+            "predictor": [
+                12,
+                "Fry"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Fry_df",
+        "answer": {
+            "score": 0.05115027353167534,
+            "std": 0.0965181440114975
+        }
+    },
+    "6e60e653c09d43ac7bffceead777944e": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Bender"
+            ],
+            "predictor": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Bender_df",
+        "answer": {
+            "score": 0.04395425319671631,
+            "std": 0.09298960119485855
+        }
+    },
+    "bd938b562f286f5adbcd4cc91b2d35d4": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Vader"
+            ],
+            "predictor": [
+                12,
+                "Vader"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Vader_df",
+        "answer": {
+            "score": 0.04788410663604736,
+            "std": 0.04615868628025055
+        }
+    },
+    "e3771c99209777731a6f70363af8b3c0": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Joey"
+            ],
+            "predictor": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Joey_df",
+        "answer": {
+            "score": 0.10522104054689407,
+            "std": 0.1704133152961731
+        }
+    },
+    "b68b872db5d3163c9d3f3721ee2d7aff": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                1,
+                "Phoebe"
+            ],
+            "predictor": [
+                12,
+                "Phoebe"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Phoebe_df",
+        "answer": {
+            "score": 0.11960501968860626,
+            "std": 0.19895990192890167
+        }
+    },
+    "869a21b78984c69234c6384b9f8735f7": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                12,
+                "Phoebe"
+            ],
+            "predictor": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.12070552259683609,
+            "std": 0.20772850513458252
+        }
+    },
+    "852abca1076292ebb7bed89634a803a7": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                12,
+                "Sheldon"
+            ],
+            "predictor": [
+                12,
+                "Joey"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.10909343510866165,
+            "std": 0.16627511382102966
+        }
+    },
+    "e915fb68b1ca1d09f80fd7d0f0ff9e50": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                12,
+                "Fry"
+            ],
+            "predictor": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.05011893808841705,
+            "std": 0.06384490430355072
+        }
+    },
+    "65f62a16259c8f5f3e04bbc0b989c264": {
+        "metric_name": "roberta crossencoding similarity",
+        "metric_version": 1,
+        "metric_attempt": 0,
+        "metric_actors": {
+            "reference": [
+                12,
+                "Barney"
+            ],
+            "predictor": [
+                12,
+                "Bender"
+            ]
+        },
+        "metric_params": {},
+        "context": {
+            "dialogpt_size": "small",
+            "dialogpt_context_sentences": 5,
+            "dialogpt_nbeams_beams": 3,
+            "dialogpt_sample_top_p": 0.92,
+            "dialogpt_sample_top_k": 50
+        },
+        "metric_arity": 2,
+        "metric_determinism": 2,
+        "reference_set": "Common_df",
+        "answer": {
+            "score": 0.04328228160738945,
+            "std": 0.06021425873041153
+        }
+    }
+}

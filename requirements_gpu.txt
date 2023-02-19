@@ -1,0 +1,44 @@
+# Requirements for CUDA==11.2, cuDNN==8.1
+
+# Base
+ipykernel
+pylint
+yapf
+notebook
+
+# Numerical
+numpy
+pandas
+scikit-learn
+
+# NLP
+gensim
+nltk
+
+# NLP Metrics
+nlg-metricverse
+pyemd
+sacrebleu
+unbabel-comet
+git+https://github.com/google-research/bleurt.git
+
+# Neural Networks
+tensorflow
+keras
+torch
+torchvision
+torchaudio
+--extra-index-url https://download.pytorch.org/whl/cu116
+
+# General Purpose Metrics
+evaluate
+datasets
+transformers
+happytransformer
+sentence_transformers
+torchmetrics
+
+# Visualization
+matplotlib
+tqdm
+wordcloud

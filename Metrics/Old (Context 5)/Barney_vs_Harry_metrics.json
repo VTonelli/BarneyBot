@@ -1,0 +1,348 @@
+{
+    "metadata": {
+        "dataset name": "common small dataset",
+        "names": {
+            "context": "context",
+            "chatbota": "Barney",
+            "chatbotb": "Harry"
+        },
+        "semantic similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "perplexity": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "bleu": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "rouge l": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "distinct": {
+            "ordering": [
+                "context",
+                "chatbota",
+                "chatbotb"
+            ]
+        },
+        "emotion": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "chatbotb-chatbota correlation"
+            ]
+        },
+        "semantic answer similarity": {
+            "ordering": [
+                "context-chatbota",
+                "context-chatbotb",
+                "chatbotb-chatbota",
+                "ccl"
+            ]
+        },
+        "semantic classifier": {
+            "ordering": [
+                "chatbota",
+                "chatbotb"
+            ]
+        }
+    },
+    "semantic similarity": [
+        {
+            "score": 0.32727062702178955,
+            "std": 0.20755380392074585
+        },
+        {
+            "score": 0.256490021944046,
+            "std": 0.10905475914478302
+        },
+        {
+            "score": 0.24406775832176208,
+            "std": 0.1055055782198906
+        },
+        0.46150887727594725
+    ],
+    "perplexity": [
+        60.62977505345756,
+        43.05399126504585
+    ],
+    "bleu": [
+        {
+            "score": 0.0
+        },
+        {
+            "score": 0.0
+        },
+        {
+            "score": 0.0
+        },
+        0.5
+    ],
+    "rouge l": [
+        {
+            "score": 0.13463484979482235,
+            "std": 0.23701449760077317
+        },
+        {
+            "score": 0.04650724380047688,
+            "std": 0.0916035087950407
+        },
+        {
+            "score": 0.05239776329508857,
+            "std": 0.08257612131931524
+        },
+        0.4171283942739659
+    ],
+    "distinct": [
+        {
+            "score": 0.10984328048288133,
+            "std": 0.06188826948933667
+        },
+        {
+            "score": 0.11248748787919512,
+            "std": 0.06720960067883289
+        },
+        {
+            "score": 0.08916436843390461,
+            "std": 0.068619836346773
+        }
+    ],
+    "emotion": [
+        {
+            "score": [
+                0.014541776718605043,
+                0.34016804504208265,
+                0.11487390943678162,
+                0.37266245127040226,
+                0.15484204553899222,
+                0.002911792164585287
+            ],
+            "std": [
+                0.01898583202938785,
+                0.39058331441389293,
+                0.31061901511037693,
+                0.346721093108161,
+                0.2500086721882319,
+                0.002405085149240629
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.024290812138601073,
+                0.36487220618873833,
+                0.07940539230725595,
+                0.44135308469828616,
+                0.08693437930944908,
+                0.003144104191700795
+            ],
+            "std": [
+                0.05631259321445393,
+                0.389868629768234,
+                0.24122770652187717,
+                0.3704265610049336,
+                0.16361257618998068,
+                0.0038813138715250665
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        {
+            "score": [
+                0.09249008371428187,
+                0.31165791601441534,
+                0.0037960856462762294,
+                0.46531192135963856,
+                0.12303951107605826,
+                0.0037044932425487785
+            ],
+            "std": [
+                0.20439910624766564,
+                0.3558779773613572,
+                0.003190997868050514,
+                0.32789559020495385,
+                0.1667965084737667,
+                0.0033247399016566857
+            ],
+            "label": [
+                "sadness",
+                "joy",
+                "love",
+                "anger",
+                "fear",
+                "surprise"
+            ]
+        },
+        0.9565765217843349
+    ],
+    "semantic answer similarity": [
+        {
+            "score": 0.12114743888378143,
+            "std": 0.205666646361351
+        },
+        {
+            "score": 0.04163864254951477,
+            "std": 0.04812183231115341
+        },
+        {
+            "score": 0.06684468686580658,
+            "std": 0.0827639251947403
+        },
+        0.42588613409408915
+    ],
+    "semantic classifier": [
+        {
+            "score": 0.4415369927883148,
+            "std": 0.4591064751148224
+        },
+        {
+            "score": 0.4798446595668793,
+            "std": 0.45367369055747986
+        }
+    ],
+    "sentences": {
+        "context": [
+            "Barney, this is about the building.",
+            "All right. I'll be right there. Stay where you are.",
+            "I think there's a pretty girl smiling at me there.",
+            "I love you, man.",
+            "Not even if she's hot?",
+            "Soft kitty, warm kitty Little ball of fur",
+            "Penny.",
+            "Oh. Sheldon, thank you. Thats so romantic. But what about Rajesh? He was okay with you choosing the name?",
+            "I didnt break it. I, I guess Stuart sold it to me like this.",
+            "Be careful.",
+            "But why would anyone go near that dog?",
+            "Expecto Patronum!",
+            "Ron Weasley.",
+            "I spoke a different language?",
+            "Harry?",
+            "OK. First Bender, then Flexo, then Fry.",
+            "Just relax, Bender. Tomorrow we'll pry you down, have a nice breakfast and then go hunt down and slaughter that ancient evil.",
+            "I'm too scared.",
+            "Dr. Zoidberg? Are you OK?",
+            "Fry, thank God we found you.",
+            "I will not fight you.",
+            "Lord Vader, what about Leia and theWookiee?",
+            "The Emperor's coming here?",
+            "Shall I hold them?",
+            "Lord Vader, what about Leia and theWookiee?",
+            "Oh! Joey uh, were you in our room last night?",
+            "Hey.",
+            "Joey... are you sure? I mean, I know how much you love him!",
+            "Ok, ten.",
+            "Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?",
+            "What are you doing for a living?",
+            "How are you doing?",
+            "Where are you going to?",
+            "What are you wearing?",
+            "What do you want to do tonight?"
+        ],
+        "chatbota": [
+            "Yeah, but it's not about the building. It's about believing in ghosts.",
+            "And so we drove back.",
+            "Oh, hi, Ellen. Have you met my brother, Barney?",
+            "I love you, too.",
+            "You mean if she's hot, right?",
+            "What?!",
+            "Penny.",
+            "That's what I said to him the other day.",
+            "How do you know?",
+            "All right, I am not the one who washes up a girl's face in your girlfriend's purse. I am not the one who goes to the hospital to take a leak on a girl's heart. But I can take a shower in the shower at this point. Who am I calling?",
+            "He's a paralegal.",
+            "Posititrum!",
+            "Hi, fellow travelers.",
+            "I understand a joke.",
+            "Dary.",
+            "Fry?  I thought you said we weren't doing anything on our anniversary.",
+            "Wow, no way, Barney, that is a perfect metaphor for tonight.",
+            "Whoa.",
+            "Yes, Virginia. I'm fine.",
+            "I'm Barney.",
+            "But I will.",
+            "Oh, yeah, they're married.",
+            "We never go out without our shirts.",
+            "I do not even know what to say to this.",
+            "Well, yeah, those guys were cool, you know? But those guys... they were like rides. And dinosaurs... stay close, guys. They were the Slutty Pumpkin.",
+            "No, I was just in the bathroom.",
+            "What up, do you happen to know how long it has been since we last spoke?",
+            "Hey Barney, how's Marshall doing in the unemployment office?",
+            "How much fun is this?",
+            "That's not allowed. Rule number one, I don't get married till I'm thirty.",
+            "Oh. Lily, you're taking this super hot date to a super lame party. And you're gonna be doing it right now. So, is it super lame if we sneak in?",
+            "Fine.",
+            "It's not my dream job, Robin. You'll be my wingman. I'll be your wingman.",
+            "I have a magic phone that says Positron 5000. How do I put this on?",
+            "I want to go to the Origins of Chewbacca exhibit, and... as my mentor-- Chewbacca, I would be the exhibit."
+        ],
+        "chatbotb": [
+            "A minute.",
+            "Dobby's gone away.",
+            "She won't let us have her now, will she?",
+            "You don't have to be here.",
+            "Hermione's gone cold since she was bitten.",
+            "Come on, let's go. Come on. Come on. Come with me.",
+            "Do you smell it?",
+            "I'm going.",
+            "But wait.",
+            "Harry, you have a very unfortunate name.",
+            "What's this?",
+            "I was thinking more of the Ministry than the Ministry.",
+            "Youre everywhere.",
+            "Yes.",
+            "Aaahh!",
+            "This one will stay for a bit.",
+            "Let's go.",
+            "He's trying to kill me.",
+            "Yes, Professor?",
+            "But, if anyone can't take my place, then so be it.",
+            "Let me go!",
+            "That's what I was talking about.",
+            "I mean, what are they going to do?",
+            "I want one, really good.",
+            "He's dead.",
+            "I heard something.",
+            "Good afternoon, dear.",
+            "He was my friend, you know.",
+            "I think I just got myself out of bed.",
+            "Oh, yes, very well.",
+            "What do you know about me?",
+            "Hey, Harry.",
+            "What do you two expect?",
+            "I just got the trolley back!",
+            "I don't know."
+        ]
+    }
+}

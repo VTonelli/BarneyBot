@@ -1,0 +1,593 @@
+Creating triplets...
+100%|██████████| 14655/14655 [01:07<00:00, 216.53it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:41<00:00,  4.88it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 133423.76it/s]
+Filtering dataset...
+##############################
+Dataset length:       29976
+Hard negatives count: 28644
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 469/469 [08:16<00:00,  1.06s/it]
+Iteration: 100%|██████████| 469/469 [07:48<00:00,  1.00it/s]
+Epoch: 100%|██████████| 2/2 [16:05<00:00, 482.88s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:40<00:00,  4.90it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 124466.23it/s]
+Filtering dataset...
+##############################
+Dataset length:       9050
+Hard negatives count: 434
+Easy positives count: 49136
+############################## 
+
+Training...
+Iteration: 100%|██████████| 142/142 [02:23<00:00,  1.01s/it]
+Iteration: 100%|██████████| 142/142 [02:21<00:00,  1.00it/s]
+Epoch: 100%|██████████| 2/2 [04:45<00:00, 142.92s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:47<00:00,  4.77it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 126369.78it/s]
+Filtering dataset...
+##############################
+Dataset length:       7142
+Hard negatives count: 72
+Easy positives count: 51406
+############################## 
+
+Training...
+Iteration: 100%|██████████| 112/112 [01:55<00:00,  1.03s/it]
+Iteration: 100%|██████████| 112/112 [01:51<00:00,  1.00it/s]
+Epoch: 100%|██████████| 2/2 [03:47<00:00, 113.85s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:24<00:00, 18.74it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:04<00:00, 17.91it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 2e+04 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:07<00:00, 218.47it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:50<00:00,  4.74it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 149658.62it/s]
+Filtering dataset...
+##############################
+Dataset length:       27250
+Hard negatives count: 31370
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 426/426 [07:42<00:00,  1.09s/it]
+Iteration: 100%|██████████| 426/426 [07:26<00:00,  1.05s/it]
+Epoch: 100%|██████████| 2/2 [15:08<00:00, 454.37s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:42<00:00,  4.87it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 130677.57it/s]
+Filtering dataset...
+##############################
+Dataset length:       19912
+Hard negatives count: 554
+Easy positives count: 38154
+############################## 
+
+Training...
+Iteration: 100%|██████████| 312/312 [05:17<00:00,  1.02s/it]
+Iteration: 100%|██████████| 312/312 [05:09<00:00,  1.01it/s]
+Epoch: 100%|██████████| 2/2 [10:26<00:00, 313.25s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:45<00:00,  4.82it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 130089.59it/s]
+Filtering dataset...
+##############################
+Dataset length:       7486
+Hard negatives count: 1780
+Easy positives count: 49354
+############################## 
+
+Training...
+Iteration: 100%|██████████| 117/117 [02:03<00:00,  1.06s/it]
+Iteration: 100%|██████████| 117/117 [01:58<00:00,  1.01s/it]
+Epoch: 100%|██████████| 2/2 [04:02<00:00, 121.16s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:24<00:00, 18.67it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:04<00:00, 18.46it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 2e+04 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:07<00:00, 217.50it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:42<00:00,  4.86it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 147438.96it/s]
+Filtering dataset...
+##############################
+Dataset length:       29716
+Hard negatives count: 28904
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 465/465 [08:09<00:00,  1.05s/it]
+Iteration: 100%|██████████| 465/465 [07:57<00:00,  1.03s/it]
+Epoch: 100%|██████████| 2/2 [16:07<00:00, 483.68s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:37<00:00,  4.95it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 129442.72it/s]
+Filtering dataset...
+##############################
+Dataset length:       38090
+Hard negatives count: 1396
+Easy positives count: 19134
+############################## 
+
+Training...
+Iteration: 100%|██████████| 596/596 [10:08<00:00,  1.02s/it]
+Iteration: 100%|██████████| 596/596 [10:03<00:00,  1.01s/it]
+Epoch: 100%|██████████| 2/2 [20:12<00:00, 606.01s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:45<00:00,  4.81it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 126325.44it/s]
+Filtering dataset...
+##############################
+Dataset length:       9776
+Hard negatives count: 576
+Easy positives count: 48268
+############################## 
+
+Training...
+Iteration: 100%|██████████| 153/153 [02:37<00:00,  1.03s/it]
+Iteration: 100%|██████████| 153/153 [02:30<00:00,  1.02it/s]
+Epoch: 100%|██████████| 2/2 [05:07<00:00, 153.97s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:23<00:00, 19.09it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:03<00:00, 18.91it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 2e+04 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:07<00:00, 217.92it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:42<00:00,  4.86it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 143129.14it/s]
+Filtering dataset...
+##############################
+Dataset length:       29882
+Hard negatives count: 28738
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 467/467 [08:16<00:00,  1.06s/it]
+Iteration: 100%|██████████| 467/467 [08:12<00:00,  1.05s/it]
+Epoch: 100%|██████████| 2/2 [16:29<00:00, 494.60s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:45<00:00,  4.81it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 132416.82it/s]
+Filtering dataset...
+##############################
+Dataset length:       33462
+Hard negatives count: 1442
+Easy positives count: 23716
+############################## 
+
+Training...
+Iteration: 100%|██████████| 523/523 [08:56<00:00,  1.03s/it]
+Iteration: 100%|██████████| 523/523 [08:46<00:00,  1.01s/it]
+Epoch: 100%|██████████| 2/2 [17:43<00:00, 531.55s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:37<00:00,  4.96it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 135144.70it/s]
+Filtering dataset...
+##############################
+Dataset length:       21584
+Hard negatives count: 400
+Easy positives count: 36636
+############################## 
+
+Training...
+Iteration: 100%|██████████| 338/338 [05:39<00:00,  1.00s/it]
+Iteration: 100%|██████████| 338/338 [05:33<00:00,  1.01it/s]
+Epoch: 100%|██████████| 2/2 [11:12<00:00, 336.19s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:23<00:00, 19.31it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:03<00:00, 19.36it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 2e+04 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:06<00:00, 219.52it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:36<00:00,  4.96it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 144712.64it/s]
+Filtering dataset...
+##############################
+Dataset length:       32986
+Hard negatives count: 25634
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 516/516 [08:58<00:00,  1.04s/it]
+Iteration: 100%|██████████| 516/516 [08:55<00:00,  1.04s/it]
+Epoch: 100%|██████████| 2/2 [17:53<00:00, 536.80s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:37<00:00,  4.95it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 127013.78it/s]
+Filtering dataset...
+##############################
+Dataset length:       21378
+Hard negatives count: 5116
+Easy positives count: 32126
+############################## 
+
+Training...
+Iteration: 100%|██████████| 335/335 [05:41<00:00,  1.02s/it]
+Iteration: 100%|██████████| 335/335 [05:35<00:00,  1.00s/it]
+Epoch: 100%|██████████| 2/2 [11:16<00:00, 338.47s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:37<00:00,  4.95it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 127417.67it/s]
+Filtering dataset...
+##############################
+Dataset length:       32206
+Hard negatives count: 2614
+Easy positives count: 23800
+############################## 
+
+Training...
+Iteration: 100%|██████████| 504/504 [08:34<00:00,  1.02s/it]
+Iteration: 100%|██████████| 504/504 [08:24<00:00,  1.00s/it]
+Epoch: 100%|██████████| 2/2 [16:58<00:00, 509.41s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:23<00:00, 19.31it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:03<00:00, 19.29it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 1e+04 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:08<00:00, 215.23it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:36<00:00,  4.96it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 144570.88it/s]
+Filtering dataset...
+##############################
+Dataset length:       30798
+Hard negatives count: 27822
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 482/482 [08:23<00:00,  1.05s/it]
+Iteration: 100%|██████████| 482/482 [08:23<00:00,  1.04s/it]
+Epoch: 100%|██████████| 2/2 [16:47<00:00, 503.51s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:37<00:00,  4.94it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 126050.71it/s]
+Filtering dataset...
+##############################
+Dataset length:       56014
+Hard negatives count: 2606
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 876/876 [15:07<00:00,  1.04s/it]
+Iteration: 100%|██████████| 876/876 [14:45<00:00,  1.01s/it]
+Epoch: 100%|██████████| 2/2 [29:53<00:00, 896.63s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:36<00:00,  4.96it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 125242.20it/s]
+Filtering dataset...
+##############################
+Dataset length:       45164
+Hard negatives count: 1182
+Easy positives count: 12274
+############################## 
+
+Training...
+Iteration: 100%|██████████| 706/706 [12:00<00:00,  1.02s/it]
+Iteration: 100%|██████████| 706/706 [11:45<00:00,  1.00it/s]
+Epoch: 100%|██████████| 2/2 [23:45<00:00, 712.76s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:23<00:00, 19.48it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:03<00:00, 19.46it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 1e+04 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:09<00:00, 210.80it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:36<00:00,  4.98it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 142363.13it/s]
+Filtering dataset...
+##############################
+Dataset length:       32854
+Hard negatives count: 25766
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 514/514 [09:05<00:00,  1.06s/it]
+Iteration: 100%|██████████| 514/514 [09:32<00:00,  1.11s/it]
+Epoch: 100%|██████████| 2/2 [18:38<00:00, 559.27s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:56<00:00,  4.63it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 125236.39it/s]
+Filtering dataset...
+##############################
+Dataset length:       54466
+Hard negatives count: 4154
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 852/852 [15:43<00:00,  1.11s/it]
+Iteration: 100%|██████████| 852/852 [15:28<00:00,  1.09s/it]
+Epoch: 100%|██████████| 2/2 [31:11<00:00, 935.82s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:53<00:00,  4.68it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 128200.23it/s]
+Filtering dataset...
+##############################
+Dataset length:       20790
+Hard negatives count: 4186
+Easy positives count: 33644
+############################## 
+
+Training...
+Iteration: 100%|██████████| 325/325 [05:53<00:00,  1.09s/it]
+Iteration: 100%|██████████| 325/325 [05:48<00:00,  1.07s/it]
+Epoch: 100%|██████████| 2/2 [11:42<00:00, 351.38s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:25<00:00, 17.79it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:04<00:00, 18.33it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 7e+03 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:09<00:00, 210.81it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:56<00:00,  4.64it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 136324.96it/s]
+Filtering dataset...
+##############################
+Dataset length:       30796
+Hard negatives count: 27824
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 482/482 [08:54<00:00,  1.11s/it]
+Iteration: 100%|██████████| 482/482 [08:56<00:00,  1.11s/it]
+Epoch: 100%|██████████| 2/2 [17:50<00:00, 535.36s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:54<00:00,  4.67it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 127415.88it/s]
+Filtering dataset...
+##############################
+Dataset length:       55728
+Hard negatives count: 2892
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 871/871 [16:06<00:00,  1.11s/it]
+Iteration: 100%|██████████| 871/871 [16:02<00:00,  1.11s/it]
+Epoch: 100%|██████████| 2/2 [32:09<00:00, 964.74s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:55<00:00,  4.65it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 133553.49it/s]
+Filtering dataset...
+##############################
+Dataset length:       17396
+Hard negatives count: 16668
+Easy positives count: 24556
+############################## 
+
+Training...
+Iteration: 100%|██████████| 272/272 [04:56<00:00,  1.09s/it]
+Iteration: 100%|██████████| 272/272 [04:55<00:00,  1.09s/it]
+Epoch: 100%|██████████| 2/2 [09:52<00:00, 296.18s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:25<00:00, 17.82it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:04<00:00, 17.97it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 4e+03 #
+##############################
+
+Creating triplets...
+100%|██████████| 14655/14655 [01:08<00:00, 214.36it/s]
+Training embedder
+####################################################################################################
+step 1/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:56<00:00,  4.63it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 131249.44it/s]
+Filtering dataset...
+##############################
+Dataset length:       32040
+Hard negatives count: 26580
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 501/501 [09:15<00:00,  1.11s/it]
+Iteration: 100%|██████████| 501/501 [09:15<00:00,  1.11s/it]
+Epoch: 100%|██████████| 2/2 [18:31<00:00, 555.65s/it]
+####################################################################################################
+step 2/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:57<00:00,  4.62it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 116949.01it/s]
+Filtering dataset...
+##############################
+Dataset length:       53298
+Hard negatives count: 5322
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 833/833 [15:22<00:00,  1.11s/it]
+Iteration: 100%|██████████| 833/833 [15:22<00:00,  1.11s/it]
+Epoch: 100%|██████████| 2/2 [30:44<00:00, 922.15s/it]
+####################################################################################################
+step 3/3
+Creating all updated embeddings...
+Batches: 100%|██████████| 1374/1374 [04:56<00:00,  4.64it/s]
+Checking triplets hardness...
+100%|██████████| 58620/58620 [00:00<00:00, 122632.27it/s]
+Filtering dataset...
+##############################
+Dataset length:       56468
+Hard negatives count: 2152
+Easy positives count: 0
+############################## 
+
+Training...
+Iteration: 100%|██████████| 883/883 [16:17<00:00,  1.11s/it]
+Iteration: 100%|██████████| 883/883 [16:07<00:00,  1.10s/it]
+Epoch: 100%|██████████| 2/2 [32:24<00:00, 972.34s/it]
+Training classifier
+Batches: 100%|██████████| 458/458 [00:25<00:00, 18.24it/s]
+Testing
+Batches: 100%|██████████| 75/75 [00:03<00:00, 18.95it/s]
+/home/sangio/Documents/unibo/NLP/BarneyBot/venv/lib/python3.10/site-packages/sklearn/neighbors/_classification.py:211: FutureWarning: Unlike other reduction functions (e.g. `skew`, `kurtosis`), the default behavior of `mode` typically preserves the axis it acts along. In SciPy 1.11.0, this behavior will change: the default value of `keepdims` will become False, the `axis` over which the statistic is taken will be eliminated, and the value None will no longer be accepted. Set `keepdims` to True or False to avoid this warning.
+  mode, _ = stats.mode(_y[neigh_ind, k], axis=1)
+
+
+##############################
+# ETA:                 0e+00 #
+##############################
