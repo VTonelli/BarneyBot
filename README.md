@@ -31,4 +31,4 @@ The list of relevant folders for this repository is:
 As an extension of the original project, we implemented and tested a variety of metrics to evaluate the performances of these chatbots.
 
 ## Additional Data
-We also deployed a drive folder which already contains the trained models, you can check it following this [drive link](https://liveunibo-my.sharepoint.com/personal/valerio_tonelli2_studio_unibo_it/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fvalerio%5Ftonelli2%5Fstudio%5Funibo%5Fit%2FDocuments%2FNLP%20%2D%20BarneyBot&ga=1)
+We also deployed a drive folder which already contains the trained models, you can check it following this [drive link](https://liveunibo-my.sharepoint.com/:f:/g/personal/valerio_tonelli2_studio_unibo_it/EqAjIM0kvAJFjrNXPPnSLe4BVC4cAMsfrr-7s_SjUiWDrg)
